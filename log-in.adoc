@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: log-in.html 
+keywords: logging in, log in, sign in, signing in, user account, login with netapp, log in with netapp, sign up, create account 
+summary: 'Dopo aver effettuato l"iscrizione a workload Factory, potrai accedere in qualsiasi momento dalla console basata su web per iniziare a gestire i tuoi workload e i file system FSX per ONTAP.' 
+---
+= Accedere a workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dopo aver effettuato l'iscrizione a workload Factory, potrai accedere in qualsiasi momento dalla console basata su web per iniziare a gestire i tuoi workload e i file system FSX per ONTAP.
+
+.A proposito di questa attività
+È possibile accedere alla console basata sul Web di workload Factory utilizzando una delle seguenti opzioni:
+
+* Le tue credenziali NetApp Support Site (NSS) esistenti
+* Un login cloud NetApp utilizzando il tuo indirizzo e-mail e una password
+
+
+.Fasi
+. Aprire un browser Web e accedere a https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella pagina *Log in*, inserire l'indirizzo e-mail associato al login.
+. A seconda del metodo di autenticazione associato all'accesso, viene richiesto di inserire le credenziali:
++
+** Credenziali cloud NetApp: Inserire la password
+** Federated User (utente federato): Immettere le credenziali di identità federated
+** Account NetApp Support Site: Immettere le credenziali del NetApp Support Site
+
+
+. Selezionare *Accedi*.
++
+Se hai effettuato l'accesso in passato, vedrai la home page di workload Factory e userai l'account predefinito.
+
++
+Se questa è la prima volta che accedi, verrai indirizzato alla pagina *account*.
+
++
+** Se sei membro di un singolo account, seleziona *continua*.
+** Se sei membro di più account, seleziona l'account e seleziona *continua*.
+
+
+
+
+.Risultato
+Hai effettuato l'accesso e puoi iniziare a utilizzare workload Factory per gestire i file system e i workload di FSX per ONTAP.

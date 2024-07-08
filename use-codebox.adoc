@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: use-codebox.html 
+keywords: codebox, automation, cloudformation, rest api, aws cli, permissions 
+summary: 'È possibile utilizzare Codebox per generare il codice necessario per eseguire qualsiasi operazione supportata da workload Factory. Puoi generare codice che può essere utilizzato ed eseguito utilizzando le API REST di workload Factory, l"interfaccia a riga di comando di AWS e AWS CloudFormation.' 
+---
+= Utilizzare Codebox per l'automazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile utilizzare Codebox per generare il codice necessario per eseguire qualsiasi operazione supportata da workload Factory. Puoi generare codice che può essere utilizzato ed eseguito utilizzando le API REST di workload Factory, l'interfaccia a riga di comando di AWS e AWS CloudFormation.
+
+Codebox è allineato alle modalità operative di fabbrica del carico di lavoro (base, lettura e automazione) popolando i dati appropriati nel codice in base alle autorizzazioni AWS fornite nell'account di fabbrica del carico di lavoro per ogni utente. Il codice può essere utilizzato come un modello in cui è possibile inserire informazioni mancanti (ad esempio, credenziali) o personalizzare alcuni dati prima di eseguire il codice.
+
+
+
+== Come usare Codebox
+
+Quando si immettono valori nelle procedure guidate dell'interfaccia utente di workload Factory, è possibile visualizzare l'aggiornamento dei dati in Codebox al completamento di ogni campo. Una volta completata la procedura guidata, ma prima di selezionare il pulsante *Crea* nella parte inferiore della pagina, selezionare image:button-copy-codebox.png["pulsante copia"] per copiare in Codebox per acquisire il codice necessario per creare la configurazione. Ad esempio, questa schermata della creazione di un nuovo Microsoft SQL Server mostra le voci della procedura guidata per le zone di disponibilità e VPC e le voci equivalenti in Codebox per un'implementazione di API REST.
+
+image:screenshot-codebox-example1.png["Schermata che mostra come creare un Microsoft SQL Server nell'interfaccia utente e le voci corrispondenti per VPC e zone di disponibilità in Codebox."]
+
+Con alcuni formati di codice è anche possibile selezionare il pulsante Download per salvare il codice in un file che è possibile portare in un altro sistema. Se necessario, puoi modificare il codice dopo averlo scaricato in modo da adattarlo ad altri account AWS.
+
+
+
+== Utilizzare il codice CloudFormation da Codebox
+
+Puoi copiare il codice CloudFormation generato da Codebox e quindi avviare lo stack Amazon Web Services CloudFormation nel tuo account AWS. CloudFormation eseguirà le azioni definite nell'interfaccia utente di workload Factory.
+
+La procedura per utilizzare il codice CLoudFormation potrebbe essere diversa a seconda che si stia distribuendo un file system FSX per ONTAP, che si creino credenziali di account o che si eseguano altre azioni workload Factory.
+
+Si noti che il codice all'interno di un file YAML generato da CloudFormation scade dopo 7 giorni per motivi di sicurezza.
+
+.Prima di iniziare
+* Devi disporre delle credenziali per accedere al tuo account AWS.
+* Per utilizzare uno stack CloudFormation è necessario disporre delle seguenti autorizzazioni utente:
++
+[%collapsible]
+====
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudformation:CreateStack",
+                "cloudformation:UpdateStack",
+                "cloudformation:DeleteStack",
+                "cloudformation:DescribeStacks",
+                "cloudformation:DescribeStackEvents",
+                "cloudformation:DescribeChangeSet",
+                "cloudformation:ExecuteChangeSet",
+                "cloudformation:ListStacks",
+                "cloudformation:ListStackResources",
+                "cloudformation:GetTemplate",
+                "cloudformation:ValidateTemplate",
+                "lambda:InvokeFunction",
+                "iam:PassRole",
+                "iam:CreateRole",
+                "iam:UpdateAssumeRolePolicy",
+                "iam:AttachRolePolicy",
+                "iam:CreateServiceLinkedRole"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+----
+====
+
+
+.Fasi
+. Dopo aver utilizzato l'interfaccia utente per definire l'operazione che si desidera eseguire, selezionare image:button-copy-codebox.png["pulsante copia"] per copiare il codice nella Codebox.
+. Selezionare *Redirect to CloudFormation* per visualizzare la pagina Redirect to CloudFormation.
+. Apri un'altra finestra del browser ed effettua l'accesso ad AWS Management Console.
+. Selezionare *continua* dalla pagina Redirect to CloudFormation.
+. Accedere all'account AWS in cui deve essere eseguito il codice.
+. Nella pagina creazione rapida stack, in funzionalità, selezionare *Acknowledge that AWS CloudFormation May ...*.
+. Selezionare *Crea stack*.
+. Monitora lo stato di avanzamento da AWS o da workload Factory.
+
+
+
+
+== Utilizzare il codice API REST da Codebox
+
+Puoi utilizzare le API REST di workload Factory generate da Codebox per implementare e gestire i file system FSX per ONTAP e altre risorse AWS.
+
+È possibile eseguire le API da qualsiasi host che supporta Curl e che dispone di connettività Internet.
+
+Tenere presente che i token di autenticazione sono nascosti in Codebox, ma vengono compilati quando si copia e incolla la chiamata API.
+
+.Fasi
+. Dopo aver utilizzato l'interfaccia utente per definire l'operazione che si desidera eseguire, selezionare image:button-copy-codebox.png["pulsante copia"] per copiare il codice API nella Codebox.
+. Incollare il codice ed eseguirlo sul sistema host.
+
+
+
+
+== Utilizza il codice CLI AWS di Codebox
+
+Puoi utilizzare l'interfaccia CLI di Amazon Web Services generata da Codebox per implementare e gestire i file system FSX per ONTAP e altre risorse AWS.
+
+.Fasi
+. Dopo aver utilizzato l'interfaccia utente per definire l'operazione che si desidera eseguire, selezionare per copiare l'interfaccia image:button-copy-codebox.png["pulsante copia"] CLI AWS nella Codebox.
+. Apri un'altra finestra del browser ed effettua l'accesso ad AWS Management Console.
+. Incollare il codice ed eseguirlo.
+

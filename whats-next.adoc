@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: whats-next.html 
+keywords: what you can do 
+summary: 'Una volta effettuato l"accesso e configurato workload Factory, è possibile creare e gestire file system FSX per ONTAP e utilizzare altre funzionalità di workload Factory.' 
+---
+= Cosa fare in seguito
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Una volta effettuato l'accesso e configurato workload Factory, puoi iniziare a utilizzare diverse funzionalità di workload Factory, come la creazione di file system Amazon FSX per ONTAP, la distribuzione di database in file system FSX per ONTAP, e migrazione delle configurazioni delle macchine virtuali in VMware Cloud su AWS utilizzando i file system FSX per ONTAP come datastore esterni.
+
+* https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Amazon FSX per NetApp ONTAP"^]
++
+Valuta e analizza gli ambienti dati correnti per ottenere potenziali risparmi sui costi usando FSX per ONTAP come infrastruttura storage, effettua il provisioning e Templatizza le implementazioni di FSX per ONTAP in base alle Best practice e accedi a funzioni di gestione avanzate.
+
+* https://docs.netapp.com/us-en/workload-genai/index.html["Genai"^]
++
+Implementa e gestisci un'infrastruttura RAG (Retrieval-Augmented Generation) per migliorare la precisione e l'unicità delle tue applicazioni ai. Crea una knowledge base RAG su FSX per ONTAP con sicurezza e conformità dei dati integrate.
+
+* https://docs.netapp.com/us-en/workload-databases/index.html["Workload dei database"^]
++
+Rileva il tuo ambiente di database esistente in AWS, valuta i potenziali risparmi sui costi passando a FSX per ONTAP, implementa database end-to-end con Best practice integrate per l'ottimizzazione e automatizza il thin cloning per pipeline ci/CD.
+
+* https://docs.netapp.com/us-en/workload-vmware/index.html["Workload VMware"^]
++
+Ottimizza migrazioni e operazioni con consigli smart e correzioni automatiche. Distribuire backup efficienti e un disaster recovery solido. Monitora e risolvi i problemi delle macchine virtuali.
+
+

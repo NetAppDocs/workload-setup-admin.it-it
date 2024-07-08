@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: codebox-automation.html 
+keywords: codebox, automation 
+summary: 'Codebox è un co-pilota Infrastructure as Code (IAC) che aiuta gli sviluppatori e DevOps a generare il codice necessario per eseguire qualsiasi operazione supportata da workload Factory. Codebox è allineato alle modalità operative di fabbrica del carico di lavoro (base, lettura, automazione) e definisce un percorso chiaro per la preparazione all"esecuzione, oltre a fornire un catalogo di automazione per un rapido riutilizzo futuro.' 
+---
+= Ulteriori informazioni sull'automazione dei codebox
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Codebox è un co-pilota Infrastructure as Code (IAC) che aiuta gli sviluppatori e DevOps a generare il codice necessario per eseguire qualsiasi operazione supportata da workload Factory. Codebox è allineato alle modalità operative di fabbrica del carico di lavoro (base, lettura e automazione) e definisce un percorso chiaro per la preparazione all'esecuzione, oltre a fornire un catalogo di automazione per un rapido riutilizzo futuro.
+
+
+
+== Funzionalità Codebox
+
+Codebox offre due funzionalità IAC principali:
+
+* _Codebox Viewer_ mostra il file IAC generato da una specifica operazione di flusso di lavoro mediante la corrispondenza di voci e selezioni dalla procedura guidata grafica o dall'interfaccia di conversazione testuale. Anche se Codebox Viewer supporta la codifica a colori per semplificare la navigazione e l'analisi, non consente la modifica, ma solo la copia o il salvataggio del codice nel catalogo di automazione.
+* _Codebox Automation Catalog_ mostra tutti i job IAC salvati, consentendo di utilizzarli facilmente per un utilizzo futuro. I lavori del catalogo di automazione vengono salvati come modelli e visualizzati nel contesto delle risorse ad essi applicabili.
+
+
+Inoltre, durante la configurazione delle credenziali workload Factory, Codebox visualizza in modo dinamico le autorizzazioni AWS necessarie per creare policy IAM. Le autorizzazioni sono fornite per ogni funzionalità della workload Factory che si intende utilizzare (database, ai, FSX per ONTAP e così via) e sono personalizzate in base a se gli utenti della policy riceveranno autorizzazioni di sola lettura o autorizzazioni complete. Ti basterà copiare le autorizzazioni da Codebox e incollarle nella Console di gestione AWS, in modo che workload Factory disponga delle autorizzazioni corrette per gestire i carichi di lavoro.
+
+
+
+== Formati di codice supportati
+
+I formati di codice supportati includono:
+
+* API REST di workload Factory
+* CLI AWS
+* CloudFormation AWS
+
+
+link:use-codebox.html["Informazioni sull'utilizzo di Codebox"].

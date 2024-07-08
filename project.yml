@@ -1,0 +1,58 @@
+---
+settings:
+  name: Setup and administration
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: it-it,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr
+sidebar:
+  entries:
+  - title: Documenti di installazione e amministrazione
+    url: "/index.html"
+  - title: Note di rilascio
+    entries:
+    - title: Novità
+      url: "/whats-new.html"
+  - title: Inizia subito
+    entries:
+    - title: Scopri le nozioni di base
+      entries:
+      - title: Panoramica di workload Factory
+        url: "/workload-factory-overview.html"
+      - title: Modalità operative
+        url: "/operational-modes.html"
+    - title: Avvio rapido
+      url: "/quick-start.html"
+    - title: Iscriviti a workload Factory
+      url: "/sign-up-saas.html"
+    - title: Aggiungi le credenziali AWS
+      url: "/add-credentials.html"
+    - title: Cosa fare in seguito
+      url: "/whats-next.html"
+  - title: Amministrare workload Factory
+    entries:
+    - title: Accedere a workload Factory
+      url: "/log-in.html"
+    - title: Automatizza le attività utilizzando Codebox
+      entries:
+      - title: Informazioni su Codebox
+        url: "/codebox-automation.html"
+      - title: Utilizzare Codebox per generare codice
+        url: "/use-codebox.html"
+    - title: Rimuovere le credenziali
+      url: "/manage-credentials.html"
+  - title: Conoscenza e supporto
+    entries:
+    - title: Registrati per ricevere assistenza
+      url: "/support-registration.html"
+    - title: Richiedi assistenza
+      url: "/get-help.html"
+  - title: Note legali
+    url: "/legal-notices.html"
+product-family:
+  name: BlueXP Workload Factory for AWS
+  repo: workload-family

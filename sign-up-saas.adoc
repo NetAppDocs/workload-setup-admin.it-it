@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: sign-up-saas.html 
+keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
+summary: Workload Factory è accessibile da una console basata su web. Quando inizi a lavorare con workload Factory, il primo passo è registrarsi utilizzando le credenziali esistenti del sito di supporto NetApp o creando un login cloud NetApp. 
+---
+= Iscriviti a workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Workload Factory è accessibile da una console basata su web. Quando inizi a lavorare con workload Factory, il primo passo è registrarsi utilizzando le credenziali esistenti del sito di supporto NetApp o creando un login cloud NetApp.
+
+.A proposito di questa attività
+Puoi iscriverti a workload Factory utilizzando una delle seguenti opzioni:
+
+* Le tue credenziali NetApp Support Site (NSS) esistenti
+* Un login cloud NetApp specificando il tuo indirizzo e-mail e una password
+
+
+.Fasi
+. Aprire un browser Web e accedere al https://console.workloads.netapp.com["Console di workload Factory"^]
+. Se disponi di un account NetApp Support Site, inserisci l'indirizzo e-mail associato al tuo account NSS direttamente nella pagina *Log in*.
++
+Se disponi di un account NSS, puoi saltare la pagina di registrazione. Workload Factory ti registrerà come parte di questo accesso iniziale.
+
+. Se non disponi di un account NSS e desideri registrarti creando un login cloud NetApp, seleziona *Registrati*.
++
+image:screenshot-sign-up1.png["Schermata della pagina di registrazione in cui è possibile aggiungere il nome utente e la password per accedere a workload Factory."]
+
+. Nella pagina *Iscrizione*, immettere le informazioni richieste per creare un login cloud NetApp e selezionare *Avanti*.
++
+Nel modulo di iscrizione sono consentiti solo caratteri inglesi.
+
+. Immettere le informazioni dettagliate relative alla società e selezionare *Iscrizione*.
+. Controlla la posta in arrivo per un messaggio e-mail da NetApp che includa le istruzioni per la verifica dell'indirizzo e-mail.
++
+Questo passaggio è necessario prima di effettuare l'accesso.
+
+. Quando richiesto, leggere il Contratto di licenza per l'utente finale e accettare i termini, quindi selezionare *continua*.
+. Nella pagina *account*, immettere un nome per l'account e, se necessario, selezionare la descrizione del lavoro.
++
+Un account è l'elemento di primo livello della piattaforma di identità di NetApp e ti consente di aggiungere e gestire autorizzazioni e credenziali.
+
++
+image:screenshot-account-selection.png["Schermata della pagina account visualizzata quando si accede con un nuovo account."]
+
+. Selezionare *Crea* per visualizzare la home page di workload Factory.
+
+
+.Risultato
+A questo punto si dispone di un account e di un account per l'accesso a workload Factory. Sei considerato un account Admin e hai accesso a tutte le funzionalità workload Factory.

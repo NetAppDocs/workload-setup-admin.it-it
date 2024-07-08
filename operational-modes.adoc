@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: operational-modes.html 
+keywords: modes, zero-trust, full-trust, read, basic, automate, aws, aws accounts, keys, multiple accounts, permissions, aws permissions, policy, policies, credentials 
+summary: 'Workload Factory offre tre modalità operative che ti consentono di controllare con attenzione l"accesso tra workload Factory e il tuo ambiente cloud in base alle policy IT. La modalità operativa utilizzata dipende dal livello di autorizzazioni AWS fornite a workload Factory.' 
+---
+= Scopri le modalità operative e le credenziali AWS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Workload Factory offre tre modalità operative che ti consentono di controllare con attenzione l'accesso tra workload Factory e il tuo ambiente cloud in base alle policy IT. La modalità operativa utilizzata dipende dal livello di autorizzazioni AWS fornite a workload Factory.
+
+
+
+== Modalità operative
+
+Le modalità operative forniscono un'organizzazione logica delle funzionalità e delle funzionalità offerte da workload Factory, in relazione al livello di trust assegnato. L'obiettivo principale delle modalità operative è comunicare in modo chiaro quali task workload Factory possono o non possono eseguire all'interno dell'account AWS.
+
+Modalità base:: Rappresenta una relazione zero-trust in cui non sono assegnate autorizzazioni AWS a workload Factory. Il prodotto è stato progettato per l'esplorazione precoce di workload Factory e l'utilizzo delle varie procedure guidate per creare l'Infrastructure as Code (IAC) necessaria. Puoi copiare il codice e utilizzarlo in AWS inserendo manualmente le tue credenziali AWS.
+Modalità di lettura:: Migliora l'esperienza della modalità di base aggiungendo autorizzazioni di sola lettura in modo che i modelli IAC siano riempiti con variabili specifiche (ad esempio, VPC, gruppi di protezione, ecc.). In questo modo puoi eseguire IAC direttamente dal tuo account AWS senza fornire autorizzazioni di modifica a workload Factory.
+Modalità automatica:: Rappresenta una relazione di trust completa per l'assegnazione di workload Factory con autorizzazioni complete. In questo modo, workload Factory può eseguire e automatizzare le operazioni in AWS per tuo conto, insieme alle credenziali assegnate che hanno le autorizzazioni necessarie per l'esecuzione.
+
+
+
+
+=== Funzioni della modalità operativa
+
+Le funzioni disponibili utilizzando ciascuna delle modalità aumentano con ogni modalità.
+
+[cols="12h,22,22,22,22"]
+|===
+| Modalità | Automazione da workload Factory | Automazione in AWS tramite IAC | Rilevamento e completamento automatico delle risorse AWS | Monitoraggio dell'avanzamento 
+
+
+| Di base | No | Modello IAC minimamente completo | No | No 
+
+
+| Leggi | No | Modello IAC moderatamente completo | Sì | Sì 
+
+
+| Automatizzare | Automazione completa | Modello IAC completo con automazione completa | Sì | Sì 
+|===
+
+
+=== Requisiti della modalità operativa
+
+Non esiste un selettore da impostare in workload Factory per identificare la modalità che si intende utilizzare. Questa modalità viene determinata in base alle credenziali e ai permessi AWS assegnati al tuo account workload Factory.
+
+[cols="16h,35,35"]
+|===
+| Modalità | Credenziali dell'account AWS | Collegamento 
+
+
+| Di base | Non richiesto | Non richiesto 
+
+
+| Leggi | Sola lettura | Non richiesto 
+
+
+| Automatizzare | Credenziali di lettura/scrittura | Obbligatorio 
+|===
+https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Ulteriori informazioni sui collegamenti"^]
+
+
+
+=== Esempi di modalità operativa
+
+Puoi impostare le tue credenziali per fornire una modalità per un componente di carico di lavoro e un'altra per un altro componente. Ad esempio, puoi configurare la modalità di automazione per le operazioni in cui stai implementando e gestendo file system FSX per ONTAP, ma configurare solo la modalità di lettura per creare e implementare carichi di lavoro di database con workload Factory.
+
+È possibile fornire queste funzionalità all'interno di un singolo set di credenziali in un account workload Factory oppure creare più set di credenziali quando ciascuna credenziale fornisce funzionalità di distribuzione del workload uniche.
+
+
+
+==== Esempio 1
+
+Gli utenti degli account che utilizzano le credenziali a cui sono state assegnate le seguenti autorizzazioni avranno il controllo completo (modalità automatica) per la creazione di file system FSX per ONTAP, la distribuzione dei database e la visualizzazione degli altri tipi di storage AWS utilizzati nell'account.
+
+image:screenshot-credentials1.png["Uno screenshot che mostra un set di credenziali che fornisce due tipi di autorizzazioni per i carichi di lavoro."]
+
+Tuttavia, non avranno controlli di automazione per la creazione e l'implementazione di carichi di lavoro VMware (modalità base) da workload Factory. Se si desidera creare carichi di lavoro VMware, è necessario copiare il codice dalla Codebox, accedere manualmente al proprio account AWS e inserire manualmente le voci mancanti nel codice generato per utilizzare questa funzionalità.
+
+
+
+==== Esempio 2
+
+In questo caso, l'utente ha creato due set di credenziali per consentire diverse funzionalità operative a seconda del set di credenziali selezionato. Generalmente, ogni set di credenziali viene accoppiato a un account AWS diverso.
+
+Il primo set di credenziali include autorizzazioni che offrono agli utenti il controllo completo sulla creazione dei file system FSX per ONTAP (e la possibilità di visualizzare altri tipi di storage AWS utilizzati nell'account), ma autorizzazioni di lettura solo quando si lavora con i workload VMware.
+
+image:screenshot-credentials-comparison-example-1.png["Uno screenshot che mostra un set di credenziali che fornisce due tipi di autorizzazioni per i carichi di lavoro."]
+
+Il secondo set di credenziali fornisce solo autorizzazioni che garantiscono agli utenti un controllo completo sulla creazione di file system FSX per ONTAP e sulla visualizzazione degli altri tipi di storage AWS utilizzati nell'account.
+
+image:screenshot-credentials-comparison-example-2.png["Uno screenshot che mostra un set di credenziali che fornisce due tipi di autorizzazioni per i carichi di lavoro."]
+
+
+
+== Credenziali AWS
+
+Abbiamo progettato un flusso di registrazione con credenziali AWS presumono il ruolo che:
+
+* Supporto di autorizzazioni degli account AWS più allineate, consentendoti di specificare le funzionalità dei workload che desideri utilizzare e fornendo requisiti di policy IAM in base a tali selezioni.
+* Consente di regolare le autorizzazioni degli account AWS assegnate in base al consenso esplicito o di esclusione di funzionalità specifiche dei carichi di lavoro.
+* Semplifica la creazione manuale delle policy IAM fornendo file di policy JSON personalizzati che puoi applicare nella console AWS.
+* Semplifica ulteriormente il processo di registrazione delle credenziali offrendo agli utenti un'opzione automatica per la creazione di ruoli e policy IAM richieste utilizzando gli stack di AWS CloudFormation.
+* Si allinea in modo migliore con FSX per gli utenti ONTAP che preferiscono avere le proprie credenziali memorizzate entro i confini dell'ecosistema cloud di AWS, consentendo lo storage delle credenziali dei servizi FSX per ONTAP in un backend di gestione segreta basato su AWS.
+
+
+
+
+=== Una o più credenziali AWS
+
+Quando si utilizza la prima funzionalità (o funzionalità) di workload Factory, è necessario creare le credenziali utilizzando le autorizzazioni richieste per tali funzionalità del carico di lavoro. Aggiungerai le credenziali a workload Factory, ma dovrai accedere ad AWS Management Console per creare il ruolo e la policy IAM. Queste credenziali saranno disponibili all'interno dell'account quando si utilizzano funzionalità in workload Factory.
+
+Il tuo set iniziale di credenziali AWS può includere una policy IAM per una funzionalità o per molte funzionalità. Dipende semplicemente dai tuoi requisiti di business.
+
+L'aggiunta di più di un set di credenziali AWS a workload Factory offre autorizzazioni aggiuntive necessarie per utilizzare funzionalità aggiuntive, come file system FSX per ONTAP, implementare i database in FSX per ONTAP, eseguire la migrazione di workload VMware e altro ancora.
+
+link:add-credentials.html["Scopri come aggiungere le credenziali AWS a workload Factory"].
