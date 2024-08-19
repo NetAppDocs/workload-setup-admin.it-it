@@ -13,6 +13,8 @@ summary: NetApp workload Factory è una potente piattaforma di gestione del cicl
 [role="lead"]
 NetApp workload Factory è una potente piattaforma di gestione del ciclo di vita progettata per aiutarti a ottimizzare i carichi di lavoro utilizzando i file system Amazon FSX per NetApp ONTAP. I carichi di lavoro che possono essere ottimizzati utilizzando workload Factory e FSX per ONTAP includono database, migrazioni VMware su VMware Cloud su AWS, chatbot ai e altro ancora.
 
+Un carico di lavoro comprende una combinazione di risorse, codice e servizi o applicazioni, progettati per soddisfare un obiettivo aziendale. Può trattarsi di un'applicazione rivolta ai clienti o di un processo di backend. I carichi di lavoro possono prevedere un sottoinsieme di risorse all'interno di un singolo account AWS o estendersi su più account.
+
 Amazon FSX per NetApp ONTAP offre volumi di storage NFS, SMB/CIFS e iSCSI completamente gestiti e nativi per AWS per applicazioni mission-critical, database, container, datastore VMware Cloud e file utente. Puoi gestire FSX per ONTAP tramite workload Factory e utilizzando i tool di gestione AWS nativi.
 
 
@@ -106,9 +108,9 @@ link:codebox-automation.html["Ulteriori informazioni su Codebox"].
 
 
 
-=== Calcolatori dello storage
+=== Calcolatori del risparmio
 
-Workload Factory fornisce un calcolatore di storage che ti permette di confrontare i costi dello storage sui file system FSX per ONTAP con Elastic Block Store (EBS), Elastic file Systems (EFS) ed FSX per Windows file Server. In base ai tuoi requisiti di storage, potresti renderti conto che FSX per i file system ONTAP è l'opzione più conveniente per te.
+Workload Factory offre un calcolatore di risparmi che consente di confrontare i costi dello storage sui file system FSX per ONTAP con Elastic Block Store (EBS), Elastic file Systems (EFS) ed FSX per Windows file Server. In base ai tuoi requisiti di storage, potresti renderti conto che FSX per i file system ONTAP è l'opzione più conveniente per te.
 
 I criteri confrontati tra i diversi tipi di sistemi storage includono la capacità totale richiesta e le performance totali, che includono gli IOPS richiesti e il throughput richiesto.
 
