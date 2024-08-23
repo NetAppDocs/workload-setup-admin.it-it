@@ -504,8 +504,8 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">4 agosto 2024</block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Supporto terraforme</block>
   <block id="1571710cf3c95e6290fc41ea04917d42" category="paragraph">Il supporto per Terraform è disponibile per Amazon FSX per l'implementazione del file system NetApp ONTAP e la creazione delle VM di storage. La guida di installazione e amministrazione contiene ora le istruzioni per l'uso di Terraform dal Codebox.</block>
-  <block id="1a83a24f33c92a88ea922a23bd6cf4e5" category="paragraph"><block ref="1a83a24f33c92a88ea922a23bd6cf4e5" category="inline-link-macro-rx"></block></block>
   <block id="462c14d3e045d4b0b69cee0781df3207" category="paragraph">Un carico di lavoro comprende una combinazione di risorse, codice e servizi o applicazioni, progettati per soddisfare un obiettivo aziendale. Può trattarsi di un'applicazione rivolta ai clienti o di un processo di backend. I carichi di lavoro possono prevedere un sottoinsieme di risorse all'interno di un singolo account AWS o estendersi su più account.</block>
   <block id="fb44c12e7a424c0619764b1060434a74" category="section-title">Calcolatori del risparmio</block>
   <block id="6904c85b1af908213d1642916b521739" category="paragraph">Workload Factory offre un calcolatore di risparmi che consente di confrontare i costi dello storage sui file system FSX per ONTAP con Elastic Block Store (EBS), Elastic file Systems (EFS) ed FSX per Windows file Server. In base ai tuoi requisiti di storage, potresti renderti conto che FSX per i file system ONTAP è l'opzione più conveniente per te.</block>
+  <block id="11cb17d1b990bbf37a24337d5692efa1" category="paragraph"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
 </blocks>
