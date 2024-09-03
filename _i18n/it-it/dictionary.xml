@@ -508,4 +508,14 @@
   <block id="fb44c12e7a424c0619764b1060434a74" category="section-title">Calcolatori del risparmio</block>
   <block id="6904c85b1af908213d1642916b521739" category="paragraph">Workload Factory offre un calcolatore di risparmi che consente di confrontare i costi dello storage sui file system FSX per ONTAP con Elastic Block Store (EBS), Elastic file Systems (EFS) ed FSX per Windows file Server. In base ai tuoi requisiti di storage, potresti renderti conto che FSX per i file system ONTAP è l'opzione più conveniente per te.</block>
   <block id="11cb17d1b990bbf37a24337d5692efa1" category="paragraph"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
+  <block id="2fd1745cefcdce50d6467d96e693f6b7" category="doc">Abbonamento RSS</block>
+  <block id="0fa776fabe30e41d70bd8d9c9e64c974" category="paragraph">L'abbonamento RSS è disponibile sul sito <block ref="372504cb6bb48559009ff8f8cdb9a245" category="inline-link-macro-rx"></block>. L'utilizzo di un feed RSS è un modo semplice per utilizzare e tenere conto delle modifiche apportate a BlueXP  workload Factory.</block>
+  <block id="447fb3de7bec10468f55367375163603" category="inline-image-macro">Schermata del menu a discesa della guida della console workload Factory. Nel menu a discesa viene visualizzato un nuovo pulsante per la sottoscrizione a RSS.</block>
+  <block id="c508966f04ada556baaaa0b94e781209" category="paragraph"><block ref="c508966f04ada556baaaa0b94e781209" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="80f4b5aa553e3a44455088c83954a088" category="section-title">Supporto di una singola policy di autorizzazioni per ogni carico di lavoro</block>
+  <block id="c876ca70d1ae73b09cdc0004b328448e" category="paragraph">Quando Aggiungi le credenziali AWS in workload Factory, ora puoi selezionare una singola policy di autorizzazione, in lettura o in modalità automatica, per ogni workload e gestione dello storage.</block>
+  <block id="41b3a089d4fbacfb53e9a5634cfc6647" category="inline-image-macro">Schermata della sezione di configurazione delle autorizzazioni nella pagina delle credenziali in cui puoi selezionare le policy di lettura o automazione delle autorizzazioni per la gestione dello storage, i carichi di lavoro ai, i carichi di lavoro dei database e i carichi di lavoro VMware.</block>
+  <block id="fa5f572610383fbc01cbba40c0f535e2" category="paragraph"><block ref="fa5f572610383fbc01cbba40c0f535e2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1db25aada4bff8233b24c1d7b39230cd" category="paragraph"><block ref="1db25aada4bff8233b24c1d7b39230cd" category="inline-link-macro-rx"></block></block>
+  <block id="b5cef683aab00353096b98823a237e69" category="section-title">1 settembre 2024</block>
 </blocks>

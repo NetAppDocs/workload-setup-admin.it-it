@@ -1,0 +1,21 @@
+= Abbonamento RSS
+:allow-uri-read: 
+
+
+
+
+=== Abbonamento RSS
+
+L'abbonamento RSS è disponibile sul sito link:https://console.workloads.netapp.com/["Console di workload Factory"^]. L'utilizzo di un feed RSS è un modo semplice per utilizzare e tenere conto delle modifiche apportate a BlueXP  workload Factory.
+
+image:screenshot-rss-subscribe-button.png["Schermata del menu a discesa della guida della console workload Factory. Nel menu a discesa viene visualizzato un nuovo pulsante per la sottoscrizione a RSS."]
+
+
+
+=== Supporto di una singola policy di autorizzazioni per ogni carico di lavoro
+
+Quando Aggiungi le credenziali AWS in workload Factory, ora puoi selezionare una singola policy di autorizzazione, in lettura o in modalità automatica, per ogni workload e gestione dello storage.
+
+image:screenshot-single-permission-policy-support.png["Schermata della sezione di configurazione delle autorizzazioni nella pagina delle credenziali in cui puoi selezionare le policy di lettura o automazione delle autorizzazioni per la gestione dello storage, i carichi di lavoro ai, i carichi di lavoro dei database e i carichi di lavoro VMware."]
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aggiungi le credenziali AWS a workload Factory"^]
