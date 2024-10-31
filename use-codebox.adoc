@@ -120,12 +120,12 @@ Puoi utilizzare l'interfaccia CLI di Amazon Web Services generata da Codebox per
 Puoi usare Terraform per implementare e gestire i file system FSX per ONTAP e altre risorse AWS.
 
 .Prima di iniziare
-* Per eseguire i comandi da è necessario un server Terraform.
+* Avrete bisogno di un sistema in cui sia installato Terraform (Windows/Mac/Linux).
 * Devi disporre delle credenziali per accedere al tuo account AWS.
 
 
 .Fasi
-. Dopo aver utilizzato l'interfaccia utente per definire l'operazione che si desidera eseguire, copiare o scaricare il codice di Terraform nella Codebox.
-. Connettersi al server.
-. Incollare il codice ed eseguirlo.
+. Dopo aver utilizzato l'interfaccia utente per definire l'operazione che si desidera eseguire, scaricare il codice Terraform dalla Codebox.
+. Copiare l'archivio degli script scaricato nel sistema in cui è installato Terraform.
+. Estrarre il file zip e seguire i passaggi del file README.MD.
 

@@ -498,9 +498,6 @@
   <block id="1b2b6bf8e053a2f8088251c3a2cc65f9" category="list-text">Dopo aver utilizzato l'interfaccia utente per definire l'operazione che si desidera eseguire, copiare l'interfaccia CLI AWS nella Codebox.</block>
   <block id="2532cd63354e6e99119077d45134b5ef" category="section-title">Utilizzare Terraform da Codebox</block>
   <block id="a5a1cedd11df4667bf63eec57c1622aa" category="paragraph">Puoi usare Terraform per implementare e gestire i file system FSX per ONTAP e altre risorse AWS.</block>
-  <block id="372393cee3187826465089e7fa3db98e" category="list-text">Per eseguire i comandi da è necessario un server Terraform.</block>
-  <block id="90d8257298c061974c94790388e32bbd" category="list-text">Dopo aver utilizzato l'interfaccia utente per definire l'operazione che si desidera eseguire, copiare o scaricare il codice di Terraform nella Codebox.</block>
-  <block id="a2417f4d64bad3dff09f2bdbce4dc0e2" category="list-text">Connettersi al server.</block>
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">4 agosto 2024</block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Supporto terraforme</block>
   <block id="1571710cf3c95e6290fc41ea04917d42" category="paragraph">Il supporto per Terraform è disponibile per Amazon FSX per l'implementazione del file system NetApp ONTAP e la creazione delle VM di storage. La guida di installazione e amministrazione contiene ora le istruzioni per l'uso di Terraform dal Codebox.</block>
@@ -518,4 +515,8 @@
   <block id="fa5f572610383fbc01cbba40c0f535e2" category="paragraph"><block ref="fa5f572610383fbc01cbba40c0f535e2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1db25aada4bff8233b24c1d7b39230cd" category="paragraph"><block ref="1db25aada4bff8233b24c1d7b39230cd" category="inline-link-macro-rx"></block></block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">1 settembre 2024</block>
+  <block id="6e9e8f336be02f99477adc019bfcd183" category="list-text">Avrete bisogno di un sistema in cui sia installato Terraform (Windows/Mac/Linux).</block>
+  <block id="613670bc7ca8a45f31728d87474749ac" category="list-text">Dopo aver utilizzato l'interfaccia utente per definire l'operazione che si desidera eseguire, scaricare il codice Terraform dalla Codebox.</block>
+  <block id="53e9887aa73e6bb1fcf6b5b002e7f175" category="list-text">Copiare l'archivio degli script scaricato nel sistema in cui è installato Terraform.</block>
+  <block id="8db9de1de3844107194be0555d5ceb7c" category="list-text">Estrarre il file zip e seguire i passaggi del file README.MD.</block>
 </blocks>
