@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: log-in.html 
 keywords: logging in, log in, sign in, signing in, user account, login with netapp, log in with netapp, sign up, create account 
-summary: 'Dopo aver effettuato l"iscrizione a workload Factory, potrai accedere in qualsiasi momento dalla console basata su web per iniziare a gestire i tuoi workload e i file system FSX per ONTAP.' 
+summary: 'Dopo aver effettuato l"iscrizione a workload Factory, puoi accedere in qualsiasi momento dalla console basata su web per iniziare a gestire i tuoi carichi di lavoro e i file system FSX per ONTAP.' 
 ---
-= Accedere a workload Factory
+= Effettua l'accesso alla fabbrica di workload BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Dopo aver effettuato l'iscrizione a workload Factory, potrai accedere in qualsiasi momento dalla console basata su web per iniziare a gestire i tuoi workload e i file system FSX per ONTAP.
+Dopo aver effettuato l'iscrizione alla BlueXP  workload Factory, puoi accedere in qualsiasi momento dalla console basata su web per iniziare a gestire i tuoi carichi di lavoro e i file system FSX per ONTAP.
 
 .A proposito di questa attività
 È possibile accedere alla console basata sul Web di workload Factory utilizzando una delle seguenti opzioni:
@@ -21,7 +21,7 @@ Dopo aver effettuato l'iscrizione a workload Factory, potrai accedere in qualsia
 
 
 .Fasi
-. Aprire un browser Web e accedere a https://console.workloads.netapp.com["Console di workload Factory"^].
+. Aprire un browser Web e accedere a https://console.workloads.netapp.com["console di fabbrica del carico di lavoro"^].
 . Nella pagina *Log in*, inserire l'indirizzo e-mail associato al login.
 . A seconda del metodo di autenticazione associato all'accesso, viene richiesto di inserire le credenziali:
 +
@@ -32,7 +32,7 @@ Dopo aver effettuato l'iscrizione a workload Factory, potrai accedere in qualsia
 
 . Selezionare *Accedi*.
 +
-Se hai effettuato l'accesso in passato, vedrai la home page di workload Factory e userai l'account predefinito.
+Se hai effettuato l'accesso in passato, vedrai la home page della fabbrica del carico di lavoro e utilizzerai l'account predefinito.
 
 +
 Se questa è la prima volta che accedi, verrai indirizzato alla pagina *account*.
@@ -45,4 +45,4 @@ Se questa è la prima volta che accedi, verrai indirizzato alla pagina *account*
 
 
 .Risultato
-Hai effettuato l'accesso e puoi iniziare a utilizzare workload Factory per gestire i file system e i workload di FSX per ONTAP.
+Ora hai effettuato l'accesso e puoi iniziare a utilizzare workload factory per gestire i file system FSX per ONTAP e i tuoi workload.

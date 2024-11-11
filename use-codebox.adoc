@@ -2,24 +2,24 @@
 sidebar: sidebar 
 permalink: use-codebox.html 
 keywords: codebox, automation, cloudformation, rest api, aws cli, permissions 
-summary: 'È possibile utilizzare Codebox per generare il codice necessario per eseguire qualsiasi operazione supportata da workload Factory. Puoi generare codice che può essere utilizzato ed eseguito utilizzando le API REST di workload Factory, l"interfaccia a riga di comando di AWS e AWS CloudFormation.' 
+summary: È possibile utilizzare Codebox per generare il codice necessario per eseguire qualsiasi operazione supportata da BlueXP  workload Factory. 
 ---
-= Utilizzare Codebox per l'automazione
+= Utilizza Codebox per l'automazione nella fabbrica di workload BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-È possibile utilizzare Codebox per generare il codice necessario per eseguire qualsiasi operazione supportata da workload Factory. Puoi generare codice che può essere utilizzato ed eseguito utilizzando le API REST di workload Factory, l'interfaccia a riga di comando di AWS e AWS CloudFormation.
+È possibile utilizzare Codebox per generare il codice necessario per eseguire qualsiasi operazione supportata da BlueXP  workload Factory. Puoi generare codice che può essere utilizzato ed eseguito utilizzando le API REST dei workload Factory, l'interfaccia a riga di comando di AWS e AWS CloudFormation.
 
-Codebox è allineato alle modalità operative di fabbrica del carico di lavoro (base, lettura e automazione) popolando i dati appropriati nel codice in base alle autorizzazioni AWS fornite nell'account di fabbrica del carico di lavoro per ogni utente. Il codice può essere utilizzato come un modello in cui è possibile inserire informazioni mancanti (ad esempio, credenziali) o personalizzare alcuni dati prima di eseguire il codice.
+Codebox è allineato alle modalità operative di fabbrica del carico di lavoro (Basic, Read e Automate) compilando i dati appropriati nel codice in base alle autorizzazioni AWS fornite nell'account di fabbrica del carico di lavoro per ciascun utente. Il codice può essere utilizzato come un modello in cui è possibile inserire informazioni mancanti (ad esempio, credenziali) o personalizzare alcuni dati prima di eseguire il codice.
 
 
 
 == Come usare Codebox
 
-Quando si immettono valori nelle procedure guidate dell'interfaccia utente di workload Factory, è possibile visualizzare l'aggiornamento dei dati in Codebox al completamento di ogni campo. Una volta completata la procedura guidata, ma prima di selezionare il pulsante *Crea* nella parte inferiore della pagina, selezionare image:button-copy-codebox.png["pulsante copia"] per copiare in Codebox per acquisire il codice necessario per creare la configurazione. Ad esempio, questa schermata della creazione di un nuovo Microsoft SQL Server mostra le voci della procedura guidata per le zone di disponibilità e VPC e le voci equivalenti in Codebox per un'implementazione di API REST.
+Quando si immettono valori nelle procedure guidate dell'interfaccia utente di fabbrica del carico di lavoro, è possibile visualizzare l'aggiornamento dei dati in Codebox mentre si completano ciascun campo. Una volta completata la procedura guidata, ma prima di selezionare il pulsante *Crea* nella parte inferiore della pagina, selezionare image:button-copy-codebox.png["pulsante copia"] per copiare in Codebox per acquisire il codice necessario per creare la configurazione. Ad esempio, questa schermata della creazione di un nuovo Microsoft SQL Server mostra le voci della procedura guidata per le zone di disponibilità e VPC e le voci equivalenti in Codebox per un'implementazione di API REST.
 
 image:screenshot-codebox-example1.png["Schermata che mostra come creare un Microsoft SQL Server nell'interfaccia utente e le voci corrispondenti per VPC e zone di disponibilità in Codebox."]
 
@@ -29,9 +29,9 @@ Con alcuni formati di codice è anche possibile selezionare il pulsante Download
 
 == Utilizzare il codice CloudFormation da Codebox
 
-Puoi copiare il codice CloudFormation generato da Codebox e quindi avviare lo stack Amazon Web Services CloudFormation nel tuo account AWS. CloudFormation eseguirà le azioni definite nell'interfaccia utente di workload Factory.
+Puoi copiare il codice CloudFormation generato da Codebox e quindi avviare lo stack Amazon Web Services CloudFormation nel tuo account AWS. CloudFormation eseguirà le azioni definite nell'interfaccia utente di fabbrica del carico di lavoro.
 
-La procedura per utilizzare il codice CLoudFormation potrebbe essere diversa a seconda che si stia distribuendo un file system FSX per ONTAP, che si creino credenziali di account o che si eseguano altre azioni workload Factory.
+I passaggi per utilizzare il codice CLoudFormation potrebbero essere diversi a seconda che si stia distribuendo un file system FSX per ONTAP, che si creino credenziali di account o che si eseguano altre azioni di fabbrica del carico di lavoro.
 
 Si noti che il codice all'interno di un file YAML generato da CloudFormation scade dopo 7 giorni per motivi di sicurezza.
 
@@ -83,14 +83,14 @@ Si noti che il codice all'interno di un file YAML generato da CloudFormation sca
 . Accedere all'account AWS in cui deve essere eseguito il codice.
 . Nella pagina creazione rapida stack, in funzionalità, selezionare *Acknowledge that AWS CloudFormation May ...*.
 . Selezionare *Crea stack*.
-. Monitora lo stato di avanzamento da AWS o da workload Factory.
+. Monitora l'avanzamento dall'AWS o dalla fabbrica dei carichi di lavoro.
 
 
 
 
 == Utilizzare il codice API REST da Codebox
 
-Puoi utilizzare le API REST di workload Factory generate da Codebox per implementare e gestire i file system FSX per ONTAP e altre risorse AWS.
+Puoi utilizzare le API REST della fabbrica dei workload generate da Codebox per implementare e gestire i file system FSX per ONTAP e altre risorse AWS.
 
 È possibile eseguire le API da qualsiasi host che supporta Curl e che dispone di connettività Internet.
 

@@ -4,10 +4,10 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Note legali
+= Note legali per la fabbrica di workload BlueXP
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]

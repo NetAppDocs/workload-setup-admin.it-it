@@ -2,16 +2,28 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
-summary: 'Scopri le novità delle funzioni di amministrazione di workload Factory: Credenziali di cloud provider, miglioramenti di Codebox e molto altro ancora.' 
+summary: 'Scopri le novità relative alle funzionalità di amministrazione di fabbrica dei workload: Credenziali dei provider di servizi cloud, miglioramenti di Codebox e molto altro ancora.' 
 ---
-= Novità
+= Novità delle funzionalità di amministrazione della fabbrica del carico di lavoro BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Scopri le novità delle funzioni di amministrazione di workload Factory: Credenziali di cloud provider, miglioramenti di Codebox e molto altro ancora.
+Scopri le novità relative alle funzionalità di amministrazione di fabbrica dei workload: Credenziali dei provider di servizi cloud, miglioramenti di Codebox e molto altro ancora.
+
+
+
+== 11 novembre 2024
+
+
+
+=== Integrazione della fabbrica del carico di lavoro nella console BlueXP 
+
+È ora possibile utilizzare workload Factory da link:https://console.bluexp.netapp.com["Console BlueXP"^]. L'esperienza della console BlueXP  offre le stesse funzionalità della console workload Factory.
+
+link:https://docs.netapp.com/workload-setup-admin/console-experiences.html["Scopri come accedere a workload Factory dalla console BlueXP "]
 
 
 
@@ -21,7 +33,7 @@ Scopri le novità delle funzioni di amministrazione di workload Factory: Credenz
 
 === Abbonamento RSS
 
-L'abbonamento RSS è disponibile sul sito link:https://console.workloads.netapp.com/["Console di workload Factory"^]. L'utilizzo di un feed RSS è un modo semplice per utilizzare e tenere conto delle modifiche apportate a BlueXP  workload Factory.
+L'abbonamento RSS è disponibile sul sito link:https://console.workloads.netapp.com/["console di fabbrica del carico di lavoro"^]. L'utilizzo di un feed RSS è un modo semplice per utilizzare e tenere conto delle modifiche apportate alla fabbrica di workload BlueXP .
 
 image:screenshot-rss-subscribe-button.png["Schermata del menu a discesa della guida della console workload Factory. Nel menu a discesa viene visualizzato un nuovo pulsante per la sottoscrizione a RSS."]
 
@@ -29,11 +41,11 @@ image:screenshot-rss-subscribe-button.png["Schermata del menu a discesa della gu
 
 === Supporto di una singola policy di autorizzazioni per ogni carico di lavoro
 
-Quando Aggiungi le credenziali AWS in workload Factory, ora puoi selezionare una singola policy di autorizzazione, in lettura o in modalità automatica, per ogni workload e gestione dello storage.
+Quando Aggiungi le credenziali AWS nella fabbrica dei workload, ora puoi selezionare una singola policy di autorizzazione, di lettura o automazione, per ogni workload e la gestione dello storage.
 
 image:screenshot-single-permission-policy-support.png["Schermata della sezione di configurazione delle autorizzazioni nella pagina delle credenziali in cui puoi selezionare le policy di lettura o automazione delle autorizzazioni per la gestione dello storage, i carichi di lavoro ai, i carichi di lavoro dei database e i carichi di lavoro VMware."]
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aggiungi le credenziali AWS a workload Factory"^]
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aggiungi le credenziali AWS alla fabbrica del workload"^]
 
 
 
@@ -53,6 +65,6 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Utiliz
 
 
 
-=== Release iniziale di workload Factory
+=== Release iniziale della fabbrica di workload BlueXP 
 
-BlueXP workload Factory per AWS è una potente piattaforma di gestione del ciclo di vita progettata per aiutarti a ottimizzare i carichi di lavoro utilizzando i file system di Amazon FSX per NetApp ONTAP. I carichi di lavoro che possono essere ottimizzati utilizzando workload Factory e FSX per ONTAP includono database, migrazioni VMware su VMware Cloud su AWS, chatbot ai e altro ancora.
+BlueXP  workload Factory è una potente piattaforma di gestione del ciclo di vita progettata per aiutarti a ottimizzare i carichi di lavoro utilizzando i file system Amazon FSX per NetApp ONTAP. I carichi di lavoro che possono essere ottimizzati utilizzando la farm di workload e FSX per ONTAP includono database, migrazioni VMware su VMware Cloud su AWS, chatbot ai e altro ancora.

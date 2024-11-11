@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: codebox-automation.html 
 keywords: codebox, automation 
-summary: 'Codebox è un co-pilota Infrastructure as Code (IAC) che aiuta gli sviluppatori e DevOps a generare il codice necessario per eseguire qualsiasi operazione supportata da workload Factory. Codebox è allineato alle modalità operative di fabbrica del carico di lavoro (base, lettura, automazione) e definisce un percorso chiaro per la preparazione all"esecuzione, oltre a fornire un catalogo di automazione per un rapido riutilizzo futuro.' 
+summary: 'Codebox è un co-pilota Infrastructure as Code (IAC) che aiuta gli sviluppatori e DevOps a generare il codice necessario per eseguire qualsiasi operazione supportata da workload Factory. La codebox è allineata alle modalità operative di fabbrica del carico di lavoro (base, lettura, automazione) e definisce un percorso chiaro per la preparazione all"esecuzione, oltre a fornire un catalogo di automazione per un rapido riutilizzo futuro.' 
 ---
 = Ulteriori informazioni sull'automazione dei codebox
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Codebox è un co-pilota Infrastructure as Code (IAC) che aiuta gli svi
 
 
 [role="lead"]
-Codebox è un co-pilota Infrastructure as Code (IAC) che aiuta gli sviluppatori e DevOps a generare il codice necessario per eseguire qualsiasi operazione supportata da workload Factory. Codebox è allineato alle modalità operative di fabbrica del carico di lavoro (base, lettura e automazione) e definisce un percorso chiaro per la preparazione all'esecuzione, oltre a fornire un catalogo di automazione per un rapido riutilizzo futuro.
+Codebox è un co-pilota Infrastructure as Code (IAC) che aiuta gli sviluppatori e DevOps a generare il codice necessario per eseguire qualsiasi operazione supportata da workload Factory. Codebox è allineato alle modalità operative di fabbrica del carico di lavoro (Basic, Read e Automate) e definisce un percorso chiaro per la preparazione all'esecuzione, oltre a fornire un catalogo di automazione per un rapido riutilizzo futuro.
 
 
 
@@ -23,7 +23,7 @@ Codebox offre due funzionalità IAC principali:
 * _Codebox Automation Catalog_ mostra tutti i job IAC salvati, consentendo di utilizzarli facilmente per un utilizzo futuro. I lavori del catalogo di automazione vengono salvati come modelli e visualizzati nel contesto delle risorse ad essi applicabili.
 
 
-Inoltre, durante la configurazione delle credenziali workload Factory, Codebox visualizza in modo dinamico le autorizzazioni AWS necessarie per creare policy IAM. Le autorizzazioni sono fornite per ogni funzionalità della workload Factory che si intende utilizzare (database, ai, FSX per ONTAP e così via) e sono personalizzate in base a se gli utenti della policy riceveranno autorizzazioni di sola lettura o autorizzazioni complete. Ti basterà copiare le autorizzazioni da Codebox e incollarle nella Console di gestione AWS, in modo che workload Factory disponga delle autorizzazioni corrette per gestire i carichi di lavoro.
+Inoltre, quando si impostano le credenziali di fabbrica del workload, Codebox visualizza dinamicamente le autorizzazioni AWS necessarie per creare policy IAM. Le autorizzazioni sono fornite per ogni funzionalità della fabbrica di workload che intendi utilizzare (database, ai, FSX per ONTAP e così via) e sono customizzate in base a se gli utenti della policy otterranno autorizzazioni di sola lettura o autorizzazioni operative complete. Ti basterà copiare le autorizzazioni da Codebox e incollarle nella Console di gestione AWS, in modo che la factory dei carichi di lavoro disponga delle autorizzazioni corrette per gestire i carichi di lavoro.
 
 
 
@@ -31,7 +31,7 @@ Inoltre, durante la configurazione delle credenziali workload Factory, Codebox v
 
 I formati di codice supportati includono:
 
-* API REST di workload Factory
+* API REST del workload di fabbrica
 * CLI AWS
 * CloudFormation AWS
 
