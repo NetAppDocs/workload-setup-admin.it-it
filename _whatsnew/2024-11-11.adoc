@@ -8,4 +8,4 @@
 
 È ora possibile utilizzare workload Factory da link:https://console.bluexp.netapp.com["Console BlueXP"^]. L'esperienza della console BlueXP  offre le stesse funzionalità della console workload Factory.
 
-link:https://docs.netapp.com/workload-setup-admin/console-experiences.html["Scopri come accedere a workload Factory dalla console BlueXP "]
+link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Scopri come accedere a workload Factory dalla console BlueXP "]
