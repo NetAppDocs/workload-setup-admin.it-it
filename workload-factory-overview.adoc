@@ -25,7 +25,7 @@ La piattaforma workload Factory offre le seguenti principali funzionalità.
 
 Storage flessibile e a basso costo:: Scopri, implementa e gestisci i file system Amazon FSX per NetApp ONTAP nel cloud. FSX per ONTAP unisce le funzionalità complete di ONTAP in un servizio gestito nativo di AWS che offre un'esperienza di cloud ibrido coerente.
 Migrazione degli ambienti vSphere on-premise in VMware Cloud su AWS:: Il Migration ADVISOR di VMware Cloud su AWS ti consente di analizzare le configurazioni delle macchine virtuali correnti negli ambienti vSphere on-premise, di generare un piano per implementare i layout di VM consigliati in VMware Cloud su AWS e di utilizzare file system Amazon FSX per NetApp ONTAP customizzati come datastore esterni.
-Ottimizzazione dell'implementazione dei database:: Implementa server, database e cloni di database Microsoft SQL, tra cui provisioning delle risorse AWS, provisioning dello storage, networking e configurazioni del sistema operativo, utilizzando configurazioni di implementazione ottimizzate, garantendo un processo di configurazione coerente e privo di errori.
+Lifecycle management del database:: Scopri i carichi di lavoro dei database e analizza i risparmi sui costi con Amazon FSX per NetApp ONTAP; sfrutta i vantaggi delle applicazioni e dello storage durante la migrazione dei database di SQL Server in FSX per lo storage ONTAP; implementa server SQL, database e cloni di database che implementano le Best practice dei vendor; utilizza un co-pilot Infrastructure as Code per automatizzare le operazioni e monitora costantemente e ottimizza le proprietà di SQL Server per migliorare performance, disponibilità, protezione ed efficienza dei costi.
 Sviluppo di chatbot ai:: Sfrutta i file system FSX per ONTAP per memorizzare le origini dei chatbot delle tue organizzazioni e i database del motore ai. Questo ti consente di incorporare i dati non strutturati della tua organizzazione in un'applicazione chatbot aziendale.
 Calcolatori del risparmio per risparmiare i costi:: Analizza le tue implementazioni attuali che utilizzano lo storage Amazon Elastic Block Store (EBS) o Elastic file System (EFS) o Amazon FSX per Windows file Server, per scoprire quanto denaro puoi risparmiare passando ad Amazon FSX per NetApp ONTAP. È inoltre possibile utilizzare la calcolatrice per eseguire uno scenario "what if" per una distribuzione futura che si sta pianificando.
 
@@ -112,11 +112,11 @@ link:codebox-automation.html["Ulteriori informazioni su Codebox"].
 
 === Calcolatori del risparmio
 
-Workload Factory fornisce un calcolatore di risparmi che consente di confrontare i costi dello storage sui file system FSX per ONTAP con Elastic Block Store (EBS), Elastic file Systems (EFS) ed FSX per Windows file Server. In base ai tuoi requisiti di storage, potresti renderti conto che FSX per i file system ONTAP è l'opzione più conveniente per te.
+Workload Factory offre calcolatori del risparmio in modo da poter confrontare i costi degli ambienti di storage o dei carichi di lavoro del database su file system FSX per ONTAP con Elastic Block Store (EBS), Elastic file Systems (EFS) ed FSX per Windows file Server. In base ai tuoi requisiti di storage, potresti renderti conto che FSX per i file system ONTAP è l'opzione più conveniente per te.
 
-I criteri confrontati tra i diversi tipi di sistemi storage includono la capacità totale richiesta e le performance totali, che includono gli IOPS richiesti e il throughput richiesto.
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html["Scopri come risparmiare per i tuoi ambienti storage"^]
+* link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Scopri come esplorare i risparmi per i carichi di lavoro del tuo database"^]
 
-https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html["Scopri come esplorare i risparmi utilizzando i calcolatori dello storage"^]
 
 
 
