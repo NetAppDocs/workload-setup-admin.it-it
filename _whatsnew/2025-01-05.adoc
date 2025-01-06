@@ -1,0 +1,11 @@
+= Supporto degli account di servizio in fabbrica con carichi di lavoro BlueXP 
+:allow-uri-read: 
+
+
+
+
+=== Supporto degli account di servizio in fabbrica con carichi di lavoro BlueXP 
+
+Gli account di servizio sono ora supportati nella fabbrica di workload BlueXP . Puoi creare account di servizio che fungano da utenti macchina che automatizzano le operazioni dell'infrastruttura.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-service-accounts.html["Creare e gestire gli account di servizio"]

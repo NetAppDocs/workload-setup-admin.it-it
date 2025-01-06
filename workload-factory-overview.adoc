@@ -28,6 +28,7 @@ Migrazione degli ambienti vSphere on-premise in VMware Cloud su AWS:: Il Migrati
 Lifecycle management del database:: Scopri i carichi di lavoro dei database e analizza i risparmi sui costi con Amazon FSX per NetApp ONTAP; sfrutta i vantaggi delle applicazioni e dello storage durante la migrazione dei database di SQL Server in FSX per lo storage ONTAP; implementa server SQL, database e cloni di database che implementano le Best practice dei vendor; utilizza un co-pilot Infrastructure as Code per automatizzare le operazioni e monitora costantemente e ottimizza le proprietà di SQL Server per migliorare performance, disponibilità, protezione ed efficienza dei costi.
 Sviluppo di chatbot ai:: Sfrutta i file system FSX per ONTAP per memorizzare le origini dei chatbot delle tue organizzazioni e i database del motore ai. Questo ti consente di incorporare i dati non strutturati della tua organizzazione in un'applicazione chatbot aziendale.
 Calcolatori del risparmio per risparmiare i costi:: Analizza le tue implementazioni attuali che utilizzano lo storage Amazon Elastic Block Store (EBS) o Elastic file System (EFS) o Amazon FSX per Windows file Server, per scoprire quanto denaro puoi risparmiare passando ad Amazon FSX per NetApp ONTAP. È inoltre possibile utilizzare la calcolatrice per eseguire uno scenario "what if" per una distribuzione futura che si sta pianificando.
+Account di servizio per promuovere l'automazione:: USA gli account di servizio per automatizzare in modo sicuro e affidabile le operazioni di fabbrica dei carichi di lavoro BlueXP . Gli account di servizio offrono un'automazione affidabile e duratura senza restrizioni per la gestione degli utenti e sono più sicuri perché forniscono solo l'accesso alle API.
 
 
 
@@ -64,12 +65,20 @@ Quando si accede a workload Factory per la prima volta, viene richiesto di crear
 
 image:screenshot-account-selection.png["Uno screenshot della procedura guidata di configurazione della fabbrica del carico di lavoro che richiede di inserire l'account della fabbrica del carico di lavoro."]
 
-Quando si crea un account, si è l'unico utente Amministratore account per tale account.
+Quando crei un account, sei il singolo utente _account admin_ per quell'account.
 
 Se la vostra organizzazione richiede una gestione aggiuntiva dell'account o dell'utente, contattateci tramite la chat in-product.
 
 
 TIP: Se si utilizza NetApp BlueXP , si appartiene già a un account perché workload Factory sfrutta gli account BlueXP .
+
+
+
+==== Account di servizio
+
+Un account di servizio agisce come "utente" che può effettuare chiamate API autorizzate alla fabbrica di workload BlueXP  per scopi di automazione. In questo modo è più semplice gestire l'automazione, poiché non è necessario creare script di automazione basati sull'account utente di una persona reale che può lasciare l'azienda in qualsiasi momento. Tutti i titolari di un account in workload Factory sono considerati amministratori degli account. Gli amministratori degli account possono creare ed eliminare più account di servizio.
+
+link:manage-service-accounts.html["Scopri come gestire gli account di servizio"].
 
 
 
