@@ -1688,6 +1688,9 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | Mostra i modelli di base disponibili in una regione | Bedrock:ListFoundationModels | Implementazione | Automatizzare 
 
 
+| Verifica dell'accesso al modello di base | Bedrock:GetFoundationModelAvailability | Implementazione | Automatizzare 
+
+
 | Ottieni regioni che supportano FSX e Bedrock durante la procedura guidata del motore di IA | ssm:GetParametersByPath | Implementazione | Automatizzare 
 
 
@@ -1782,9 +1785,6 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 
 
 | Registri:TagResource | Implementazione | Automatizzare 
-
-
-| Verifica dell'accesso al modello di base | Bedrock:GetFoundationModelAvailability | Risoluzione dei problemi | Automatizzare 
 |===
 ====
 
