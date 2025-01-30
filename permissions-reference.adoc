@@ -315,10 +315,18 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 .3+| Ottieni dettagli chiave KMS e utilizza la crittografia per FSX for ONTAP | Km: CreateGrant | Implementazione | Automatizzare 
 
 
-| Km:descrivere* | Implementazione | Automatizzare 
+| Km:descrivere* | Implementazione  a| 
+* Leggi
+* Automatizzare
 
 
-| Km: Elenco* | Implementazione | Automatizzare 
+
+
+| Km: Elenco* | Implementazione  a| 
+* Leggi
+* Automatizzare
+
+
 
 
 | Descrivi Elastic file System nel calcolatore del risparmio | Elasticfilesystem:description* | Scopri i risparmi | Leggi 
