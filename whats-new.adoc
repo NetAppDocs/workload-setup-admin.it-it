@@ -15,6 +15,12 @@ Scopri le novità relative alle funzionalità di amministrazione di fabbrica dei
 
 
 
+== 02 febbraio 2025
+
+include: _whatsnew/2025-02-02.adoc[]
+
+
+
 == 22 gennaio 2025
 
 
@@ -27,7 +33,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
-== 05 gennaio 2025
+== 5 gennaio 2025
 
 
 

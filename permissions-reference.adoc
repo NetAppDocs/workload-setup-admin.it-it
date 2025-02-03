@@ -1373,7 +1373,11 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 | Scollega il ruolo dal profilo di istanza EC2 di cui è stato eseguito il provisioning | iam:RemoveRoleFromInstanceProfile | Implementazione | Automatizzare 
 
 
-| Convalidare le autorizzazioni disponibili nel ruolo e confrontarle con le autorizzazioni richieste | iam:SimulatePrincipalPolicy | Implementazione | Automatizzare 
+| Convalidare le autorizzazioni disponibili nel ruolo e confrontarle con le autorizzazioni richieste | iam:SimulatePrincipalPolicy | Implementazione  a| 
+* Leggi
+* Automatizzare
+
+
 |===
 . L'autorizzazione è limitata alle risorse che iniziano con WLMDB.
 . "iam:CreateServiceEnumerRole" limitato da "iam:AWSServiceName": "ec2.amazonaws.com"*
@@ -2073,3 +2077,9 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 == Registro delle modifiche
 
 Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle sezioni seguenti.
+
+
+
+=== 3 febbraio 2025
+
+Il seguente permesso è ora disponibile in modalità _Read_ per i database: `iam:SimulatePrincipalPolicy`.
