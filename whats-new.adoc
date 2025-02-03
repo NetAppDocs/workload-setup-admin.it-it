@@ -17,7 +17,21 @@ Scopri le novità relative alle funzionalità di amministrazione di fabbrica dei
 
 == 02 febbraio 2025
 
-include: _whatsnew/2025-02-02.adoc[]
+
+
+=== CloudShell disponibile nella console di fabbrica del workload BlueXP 
+
+CloudShell è disponibile da qualsiasi luogo nella console della workload Factory di BlueXP . CloudShell ti consente di utilizzare le credenziali AWS e ONTAP fornite nel tuo account BlueXP  ed eseguire i comandi dell'interfaccia a riga di comando di AWS o i comandi dell'interfaccia a riga di comando di ONTAP in un ambiente simile alla shell.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["Utilizzare CloudShell"]
+
+
+
+=== Aggiornamento delle autorizzazioni per i database
+
+Il seguente permesso è ora disponibile in modalità _Read_ per i database: `iam:SimulatePrincipalPolicy`.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["Registro delle modifiche di riferimento delle autorizzazioni"]
 
 
 
