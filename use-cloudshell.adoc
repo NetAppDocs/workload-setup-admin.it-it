@@ -49,11 +49,8 @@ Puoi implementare CloudShell da qualsiasi punto della console della workload fac
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Aprire CloudShell dalla barra di navigazione superiore.
-+
-image:screenshot-select-cloudshell-icon.png["Schermata che mostra l'icona di CloudShell nella barra di navigazione superiore."]
-
-. Selezionare credenziali e regione per la sessione CloudShell, quindi selezionare la freccia per continuare.
+. Aprire CloudShell image:cloudshell-icon.png["Schermata dell'icona della shell del cloud"] dalla barra di navigazione superiore.
+. Nella finestra CloudShell, selezionare le credenziali e la regione per la sessione CloudShell, quindi selezionare la freccia per continuare.
 +
 image:screenshot-deploy-cloudshell-session.png["Schermata che mostra una nuova sessione di CloudShell."]
 
