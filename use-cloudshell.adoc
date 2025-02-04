@@ -155,9 +155,7 @@ image:screenshot-cloudshell-split-view.png["Schermata che mostra due schede Clou
 Se si chiude accidentalmente la sessione CloudShell, è possibile riaprirla.
 
 .Fase
-Seleziona l'icona CloudShell nella barra di navigazione superiore.
-
-image:screenshot-select-cloudshell-icon.png["Schermata che mostra l'icona di CloudShell nella barra di navigazione superiore."]
+Selezionare l'icona CloudShell image:cloudshell-icon.png["Schermata dell'icona della shell del cloud"]dalla barra di navigazione superiore.
 
 .Risultato
 Si aprono le ultime sessioni di CloudShell.
