@@ -1652,6 +1652,15 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | Contrassegnare le risorse create dalla creazione di stack del motore ai durante le operazioni di implementazione e ricostruzione | ec2:CreateTag | Implementazione | Automatizzare 
 
 
+.2+| Pubblicare gli eventi criptati nel backend WLmai dallo stack ai-Engine | Km:GenerateDataKey | Implementazione | Automatizzare 
+
+
+| Km:decrittografia | Implementazione | Automatizzare 
+
+
+| Per pubblicare eventi e risorse personalizzate nel backend WLmai dallo stack ai-Engine | sns: Pubblica | Implementazione | Automatizzare 
+
+
 | Elenca i VPC durante l'implementazione guidata del motore ai | ec2:DescripteVpcs | Implementazione | Automatizzare 
 
 
@@ -1706,6 +1715,9 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | Verifica dell'accesso al modello di base | Bedrock:GetFoundationModelAvailability | Implementazione | Automatizzare 
 
 
+| Verificare la necessità di creare un gruppo di log di CloudWatch durante le operazioni di distribuzione e ricostruzione | Registri:DescribeLogGroups | Implementazione | Automatizzare 
+
+
 | Ottieni regioni che supportano FSX e Bedrock durante la procedura guidata del motore di IA | ssm:GetParametersByPath | Implementazione | Automatizzare 
 
 
@@ -1715,13 +1727,10 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | Ottenere la risposta SSM dal comando inviato al motore ai | ssm:GetCommandInvocation | Implementazione | Automatizzare 
 
 
-.3+| Controllare il collegamento SSM al motore ai | ssm:SendCommand | Implementazione | Automatizzare 
+.2+| Controllare il collegamento SSM al motore ai | ssm:SendCommand | Implementazione | Automatizzare 
 
 
 | ssm:GetConnectionStatus | Implementazione | Automatizzare 
-
-
-| ssm:SendCommand | Implementazione | Automatizzare 
 
 
 .8+| Creare un profilo di istanza del motore ai durante la creazione dello stack durante le operazioni di implementazione e ricostruzione | iam: CreateRole | Implementazione | Automatizzare 
@@ -1773,9 +1782,6 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 
 
 | ssm: Parametro di PutMeter | Implementazione | Automatizzare 
-
-
-| Verificare la necessità di creare un gruppo di log di CloudWatch durante le operazioni di distribuzione e ricostruzione | Registri:DescribeLogGroups | Implementazione | Automatizzare 
 
 
 .2+| Invia i log del motore ai al gruppo di log di CloudWatch durante le operazioni di implementazione e ricostruzione | Registri:CreateLogGroup | Implementazione | Automatizzare 
@@ -1917,6 +1923,30 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 | Scopo | Azione | Dove usato | Modalità 
 
 
+| Collegare i gruppi di sicurezza e modificare le regole per i nodi sottoposti a provisioning | ec2:AuthorizeSecurityGroupIngress | Implementazione | Automatizzare 
+
+
+| Creare volumi EBS | ec2:CreateVolume | Implementazione | Automatizzare 
+
+
+| Contrassegna i valori personalizzati per le risorse FSX per NetApp ONTAP create da carichi di lavoro VMware | FSX:TagResource | Implementazione | Automatizzare 
+
+
+| Creare e convalidare il modello CloudFormation | Cloud formation: CreateStack | Implementazione | Automatizzare 
+
+
+| Gestire i tag e la sicurezza di rete sulle istanze create | ec2:CreateSecurityGroup | Implementazione | Automatizzare 
+
+
+| Avviare le istanze create | ec2:RunInstances | Implementazione | Automatizzare 
+
+
+| Ottieni dettagli sull'istanza di EC2 | ec2:DescripbeInstances | Implementazione | Automatizzare 
+
+
+| Elencare le immagini durante la creazione dello stack durante le operazioni di distribuzione e ricostruzione | ec2:DescripteImages | Implementazione | Automatizzare 
+
+
 | Scaricare i VPC nell'ambiente selezionato per completare il modulo di distribuzione | ec2:DescripteVpcs  a| 
 * Implementazione
 * Inventario
@@ -2021,13 +2051,16 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 | Automatizzare 
 
 
-.4+| Ottieni i dettagli chiave del KMS e utilizza la crittografia per Amazon FSX per NetApp ONTAP | Km: CreateGrant | Implementazione | Automatizzare 
+.5+| Ottieni i dettagli chiave del KMS e utilizza la crittografia per Amazon FSX per NetApp ONTAP | Km: CreateGrant | Implementazione | Automatizzare 
 
 
 | Km:descrivere* | Implementazione | Automatizzare 
 
 
 | Km: Elenco* | Implementazione | Automatizzare 
+
+
+| Km:decrittografia | Implementazione | Automatizzare 
 
 
 | Km:GenerateDataKey | Implementazione | Automatizzare 
