@@ -763,6 +763,9 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 
 
+| Creare endpoint VPC se non esistono per i servizi richiesti indipendentemente dalla connettività di rete pubblica sulle istanze EC2 | EC2:CreateVpcEndpoint | Implementazione | Automatizzare 
+
+
 | Ottieni tipi di istanza disponibili nella regione per i nodi di convalida (t2.micro/t3.micro) | EC2:DescribeInstanceTypeOfferings | Implementazione  a| 
 * Leggi
 * Automatizzare
@@ -810,6 +813,13 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 
 | Ottenere l'elenco degli stack di CloudFormation in esecuzione nell'ambiente per controllare il limite di quota | Cloudformation:ListStack | Implementazione  a| 
+* Leggi
+* Automatizzare
+
+
+
+
+| Controllare i limiti degli account per le risorse prima di attivare la distribuzione | Formazione del cloud:DescribeAccountLimits | Implementazione  a| 
 * Leggi
 * Automatizzare
 
@@ -948,6 +958,48 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Automatizzare
 
 
+
+
+| Verifica se l'account è registrato in AWS Compute Optimizer | Compute-Optimizer:GetEnrollmentStatus  a| 
+* Scopri i risparmi
+* Ottimizzazione
+
+| Automatizzare 
+
+
+| Aggiornare una preferenza di raccomandazione esistente in AWS Compute Optimizer per personalizzare i suggerimenti per i carichi di lavoro di SQL Server | Compute-Optimizer:RecommendationPreferences  a| 
+* Scopri i risparmi
+* Ottimizzazione
+
+| Automatizzare 
+
+
+| AWS Compute Optimizer offre le preferenze dei consigli in vigore per una determinata risorsa | Compute-Optimizer:GetEffectiveRecommendationPreferences  a| 
+* Scopri i risparmi
+* Ottimizzazione
+
+| Automatizzare 
+
+
+| Recupera consigli generati da AWS Compute Optimizer per le istanze di Amazon Elastic Compute Cloud (Amazon EC2) | Compute-Optimizer:GetEC2InstanceRecommendations  a| 
+* Scopri i risparmi
+* Ottimizzazione
+
+| Automatizzare 
+
+
+.2+| Controllare l'associazione di esempio ai gruppi di ridimensionamento automatico | Ridimensionamento automatico:DescribeAutoScalingGroups  a| 
+* Scopri i risparmi
+* Ottimizzazione
+
+| Automatizzare 
+
+
+| Ridimensionamento automatico:DescribeAutoScalingInstances  a| 
+* Scopri i risparmi
+* Ottimizzazione
+
+| Automatizzare 
 
 
 .4+| Ottieni, elenca, crea ed elimina i parametri SSM per le credenziali utente ad, FSX per ONTAP e SQL utilizzate durante l'implementazione o gestite nell'account AWS | ssm:getParameter ^1^  a| 
