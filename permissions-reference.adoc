@@ -2174,7 +2174,7 @@ Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle s
 
 === 2 marzo 2025
 
-Il seguente permesso è ora disponibile in modalità _Read_ per i database: `iam:SimulatePrincipalPolicy`.
+Il seguente permesso è ora disponibile in modalità _Read_ per i database: `iam:SimulatePrincipalPolicy`. Il seguente permesso è ora disponibile in modalità _automatizza_ per GenAI: `bedrock:GetFoundationModel`.
 
 
 
