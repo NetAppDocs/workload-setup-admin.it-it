@@ -1558,6 +1558,7 @@ I criteri IAM Genai sono disponibili solo in modalità operativa:
         "bedrock:InvokeModelWithResponseStream",
         "bedrock:InvokeModel",
         "bedrock:ListFoundationModels",
+        "bedrock:GetFoundationModel",
         "bedrock:GetFoundationModelAvailability",
         "bedrock:GetModelInvocationLoggingConfiguration"
       ],
@@ -1764,6 +1765,9 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | Mostra i modelli di base disponibili in una regione | Bedrock:ListFoundationModels | Implementazione | Automatizzare 
 
 
+| Ottieni informazioni su un modello di base | Bedrock:GetFoundationModel | Implementazione | Automatizzare 
+
+
 | Verifica dell'accesso al modello di base | Bedrock:GetFoundationModelAvailability | Implementazione | Automatizzare 
 
 
@@ -1773,7 +1777,7 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | Ottieni regioni che supportano FSX e Bedrock durante la procedura guidata del motore di IA | ssm:GetParametersByPath | Implementazione | Automatizzare 
 
 
-| Ottieni l'ultima immagine Amazon Linux per l'implementazione del motore ai durante le operazioni di implementazione e ricostruzione | ssm:GetParameters | Implementazione | Automatizzare 
+| Ottieni l'ultima immagine di Amazon Linux per l'implementazione del motore ai durante le operazioni di implementazione e ricostruzione | ssm:GetParameters | Implementazione | Automatizzare 
 
 
 | Ottenere la risposta SSM dal comando inviato al motore ai | ssm:GetCommandInvocation | Implementazione | Automatizzare 
@@ -2165,6 +2169,12 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 == Registro delle modifiche
 
 Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle sezioni seguenti.
+
+
+
+=== 2 marzo 2025
+
+Il seguente permesso è ora disponibile in modalità _Read_ per i database: `iam:SimulatePrincipalPolicy`.
 
 
 
