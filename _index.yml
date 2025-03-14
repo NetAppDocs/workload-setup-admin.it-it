@@ -37,3 +37,11 @@ indexpage:
       url: codebox-automation.html
     - title: Utilizzare Codebox per l'automazione
       url: use-codebox.html
+  - title: Blog e community
+    links:
+    - title: Community NetApp
+      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+    - title: Blog BlueXP
+      url: https://bluexp.netapp.com/blog
+    - title: Webinar sul cloud
+      url: https://bluexp.netapp.com/events
