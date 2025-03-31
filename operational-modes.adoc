@@ -24,6 +24,8 @@ Modalità di lettura:: Migliora l'esperienza della modalità di base aggiungendo
 Modalità automatica:: Rappresenta una relazione di trust completa in modo che la workload Factory venga assegnata con autorizzazioni complete. Ciò consente a workload factory di eseguire e automatizzare le operazioni in AWS per tuo conto, insieme alle credenziali assegnate che hanno le autorizzazioni necessarie per l'esecuzione.
 
 
+Ulteriori informazioni su link:https://review.docs.netapp.com/us-en/workload-setup-admin_simulation-permission-update/permissions-reference.html["Autorizzazioni per la fabbrica del carico di lavoro BlueXP "].
+
 
 
 === Funzioni della modalità operativa

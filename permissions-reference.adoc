@@ -63,6 +63,13 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
         "cloudwatch:GetMetricStatistics"
       ],
       "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
     }
   ]
 }
@@ -89,6 +96,7 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
         "kms:CreateGrant",
         "cloudwatch:PutMetricData",
         "cloudwatch:GetMetricData",
+        "iam:SimulatePrincipalPolicy",
         "cloudwatch:GetMetricStatistics"
       ],
       "Resource": "*"
@@ -407,6 +415,7 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
         "ssm:GetParametersByPath",
         "ssm:GetCommandInvocation",
         "ssm:SendCommand",
+        "ssm:GetConnectionStatus",
         "ssm:DescribePatchBaselines",
         "ssm:DescribeInstancePatchStates",
         "ssm:ListCommands",
@@ -426,6 +435,14 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
         "ssm:DeleteParameters"
       ],
       "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
+    },
+    {
+      "Sid": "IAMGroup",
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
     }
   ]
 }
@@ -1428,7 +1445,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 | Scollega il ruolo dal profilo di istanza EC2 di cui è stato eseguito il provisioning | iam:RemoveRoleFromInstanceProfile | Implementazione | Automatizzare 
 
 
-| Convalidare le autorizzazioni disponibili nel ruolo e confrontarle con le autorizzazioni richieste | iam:SimulatePrincipalPolicy | Implementazione  a| 
+| Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione  a| 
 * Leggi
 * Automatizzare
 
@@ -1507,10 +1524,10 @@ I criteri IAM Genai sono disponibili solo in modalità operativa:
       "Effect": "Allow",
       "Action": [
         "iam:CreateRole",
+        "iam:CreatePolicy",
         "iam:CreateInstanceProfile",
         "iam:AddRoleToInstanceProfile",
         "iam:PutRolePolicy",
-        "iam:SimulatePrincipalPolicy",
         "iam:GetRolePolicy",
         "iam:GetRole",
         "iam:TagRole"
@@ -1550,19 +1567,6 @@ I criteri IAM Genai sono disponibili solo in modalità operativa:
         "arn:aws:fsx:*:*:volume/*/*",
         "arn:aws:fsx:*:*:storage-virtual-machine/*/*"
       ]
-    },
-    {
-      "Sid": "BedrockGroup",
-      "Effect": "Allow",
-      "Action": [
-        "bedrock:InvokeModelWithResponseStream",
-        "bedrock:InvokeModel",
-        "bedrock:ListFoundationModels",
-        "bedrock:GetFoundationModel",
-        "bedrock:GetFoundationModelAvailability",
-        "bedrock:GetModelInvocationLoggingConfiguration"
-      ],
-      "Resource": "*"
     },
     {
       "Sid": "SSMParameterStore",
@@ -1661,7 +1665,21 @@ I criteri IAM Genai sono disponibili solo in modalità operativa:
       "Resource": "arn:aws:logs:*:*:log-group:/netapp/wlmai*:*"
     },
     {
-      "Sid": "CloudWatch2",
+      "Sid": "BedrockGroup",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModelWithResponseStream",
+        "bedrock:InvokeModel",
+        "bedrock:ListFoundationModels",
+        "bedrock:GetFoundationModelAvailability",
+        "bedrock:GetModelInvocationLoggingConfiguration",
+        "bedrock:PutModelInvocationLoggingConfiguration",
+        "bedrock:ListInferenceProfiles"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudWatchBedrock",
       "Effect": "Allow",
       "Action": [
         "logs:CreateLogGroup",
@@ -1669,6 +1687,22 @@ I criteri IAM Genai sono disponibili solo in modalità operativa:
         "logs:TagResource"
       ],
       "Resource": "arn:aws:logs:*:*:log-group:/aws/bedrock*"
+    },
+    {
+      "Sid": "BedrockLoggingAttachRole",
+      "Effect": "Allow",
+      "Action": [
+        "iam:AttachRolePolicy",
+        "iam:PassRole"
+      ],
+      "Resource": "arn:aws:iam::*:role/NetApp_AI_Bedrock*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
     }
   ]
 }
@@ -1705,19 +1739,19 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | Contrassegnare le risorse create dalla creazione di stack del motore ai durante le operazioni di implementazione e ricostruzione | ec2:CreateTag | Implementazione | Automatizzare 
 
 
-.2+| Pubblicare gli eventi criptati nel backend WLmai dallo stack ai-Engine | Km:GenerateDataKey | Implementazione | Automatizzare 
+.2+| Pubblicare gli eventi crittografati nel backend WLmai dallo stack del motore ai | Km:GenerateDataKey | Implementazione | Automatizzare 
 
 
 | Km:decrittografia | Implementazione | Automatizzare 
 
 
-| Per pubblicare eventi e risorse personalizzate nel backend WLmai dallo stack ai-Engine | sns: Pubblica | Implementazione | Automatizzare 
+| Pubblicare eventi e risorse personalizzate sul backend WLmai dallo stack ai-Engine | sns: Pubblica | Implementazione | Automatizzare 
 
 
 | Elenca i VPC durante l'implementazione guidata del motore ai | ec2:DescripteVpcs | Implementazione | Automatizzare 
 
 
-| Per elencare le subnet nella procedura guidata di implementazione del motore ai | ec2:DescripteSubnet | Implementazione | Automatizzare 
+| Elencare le subnet nella procedura guidata di implementazione del motore ai | ec2:DescripteSubnet | Implementazione | Automatizzare 
 
 
 | Ottenere tabelle di routing durante la distribuzione e la ricostruzione del motore ai | ec2:DescripteRouteTable | Implementazione | Automatizzare 
@@ -1738,7 +1772,7 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | Elenca le immagini durante la creazione dello stack del motore ai durante le operazioni di implementazione e ricostruzione | ec2:DescripteImages | Implementazione | Automatizzare 
 
 
-.2+| Per creare e aggiornare l'istanza ai e il gruppo di sicurezza dell'endpoint privato durante la creazione dello stack dell'istanza ai durante le operazioni di distribuzione e ricostruzione | ec2:RevokeSecurityGroupErgress | Implementazione | Automatizzare 
+.2+| Creare e aggiornare l'istanza ai e il gruppo di sicurezza dell'endpoint privato durante la creazione dello stack dell'istanza ai durante le operazioni di distribuzione e ricostruzione | ec2:RevokeSecurityGroupErgress | Implementazione | Automatizzare 
 
 
 | ec2:RevokeSecurityGroupIngress | Implementazione | Automatizzare 
@@ -1756,7 +1790,7 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | Eseguire una query sullo stato di registrazione di Amazon Bedrock/Amazon CloudWatch durante l'implementazione del motore ai | Bedrock:GetModelInvocationLoggingConfiguration | Implementazione | Automatizzare 
 
 
-| Per avviare una richiesta di chat a uno dei modelli di base | Bedrock:InvokeModelWithResponseStream | Implementazione | Automatizzare 
+| Avviare una richiesta di chat su uno dei modelli di base | Bedrock:InvokeModelWithResponseStream | Implementazione | Automatizzare 
 
 
 | Inizia la richiesta di chat/integrazione per i modelli di base | Bedrock:InvokeModel | Implementazione | Automatizzare 
@@ -1765,16 +1799,13 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | Mostra i modelli di base disponibili in una regione | Bedrock:ListFoundationModels | Implementazione | Automatizzare 
 
 
-| Ottieni informazioni su un modello di base | Bedrock:GetFoundationModel | Implementazione | Automatizzare 
-
-
 | Verifica dell'accesso al modello di base | Bedrock:GetFoundationModelAvailability | Implementazione | Automatizzare 
 
 
-| Verificare la necessità di creare un gruppo di log di CloudWatch durante le operazioni di distribuzione e ricostruzione | Registri:DescribeLogGroups | Implementazione | Automatizzare 
+| Verifica la necessità di creare un gruppo di log Amazon CloudWatch durante le operazioni di distribuzione e ricostruzione | Registri:DescribeLogGroups | Implementazione | Automatizzare 
 
 
-| Ottieni regioni che supportano FSX e Bedrock durante la procedura guidata del motore di IA | ssm:GetParametersByPath | Implementazione | Automatizzare 
+| Ottieni regioni che supportano FSX e Amazon Bedrock durante la procedura guidata del motore di ai | ssm:GetParametersByPath | Implementazione | Automatizzare 
 
 
 | Ottieni l'ultima immagine di Amazon Linux per l'implementazione del motore ai durante le operazioni di implementazione e ricostruzione | ssm:GetParameters | Implementazione | Automatizzare 
@@ -1813,19 +1844,19 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | iam: PassRole | Implementazione | Automatizzare 
 
 
-| Convalidare le autorizzazioni disponibili nel ruolo e confrontarle con le autorizzazioni richieste durante le operazioni di distribuzione e ricostruzione | iam:SimulatePrincipalPolicy | Implementazione | Automatizzare 
+| Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione | Automatizzare 
 
 
-| Elencare i file system FSX durante la procedura guidata "Crea knowledgebase" | fsx:DescribeVolumes | Creazione di una Knowledge base | Automatizzare 
+| Elenca file system FSX per ONTAP durante la procedura guidata "Crea knowledgebase" | fsx:DescribeVolumes | Creazione di una Knowledge base | Automatizzare 
 
 
-| Elenca i volumi del file system FSX durante la procedura guidata "Crea knowledgebase" | fsx:DescribeFileSystems | Creazione di una Knowledge base | Automatizzare 
+| Elencare FSX per i volumi del file system ONTAP durante la procedura guidata "Crea knowledgebase" | fsx:DescribeFileSystems | Creazione di una Knowledge base | Automatizzare 
 
 
-| Gestire le knowledgebase sul motore ai durante le operazioni di ricostruzione | fsx:ListTagsForResource | Risoluzione dei problemi | Automatizzare 
+| Gestire knowledge base sul motore ai durante le operazioni di ricostruzione | fsx:ListTagsForResource | Risoluzione dei problemi | Automatizzare 
 
 
-| Elencare le macchine virtuali di archiviazione del file system FSX durante la procedura guidata "Crea knowledgebase" | fsx:DescribeStorageVirtualMachines | Implementazione | Automatizzare 
+| Elenca FSX per le macchine virtuali di storage del file system ONTAP durante la procedura guidata "Crea knowledgebase" | fsx:DescribeStorageVirtualMachines | Implementazione | Automatizzare 
 
 
 | Spostare la knowledgebase in una nuova istanza | fsx:UntagResource | Risoluzione dei problemi | Automatizzare 
@@ -1840,28 +1871,43 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | ssm: Parametro di PutMeter | Implementazione | Automatizzare 
 
 
-.2+| Invia i log del motore ai al gruppo di log di CloudWatch durante le operazioni di implementazione e ricostruzione | Registri:CreateLogGroup | Implementazione | Automatizzare 
+.2+| Invia i log del motore ai al gruppo di log di Amazon CloudWatch durante le operazioni di implementazione e ricostruzione | Registri:CreateLogGroup | Implementazione | Automatizzare 
 
 
 | Registri:PutRetentionPolicy | Implementazione | Automatizzare 
 
 
-| Inviare i registri del motore ai al gruppo di log di CloudWatch | Registri:TagResource | Risoluzione dei problemi | Automatizzare 
+| Inviare i registri del motore ai al gruppo di log di Amazon CloudWatch | Registri:TagResource | Risoluzione dei problemi | Automatizzare 
 
 
-| Ottieni la risposta SSM da CloudWatch (quando la risposta è troppo lunga) | Registri:DescribeLogStreams | Risoluzione dei problemi | Automatizzare 
+| Ottieni la risposta SSM da Amazon CloudWatch (quando la risposta è troppo lunga) | Registri:DescribeLogStreams | Risoluzione dei problemi | Automatizzare 
 
 
-| Ottieni la risposta SSM da CloudWatch | Registri:GetLogEvents | Risoluzione dei problemi | Automatizzare 
+| Ottieni la risposta SSM da Amazon CloudWatch | Registri:GetLogEvents | Risoluzione dei problemi | Automatizzare 
 
 
-.3+| Creare un gruppo di log di CloudWatch per i registri Bedrock durante la reazione dello stack durante le operazioni di distribuzione e ricostruzione | Registri:CreateLogGroup | Implementazione | Automatizzare 
+.3+| Creare un gruppo di log di Amazon CloudWatch per i registri Amazon Bedrock durante la reazione dello stack durante le operazioni di distribuzione e ricostruzione | Registri:CreateLogGroup | Implementazione | Automatizzare 
 
 
 | Registri:PutRetentionPolicy | Implementazione | Automatizzare 
 
 
 | Registri:TagResource | Implementazione | Automatizzare 
+
+
+| Invia i registri delle pedine ad Amazon CloudWatch | Bedrock:PutModelInvocationLoggingConfiguration | Risoluzione dei problemi | Automatizzare 
+
+
+| Crea il ruolo che consente di inviare i registri Amazon Bedrock ad Amazon CloudWatch | iam:AttachRolePolicy | Risoluzione dei problemi | Automatizzare 
+
+
+| Crea il ruolo che consente di inviare i registri Amazon Bedrock ad Amazon CloudWatch | iam: PassRole | Risoluzione dei problemi | Automatizzare 
+
+
+| Crea il ruolo che consente di inviare i registri Amazon Bedrock ad Amazon CloudWatch | iam:createPolicy | Risoluzione dei problemi | Automatizzare 
+
+
+| Elenca profili di deduzione per il modello | Bedrock:ListInferenceProfiles | Risoluzione dei problemi | Automatizzare 
 |===
 ====
 
@@ -1882,23 +1928,35 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
 [source, json]
 ----
 {
-  "Effect": "Allow",
-  "Action": [
-    "ec2:DescribeRegions",
-    "ec2:DescribeAvailabilityZones",
-    "ec2:DescribeVpcs",
-    "ec2:DescribeSecurityGroups",
-    "ec2:DescribeSubnets",
-    "ssm:GetParametersByPath",
-    "kms:DescribeKey",
-    "kms:ListKeys",
-    "kms:ListAliases"
-  ],
-  "Resource": "*"
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeRegions",
+        "ec2:DescribeAvailabilityZones",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeSubnets",
+        "ssm:GetParametersByPath",
+        "kms:DescribeKey",
+        "kms:ListKeys",
+        "kms:ListAliases"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ----
 --
-.Modalità operativa
+.Modalità automatica
 --
 [source, json]
 ----
@@ -2132,7 +2190,7 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 | Automatizzare 
 
 
-| SimulatePrincipalPolicy è necessario per eseguire la convalida delle autorizzazioni disponibili nel ruolo e confrontarle con i dati necessari | iam:SimulatePrincipalPolicy | Implementazione | Automatizzare 
+| Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione | Automatizzare 
 
 
 .4+| L'archivio parametri SSM viene utilizzato per salvare le credenziali di Amazon FSX per NetApp ONTAP | ssm:getParameter  a| 
@@ -2169,6 +2227,31 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 == Registro delle modifiche
 
 Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle sezioni seguenti.
+
+
+
+=== 30 marzo 2025
+
+
+
+==== Aggiornamento delle autorizzazioni del carico di lavoro Genai
+
+Le seguenti autorizzazioni sono ora disponibili in _modalità automatica_ per GenAI:
+
+* `bedrock:PutModelInvocationLoggingConfiguration`
+* `iam:AttachRolePolicy`
+* `iam:PassRole`
+* `iam:createPolicy`
+* `bedrock:ListInferenceProfiles`
+
+
+Il seguente permesso è stato rimosso da _automatizza mode_ per GenAI: `Bedrock:GetFoundationModel`.
+
+
+
+==== iam:aggiornamento delle autorizzazioni di SimulatePrincipalPolicy
+
+L' `iam:SimulatePrincipalPolicy`autorizzazione fa parte di tutte le policy di autorizzazione dei workload se si attiva il controllo automatico delle autorizzazioni quando si aggiungono ulteriori credenziali di account AWS o si aggiunge una nuova funzionalità per il workload dalla console della workload Factory. L'autorizzazione simula le operazioni dei carichi di lavoro e controlla se disponi delle autorizzazioni necessarie per gli account AWS prima di implementare le risorse dalla fabbrica dei carichi di lavoro. L'attivazione di questo controllo riduce il tempo e gli sforzi necessari per eliminare le risorse da operazioni non riuscite e per aggiungere autorizzazioni mancanti.
 
 
 

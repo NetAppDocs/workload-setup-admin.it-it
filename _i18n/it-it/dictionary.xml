@@ -16,10 +16,8 @@
   <block id="d11861b4e2dfc9ac3d86245926aa2785" category="section-title">Fase 1: Selezionare le capacità del carico di lavoro e creare i criteri IAM</block>
   <block id="530d81548274a062436af51b8c3e829f" category="paragraph">In questa sezione è possibile scegliere quali tipi di funzionalità del carico di lavoro saranno gestibili come parte di queste credenziali e le autorizzazioni abilitate per ogni carico di lavoro. Per creare le policy, dovrai copiare da Codebox le autorizzazioni delle policy per ogni carico di lavoro selezionato e aggiungerle ad AWS Management Console all'interno dell'account AWS.</block>
   <block id="445f4ba50fbc8e7b285aedb4396412bb" category="inline-image-macro">Uno screenshot che mostra quali tipi di funzionalità del carico di lavoro saranno gestibili come parte delle policy in queste credenziali.</block>
-  <block id="0edc9a25423073fcc768405f6aeda88b" category="paragraph"><block ref="0edc9a25423073fcc768405f6aeda88b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c1ab1d79c6a7c98f384377942001e718" category="list-text">Nella sezione *Crea criteri*, abilitare ciascuna funzionalità del carico di lavoro che si desidera includere in queste credenziali.</block>
   <block id="3b9b789374908017040d97f81eb4008d" category="paragraph">Puoi aggiungere funzionalità in un secondo momento, quindi seleziona solo i carichi di lavoro da implementare e gestire.</block>
-  <block id="5366a51a090d4b12810a9a8050f2fec4" category="list-text">Per le funzionalità del carico di lavoro che offrono una scelta di livelli di autorizzazione (funzionamento, visualizzazione e così via), selezionare il tipo di autorizzazioni che saranno disponibili con queste credenziali.</block>
   <block id="6d45b51df5e4b4d742aed3a012be7ece" category="list-text">Nella finestra Codebox, copiare le autorizzazioni per il primo criterio IAM.</block>
   <block id="d9951e6a22fb7f7d403d017e5b8ef9c6" category="list-text">Apri un'altra finestra del browser ed effettua l'accesso al tuo account AWS in AWS Management Console.</block>
   <block id="0545945650ae73f856cfac5d203df5f5" category="list-text">Aprire il servizio IAM, quindi selezionare *Criteri* &gt; *Crea criterio*.</block>
@@ -442,7 +440,6 @@
   <block id="49836a38c5243f5726abfb5a8b95ac7b" category="doc">Rimuovi le credenziali dalla fabbrica del workload BlueXP </block>
   <block id="9369e772c26e2cdfaafe3b142d172bbe" category="paragraph">Se non hai più bisogno di un set di credenziali, puoi eliminarle da workload Factory. È possibile eliminare solo le credenziali non associate a un file system FSX per ONTAP.</block>
   <block id="d7d90d1ce8174a99f1ebf77537c7d533" category="summary">Workload Factory offre tre modalità operative che ti consentono di controllare con attenzione l'accesso tra la fabbrica del carico di lavoro e il patrimonio cloud in base alle policy IT. La modalità operativa utilizzata è determinata dal livello di autorizzazioni AWS fornito alla fabbrica dei carichi di lavoro.</block>
-  <block id="e02d9a51503bcf62267395364d4b1f92" category="paragraph">Workload Factory offre tre modalità operative che ti consentono di controllare con attenzione l'accesso tra la fabbrica del carico di lavoro e il patrimonio cloud in base alle policy IT. La modalità operativa utilizzata è determinata dal livello di autorizzazioni AWS fornito alla fabbrica dei carichi di lavoro.</block>
   <block id="fb4bff09d4eb62ced2b03ad6ae3d8be4" category="paragraph">Le modalità operative forniscono un'organizzazione logica delle funzionalità e delle funzionalità fornite dalla fabbrica dei carichi di lavoro, in relazione al livello di attendibilità assegnato. L'obiettivo principale delle modalità operative è comunicare in modo chiaro quali task possono o non possono essere eseguiti dalla fabbrica dei carichi di lavoro all'interno dell'account AWS.</block>
   <block id="85776f584c3633cbff79b95327a8fd11" category="list-text">Rappresenta una relazione zero-trust in cui non sono assegnate autorizzazioni AWS alla workload Factory. È progettato per l'esplorazione precoce della fabbrica dei carichi di lavoro e l'utilizzo delle varie procedure guidate per creare l'infrastruttura come codice (IAC) necessaria. Puoi copiare il codice e utilizzarlo in AWS inserendo manualmente le tue credenziali AWS.</block>
   <block id="e2cef0f4569c69bf6900a6cb6135eb11" category="list-text">Migliora l'esperienza della modalità di base aggiungendo autorizzazioni di sola lettura in modo che i modelli IAC siano riempiti con variabili specifiche (ad esempio, VPC, gruppi di protezione, ecc.). In questo modo puoi eseguire IAC direttamente dal tuo account AWS senza fornire autorizzazioni di modifica alla fabbrica dei workload.</block>
@@ -854,7 +851,6 @@
   <block id="a6e64d0684dcf803ad58d40684383bb9" category="cell">iam:PutRolePolicy</block>
   <block id="09ff084e5cc884cadc645fe74ab08f47" category="cell">Scollega il ruolo dal profilo di istanza EC2 di cui è stato eseguito il provisioning</block>
   <block id="b5a94c08b69b4b7f78637d9e9362ee11" category="cell">iam:RemoveRoleFromInstanceProfile</block>
-  <block id="ae7064637293927badfc083eaa1afe44" category="cell">Convalidare le autorizzazioni disponibili nel ruolo e confrontarle con le autorizzazioni richieste</block>
   <block id="19f5de89e4c667692a153296018e225f" category="cell">iam:SimulatePrincipalPolicy</block>
   <block id="291798398943ff81aecb072ccb31136f" category="list-text">L'autorizzazione è limitata alle risorse che iniziano con WLMDB.</block>
   <block id="8871e7455cbf17c8190fb2c27de4cb92" category="list-text">"iam:CreateServiceEnumerRole" limitato da "iam:AWSServiceName": "ec2.amazonaws.com"*</block>
@@ -875,7 +871,6 @@
   <block id="4f6009e4cc9f9d0249a22b9e3c5ab9f0" category="cell">Creare un gruppo di sicurezza del motore ai durante la creazione dello stack del motore ai durante le operazioni di implementazione e ricostruzione</block>
   <block id="c44890ed155f5fc1b7589d1d6c12785a" category="cell">Contrassegnare le risorse create dalla creazione di stack del motore ai durante le operazioni di implementazione e ricostruzione</block>
   <block id="071c42384a4bff95d3acc47d90766c9b" category="cell">Elenca i VPC durante l'implementazione guidata del motore ai</block>
-  <block id="4f919096830cc8f8b86b770de27e4573" category="cell">Per elencare le subnet nella procedura guidata di implementazione del motore ai</block>
   <block id="7ba2aa86177ae5f0d7e3b4e5766bad67" category="cell">Ottenere tabelle di routing durante la distribuzione e la ricostruzione del motore ai</block>
   <block id="7245f0c5139bb046010a68b69a264eca" category="cell">Elenca le coppie di chiavi durante l'implementazione guidata del motore ai</block>
   <block id="b28eb58d1a1db0c0afa78fe12cf5fb01" category="cell">Elencare i gruppi di sicurezza durante la creazione dello stack del motore ai (per trovare gruppi di sicurezza sugli endpoint privati)</block>
@@ -883,30 +878,22 @@
   <block id="f8022dadecc2f9ce9937bc1108cb6290" category="cell">Elencare le istanze per scoprire lo stato del motore ai</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="cell">Risoluzione dei problemi</block>
   <block id="66225a6c05fbef258e73728898744db8" category="cell">Elenca le immagini durante la creazione dello stack del motore ai durante le operazioni di implementazione e ricostruzione</block>
-  <block id="51af837b20896f9dfb54da2ae0062d73" category="cell">Per creare e aggiornare l'istanza ai e il gruppo di sicurezza dell'endpoint privato durante la creazione dello stack dell'istanza ai durante le operazioni di distribuzione e ricostruzione</block>
   <block id="effc62a026ed8a4a114329bdc528d625" category="cell">Esegui un motore ai durante la creazione di uno stack di formazione del cloud durante le operazioni di implementazione e ricostruzione</block>
   <block id="8db0f3adf91a39cebe582faf96db2426" category="cell">Collegare il gruppo di sicurezza e modificare le regole per il motore ai durante la creazione dello stack durante le operazioni di distribuzione e ricostruzione</block>
   <block id="70d1598e70f9b135b09469bea7b082e5" category="cell">Eseguire una query sullo stato di registrazione di Amazon Bedrock/Amazon CloudWatch durante l'implementazione del motore ai</block>
   <block id="e8a46aee8aa47b78b90b155b227afbc9" category="cell">Bedrock:GetModelInvocationLoggingConfiguration</block>
-  <block id="499f8014a8d4d99806abf03c9dd3a314" category="cell">Per avviare una richiesta di chat a uno dei modelli di base</block>
   <block id="00fe52afa6e3b9a0d389f529a2b88242" category="cell">Bedrock:InvokeModelWithResponseStream</block>
   <block id="d3514773d1692fd740afde54cdaaa7b0" category="cell">Inizia la richiesta di chat/integrazione per i modelli di base</block>
   <block id="93804e96d3f417a0088c564647dd28e9" category="cell">Bedrock:InvokeModel</block>
   <block id="65294ced72c6aa8f05b632194559e081" category="cell">Mostra i modelli di base disponibili in una regione</block>
   <block id="66613086b6208ec265a60220a21ff40a" category="cell">Bedrock:ListFoundationModels</block>
-  <block id="77771f1732da043133eab422a7e43291" category="cell">Ottieni regioni che supportano FSX e Bedrock durante la procedura guidata del motore di IA</block>
   <block id="302112cb321a929a6d9830e917817acb" category="cell">ssm:GetParameters</block>
   <block id="37cc48b6baed18a8130ec18d97544390" category="cell">Ottenere la risposta SSM dal comando inviato al motore ai</block>
   <block id="97128676550f404369a4900a6b92a6a7" category="cell">Controllare il collegamento SSM al motore ai</block>
   <block id="98c5cc885360f80a84c57ec1044622dc" category="cell">Creare un profilo di istanza del motore ai durante la creazione dello stack durante le operazioni di implementazione e ricostruzione</block>
   <block id="7f862a4b8fc22b0af5dda5c9ababa346" category="cell">iam: TagRole</block>
   <block id="f6ae0a8a1321975a6474722dcafe1322" category="cell">iam: PassRole</block>
-  <block id="8c9e5ebe3c2f413a71e0fdc004587e34" category="cell">Convalidare le autorizzazioni disponibili nel ruolo e confrontarle con le autorizzazioni richieste durante le operazioni di distribuzione e ricostruzione</block>
-  <block id="759ffbd9c30a98856442b965585a3d8b" category="cell">Elencare i file system FSX durante la procedura guidata "Crea knowledgebase"</block>
   <block id="11d11aa8dbaf1d4106e7ae01b6868bba" category="cell">Creazione di una Knowledge base</block>
-  <block id="004bee7d3b6c6b82f20b73d6e431ab0d" category="cell">Elenca i volumi del file system FSX durante la procedura guidata "Crea knowledgebase"</block>
-  <block id="8b4d32b772896acf285601d5cb629206" category="cell">Gestire le knowledgebase sul motore ai durante le operazioni di ricostruzione</block>
-  <block id="80b6c276377dba072ef8005fb1d28449" category="cell">Elencare le macchine virtuali di archiviazione del file system FSX durante la procedura guidata "Crea knowledgebase"</block>
   <block id="50ed17d5232c875f8ad42bc76592a63c" category="cell">Spostare la knowledgebase in una nuova istanza</block>
   <block id="a25a265c7f4f2cde7c7a15838d3f1021" category="cell">fsx:UntagResource</block>
   <block id="9f4a3990e86e58c629dd4042743dc489" category="cell">Gestire la knowledgebase sul motore ai durante la ricostruzione</block>
@@ -914,21 +901,14 @@
   <block id="58cce26ec46dea767f28067a2aadecbf" category="cell">Salvare i segreti SSM (token ECR, credenziali CIFS, chiavi degli account del servizio di locazione) in modo sicuro</block>
   <block id="6cdfe2c5f0e0f28290eadae29ccbb913" category="cell">ssm:getParameter</block>
   <block id="5df0bb9577b967295f5ff5c94274a01c" category="cell">ssm: Parametro di PutMeter</block>
-  <block id="75b38f707a1d195e422d6e573dc005ec" category="cell">Verificare la necessità di creare un gruppo di log di CloudWatch durante le operazioni di distribuzione e ricostruzione</block>
   <block id="99a70cb6d5b807589a0a1aa9bbcfea7d" category="cell">Registri:DescribeLogGroups</block>
-  <block id="8e31dab0a6f4117f41c0112b93f0f77d" category="cell">Invia i log del motore ai al gruppo di log di CloudWatch durante le operazioni di implementazione e ricostruzione</block>
   <block id="9c72603737d6e2074ae7fab048b5d3d1" category="cell">Registri:PutRetentionPolicy</block>
-  <block id="bece71a215bda1e5c99fabe57fe47c24" category="cell">Inviare i registri del motore ai al gruppo di log di CloudWatch</block>
-  <block id="154706d25e6c48e7a1675266f50bca88" category="cell">Ottieni la risposta SSM da CloudWatch (quando la risposta è troppo lunga)</block>
   <block id="b9f69a856f0b78c0908e042e6d0fda54" category="cell">Registri:DescribeLogStreams</block>
-  <block id="ff841e88d97bf6f5d4734b33cfac01ac" category="cell">Ottieni la risposta SSM da CloudWatch</block>
   <block id="6d952035baa97bd601f4d280f10fcc53" category="cell">Registri:GetLogEvents</block>
-  <block id="8dbffbc5258110d76ccbf445f1d44774" category="cell">Creare un gruppo di log di CloudWatch per i registri Bedrock durante la reazione dello stack durante le operazioni di distribuzione e ricostruzione</block>
   <block id="8a71d22cd00a39460a071b070099b8d6" category="cell">Verifica dell'accesso al modello di base</block>
   <block id="c812f1cb829c6d16da192b12e04d78ff" category="cell">Bedrock:GetFoundationModelAvailability</block>
   <block id="3332885fc7b64062d9405bcdf57a9334" category="section-title">Autorizzazioni per i carichi di lavoro VMware</block>
   <block id="1d33843eea5e12818124076de04b4a65" category="example-title">Criteri IAM per i carichi di lavoro VMware</block>
-  <block id="9e7d53cad3dc8e62b48821ac33e69a99" category="open-title">Modalità operativa</block>
   <block id="e87b88b1ae053b847cb60dcd1d96e6ee" category="paragraph">Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i carichi di lavoro VMware.</block>
   <block id="e0df1a71ae70fb0909b9e26f9400e56e" category="example-title">Tabella delle autorizzazioni per i carichi di lavoro VMware</block>
   <block id="f82dcfe0928b7d309053f8e9481fd1c3" category="cell">Scaricare i VPC nell'ambiente selezionato per completare il modulo di distribuzione</block>
@@ -946,7 +926,6 @@
   <block id="f40779c61ae21b6fbb5c6964620d50db" category="cell">Ottieni i dettagli chiave del KMS e utilizza la crittografia per Amazon FSX per NetApp ONTAP</block>
   <block id="5df883e5adda577f2fbed8edd98a6052" category="cell">Elencare gli argomenti SNS dei clienti e pubblicarli su SNS back-end WLMVMC e SNS dei clienti, se selezionati</block>
   <block id="51faf18a49599aa5875c9cc5ecd0c156" category="cell">Utilizzato per recuperare l'elenco più recente delle regioni AWS supportate da Amazon FSX per NetApp ONTAP</block>
-  <block id="1e40105dab96dd2107f838271dd1c482" category="cell">SimulatePrincipalPolicy è necessario per eseguire la convalida delle autorizzazioni disponibili nel ruolo e confrontarle con i dati necessari</block>
   <block id="22ebc59c28ff9c2a08d716ded9c8e998" category="cell">L'archivio parametri SSM viene utilizzato per salvare le credenziali di Amazon FSX per NetApp ONTAP</block>
   <block id="766060a05aed7395a628048f6e5d8152" category="cell">ssm:PutParameters</block>
   <block id="f5ad3adfdd57e7f67f8a97e4699177e7" category="cell">ssm: DeleteParameters</block>
@@ -1041,9 +1020,7 @@
   <block id="7413e05cafe498b54ab1b5640cc3ba82" category="paragraph">Selezionare l'icona CloudShell <block ref="22292d13795e0e4de9ba364021c92eab" category="inline-image-macro-rx" type="image"></block>dalla barra di navigazione superiore.</block>
   <block id="a5fab0062142f5ef0615c361259b0b89" category="cell">Il ruolo concesso fornisce la comunicazione tra FSX per ONTAP e altri servizi AWS</block>
   <block id="8832fb7d0699d4878c8449616cd47613" category="cell">iam:CreateServiceEnumerRole</block>
-  <block id="f018d84c71280c7c2350ecdc41af9036" category="cell">Pubblicare gli eventi criptati nel backend WLmai dallo stack ai-Engine</block>
   <block id="e3fee6f099023b5f4b39c1c744c6ea99" category="cell">Km:decrittografia</block>
-  <block id="5407beb6c8285b66530a423f5e1a1c44" category="cell">Per pubblicare eventi e risorse personalizzate nel backend WLmai dallo stack ai-Engine</block>
   <block id="85f90a8db0a64c1052007e6603c729f3" category="cell">Creare volumi EBS</block>
   <block id="9b72805c27ddeb5ac656bcddaa415cb8" category="cell">Contrassegna i valori personalizzati per le risorse FSX per NetApp ONTAP create da carichi di lavoro VMware</block>
   <block id="043622d556b2884b98fb152bcf740dcd" category="cell">Creare e convalidare il modello CloudFormation</block>
@@ -1067,8 +1044,6 @@
   <block id="bf2cca138f5e3f74f2e6b73d8e8b2452" category="paragraph">L'abbonamento RSS è disponibile sul sito <block ref="a65cf6b405017af965199f55f7b4fce1" category="inline-link-macro-rx"></block>. L'utilizzo di un feed RSS è un modo semplice per utilizzare e tenere conto delle modifiche apportate alla fabbrica di workload BlueXP .</block>
   <block id="1a88151efda7b7ae7945b1161fe70fdc" category="paragraph"><block ref="1a88151efda7b7ae7945b1161fe70fdc" category="inline-link-macro-rx"></block></block>
   <block id="cf1f4a083afa7ccb1141e827deb4cdc2" category="paragraph">È ora possibile utilizzare workload Factory da <block ref="4623dd80d89c29fbf0d2b04387a56c33" category="inline-link-macro-rx"></block>. L'esperienza della console BlueXP  offre le stesse funzionalità della console workload Factory.</block>
-  <block id="fb2b74ed81679192134e9c2c07019b42" category="cell">Ottieni informazioni su un modello di base</block>
-  <block id="1311c4cbbe5b925c15d25fe5ff7b022b" category="cell">Bedrock:GetFoundationModel</block>
   <block id="dec23cffbd0de1b8096bc26072eb0b7d" category="cell">Ottieni l'ultima immagine di Amazon Linux per l'implementazione del motore ai durante le operazioni di implementazione e ricostruzione</block>
   <block id="6928ceecf566ab44f308d64b3806a0bc" category="section-title">2 marzo 2025</block>
   <block id="d783298edb81a604dd8765a5040ef52e" category="paragraph">Il seguente permesso è ora disponibile in modalità _automatizza_ per GenAI:<block ref="1311c4cbbe5b925c15d25fe5ff7b022b" prefix=" " category="inline-code"></block>.</block>
@@ -1076,4 +1051,79 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Community NetApp</block>
   <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">Blog BlueXP</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Webinar sul cloud</block>
+  <block id="42bc8432872c22cf4fdbb156ae58a17e" category="doc">CloudShell riporta errori generati da ai per i comandi CLI di ONTAP</block>
+  <block id="3450754e7ec63bd0a961376c9928752a" category="paragraph">Quando si utilizza CloudShell, ogni volta che si invia un comando CLI di ONTAP e si verifica un errore, è possibile ottenere risposte agli errori generate dall'intelligenza artificiale che includono una descrizione del guasto, la causa del guasto e una risoluzione dettagliata.</block>
+  <block id="4ef50e373522b91f7df59d5cba69a8b7" category="section-title">iam:aggiornamento autorizzazioni SimulatePermissionPolicy</block>
+  <block id="906699741ebd9905a07af900abcfd438" category="paragraph">Ora puoi gestire<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block> il permesso dalla console workload Factory quando Aggiungi ulteriori credenziali di account AWS o Aggiungi una nuova funzionalità del workload come il workload Genai.</block>
+  <block id="c1bc5d8eeb872326cb512499f02befb5" category="paragraph"><block ref="c1bc5d8eeb872326cb512499f02befb5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f7b9069b6f855261dc3e63baeaa5531f" category="list-text">Per le funzionalità del carico di lavoro che offrono una scelta di livelli di autorizzazione (lettura o automazione), selezionare il tipo di autorizzazioni che saranno disponibili con queste credenziali.</block>
+  <block id="04c38dfa84592feebab3e30dfe4a019a" category="list-text">Facoltativo: Selezionare *Abilita controllo automatico autorizzazioni* per verificare se si dispone delle autorizzazioni necessarie per completare le operazioni del carico di lavoro. L'attivazione del segno di spunta aggiunge<block ref="23bd3e826a13b6d94db9e07f105dfed2" prefix=" " category="inline-code"></block> ai criteri di autorizzazione. Lo scopo di questa autorizzazione è solo confermare le autorizzazioni. È possibile rimuovere l'autorizzazione dopo aver aggiunto le credenziali, ma si consiglia di conservarla per evitare la creazione di risorse per operazioni parzialmente riuscite e per evitare di eliminare qualsiasi pulitura manuale delle risorse richiesta.</block>
+  <block id="c3c7c9c146408a0ee564eedba4821f52" category="list-text">Facoltativo: Selezionare *Abilita controllo automatico autorizzazioni* per verificare se si dispone delle autorizzazioni necessarie per completare le operazioni del carico di lavoro. L'attivazione del controllo aggiunge l'<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>autorizzazione ai criteri di autorizzazione. Lo scopo di questa autorizzazione è solo confermare le autorizzazioni. È possibile rimuovere l'autorizzazione dopo aver aggiunto le credenziali, ma si consiglia di conservarla per evitare la creazione di risorse per operazioni parzialmente riuscite e per evitare di eliminare qualsiasi pulitura manuale delle risorse richiesta.</block>
+  <block id="ad9001b544dade5536691ec3feee578f" category="inline-link-macro">Autorizzazioni per la fabbrica del carico di lavoro BlueXP </block>
+  <block id="4c1bf71f3b414847584faa395569aa99" category="paragraph">Ulteriori informazioni su <block ref="0ea8d4071df9710eb1c660a6314e7a7f" category="inline-link-macro-rx"></block>.</block>
+  <block id="2a358d687197b0311c68b4c8a7e35e1c" category="cell">Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS</block>
+  <block id="8c5e268f15aeebda6b5b234b3f7c7174" category="cell">Pubblicare gli eventi crittografati nel backend WLmai dallo stack del motore ai</block>
+  <block id="9b1384398d4de5545bd0dad2106d6b0d" category="cell">Pubblicare eventi e risorse personalizzate sul backend WLmai dallo stack ai-Engine</block>
+  <block id="359cacd98d9742aded751741e70dce82" category="cell">Elencare le subnet nella procedura guidata di implementazione del motore ai</block>
+  <block id="b2009fdc9170f9b13160d7da2fbab6aa" category="cell">Creare e aggiornare l'istanza ai e il gruppo di sicurezza dell'endpoint privato durante la creazione dello stack dell'istanza ai durante le operazioni di distribuzione e ricostruzione</block>
+  <block id="f0f0a4abc20f5a5e438ac1da53b231af" category="cell">Avviare una richiesta di chat su uno dei modelli di base</block>
+  <block id="ffd1e194cd59f12c42768a9effd5aa2f" category="cell">Verifica la necessità di creare un gruppo di log Amazon CloudWatch durante le operazioni di distribuzione e ricostruzione</block>
+  <block id="2887c4c92d65effaf012b7ca2f914958" category="cell">Ottieni regioni che supportano FSX e Amazon Bedrock durante la procedura guidata del motore di ai</block>
+  <block id="aaaceeee6185dfed5c284df5970707f3" category="cell">Elenca file system FSX per ONTAP durante la procedura guidata "Crea knowledgebase"</block>
+  <block id="a2e54834745704983c3bbc9eb41ed0a1" category="cell">Elencare FSX per i volumi del file system ONTAP durante la procedura guidata "Crea knowledgebase"</block>
+  <block id="2fac110cec869b1380662052556e21b4" category="cell">Gestire knowledge base sul motore ai durante le operazioni di ricostruzione</block>
+  <block id="22262aaf9e90060dfd5872961f2d20b9" category="cell">Elenca FSX per le macchine virtuali di storage del file system ONTAP durante la procedura guidata "Crea knowledgebase"</block>
+  <block id="e4276513c887d1d78315c446314f306e" category="cell">Invia i log del motore ai al gruppo di log di Amazon CloudWatch durante le operazioni di implementazione e ricostruzione</block>
+  <block id="a89bcda1bd913f5d2c92bb3afd10848c" category="cell">Inviare i registri del motore ai al gruppo di log di Amazon CloudWatch</block>
+  <block id="1ae2d90929ed009fb7cb0c3215e704ed" category="cell">Ottieni la risposta SSM da Amazon CloudWatch (quando la risposta è troppo lunga)</block>
+  <block id="58401e538d76248fba41eb3d4b00ff5b" category="cell">Ottieni la risposta SSM da Amazon CloudWatch</block>
+  <block id="79b580d74ffecaf0e2c1b9af0ac5f882" category="cell">Creare un gruppo di log di Amazon CloudWatch per i registri Amazon Bedrock durante la reazione dello stack durante le operazioni di distribuzione e ricostruzione</block>
+  <block id="4a5e33ece3615dac1032e841cde40447" category="cell">Invia i registri delle pedine ad Amazon CloudWatch</block>
+  <block id="add4bf257ce9e3b25c497de343e52632" category="cell">Bedrock:PutModelInvocationLoggingConfiguration</block>
+  <block id="60932b6084feefeacceacd749dcdedc9" category="cell">Crea il ruolo che consente di inviare i registri Amazon Bedrock ad Amazon CloudWatch</block>
+  <block id="b76a6c7392362eeb73fd252a4af062ca" category="cell">iam:AttachRolePolicy</block>
+  <block id="8de34002c35d0d4a13280a50047e76e4" category="cell">iam:createPolicy</block>
+  <block id="9f48be20e687484bbb74c66926ff62af" category="cell">Elenca profili di deduzione per il modello</block>
+  <block id="9aa5a97dfe3f7608d8ee28e7db3c4e2c" category="cell">Bedrock:ListInferenceProfiles</block>
+  <block id="db54384248c75c5896f34bcb0879b66c" category="section-title">30 marzo 2025</block>
+  <block id="68ef824f4316a8546891ab93ee11d77f" category="section-title">Aggiornamento delle autorizzazioni del carico di lavoro Genai</block>
+  <block id="f587eed9c7dc8910227d7d906f2261fd" category="paragraph">Le seguenti autorizzazioni sono ora disponibili in _modalità automatica_ per GenAI:</block>
+  <block id="8478b63212964b55320b9d61c0737e08" category="list-text"><block ref="add4bf257ce9e3b25c497de343e52632" prefix="" category="inline-code"></block></block>
+  <block id="d07fde30621d1890701e3ba8f6d492ad" category="list-text"><block ref="b76a6c7392362eeb73fd252a4af062ca" prefix="" category="inline-code"></block></block>
+  <block id="a39790181f1fd72ef9537ae34545ff02" category="list-text"><block ref="f6ae0a8a1321975a6474722dcafe1322" prefix="" category="inline-code"></block></block>
+  <block id="e1c6dba31ff47898c553f6707ccfbdb0" category="list-text"><block ref="8de34002c35d0d4a13280a50047e76e4" prefix="" category="inline-code"></block></block>
+  <block id="71d01806cd25e89067c25b4f03e9a607" category="list-text"><block ref="9aa5a97dfe3f7608d8ee28e7db3c4e2c" prefix="" category="inline-code"></block></block>
+  <block id="4d3f55c3707ec2803e7eaf6d7b978451" category="paragraph">Il seguente permesso è stato rimosso da _automatizza mode_ per GenAI:<block ref="8a44b1c8d2e06b1acd7404fbb70437cc" prefix=" " category="inline-code"></block>.</block>
+  <block id="4e1a858f8ffb4228ac62fb2a65e14e11" category="section-title">iam:aggiornamento delle autorizzazioni di SimulatePrincipalPolicy</block>
+  <block id="ebbd089f3b834616ea3613bf16e46cbf" category="paragraph">L'<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>autorizzazione fa parte di tutte le policy di autorizzazione dei workload se si attiva il controllo automatico delle autorizzazioni quando si aggiungono ulteriori credenziali di account AWS o si aggiunge una nuova funzionalità per il workload dalla console della workload Factory. L'autorizzazione simula le operazioni dei carichi di lavoro e controlla se disponi delle autorizzazioni necessarie per gli account AWS prima di implementare le risorse dalla fabbrica dei carichi di lavoro. L'attivazione di questo controllo riduce il tempo e gli sforzi necessari per eliminare le risorse da operazioni non riuscite e per aggiungere autorizzazioni mancanti.</block>
+  <block id="e81d623c1eabf7a990c647cdb9dc4de8" category="list-text">Risposte di errore generate da ai per i comandi CLI di ONTAP</block>
+  <block id="fecf8c04c92afcaa45ac22e74423f5cb" category="section-title">Comandi CloudShell</block>
+  <block id="5c9c99b1013b0e43fb1314d83cc5242b" category="paragraph">All'interno dell'interfaccia grafica di CloudShell, è possibile immettere<block ref="657f8b8da628ef83cf69101b6817150a" prefix=" " category="inline-code"></block> per visualizzare i comandi CloudShell disponibili. Dopo aver inviato il<block ref="657f8b8da628ef83cf69101b6817150a" prefix=" " category="inline-code"></block> comando, viene visualizzato il seguente riferimento.</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="list-text">Descrizione</block>
+  <block id="5a74855c30a89f18aabcae2686c1831f" category="list-text">NetApp CloudShell è un'interfaccia grafica utente integrata nella fabbrica di carichi di lavoro di BlueXP  che consente di eseguire comandi dell'interfaccia a riga di comando di AWS o dell'interfaccia a riga di comando di ONTAP in un ambiente simile a una shell. Simula le sessioni terminali nel browser, fornendo funzionalità terminali e messaggi di proxying attraverso il backend nella fabbrica del carico di lavoro. Ti consente di utilizzare le credenziali di AWS e di ONTAP fornite nel tuo account BlueXP .</block>
+  <block id="29349e534777eb74b3582eb552f6b76d" category="list-text">Comandi disponibili</block>
+  <block id="9408261c3775c6abe5ba6ef14faa8a1a" category="list-text"><block ref="01bc6f8efa4202821e95f4fdf6298b30" prefix="" category="inline-code"></block></block>
+  <block id="c6a354ad100a80a11b5358549fa08956" category="list-text"><block ref="657f8b8da628ef83cf69101b6817150a" prefix="" category="inline-code"></block></block>
+  <block id="e4a48e13b078ffed575db282e95cbf5d" category="list-text"><block ref="5696fba8dd789a13c2ceb24deaed74be" prefix="" category="inline-code"></block></block>
+  <block id="c4352d06a85db47c5f3caad2ce69d15e" category="list-text"><block ref="3b5b347787fd4fe1e38c522ff6637807" prefix="" category="inline-code"></block></block>
+  <block id="ad4e206408c1c59bfb8a057ba7857446" category="list-text">Contesto</block>
+  <block id="cb8b4c44a56d3dcbb2f832e3b29cd17d" category="list-text">Ogni sessione terminale viene eseguita in un contesto specifico: Credenziali, area e facoltativamente file system FSX per ONTAP.</block>
+  <block id="7a702884b96a08a3907a8a471abf949b" category="paragraph">Tutti i comandi AWS vengono eseguiti nel contesto fornito. I comandi AWS hanno esito positivo solo se le credenziali fornite dispongono delle autorizzazioni necessarie nell'area specificata.</block>
+  <block id="77d06b9ca965a3593dd7ce79688cc7e2" category="paragraph">È possibile specificare i comandi ONTAP con un opzionale<block ref="44e80d43b9615befaf6b19e40990e329" prefix=" " category="inline-code"></block>. Se si fornisce un<block ref="44e80d43b9615befaf6b19e40990e329" prefix=" " category="inline-code"></block> con un singolo comando ONTAP, questo ID sovrascrive l'ID nel contesto. Se la sessione terminale non dispone di un contesto ID file system FSX per ONTAP, è necessario fornire<block ref="44e80d43b9615befaf6b19e40990e329" prefix=" " category="inline-code"></block> ogni comando ONTAP.</block>
+  <block id="709adb949ea5dacc37bbc5f28d0389a8" category="paragraph">Per aggiornare specifiche di contesto diverse, procedere come segue: * Per modificare le credenziali: "Using Credits &lt;credentialId&gt;" * per modificare l'area: "Using Region &lt;regionCode&gt;" * per modificare FSX for ONTAP file system: "Using fsx &lt;fileSystemId&gt;"</block>
+  <block id="1edcef27d6d610b941bff34048672231" category="list-text">Visualizzazione degli elementi</block>
+  <block id="e42980b3c0bd52fb14aaa9988655c033" category="list-text">Per visualizzare le credenziali disponibili: "Mostra credenziali"</block>
+  <block id="78522635a5140c949c97294742094c1e" category="list-text">Per visualizzare le regioni disponibili: "Mostra regioni"</block>
+  <block id="3136fda9c147acfdf956c914baf5e65b" category="list-text">Per visualizzare la cronologia dei comandi: "Mostra cronologia"</block>
+  <block id="03df896fc71cd516fdcf44aa699c4933" category="list-text">Variabili</block>
+  <block id="fcdc44920df6ae99e908733121b1ede8" category="list-text">Di seguito sono riportati alcuni esempi di impostazione e utilizzo delle variabili. Se un valore variabile contiene spazi, è necessario impostarlo all'interno delle virgolette.</block>
+  <block id="fb6529d9f860f345fe33d504077c3098" category="list-text">Per impostare una variabile: $&lt;variable&gt; = &lt;value&gt;</block>
+  <block id="79455121e702185ae236d6d3ae86d769" category="list-text">Per utilizzare una variabile: $&lt;variable&gt;</block>
+  <block id="073561292daefe5d19eb6dc57fca2623" category="list-text">Esempio di impostazione di una variabile: $svm1 = svm123</block>
+  <block id="7ee0990c4bd93aa182fedd32047faca4" category="list-text">Esempio usando una variabile: --fsx filesystem-1 volumes show --vserver $svm1</block>
+  <block id="5dd42e8c4c677f0d9d2a7dfd5965fe45" category="list-text">Esempio di impostazione di una variabile con valore stringa $comment1 = "Un commento con spazi"</block>
+  <block id="b3c5827f54218753bb2c3338236446c2" category="list-text">Operatori</block>
+  <block id="da1654cced07f7b0be3ee4215ae83b0b" category="list-text">Gli operatori shell come pipe<block ref="b99834bc19bbad24580b3adfa04fb947" prefix=" " category="inline-code"></block>, esecuzione in background<block ref="c2249209343ab488c055da76368f04a0" prefix=" " category="inline-code"></block> e reindirizzamento<block ref="58ba3bb1a1772a74392e5e86bd2be4b7" prefix=" " category="inline-code"></block> non sono supportati. L'esecuzione del comando non riesce se si includono questi operatori.</block>
+  <block id="bc7864e70344eae19121f3e6408c5e04" category="list-text">Immettere<block ref="657f8b8da628ef83cf69101b6817150a" prefix=" " category="inline-code"></block> per visualizzare le istruzioni disponibili <block ref="0bdecf44265be755040a6284b4703b71" category="inline-xref-macro-rx"></block>o fare riferimento ai seguenti documenti di riferimento CLI per i comandi disponibili:</block>
+  <block id="34b14d4981e88ee13798aea3eecf0674" category="paragraph">Se si verifica un errore dopo aver inviato un comando CLI ONTAP, selezionare l'icona della lampadina per ottenere una breve risposta all'errore generata dall'intelligenza artificiale con una descrizione del guasto, la causa del guasto e una risoluzione dettagliata. Per ulteriori dettagli, selezionare *ulteriori informazioni*.</block>
 </blocks>
