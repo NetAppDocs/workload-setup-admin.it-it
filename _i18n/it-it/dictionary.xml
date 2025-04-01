@@ -1051,7 +1051,6 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Community NetApp</block>
   <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">Blog BlueXP</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Webinar sul cloud</block>
-  <block id="42bc8432872c22cf4fdbb156ae58a17e" category="doc">CloudShell riporta errori generati da ai per i comandi CLI di ONTAP</block>
   <block id="3450754e7ec63bd0a961376c9928752a" category="paragraph">Quando si utilizza CloudShell, ogni volta che si invia un comando CLI di ONTAP e si verifica un errore, è possibile ottenere risposte agli errori generate dall'intelligenza artificiale che includono una descrizione del guasto, la causa del guasto e una risoluzione dettagliata.</block>
   <block id="4ef50e373522b91f7df59d5cba69a8b7" category="section-title">iam:aggiornamento autorizzazioni SimulatePermissionPolicy</block>
   <block id="906699741ebd9905a07af900abcfd438" category="paragraph">Ora puoi gestire<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block> il permesso dalla console workload Factory quando Aggiungi ulteriori credenziali di account AWS o Aggiungi una nuova funzionalità del workload come il workload Genai.</block>
@@ -1126,4 +1125,5 @@
   <block id="da1654cced07f7b0be3ee4215ae83b0b" category="list-text">Gli operatori shell come pipe<block ref="b99834bc19bbad24580b3adfa04fb947" prefix=" " category="inline-code"></block>, esecuzione in background<block ref="c2249209343ab488c055da76368f04a0" prefix=" " category="inline-code"></block> e reindirizzamento<block ref="58ba3bb1a1772a74392e5e86bd2be4b7" prefix=" " category="inline-code"></block> non sono supportati. L'esecuzione del comando non riesce se si includono questi operatori.</block>
   <block id="bc7864e70344eae19121f3e6408c5e04" category="list-text">Immettere<block ref="657f8b8da628ef83cf69101b6817150a" prefix=" " category="inline-code"></block> per visualizzare le istruzioni disponibili <block ref="0bdecf44265be755040a6284b4703b71" category="inline-xref-macro-rx"></block>o fare riferimento ai seguenti documenti di riferimento CLI per i comandi disponibili:</block>
   <block id="34b14d4981e88ee13798aea3eecf0674" category="paragraph">Se si verifica un errore dopo aver inviato un comando CLI ONTAP, selezionare l'icona della lampadina per ottenere una breve risposta all'errore generata dall'intelligenza artificiale con una descrizione del guasto, la causa del guasto e una risoluzione dettagliata. Per ulteriori dettagli, selezionare *ulteriori informazioni*.</block>
+  <block id="ef74d01649997b60252254da8a1573fd" category="doc">CloudShell riporta risposte di errore generate dall'ai per i comandi CLI di ONTAP</block>
 </blocks>

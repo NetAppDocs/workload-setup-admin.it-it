@@ -19,7 +19,7 @@ Scopri le novità relative alle funzionalità di amministrazione di fabbrica dei
 
 
 
-=== CloudShell riporta errori generati da ai per i comandi CLI di ONTAP
+=== CloudShell riporta risposte di errore generate dall'ai per i comandi CLI di ONTAP
 
 Quando si utilizza CloudShell, ogni volta che si invia un comando CLI di ONTAP e si verifica un errore, è possibile ottenere risposte agli errori generate dall'intelligenza artificiale che includono una descrizione del guasto, la causa del guasto e una risoluzione dettagliata.
 
