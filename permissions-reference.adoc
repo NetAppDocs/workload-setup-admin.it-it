@@ -419,6 +419,7 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
         "ssm:DescribePatchBaselines",
         "ssm:DescribeInstancePatchStates",
         "ssm:ListCommands",
+        "ssm:DescribeInstanceInformation",
         "fsx:ListTagsForResource"
       ],
       "Resource": [
@@ -437,7 +438,6 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
       "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
     },
     {
-      "Sid": "IAMGroup",
       "Effect": "Allow",
       "Action": [
         "iam:SimulatePrincipalPolicy"
@@ -954,6 +954,9 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Automatizzare
 
 
+
+
+| Recupero dello stato di associazione SSM per un gruppo di istanze EC2 gestite (nodi SQL) | ssm:DescribeInstanceInformation | Inventario | Leggi 
 
 
 | Consultare l'elenco delle linee di base delle patch disponibili per la valutazione delle patch del sistema operativo | ssm:DescribePatchBaselines | Ottimizzazione  a| 
@@ -2227,6 +2230,12 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 == Registro delle modifiche
 
 Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle sezioni seguenti.
+
+
+
+=== 2 aprile 2025
+
+Il seguente permesso è ora disponibile in _modalità di lettura_ per i database: 'Sm:DescribeInstanceInformation'.
 
 
 
