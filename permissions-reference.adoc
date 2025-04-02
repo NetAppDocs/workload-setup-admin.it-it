@@ -2235,7 +2235,7 @@ Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle s
 
 === 2 aprile 2025
 
-Il seguente permesso è ora disponibile in _modalità di lettura_ per i database: 'Sm:DescribeInstanceInformation'.
+Il seguente permesso è ora disponibile in _modalità di lettura_ per i database: `ssm:DescribeInstanceInformation`.
 
 
 
