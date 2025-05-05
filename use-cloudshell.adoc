@@ -27,6 +27,7 @@ Le funzionalità di CloudShell includono:
 * Persistenza del contenuto dell'ultima sessione: Riaprire l'ultima sessione se la si chiude per errore
 * Preferenze impostazioni: Consente di modificare le dimensioni del carattere e il tipo di output
 * Risposte di errore generate da ai per i comandi CLI di ONTAP
+* Supporto completamento automatico: Iniziare a digitare un comando e utilizzare il tasto *Tab* per visualizzare le opzioni disponibili
 
 
 

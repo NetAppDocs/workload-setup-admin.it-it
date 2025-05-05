@@ -20,7 +20,7 @@ Per utilizzare i servizi e le funzionalità di fabbrica dei carichi di lavoro Bl
 
 == Perché utilizzare le autorizzazioni
 
-Quando fornisci autorizzazioni in lettura o automazione in modalità, la workload Factory allega una policy all'istanza con autorizzazioni per gestire risorse e processi all'interno di tale account AWS. Ciò consente a workload factory di eseguire diverse operazioni a partire dal rilevamento degli ambienti storage, fino all'implementazione di risorse AWS, come file system nella gestione dello storage o knowledge base per i workload Genai.
+Quando fornisci autorizzazioni in modalità di sola lettura o di lettura/scrittura, workload Factory allega una policy all'istanza con autorizzazioni per gestire risorse e processi all'interno di tale account AWS. Ciò consente a workload factory di eseguire diverse operazioni a partire dal rilevamento degli ambienti storage, fino all'implementazione di risorse AWS, come file system nella gestione dello storage o knowledge base per i workload Genai.
 
 Per i carichi di lavoro del database, ad esempio, quando viene concessa la fabbrica del carico di lavoro con le autorizzazioni richieste, analizza tutte le EC2 istanze di un determinato account e area e filtra tutte le macchine basate su Windows. Se AWS Systems Manager (SSM) Agent è installato e in esecuzione sull'host e la rete di System Manager è configurata correttamente, workload Factory può accedere al computer Windows e verificare se il software SQL Server è installato o meno.
 
@@ -43,7 +43,7 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
 ====
 [role="tabbed-block"]
 =====
-.Modalità di lettura
+.Modalità di sola lettura
 --
 [source, json]
 ----
@@ -75,7 +75,7 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
 }
 ----
 --
-.Modalità automatica
+.Modalità lettura/scrittura
 --
 [source, json]
 ----
@@ -133,22 +133,22 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 | Scopo | Azione | Dove usato | Modalità 
 
 
-| Crea un file system FSX per ONTAP | fsx:CreateFileSystem* | Implementazione | Automatizzare 
+| Crea un file system FSX per ONTAP | fsx:CreateFileSystem* | Implementazione | Lettura/scrittura 
 
 
-| Creare un gruppo di sicurezza per un file system FSX per ONTAP | ec2:CreateSecurityGroup | Implementazione | Automatizzare 
+| Creare un gruppo di sicurezza per un file system FSX per ONTAP | ec2:CreateSecurityGroup | Implementazione | Lettura/scrittura 
 
 
-| Aggiungere tag a un gruppo di sicurezza per un file system FSX per ONTAP | ec2:CreateTag | Implementazione | Automatizzare 
+| Aggiungere tag a un gruppo di sicurezza per un file system FSX per ONTAP | ec2:CreateTag | Implementazione | Lettura/scrittura 
 
 
-.2+| Autorizzare l'uscita e l'ingresso dei gruppi di sicurezza per un file system FSX per ONTAP | ec2:AuthorizeSecurityGroupErgress | Implementazione | Automatizzare 
+.2+| Autorizzare l'uscita e l'ingresso dei gruppi di sicurezza per un file system FSX per ONTAP | ec2:AuthorizeSecurityGroupErgress | Implementazione | Lettura/scrittura 
 
 
-| ec2:AuthorizeSecurityGroupIngress | Implementazione | Automatizzare 
+| ec2:AuthorizeSecurityGroupIngress | Implementazione | Lettura/scrittura 
 
 
-| Il ruolo concesso fornisce la comunicazione tra FSX per ONTAP e altri servizi AWS | iam:CreateServiceEnumerRole | Implementazione | Automatizzare 
+| Il ruolo concesso fornisce la comunicazione tra FSX per ONTAP e altri servizi AWS | iam:CreateServiceEnumerRole | Implementazione | Lettura/scrittura 
 
 
 .7+| Scopri come compilare il modulo di implementazione del file system FSX per ONTAP | ec2:DescripteVpcs  a| 
@@ -156,8 +156,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -167,8 +167,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -178,8 +178,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -189,8 +189,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -200,8 +200,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -211,8 +211,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -222,25 +222,25 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
-.3+| Ottieni dettagli chiave KMS e utilizza la crittografia per FSX for ONTAP | Km: CreateGrant | Implementazione | Automatizzare 
+.3+| Ottieni dettagli chiave KMS e utilizza la crittografia per FSX for ONTAP | Km: CreateGrant | Implementazione | Lettura/scrittura 
 
 
 | Km:descrivere* | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Km: Elenco* | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -250,112 +250,112 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Ottieni dettagli per EC2 istanze | ec2:DescripbeInstances | Scopri i risparmi  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
-| Descrivi Elastic file System nel calcolatore del risparmio | Elasticfilesystem:description* | Scopri i risparmi | Leggi 
+| Descrivi Elastic file System nel calcolatore del risparmio | Elasticfilesystem:description* | Scopri i risparmi | Sola lettura 
 
 
 | Elenca i tag per le risorse di FSX per ONTAP | fsx:ListTagsForResource | Inventario  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
-.2+| Gestire l'uscita e l'ingresso dei gruppi di sicurezza per un file system FSX per ONTAP | ec2:RevokeSecurityGroupIngress | Operazioni di gestione | Automatizzare 
+.2+| Gestire l'uscita e l'ingresso dei gruppi di sicurezza per un file system FSX per ONTAP | ec2:RevokeSecurityGroupIngress | Operazioni di gestione | Lettura/scrittura 
 
 
-| ec2:DeleteSecurityGroup | Operazioni di gestione | Automatizzare 
+| ec2:DeleteSecurityGroup | Operazioni di gestione | Lettura/scrittura 
 
 
-.16+| Crea, visualizza e gestisci risorse di file system FSX per ONTAP | fsx:CreateVolume* | Operazioni di gestione | Automatizzare 
+.16+| Crea, visualizza e gestisci risorse di file system FSX per ONTAP | fsx:CreateVolume* | Operazioni di gestione | Lettura/scrittura 
 
 
-| fsx:TagResource* | Operazioni di gestione | Automatizzare 
+| fsx:TagResource* | Operazioni di gestione | Lettura/scrittura 
 
 
-| fsx:CreateStorageVirtualMachine* | Operazioni di gestione | Automatizzare 
+| fsx:CreateStorageVirtualMachine* | Operazioni di gestione | Lettura/scrittura 
 
 
-| fsx:DeleteFileSystem* | Operazioni di gestione | Automatizzare 
+| fsx:DeleteFileSystem* | Operazioni di gestione | Lettura/scrittura 
 
 
-| fsx:DeleteStorageVirtualMachine* | Operazioni di gestione | Automatizzare 
+| fsx:DeleteStorageVirtualMachine* | Operazioni di gestione | Lettura/scrittura 
 
 
 | fsx:DescribeFileSystems* | Inventario  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | fsx:DescribeStorageVirtualMachines* | Inventario  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
-| fsx:UpdateFileSystem* | Operazioni di gestione | Automatizzare 
+| fsx:UpdateFileSystem* | Operazioni di gestione | Lettura/scrittura 
 
 
-| fsx:UpdateStorageVirtualMachine* | Operazioni di gestione | Automatizzare 
+| fsx:UpdateStorageVirtualMachine* | Operazioni di gestione | Lettura/scrittura 
 
 
 | fsx:DescribeVolumes* | Inventario  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
-| fsx:UpdateVolume* | Operazioni di gestione | Automatizzare 
+| fsx:UpdateVolume* | Operazioni di gestione | Lettura/scrittura 
 
 
-| fsx:DeleteVolume* | Operazioni di gestione | Automatizzare 
+| fsx:DeleteVolume* | Operazioni di gestione | Lettura/scrittura 
 
 
-| fsx:UntagResource* | Operazioni di gestione | Automatizzare 
+| fsx:UntagResource* | Operazioni di gestione | Lettura/scrittura 
 
 
 | fsx:DescribeBackups* | Operazioni di gestione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
-| fsx:CreateBackup* | Operazioni di gestione | Automatizzare 
+| fsx:CreateBackup* | Operazioni di gestione | Lettura/scrittura 
 
 
-| fsx:CreateVolumeFromBackup* | Operazioni di gestione | Automatizzare 
+| fsx:CreateVolumeFromBackup* | Operazioni di gestione | Lettura/scrittura 
 
 
-| Segnala le metriche di CloudWatch | Cloudwatch:PutMetricData | Operazioni di gestione | Automatizzare 
+| Segnala le metriche di CloudWatch | Cloudwatch:PutMetricData | Operazioni di gestione | Lettura/scrittura 
 
 
 .2+| Ottieni metriche su file system e volumi | Cloudwatch:GetMetricData | Operazioni di gestione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Cloudwatch:GetMetricStatistics | Operazioni di gestione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 |===
@@ -373,7 +373,7 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
 ====
 [role="tabbed-block"]
 =====
-.Modalità di lettura
+.Modalità di sola lettura
 --
 [source, json]
 ----
@@ -438,6 +438,15 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
       "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
     },
     {
+      "Sid": "SSMResponseCloudWatch",
+      "Effect": "Allow",
+      "Action": [
+        "logs:GetLogEvents",
+        "logs:PutRetentionPolicy"
+      ],
+      "Resource": "arn:aws:logs:*:*:log-group:netapp/wlmdb/*"
+    },
+    {
       "Effect": "Allow",
       "Action": [
         "iam:SimulatePrincipalPolicy"
@@ -448,7 +457,7 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
 }
 ----
 --
-.Modalità automatica
+.Modalità lettura/scrittura
 --
 [source, json]
 ----
@@ -607,8 +616,7 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
         "iam:GetRolePolicy",
         "iam:GetUser",
         "iam:PutRolePolicy",
-        "iam:RemoveRoleFromInstanceProfile",
-        "iam:SimulatePrincipalPolicy"
+        "iam:RemoveRoleFromInstanceProfile"
       ],
       "Resource": "*"
     },
@@ -644,6 +652,13 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
         "ssm:DeleteParameters"
       ],
       "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
     }
   ]
 }
@@ -661,20 +676,31 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 | Scopo | Azione | Dove usato | Modalità 
 
 
+| Workload Factory passa ai registri di Amazon CloudWatch per l'istanza SQL in caso di troncamento dell'output SSM. | Registri:GetLogEvents  a| 
+* Valutazione dello storage
+* Inventario
+
+ a| 
+* Sola lettura
+* Lettura/scrittura
+
+
+
+
 | Ottieni statistiche metriche per FSX per ONTAP, EBS ed FSX per Windows file Server | Cloudwatch:GetMetricStatistics  a| 
 * Inventario
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Elencare e impostare i trigger per gli eventi | sns:ListTopics | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -684,22 +710,22 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | ec2:DescripteKeyPairs | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | ec2:DescripteNetworkInterfaces | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -709,8 +735,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -720,8 +746,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Inventario
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -731,29 +757,29 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Inventario
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | ec2:DescripteSecurityGroups | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | ec2:DescripteImages | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | ec2:DescripteRegions | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -763,8 +789,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Inventario
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -774,25 +800,25 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Inventario
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
-| Creare endpoint VPC se non esistono per i servizi richiesti indipendentemente dalla connettività di rete pubblica sulle istanze EC2 | EC2:CreateVpcEndpoint | Implementazione | Automatizzare 
+| Creare endpoint VPC se non esistono per i servizi richiesti indipendentemente dalla connettività di rete pubblica sulle istanze EC2 | EC2:CreateVpcEndpoint | Implementazione | Lettura/scrittura 
 
 
 | Ottieni tipi di istanza disponibili nella regione per i nodi di convalida (t2.micro/t3.micro) | EC2:DescribeInstanceTypeOfferings | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Ottieni i dettagli snapshot di ogni volume EBS collegato per ottenere prezzi e stime di risparmio | ec2:DescripteSnapshot | Scopri i risparmi  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -802,50 +828,50 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 .3+| Ottieni i dettagli delle chiavi KMS per la crittografia del file system FSX per ONTAP | Km:ListAlias | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Km:ListKeys | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Km: DescribeKey | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Ottenere l'elenco degli stack di CloudFormation in esecuzione nell'ambiente per controllare il limite di quota | Cloudformation:ListStack | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Controllare i limiti degli account per le risorse prima di attivare la distribuzione | Formazione del cloud:DescribeAccountLimits | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Ottieni un elenco delle Active Directory gestite da AWS nella regione | ds:DescribeDirectories | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -855,8 +881,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -866,8 +892,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -878,8 +904,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Inventario
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -891,29 +917,29 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Scopri i risparmi
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | fsx:ListTagsForResource | Gestire le operazioni  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Ottieni i limiti di quota del servizio per CloudFormation e VPC | Services equotas:ListServiceQuotas | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Utilizzare la query basata su SSM per ottenere l'elenco aggiornato delle aree supportate da FSX per ONTAP | ssm:GetParametersByPath | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -925,8 +951,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Ottimizzazione
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -938,8 +964,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Ottimizzazione
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -950,8 +976,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Ottimizzazione
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -960,22 +986,22 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 
 | Consultare l'elenco delle linee di base delle patch disponibili per la valutazione delle patch del sistema operativo | ssm:DescribePatchBaselines | Ottimizzazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Ottenere lo stato di applicazione delle patch nelle istanze di Windows EC2 per la valutazione delle patch del sistema operativo | ssm:DescribeInstancePatchStates | Ottimizzazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Elenca comandi eseguiti da AWS Patch Manager su istanze EC2 per la gestione delle patch del sistema operativo | ssm:ListCommander | Ottimizzazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -984,42 +1010,42 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Scopri i risparmi
 * Ottimizzazione
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 | Aggiornare una preferenza di raccomandazione esistente in AWS Compute Optimizer per personalizzare i suggerimenti per i carichi di lavoro di SQL Server | Compute-Optimizer:RecommendationPreferences  a| 
 * Scopri i risparmi
 * Ottimizzazione
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 | AWS Compute Optimizer offre le preferenze dei consigli in vigore per una determinata risorsa | Compute-Optimizer:GetEffectiveRecommendationPreferences  a| 
 * Scopri i risparmi
 * Ottimizzazione
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 | Recupera consigli generati da AWS Compute Optimizer per le istanze di Amazon Elastic Compute Cloud (Amazon EC2) | Compute-Optimizer:GetEC2InstanceRecommendations  a| 
 * Scopri i risparmi
 * Ottimizzazione
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 .2+| Controllare l'associazione di esempio ai gruppi di ridimensionamento automatico | Ridimensionamento automatico:DescribeAutoScalingGroups  a| 
 * Scopri i risparmi
 * Ottimizzazione
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 | Ridimensionamento automatico:DescribeAutoScalingInstances  a| 
 * Scopri i risparmi
 * Ottimizzazione
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 .4+| Ottieni, elenca, crea ed elimina i parametri SSM per le credenziali utente ad, FSX per ONTAP e SQL utilizzate durante l'implementazione o gestite nell'account AWS | ssm:getParameter ^1^  a| 
@@ -1027,15 +1053,15 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Gestire le operazioni
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | ssm:GetParameters ^1^ | Gestire le operazioni  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -1045,183 +1071,183 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Gestire le operazioni
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | ssm:DeleteParameters ^1^ | Gestire le operazioni  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
-.9+| Associare le risorse di rete ai nodi SQL e ai nodi di convalida e aggiungere ulteriori IP secondari ai nodi SQL | EC2:AllocateAddress ^1^ | Implementazione | Automatizzare 
+.9+| Associare le risorse di rete ai nodi SQL e ai nodi di convalida e aggiungere ulteriori IP secondari ai nodi SQL | EC2:AllocateAddress ^1^ | Implementazione | Lettura/scrittura 
 
 
-| EC2:AllocateHosts ^1^ | Implementazione | Automatizzare 
+| EC2:AllocateHosts ^1^ | Implementazione | Lettura/scrittura 
 
 
-| EC2:AssignPrivateIpAddresses ^1^ | Implementazione | Automatizzare 
+| EC2:AssignPrivateIpAddresses ^1^ | Implementazione | Lettura/scrittura 
 
 
-| EC2:AssociateAddress ^1^ | Implementazione | Automatizzare 
+| EC2:AssociateAddress ^1^ | Implementazione | Lettura/scrittura 
 
 
-| EC2:AssociateRouteTable ^1^ | Implementazione | Automatizzare 
+| EC2:AssociateRouteTable ^1^ | Implementazione | Lettura/scrittura 
 
 
-| EC2:AssociateSubnetCidrBlock ^1^ | Implementazione | Automatizzare 
+| EC2:AssociateSubnetCidrBlock ^1^ | Implementazione | Lettura/scrittura 
 
 
-| EC2:AssociateVpcCidrBlock ^1^ | Implementazione | Automatizzare 
+| EC2:AssociateVpcCidrBlock ^1^ | Implementazione | Lettura/scrittura 
 
 
-| EC2:AttachInternetGateway ^1^ | Implementazione | Automatizzare 
+| EC2:AttachInternetGateway ^1^ | Implementazione | Lettura/scrittura 
 
 
-| EC2:AttachNetworkInterface ^1^ | Implementazione | Automatizzare 
+| EC2:AttachNetworkInterface ^1^ | Implementazione | Lettura/scrittura 
 
 
-| Possibilità di collegare i volumi EBS richiesti ai nodi SQL per l'implementazione | ec2:AttachVolume | Implementazione | Automatizzare 
+| Possibilità di collegare i volumi EBS richiesti ai nodi SQL per l'implementazione | ec2:AttachVolume | Implementazione | Lettura/scrittura 
 
 
-.2+| Collegare i gruppi di sicurezza e modificare le regole per i nodi sottoposti a provisioning | ec2:AuthorizeSecurityGroupErgress | Implementazione | Automatizzare 
+.2+| Collegare i gruppi di sicurezza e modificare le regole per i nodi sottoposti a provisioning | ec2:AuthorizeSecurityGroupErgress | Implementazione | Lettura/scrittura 
 
 
-| ec2:AuthorizeSecurityGroupIngress | Implementazione | Automatizzare 
+| ec2:AuthorizeSecurityGroupIngress | Implementazione | Lettura/scrittura 
 
 
-| Creare volumi EBS richiesti ai nodi SQL per l'implementazione | ec2:CreateVolume | Implementazione | Automatizzare 
+| Creare volumi EBS richiesti ai nodi SQL per l'implementazione | ec2:CreateVolume | Implementazione | Lettura/scrittura 
 
 
-.11+| Rimuovere i nodi di convalida temporanea creati di tipo t2.micro e per il rollback o il nuovo tentativo di nodi SQL EC2 non riusciti | ec2:DeleteNetworkInterface | Implementazione | Automatizzare 
+.11+| Rimuovere i nodi di convalida temporanea creati di tipo t2.micro e per il rollback o il nuovo tentativo di nodi SQL EC2 non riusciti | ec2:DeleteNetworkInterface | Implementazione | Lettura/scrittura 
 
 
-| ec2:DeleteSecurityGroup | Implementazione | Automatizzare 
+| ec2:DeleteSecurityGroup | Implementazione | Lettura/scrittura 
 
 
-| ec2:DeleteMags | Implementazione | Automatizzare 
+| ec2:DeleteMags | Implementazione | Lettura/scrittura 
 
 
-| ec2:DeleteVolume | Implementazione | Automatizzare 
+| ec2:DeleteVolume | Implementazione | Lettura/scrittura 
 
 
-| EC2:DetachNetworkInterface | Implementazione | Automatizzare 
+| EC2:DetachNetworkInterface | Implementazione | Lettura/scrittura 
 
 
-| ec2:DetachVolume | Implementazione | Automatizzare 
+| ec2:DetachVolume | Implementazione | Lettura/scrittura 
 
 
-| EC2:DisassociateAddress | Implementazione | Automatizzare 
+| EC2:DisassociateAddress | Implementazione | Lettura/scrittura 
 
 
-| ec2:DisassociateIamInstanceProfile | Implementazione | Automatizzare 
+| ec2:DisassociateIamInstanceProfile | Implementazione | Lettura/scrittura 
 
 
-| EC2:DisassociateRouteTable | Implementazione | Automatizzare 
+| EC2:DisassociateRouteTable | Implementazione | Lettura/scrittura 
 
 
-| EC2:DisassociateSubnetCidrBlock | Implementazione | Automatizzare 
+| EC2:DisassociateSubnetCidrBlock | Implementazione | Lettura/scrittura 
 
 
-| EC2:DisassociateVpcCidrBlock | Implementazione | Automatizzare 
+| EC2:DisassociateVpcCidrBlock | Implementazione | Lettura/scrittura 
 
 
-.7+| Modificare gli attributi per le istanze SQL create. Applicabile solo ai nomi che iniziano con WLMDB. | ec2:ModifyInstanceAttribute | Implementazione | Automatizzare 
+.7+| Modificare gli attributi per le istanze SQL create. Applicabile solo ai nomi che iniziano con WLMDB. | ec2:ModifyInstanceAttribute | Implementazione | Lettura/scrittura 
 
 
-| EC2:ModifyInstancePlacement | Implementazione | Automatizzare 
+| EC2:ModifyInstancePlacement | Implementazione | Lettura/scrittura 
 
 
-| ec2:ModifyNetworkInterfaceAttribute | Implementazione | Automatizzare 
+| ec2:ModifyNetworkInterfaceAttribute | Implementazione | Lettura/scrittura 
 
 
-| EC2:ModifySubnetAttribute | Implementazione | Automatizzare 
+| EC2:ModifySubnetAttribute | Implementazione | Lettura/scrittura 
 
 
-| ec2:ModifyVolume | Implementazione | Automatizzare 
+| ec2:ModifyVolume | Implementazione | Lettura/scrittura 
 
 
-| ec2:ModifyVolumeAttribute | Implementazione | Automatizzare 
+| ec2:ModifyVolumeAttribute | Implementazione | Lettura/scrittura 
 
 
-| EC2:ModifyVpcAttribute | Implementazione | Automatizzare 
+| EC2:ModifyVpcAttribute | Implementazione | Lettura/scrittura 
 
 
-.5+| Dissociare e distruggere le istanze di convalida | EC2:ReleaseAddress | Implementazione | Automatizzare 
+.5+| Dissociare e distruggere le istanze di convalida | EC2:ReleaseAddress | Implementazione | Lettura/scrittura 
 
 
-| EC2:ReplaceRoute | Implementazione | Automatizzare 
+| EC2:ReplaceRoute | Implementazione | Lettura/scrittura 
 
 
-| EC2:ReplaceRouteTableAssociation | Implementazione | Automatizzare 
+| EC2:ReplaceRouteTableAssociation | Implementazione | Lettura/scrittura 
 
 
-| ec2:RevokeSecurityGroupErgress | Implementazione | Automatizzare 
+| ec2:RevokeSecurityGroupErgress | Implementazione | Lettura/scrittura 
 
 
-| ec2:RevokeSecurityGroupIngress | Implementazione | Automatizzare 
+| ec2:RevokeSecurityGroupIngress | Implementazione | Lettura/scrittura 
 
 
-| Avviare le istanze distribuite | ec2:StartInstances | Implementazione | Automatizzare 
+| Avviare le istanze distribuite | ec2:StartInstances | Implementazione | Lettura/scrittura 
 
 
-| Arrestare le istanze distribuite | ec2:StopInstances | Implementazione | Automatizzare 
+| Arrestare le istanze distribuite | ec2:StopInstances | Implementazione | Lettura/scrittura 
 
 
 | Contrassegnare i valori personalizzati per le risorse Amazon FSX per NetApp ONTAP create da WLMDB per ottenere i dettagli di fatturazione durante la gestione delle risorse | fsx:TagResource ^1^  a| 
 * Implementazione
 * Gestire le operazioni
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
-.5+| Creare e convalidare il modello CloudFormation per la distribuzione | Cloud formation: CreateStack | Implementazione | Automatizzare 
+.5+| Creare e convalidare il modello CloudFormation per la distribuzione | Cloud formation: CreateStack | Implementazione | Lettura/scrittura 
 
 
-| Cloudformation:DescripbeStackEvents | Implementazione | Automatizzare 
+| Cloudformation:DescripbeStackEvents | Implementazione | Lettura/scrittura 
 
 
-| Cloudformation:DescripteStack | Implementazione | Automatizzare 
+| Cloudformation:DescripteStack | Implementazione | Lettura/scrittura 
 
 
-| Cloudformation:ListStack | Implementazione | Automatizzare 
+| Cloudformation:ListStack | Implementazione | Lettura/scrittura 
 
 
-| Cloud formation:ValidateTemplate | Implementazione | Automatizzare 
+| Cloud formation:ValidateTemplate | Implementazione | Lettura/scrittura 
 
 
-| Recuperare le metriche per la raccomandazione sull'ottimizzazione del calcolo | Cloudwatch:GetMetricStatistics | Scopri i risparmi | Automatizzare 
+| Recuperare le metriche per la raccomandazione sull'ottimizzazione del calcolo | Cloudwatch:GetMetricStatistics | Scopri i risparmi | Lettura/scrittura 
 
 
-| Recuperare le directory disponibili nella regione | ds:DescribeDirectories | Implementazione | Automatizzare 
+| Recuperare le directory disponibili nella regione | ds:DescribeDirectories | Implementazione | Lettura/scrittura 
 
 
-.2+| Aggiungere le regole per il gruppo di protezione collegato alle istanze EC2 con provisioning | ec2:AuthorizeSecurityGroupErgress | Implementazione | Automatizzare 
+.2+| Aggiungere le regole per il gruppo di protezione collegato alle istanze EC2 con provisioning | ec2:AuthorizeSecurityGroupErgress | Implementazione | Lettura/scrittura 
 
 
-| ec2:AuthorizeSecurityGroupIngress | Implementazione | Automatizzare 
+| ec2:AuthorizeSecurityGroupIngress | Implementazione | Lettura/scrittura 
 
 
-.2+| Creare modelli di stack nidificati per riprovare e ripristinare | EC2:CreateLaunchTemplate | Implementazione | Automatizzare 
+.2+| Creare modelli di stack nidificati per riprovare e ripristinare | EC2:CreateLaunchTemplate | Implementazione | Lettura/scrittura 
 
 
-| EC2:CreateLaunchTemplateVersion | Implementazione | Automatizzare 
+| EC2:CreateLaunchTemplateVersion | Implementazione | Lettura/scrittura 
 
 
-.3+| Gestire i tag e la sicurezza di rete sulle istanze create | ec2:CreateNetworkInterface | Implementazione | Automatizzare 
+.3+| Gestire i tag e la sicurezza di rete sulle istanze create | ec2:CreateNetworkInterface | Implementazione | Lettura/scrittura 
 
 
-| ec2:CreateSecurityGroup | Implementazione | Automatizzare 
+| ec2:CreateSecurityGroup | Implementazione | Lettura/scrittura 
 
 
-| ec2:CreateTag | Implementazione | Automatizzare 
+| ec2:CreateTag | Implementazione | Lettura/scrittura 
 
 
-| Eliminare il gruppo di protezione creato temporaneamente per i nodi di convalida | ec2:DeleteSecurityGroup | Implementazione | Automatizzare 
+| Eliminare il gruppo di protezione creato temporaneamente per i nodi di convalida | ec2:DeleteSecurityGroup | Implementazione | Lettura/scrittura 
 
 
 .2+| Ottieni dettagli delle istanze per il provisioning | EC2:descrivere*  a| 
@@ -1229,7 +1255,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Inventario
 * Scopri i risparmi
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 | EC2:Get*  a| 
@@ -1237,29 +1263,29 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Inventario
 * Scopri i risparmi
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
-| Avviare le istanze create | ec2:RunInstances | Implementazione | Automatizzare 
+| Avviare le istanze create | ec2:RunInstances | Implementazione | Lettura/scrittura 
 
 
 | Systems Manager utilizza l'endpoint del servizio di consegna dei messaggi AWS per le operazioni API | ec2messages:*  a| 
 * Distribuzione *inventario
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
-.3+| Crea risorse FSX per ONTAP richieste per il provisioning. Per i sistemi esistenti di FSX per ONTAP, viene creata una nuova SVM per ospitare i volumi SQL. | fsx:CreateFileSystem | Implementazione | Automatizzare 
+.3+| Crea risorse FSX per ONTAP richieste per il provisioning. Per i sistemi esistenti di FSX per ONTAP, viene creata una nuova SVM per ospitare i volumi SQL. | fsx:CreateFileSystem | Implementazione | Lettura/scrittura 
 
 
-| fsx:CreateStorageVirtualMachine | Implementazione | Automatizzare 
+| fsx:CreateStorageVirtualMachine | Implementazione | Lettura/scrittura 
 
 
 | fsx:CreateVolume  a| 
 * Implementazione
 * Gestire le operazioni
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 .2+| Ottieni i dettagli di FSX per ONTAP | fsx:descrivere*  a| 
@@ -1268,88 +1294,88 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Gestire le operazioni
 * Scopri i risparmi
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 | fsx: Elenco*  a| 
 * Implementazione
 * Inventario
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
-| Ridimensiona FSX per il file system ONTAP per rimediare allo spazio a disposizione del file system | fsx:Updatefilesystem | Ottimizzazione | Automatizzare 
+| Ridimensiona FSX per il file system ONTAP per rimediare allo spazio a disposizione del file system | fsx:Updatefilesystem | Ottimizzazione | Lettura/scrittura 
 
 
-| Ridimensionamento dei volumi per correggere le dimensioni dei dischi di log e TempDB | fsx:UpdateVolume | Ottimizzazione | Automatizzare 
+| Ridimensionamento dei volumi per correggere le dimensioni dei dischi di log e TempDB | fsx:UpdateVolume | Ottimizzazione | Lettura/scrittura 
 
 
-.4+| Ottieni dettagli chiave KMS e utilizza la crittografia per FSX for ONTAP | Km: CreateGrant | Implementazione | Automatizzare 
+.4+| Ottieni dettagli chiave KMS e utilizza la crittografia per FSX for ONTAP | Km: CreateGrant | Implementazione | Lettura/scrittura 
 
 
-| Km:descrivere* | Implementazione | Automatizzare 
+| Km:descrivere* | Implementazione | Lettura/scrittura 
 
 
-| Km: Elenco* | Implementazione | Automatizzare 
+| Km: Elenco* | Implementazione | Lettura/scrittura 
 
 
-| Km:GenerateDataKey | Implementazione | Automatizzare 
+| Km:GenerateDataKey | Implementazione | Lettura/scrittura 
 
 
-.7+| Creare log di CloudWatch per la convalida e il provisioning di script in esecuzione su istanze EC2 | Registri:CreateLogGroup | Implementazione | Automatizzare 
+.7+| Creare log di CloudWatch per la convalida e il provisioning di script in esecuzione su istanze EC2 | Registri:CreateLogGroup | Implementazione | Lettura/scrittura 
 
 
-| Registri:CreateLogStream | Implementazione | Automatizzare 
+| Registri:CreateLogStream | Implementazione | Lettura/scrittura 
 
 
-| Registri:DescribeLog* | Implementazione | Automatizzare 
+| Registri:DescribeLog* | Implementazione | Lettura/scrittura 
 
 
-| Registri:GetLog* | Implementazione | Automatizzare 
+| Registri:GetLog* | Implementazione | Lettura/scrittura 
 
 
-| Registri:ListLogDeliveries | Implementazione | Automatizzare 
+| Registri:ListLogDeliveries | Implementazione | Lettura/scrittura 
 
 
 | Registri:PutLogEvents  a| 
 * Implementazione
 * Gestire le operazioni
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
-| Registri:TagResource | Implementazione | Automatizzare 
+| Registri:TagResource | Implementazione | Lettura/scrittura 
 
 
-| Creare segreti in un account utente per le credenziali fornite per SQL, dominio e FSX per ONTAP | Services equotas:ListServiceQuotas | Implementazione | Automatizzare 
+| Creare segreti in un account utente per le credenziali fornite per SQL, dominio e FSX per ONTAP | Services equotas:ListServiceQuotas | Implementazione | Lettura/scrittura 
 
 
-.2+| Elencare gli argomenti SNS dei clienti e pubblicarli su SNS back-end WLMDB e SNS dei clienti, se selezionati | sns:ListTopics | Implementazione | Automatizzare 
+.2+| Elencare gli argomenti SNS dei clienti e pubblicarli su SNS back-end WLMDB e SNS dei clienti, se selezionati | sns:ListTopics | Implementazione | Lettura/scrittura 
 
 
-| sns: Pubblica | Implementazione | Automatizzare 
+| sns: Pubblica | Implementazione | Lettura/scrittura 
 
 
-.11+| Autorizzazioni SSM richieste per eseguire lo script di rilevamento sulle istanze SQL sottoposte a provisioning e per recuperare l'elenco più recente delle regioni AWS supportate da FSX per ONTAP. | ssm:descrivere* | Implementazione | Automatizzare 
+.11+| Autorizzazioni SSM richieste per eseguire lo script di rilevamento sulle istanze SQL sottoposte a provisioning e per recuperare l'elenco più recente delle regioni AWS supportate da FSX per ONTAP. | ssm:descrivere* | Implementazione | Lettura/scrittura 
 
 
 | ssm:Get*  a| 
 * Implementazione
 * Gestire le operazioni
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
-| ssm:elenco* | Implementazione | Automatizzare 
+| ssm:elenco* | Implementazione | Lettura/scrittura 
 
 
-| ssm: PutComplianceItems | Implementazione | Automatizzare 
+| ssm: PutComplianceItems | Implementazione | Lettura/scrittura 
 
 
-| ssm:PutConfigurePackageResult | Implementazione | Automatizzare 
+| ssm:PutConfigurePackageResult | Implementazione | Lettura/scrittura 
 
 
-| ssm:PutInventory | Implementazione | Automatizzare 
+| ssm:PutInventory | Implementazione | Lettura/scrittura 
 
 
 | ssm:SendCommand  a| 
@@ -1357,16 +1383,16 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Inventario
 * Gestire le operazioni
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
-| ssm:UpdateAssociationStatus | Implementazione | Automatizzare 
+| ssm:UpdateAssociationStatus | Implementazione | Lettura/scrittura 
 
 
-| ssm:UpdateInstanceAssociationStatus | Implementazione | Automatizzare 
+| ssm:UpdateInstanceAssociationStatus | Implementazione | Lettura/scrittura 
 
 
-| ssm:UpdateInstanceInformation | Implementazione | Automatizzare 
+| ssm:UpdateInstanceInformation | Implementazione | Lettura/scrittura 
 
 
 | smmessages:*  a| 
@@ -1374,7 +1400,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Inventario
 * Gestire le operazioni
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 .4+| Salva credenziali per FSX per ONTAP, Active Directory e utente SQL (solo per l'autenticazione utente SQL) | ssm:getParameter ^1^  a| 
@@ -1382,75 +1408,75 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Gestire le operazioni
 * Inventario
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 | ssm:GetParameters ^1^  a| 
 * Implementazione
 * Inventario
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 | ssm:PutParameter ^1^  a| 
 * Implementazione
 * Gestire le operazioni
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 | ssm:DeleteParameters ^1^  a| 
 * Implementazione
 * Gestire le operazioni
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
-| Segnala lo stack CloudFormation in caso di successo o errore. | Formazione del cloud:SignalResource ^1^ | Implementazione | Automatizzare 
+| Segnala lo stack CloudFormation in caso di successo o errore. | Formazione del cloud:SignalResource ^1^ | Implementazione | Lettura/scrittura 
 
 
-| Aggiungere il ruolo EC2 creato da modello al profilo di istanza di EC2 per consentire agli script di EC2 di accedere alle risorse necessarie per la distribuzione. | iam:AddRoleToInstanceProfile | Implementazione | Automatizzare 
+| Aggiungere il ruolo EC2 creato da modello al profilo di istanza di EC2 per consentire agli script di EC2 di accedere alle risorse necessarie per la distribuzione. | iam:AddRoleToInstanceProfile | Implementazione | Lettura/scrittura 
 
 
-| Creare un profilo di istanza per EC2 e allegare il ruolo EC2 creato. | iam:CreateInstanceProfile | Implementazione | Automatizzare 
+| Creare un profilo di istanza per EC2 e allegare il ruolo EC2 creato. | iam:CreateInstanceProfile | Implementazione | Lettura/scrittura 
 
 
-| Creare un ruolo EC2 tramite il modello con le autorizzazioni elencate di seguito | iam: CreateRole | Implementazione | Automatizzare 
+| Creare un ruolo EC2 tramite il modello con le autorizzazioni elencate di seguito | iam: CreateRole | Implementazione | Lettura/scrittura 
 
 
-| Creare un ruolo collegato al servizio EC2 | iam:CreateServiceEnumerRole ^2^ | Implementazione | Automatizzare 
+| Creare un ruolo collegato al servizio EC2 | iam:CreateServiceEnumerRole ^2^ | Implementazione | Lettura/scrittura 
 
 
-| Eliminare il profilo di istanza creato durante la distribuzione specificamente per i nodi di convalida | iam:DeleteInstanceProfile | Implementazione | Automatizzare 
+| Eliminare il profilo di istanza creato durante la distribuzione specificamente per i nodi di convalida | iam:DeleteInstanceProfile | Implementazione | Lettura/scrittura 
 
 
-.5+| Ottieni i dettagli del ruolo e della policy per determinare eventuali lacune nelle autorizzazioni e convalidare per la distribuzione | iam:GetPolicy | Implementazione | Automatizzare 
+.5+| Ottieni i dettagli del ruolo e della policy per determinare eventuali lacune nelle autorizzazioni e convalidare per la distribuzione | iam:GetPolicy | Implementazione | Lettura/scrittura 
 
 
-| iam:GetPolicyVersion | Implementazione | Automatizzare 
+| iam:GetPolicyVersion | Implementazione | Lettura/scrittura 
 
 
-| iam: GetRole | Implementazione | Automatizzare 
+| iam: GetRole | Implementazione | Lettura/scrittura 
 
 
-| iam:GetRolePolicy | Implementazione | Automatizzare 
+| iam:GetRolePolicy | Implementazione | Lettura/scrittura 
 
 
-| iam:GetUser | Implementazione | Automatizzare 
+| iam:GetUser | Implementazione | Lettura/scrittura 
 
 
-| Passare il ruolo creato all'istanza EC2 | iam:PassRole ^3^ | Implementazione | Automatizzare 
+| Passare il ruolo creato all'istanza EC2 | iam:PassRole ^3^ | Implementazione | Lettura/scrittura 
 
 
-| Aggiungere policy con autorizzazioni richieste al ruolo EC2 creato | iam:PutRolePolicy | Implementazione | Automatizzare 
+| Aggiungere policy con autorizzazioni richieste al ruolo EC2 creato | iam:PutRolePolicy | Implementazione | Lettura/scrittura 
 
 
-| Scollega il ruolo dal profilo di istanza EC2 di cui è stato eseguito il provisioning | iam:RemoveRoleFromInstanceProfile | Implementazione | Automatizzare 
+| Scollega il ruolo dal profilo di istanza EC2 di cui è stato eseguito il provisioning | iam:RemoveRoleFromInstanceProfile | Implementazione | Lettura/scrittura 
 
 
 | Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 |===
@@ -1466,7 +1492,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 I criteri IAM per i carichi di lavoro VMware forniscono le autorizzazioni necessarie per la workload Factory per VMware per gestire le risorse e i processi all'interno dell'ambiente di cloud pubblico in base alla modalità operativa in cui operi.
 
-I criteri IAM Genai sono disponibili solo in modalità operativa:
+I criteri IAM Genai sono disponibili solo in modalità lettura/scrittura:
 
 .Policy IAM per i carichi di lavoro Genai
 [%collapsible]
@@ -1527,7 +1553,6 @@ I criteri IAM Genai sono disponibili solo in modalità operativa:
       "Effect": "Allow",
       "Action": [
         "iam:CreateRole",
-        "iam:CreatePolicy",
         "iam:CreateInstanceProfile",
         "iam:AddRoleToInstanceProfile",
         "iam:PutRolePolicy",
@@ -1701,6 +1726,22 @@ I criteri IAM Genai sono disponibili solo in modalità operativa:
       "Resource": "arn:aws:iam::*:role/NetApp_AI_Bedrock*"
     },
     {
+      "Sid": "BedrockLoggingIamOperations",
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreatePolicy"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "QBusiness",
+      "Effect": "Allow",
+      "Action": [
+        "qbusiness:ListApplications"
+      ],
+      "Resource": "*"
+    },
+    {
       "Effect": "Allow",
       "Action": [
         "iam:SimulatePrincipalPolicy"
@@ -1721,196 +1762,202 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | Scopo | Azione | Dove usato | Modalità 
 
 
-| Crea uno stack di formazione cloud per un motore ai durante le operazioni di implementazione e ricostruzione | Cloud formation: CreateStack | Implementazione | Automatizzare 
+| Crea uno stack di formazione cloud per un motore ai durante le operazioni di implementazione e ricostruzione | Cloud formation: CreateStack | Implementazione | Lettura/scrittura 
 
 
-| Creare lo stack di formazione del cloud del motore ai | Cloudformation:DescripteStack | Implementazione | Automatizzare 
+| Creare lo stack di formazione del cloud del motore ai | Cloudformation:DescripteStack | Implementazione | Lettura/scrittura 
 
 
-| Elencare le regioni per la procedura guidata di implementazione del motore ai | ec2:DescripteRegions | Implementazione | Automatizzare 
+| Elencare le regioni per la procedura guidata di implementazione del motore ai | ec2:DescripteRegions | Implementazione | Lettura/scrittura 
 
 
-| Visualizzare le etichette del motore ai | ec2:DescripteTag | Implementazione | Automatizzare 
+| Visualizzare le etichette del motore ai | ec2:DescripteTag | Implementazione | Lettura/scrittura 
 
 
-| Elenca gli endpoint VPC prima della creazione dello stack del motore ai | EC2:CreateVpcEndpoint | Implementazione | Automatizzare 
+| Elenca gli endpoint VPC prima della creazione dello stack del motore ai | EC2:CreateVpcEndpoint | Implementazione | Lettura/scrittura 
 
 
-| Creare un gruppo di sicurezza del motore ai durante la creazione dello stack del motore ai durante le operazioni di implementazione e ricostruzione | ec2:CreateSecurityGroup | Implementazione | Automatizzare 
+| Creare un gruppo di sicurezza del motore ai durante la creazione dello stack del motore ai durante le operazioni di implementazione e ricostruzione | ec2:CreateSecurityGroup | Implementazione | Lettura/scrittura 
 
 
-| Contrassegnare le risorse create dalla creazione di stack del motore ai durante le operazioni di implementazione e ricostruzione | ec2:CreateTag | Implementazione | Automatizzare 
+| Contrassegnare le risorse create dalla creazione di stack del motore ai durante le operazioni di implementazione e ricostruzione | ec2:CreateTag | Implementazione | Lettura/scrittura 
 
 
-.2+| Pubblicare gli eventi crittografati nel backend WLmai dallo stack del motore ai | Km:GenerateDataKey | Implementazione | Automatizzare 
+.2+| Pubblicare gli eventi crittografati nel backend WLmai dallo stack del motore ai | Km:GenerateDataKey | Implementazione | Lettura/scrittura 
 
 
-| Km:decrittografia | Implementazione | Automatizzare 
+| Km:decrittografia | Implementazione | Lettura/scrittura 
 
 
-| Pubblicare eventi e risorse personalizzate sul backend WLmai dallo stack ai-Engine | sns: Pubblica | Implementazione | Automatizzare 
+| Pubblicare eventi e risorse personalizzate sul backend WLmai dallo stack ai-Engine | sns: Pubblica | Implementazione | Lettura/scrittura 
 
 
-| Elenca i VPC durante l'implementazione guidata del motore ai | ec2:DescripteVpcs | Implementazione | Automatizzare 
+| Elenca i VPC durante l'implementazione guidata del motore ai | ec2:DescripteVpcs | Implementazione | Lettura/scrittura 
 
 
-| Elencare le subnet nella procedura guidata di implementazione del motore ai | ec2:DescripteSubnet | Implementazione | Automatizzare 
+| Elencare le subnet nella procedura guidata di implementazione del motore ai | ec2:DescripteSubnet | Implementazione | Lettura/scrittura 
 
 
-| Ottenere tabelle di routing durante la distribuzione e la ricostruzione del motore ai | ec2:DescripteRouteTable | Implementazione | Automatizzare 
+| Ottenere tabelle di routing durante la distribuzione e la ricostruzione del motore ai | ec2:DescripteRouteTable | Implementazione | Lettura/scrittura 
 
 
-| Elenca le coppie di chiavi durante l'implementazione guidata del motore ai | ec2:DescripteKeyPairs | Implementazione | Automatizzare 
+| Elenca le coppie di chiavi durante l'implementazione guidata del motore ai | ec2:DescripteKeyPairs | Implementazione | Lettura/scrittura 
 
 
-| Elencare i gruppi di sicurezza durante la creazione dello stack del motore ai (per trovare gruppi di sicurezza sugli endpoint privati) | ec2:DescripteSecurityGroups | Implementazione | Automatizzare 
+| Elencare i gruppi di sicurezza durante la creazione dello stack del motore ai (per trovare gruppi di sicurezza sugli endpoint privati) | ec2:DescripteSecurityGroups | Implementazione | Lettura/scrittura 
 
 
-| Ottieni endpoint VPC per determinare se crearne uno durante l'implementazione del motore ai | ec2:DescripteVpcEndpoint | Implementazione | Automatizzare 
+| Ottieni endpoint VPC per determinare se crearne uno durante l'implementazione del motore ai | ec2:DescripteVpcEndpoint | Implementazione | Lettura/scrittura 
 
 
-| Elencare le istanze per scoprire lo stato del motore ai | ec2:DescripbeInstances | Risoluzione dei problemi | Automatizzare 
+| Elencare le applicazioni aziendali Amazon Q | Qbusiness:ListApplications | Implementazione | Lettura/scrittura 
 
 
-| Elenca le immagini durante la creazione dello stack del motore ai durante le operazioni di implementazione e ricostruzione | ec2:DescripteImages | Implementazione | Automatizzare 
+| Elencare le istanze per scoprire lo stato del motore ai | ec2:DescripbeInstances | Risoluzione dei problemi | Lettura/scrittura 
 
 
-.2+| Creare e aggiornare l'istanza ai e il gruppo di sicurezza dell'endpoint privato durante la creazione dello stack dell'istanza ai durante le operazioni di distribuzione e ricostruzione | ec2:RevokeSecurityGroupErgress | Implementazione | Automatizzare 
+| Elenca le immagini durante la creazione dello stack del motore ai durante le operazioni di implementazione e ricostruzione | ec2:DescripteImages | Implementazione | Lettura/scrittura 
 
 
-| ec2:RevokeSecurityGroupIngress | Implementazione | Automatizzare 
+.2+| Creare e aggiornare l'istanza ai e il gruppo di sicurezza dell'endpoint privato durante la creazione dello stack dell'istanza ai durante le operazioni di distribuzione e ricostruzione | ec2:RevokeSecurityGroupErgress | Implementazione | Lettura/scrittura 
 
 
-| Esegui un motore ai durante la creazione di uno stack di formazione del cloud durante le operazioni di implementazione e ricostruzione | ec2:RunInstances | Implementazione | Automatizzare 
+| ec2:RevokeSecurityGroupIngress | Implementazione | Lettura/scrittura 
 
 
-.2+| Collegare il gruppo di sicurezza e modificare le regole per il motore ai durante la creazione dello stack durante le operazioni di distribuzione e ricostruzione | ec2:AuthorizeSecurityGroupErgress | Implementazione | Automatizzare 
+| Esegui un motore ai durante la creazione di uno stack di formazione del cloud durante le operazioni di implementazione e ricostruzione | ec2:RunInstances | Implementazione | Lettura/scrittura 
 
 
-| ec2:AuthorizeSecurityGroupIngress | Implementazione | Automatizzare 
+.2+| Collegare il gruppo di sicurezza e modificare le regole per il motore ai durante la creazione dello stack durante le operazioni di distribuzione e ricostruzione | ec2:AuthorizeSecurityGroupErgress | Implementazione | Lettura/scrittura 
 
 
-| Eseguire una query sullo stato di registrazione di Amazon Bedrock/Amazon CloudWatch durante l'implementazione del motore ai | Bedrock:GetModelInvocationLoggingConfiguration | Implementazione | Automatizzare 
+| ec2:AuthorizeSecurityGroupIngress | Implementazione | Lettura/scrittura 
 
 
-| Avviare una richiesta di chat su uno dei modelli di base | Bedrock:InvokeModelWithResponseStream | Implementazione | Automatizzare 
+| Eseguire una query sullo stato di registrazione di Amazon Bedrock/Amazon CloudWatch durante l'implementazione del motore ai | Bedrock:GetModelInvocationLoggingConfiguration | Implementazione | Lettura/scrittura 
 
 
-| Inizia la richiesta di chat/integrazione per i modelli di base | Bedrock:InvokeModel | Implementazione | Automatizzare 
+| Avviare una richiesta di chat su uno dei modelli di base | Bedrock:InvokeModelWithResponseStream | Implementazione | Lettura/scrittura 
 
 
-| Mostra i modelli di base disponibili in una regione | Bedrock:ListFoundationModels | Implementazione | Automatizzare 
+| Inizia la richiesta di chat/integrazione per i modelli di base | Bedrock:InvokeModel | Implementazione | Lettura/scrittura 
 
 
-| Verifica dell'accesso al modello di base | Bedrock:GetFoundationModelAvailability | Implementazione | Automatizzare 
+| Mostra i modelli di base disponibili in una regione | Bedrock:ListFoundationModels | Implementazione | Lettura/scrittura 
 
 
-| Verifica la necessità di creare un gruppo di log Amazon CloudWatch durante le operazioni di distribuzione e ricostruzione | Registri:DescribeLogGroups | Implementazione | Automatizzare 
+| Ottieni informazioni su un modello di base | Bedrock:GetFoundationModel | Implementazione | Lettura/scrittura 
 
 
-| Ottieni regioni che supportano FSX e Amazon Bedrock durante la procedura guidata del motore di ai | ssm:GetParametersByPath | Implementazione | Automatizzare 
+| Verifica dell'accesso al modello di base | Bedrock:GetFoundationModelAvailability | Implementazione | Lettura/scrittura 
 
 
-| Ottieni l'ultima immagine di Amazon Linux per l'implementazione del motore ai durante le operazioni di implementazione e ricostruzione | ssm:GetParameters | Implementazione | Automatizzare 
+| Verifica la necessità di creare un gruppo di log Amazon CloudWatch durante le operazioni di distribuzione e ricostruzione | Registri:DescribeLogGroups | Implementazione | Lettura/scrittura 
 
 
-| Ottenere la risposta SSM dal comando inviato al motore ai | ssm:GetCommandInvocation | Implementazione | Automatizzare 
+| Ottieni regioni che supportano FSX e Amazon Bedrock durante la procedura guidata del motore di ai | ssm:GetParametersByPath | Implementazione | Lettura/scrittura 
 
 
-.2+| Controllare il collegamento SSM al motore ai | ssm:SendCommand | Implementazione | Automatizzare 
+| Ottieni l'ultima immagine di Amazon Linux per l'implementazione del motore ai durante le operazioni di implementazione e ricostruzione | ssm:GetParameters | Implementazione | Lettura/scrittura 
 
 
-| ssm:GetConnectionStatus | Implementazione | Automatizzare 
+| Ottenere la risposta SSM dal comando inviato al motore ai | ssm:GetCommandInvocation | Implementazione | Lettura/scrittura 
 
 
-.8+| Creare un profilo di istanza del motore ai durante la creazione dello stack durante le operazioni di implementazione e ricostruzione | iam: CreateRole | Implementazione | Automatizzare 
+.2+| Controllare il collegamento SSM al motore ai | ssm:SendCommand | Implementazione | Lettura/scrittura 
 
 
-| iam:CreateInstanceProfile | Implementazione | Automatizzare 
+| ssm:GetConnectionStatus | Implementazione | Lettura/scrittura 
 
 
-| iam:AddRoleToInstanceProfile | Implementazione | Automatizzare 
+.8+| Creare un profilo di istanza del motore ai durante la creazione dello stack durante le operazioni di implementazione e ricostruzione | iam: CreateRole | Implementazione | Lettura/scrittura 
 
 
-| iam:PutRolePolicy | Implementazione | Automatizzare 
+| iam:CreateInstanceProfile | Implementazione | Lettura/scrittura 
 
 
-| iam:GetRolePolicy | Implementazione | Automatizzare 
+| iam:AddRoleToInstanceProfile | Implementazione | Lettura/scrittura 
 
 
-| iam: GetRole | Implementazione | Automatizzare 
+| iam:PutRolePolicy | Implementazione | Lettura/scrittura 
 
 
-| iam: TagRole | Implementazione | Automatizzare 
+| iam:GetRolePolicy | Implementazione | Lettura/scrittura 
 
 
-| iam: PassRole | Implementazione | Automatizzare 
+| iam: GetRole | Implementazione | Lettura/scrittura 
 
 
-| Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione | Automatizzare 
+| iam: TagRole | Implementazione | Lettura/scrittura 
 
 
-| Elenca file system FSX per ONTAP durante la procedura guidata "Crea knowledgebase" | fsx:DescribeVolumes | Creazione di una Knowledge base | Automatizzare 
+| iam: PassRole | Implementazione | Lettura/scrittura 
 
 
-| Elencare FSX per i volumi del file system ONTAP durante la procedura guidata "Crea knowledgebase" | fsx:DescribeFileSystems | Creazione di una Knowledge base | Automatizzare 
+| Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione | Lettura/scrittura 
 
 
-| Gestire knowledge base sul motore ai durante le operazioni di ricostruzione | fsx:ListTagsForResource | Risoluzione dei problemi | Automatizzare 
+| Elenca file system FSX per ONTAP durante la procedura guidata "Crea knowledgebase" | fsx:DescribeVolumes | Creazione di una Knowledge base | Lettura/scrittura 
 
 
-| Elenca FSX per le macchine virtuali di storage del file system ONTAP durante la procedura guidata "Crea knowledgebase" | fsx:DescribeStorageVirtualMachines | Implementazione | Automatizzare 
+| Elencare FSX per i volumi del file system ONTAP durante la procedura guidata "Crea knowledgebase" | fsx:DescribeFileSystems | Creazione di una Knowledge base | Lettura/scrittura 
 
 
-| Spostare la knowledgebase in una nuova istanza | fsx:UntagResource | Risoluzione dei problemi | Automatizzare 
+| Gestire knowledge base sul motore ai durante le operazioni di ricostruzione | fsx:ListTagsForResource | Risoluzione dei problemi | Lettura/scrittura 
 
 
-| Gestire la knowledgebase sul motore ai durante la ricostruzione | FSX:TagResource | Risoluzione dei problemi | Automatizzare 
+| Elenca FSX per le macchine virtuali di storage del file system ONTAP durante la procedura guidata "Crea knowledgebase" | fsx:DescribeStorageVirtualMachines | Implementazione | Lettura/scrittura 
 
 
-.2+| Salvare i segreti SSM (token ECR, credenziali CIFS, chiavi degli account del servizio di locazione) in modo sicuro | ssm:getParameter | Implementazione | Automatizzare 
+| Spostare la knowledgebase in una nuova istanza | fsx:UntagResource | Risoluzione dei problemi | Lettura/scrittura 
 
 
-| ssm: Parametro di PutMeter | Implementazione | Automatizzare 
+| Gestire la knowledgebase sul motore ai durante la ricostruzione | FSX:TagResource | Risoluzione dei problemi | Lettura/scrittura 
 
 
-.2+| Invia i log del motore ai al gruppo di log di Amazon CloudWatch durante le operazioni di implementazione e ricostruzione | Registri:CreateLogGroup | Implementazione | Automatizzare 
+.2+| Salvare i segreti SSM (token ECR, credenziali CIFS, chiavi degli account del servizio di locazione) in modo sicuro | ssm:getParameter | Implementazione | Lettura/scrittura 
 
 
-| Registri:PutRetentionPolicy | Implementazione | Automatizzare 
+| ssm: Parametro di PutMeter | Implementazione | Lettura/scrittura 
 
 
-| Inviare i registri del motore ai al gruppo di log di Amazon CloudWatch | Registri:TagResource | Risoluzione dei problemi | Automatizzare 
+.2+| Invia i log del motore ai al gruppo di log di Amazon CloudWatch durante le operazioni di implementazione e ricostruzione | Registri:CreateLogGroup | Implementazione | Lettura/scrittura 
 
 
-| Ottieni la risposta SSM da Amazon CloudWatch (quando la risposta è troppo lunga) | Registri:DescribeLogStreams | Risoluzione dei problemi | Automatizzare 
+| Registri:PutRetentionPolicy | Implementazione | Lettura/scrittura 
 
 
-| Ottieni la risposta SSM da Amazon CloudWatch | Registri:GetLogEvents | Risoluzione dei problemi | Automatizzare 
+| Inviare i registri del motore ai al gruppo di log di Amazon CloudWatch | Registri:TagResource | Risoluzione dei problemi | Lettura/scrittura 
 
 
-.3+| Creare un gruppo di log di Amazon CloudWatch per i registri Amazon Bedrock durante la reazione dello stack durante le operazioni di distribuzione e ricostruzione | Registri:CreateLogGroup | Implementazione | Automatizzare 
+| Ottieni la risposta SSM da Amazon CloudWatch (quando la risposta è troppo lunga) | Registri:DescribeLogStreams | Risoluzione dei problemi | Lettura/scrittura 
 
 
-| Registri:PutRetentionPolicy | Implementazione | Automatizzare 
+| Ottieni la risposta SSM da Amazon CloudWatch | Registri:GetLogEvents | Risoluzione dei problemi | Lettura/scrittura 
 
 
-| Registri:TagResource | Implementazione | Automatizzare 
+.3+| Creare un gruppo di log Amazon CloudWatch per i registri Amazon Bedrock durante la creazione dello stack durante le operazioni di distribuzione e ricostruzione | Registri:CreateLogGroup | Implementazione | Lettura/scrittura 
 
 
-| Invia i registri delle pedine ad Amazon CloudWatch | Bedrock:PutModelInvocationLoggingConfiguration | Risoluzione dei problemi | Automatizzare 
+| Registri:PutRetentionPolicy | Implementazione | Lettura/scrittura 
 
 
-| Crea il ruolo che consente di inviare i registri Amazon Bedrock ad Amazon CloudWatch | iam:AttachRolePolicy | Risoluzione dei problemi | Automatizzare 
+| Registri:TagResource | Implementazione | Lettura/scrittura 
 
 
-| Crea il ruolo che consente di inviare i registri Amazon Bedrock ad Amazon CloudWatch | iam: PassRole | Risoluzione dei problemi | Automatizzare 
+| Invia i registri delle pedine ad Amazon CloudWatch | Bedrock:PutModelInvocationLoggingConfiguration | Risoluzione dei problemi | Lettura/scrittura 
 
 
-| Crea il ruolo che consente di inviare i registri Amazon Bedrock ad Amazon CloudWatch | iam:createPolicy | Risoluzione dei problemi | Automatizzare 
+| Crea il ruolo che consente di inviare i registri Amazon Bedrock ad Amazon CloudWatch | iam:AttachRolePolicy | Risoluzione dei problemi | Lettura/scrittura 
 
 
-| Elenca profili di deduzione per il modello | Bedrock:ListInferenceProfiles | Risoluzione dei problemi | Automatizzare 
+| Crea il ruolo che consente di inviare i registri Amazon Bedrock ad Amazon CloudWatch | iam: PassRole | Risoluzione dei problemi | Lettura/scrittura 
+
+
+| Crea il ruolo che consente di inviare i registri Amazon Bedrock ad Amazon CloudWatch | iam:createPolicy | Risoluzione dei problemi | Lettura/scrittura 
+
+
+| Elenca profili di deduzione per il modello | Bedrock:ListInferenceProfiles | Risoluzione dei problemi | Lettura/scrittura 
 |===
 ====
 
@@ -1926,7 +1973,7 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
 ====
 [role="tabbed-block"]
 =====
-.Modalità di lettura
+.Modalità di sola lettura
 --
 [source, json]
 ----
@@ -1959,7 +2006,7 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
 }
 ----
 --
-.Modalità automatica
+.Modalità lettura/scrittura
 --
 [source, json]
 ----
@@ -2040,28 +2087,28 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 | Scopo | Azione | Dove usato | Modalità 
 
 
-| Collegare i gruppi di sicurezza e modificare le regole per i nodi sottoposti a provisioning | ec2:AuthorizeSecurityGroupIngress | Implementazione | Automatizzare 
+| Collegare i gruppi di sicurezza e modificare le regole per i nodi sottoposti a provisioning | ec2:AuthorizeSecurityGroupIngress | Implementazione | Lettura/scrittura 
 
 
-| Creare volumi EBS | ec2:CreateVolume | Implementazione | Automatizzare 
+| Creare volumi EBS | ec2:CreateVolume | Implementazione | Lettura/scrittura 
 
 
-| Contrassegna i valori personalizzati per le risorse FSX per NetApp ONTAP create da carichi di lavoro VMware | FSX:TagResource | Implementazione | Automatizzare 
+| Contrassegna i valori personalizzati per le risorse FSX per NetApp ONTAP create da carichi di lavoro VMware | FSX:TagResource | Implementazione | Lettura/scrittura 
 
 
-| Creare e convalidare il modello CloudFormation | Cloud formation: CreateStack | Implementazione | Automatizzare 
+| Creare e convalidare il modello CloudFormation | Cloud formation: CreateStack | Implementazione | Lettura/scrittura 
 
 
-| Gestire i tag e la sicurezza di rete sulle istanze create | ec2:CreateSecurityGroup | Implementazione | Automatizzare 
+| Gestire i tag e la sicurezza di rete sulle istanze create | ec2:CreateSecurityGroup | Implementazione | Lettura/scrittura 
 
 
-| Avviare le istanze create | ec2:RunInstances | Implementazione | Automatizzare 
+| Avviare le istanze create | ec2:RunInstances | Implementazione | Lettura/scrittura 
 
 
-| Ottieni dettagli sull'istanza di EC2 | ec2:DescripbeInstances | Implementazione | Automatizzare 
+| Ottieni dettagli sull'istanza di EC2 | ec2:DescripbeInstances | Implementazione | Lettura/scrittura 
 
 
-| Elencare le immagini durante la creazione dello stack durante le operazioni di distribuzione e ricostruzione | ec2:DescripteImages | Implementazione | Automatizzare 
+| Elencare le immagini durante la creazione dello stack durante le operazioni di distribuzione e ricostruzione | ec2:DescripteImages | Implementazione | Lettura/scrittura 
 
 
 | Scaricare i VPC nell'ambiente selezionato per completare il modulo di distribuzione | ec2:DescripteVpcs  a| 
@@ -2069,8 +2116,8 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 * Inventario
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -2080,15 +2127,15 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 * Inventario
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Ottenere i gruppi di protezione nell'ambiente selezionato per completare il modulo di distribuzione | ec2:DescripteSecurityGroups | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
@@ -2098,58 +2145,58 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 * Inventario
 
  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Ottieni le regioni con il supporto di Amazon FSX per NetApp ONTAP | ec2:DescripteRegions | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Ottieni gli alias delle chiavi KMS da utilizzare per la crittografia Amazon FSX per NetApp ONTAP | Km:ListAlias | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Ottieni le chiavi KMS da utilizzare per la crittografia di Amazon FSX per NetApp ONTAP | Km:ListKeys | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | Ottieni i dettagli sulla scadenza delle chiavi KMS da utilizzare per la crittografia di Amazon FSX per NetApp ONTAP | Km: DescribeKey | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
 | La query basata su SSM viene utilizzata per ottenere l'elenco aggiornato delle regioni supportate da Amazon FSX per NetApp ONTAP | ssm:GetParametersByPath | Implementazione  a| 
-* Leggi
-* Automatizzare
+* Sola lettura
+* Lettura/scrittura
 
 
 
 
-.3+| Crea le risorse Amazon FSX per NetApp ONTAP necessarie per il provisioning | fsx:CreateFileSystem | Implementazione | Automatizzare 
+.3+| Crea le risorse Amazon FSX per NetApp ONTAP necessarie per il provisioning | fsx:CreateFileSystem | Implementazione | Lettura/scrittura 
 
 
-| fsx:CreateStorageVirtualMachine | Implementazione | Automatizzare 
+| fsx:CreateStorageVirtualMachine | Implementazione | Lettura/scrittura 
 
 
 | fsx:CreateVolume  a| 
 * Implementazione
 * Operazioni di gestione
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 .2+| Ottieni i dettagli di Amazon FSX per NetApp ONTAP | fsx:descrivere*  a| 
@@ -2158,42 +2205,42 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 * Operazioni di gestione
 * Scopri i risparmi
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 | fsx: Elenco*  a| 
 * Implementazione
 * Inventario
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
-.5+| Ottieni i dettagli chiave del KMS e utilizza la crittografia per Amazon FSX per NetApp ONTAP | Km: CreateGrant | Implementazione | Automatizzare 
+.5+| Ottieni i dettagli chiave del KMS e utilizza la crittografia per Amazon FSX per NetApp ONTAP | Km: CreateGrant | Implementazione | Lettura/scrittura 
 
 
-| Km:descrivere* | Implementazione | Automatizzare 
+| Km:descrivere* | Implementazione | Lettura/scrittura 
 
 
-| Km: Elenco* | Implementazione | Automatizzare 
+| Km: Elenco* | Implementazione | Lettura/scrittura 
 
 
-| Km:decrittografia | Implementazione | Automatizzare 
+| Km:decrittografia | Implementazione | Lettura/scrittura 
 
 
-| Km:GenerateDataKey | Implementazione | Automatizzare 
+| Km:GenerateDataKey | Implementazione | Lettura/scrittura 
 
 
-| Elencare gli argomenti SNS dei clienti e pubblicarli su SNS back-end WLMVMC e SNS dei clienti, se selezionati | sns: Pubblica | Implementazione | Automatizzare 
+| Elencare gli argomenti SNS dei clienti e pubblicarli su SNS back-end WLMVMC e SNS dei clienti, se selezionati | sns: Pubblica | Implementazione | Lettura/scrittura 
 
 
 | Utilizzato per recuperare l'elenco più recente delle regioni AWS supportate da Amazon FSX per NetApp ONTAP | ssm:Get*  a| 
 * Implementazione
 * Operazioni di gestione
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
-| Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione | Automatizzare 
+| Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione | Lettura/scrittura 
 
 
 .4+| L'archivio parametri SSM viene utilizzato per salvare le credenziali di Amazon FSX per NetApp ONTAP | ssm:getParameter  a| 
@@ -2201,28 +2248,28 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 * Operazioni di gestione
 * Inventario
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 | ssm:PutParameters  a| 
 * Implementazione
 * Inventario
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 | ssm: Parametro di PutMeter  a| 
 * Implementazione
 * Operazioni di gestione
 
-| Automatizzare 
+| Lettura/scrittura 
 
 
 | ssm: DeleteParameters  a| 
 * Implementazione
 * Operazioni di gestione
 
-| Automatizzare 
+| Lettura/scrittura 
 |===
 ====
 
@@ -2233,9 +2280,17 @@ Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle s
 
 
 
+=== 4 maggio 2025
+
+Il seguente permesso è ora disponibile in modalità _Read/Write_ per GenAI: `qbusiness:ListApplications`.
+
+Il seguente permesso è ora disponibile in modalità _sola lettura_ per i database: `logs:GetLogEvents`.
+
+
+
 === 2 aprile 2025
 
-Il seguente permesso è ora disponibile in _modalità di lettura_ per i database: `ssm:DescribeInstanceInformation`.
+Il seguente permesso è ora disponibile in modalità _sola lettura_ per i database: `ssm:DescribeInstanceInformation`.
 
 
 
@@ -2245,7 +2300,7 @@ Il seguente permesso è ora disponibile in _modalità di lettura_ per i database
 
 ==== Aggiornamento delle autorizzazioni del carico di lavoro Genai
 
-Le seguenti autorizzazioni sono ora disponibili in _modalità automatica_ per GenAI:
+Le seguenti autorizzazioni sono ora disponibili in modalità _lettura/scrittura_ per GenAI:
 
 * `bedrock:PutModelInvocationLoggingConfiguration`
 * `iam:AttachRolePolicy`
@@ -2254,7 +2309,7 @@ Le seguenti autorizzazioni sono ora disponibili in _modalità automatica_ per Ge
 * `bedrock:ListInferenceProfiles`
 
 
-Il seguente permesso è stato rimosso da _automatizza mode_ per GenAI: `Bedrock:GetFoundationModel`.
+Il seguente permesso è stato rimosso dalla modalità _Read/Write_ per GenAI: `Bedrock:GetFoundationModel`.
 
 
 
@@ -2266,10 +2321,10 @@ L' `iam:SimulatePrincipalPolicy`autorizzazione fa parte di tutte le policy di au
 
 === 2 marzo 2025
 
-Il seguente permesso è ora disponibile in modalità _automatizza_ per GenAI: `bedrock:GetFoundationModel`.
+Il seguente permesso è ora disponibile in modalità _Read/Write_ per GenAI: `bedrock:GetFoundationModel`.
 
 
 
 === 3 febbraio 2025
 
-Il seguente permesso è ora disponibile in modalità _Read_ per i database: `iam:SimulatePrincipalPolicy`.
+Il seguente permesso è ora disponibile in modalità _sola lettura_ per i database: `iam:SimulatePrincipalPolicy`.

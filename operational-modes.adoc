@@ -20,8 +20,8 @@ Workload Factory offre tre modalità operative che ti consentono di controllare 
 Le modalità operative forniscono un'organizzazione logica delle funzionalità e delle funzionalità fornite dalla fabbrica dei carichi di lavoro, in relazione al livello di attendibilità assegnato. L'obiettivo principale delle modalità operative è comunicare in modo chiaro quali task possono o non possono essere eseguiti dalla fabbrica dei carichi di lavoro all'interno dell'account AWS.
 
 Modalità base:: Rappresenta una relazione zero-trust in cui non sono assegnate autorizzazioni AWS alla workload Factory. È progettato per l'esplorazione precoce della fabbrica dei carichi di lavoro e l'utilizzo delle varie procedure guidate per creare l'infrastruttura come codice (IAC) necessaria. Puoi copiare il codice e utilizzarlo in AWS inserendo manualmente le tue credenziali AWS.
-Modalità di lettura:: Migliora l'esperienza della modalità di base aggiungendo autorizzazioni di sola lettura in modo che i modelli IAC siano riempiti con variabili specifiche (ad esempio, VPC, gruppi di protezione, ecc.). In questo modo puoi eseguire IAC direttamente dal tuo account AWS senza fornire autorizzazioni di modifica alla fabbrica dei workload.
-Modalità automatica:: Rappresenta una relazione di trust completa in modo che la workload Factory venga assegnata con autorizzazioni complete. Ciò consente a workload factory di eseguire e automatizzare le operazioni in AWS per tuo conto, insieme alle credenziali assegnate che hanno le autorizzazioni necessarie per l'esecuzione.
+Modalità di sola lettura:: Migliora l'esperienza della modalità di base aggiungendo autorizzazioni di sola lettura in modo che i modelli IAC siano riempiti con variabili specifiche (ad esempio, VPC, gruppi di protezione, ecc.). In questo modo puoi eseguire IAC direttamente dal tuo account AWS senza fornire autorizzazioni di modifica alla fabbrica dei workload.
+Modalità lettura/scrittura:: Rappresenta una relazione di trust completa in modo che la workload Factory venga assegnata con autorizzazioni complete. Ciò consente a workload factory di eseguire e automatizzare le operazioni in AWS per tuo conto, insieme alle credenziali assegnate che hanno le autorizzazioni necessarie per l'esecuzione.
 
 
 Ulteriori informazioni su link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Autorizzazioni per la fabbrica del carico di lavoro BlueXP "].
@@ -40,10 +40,10 @@ Le funzioni disponibili utilizzando ciascuna delle modalità aumentano con ogni 
 | Di base | No | Modello IAC minimamente completo | No | No 
 
 
-| Leggi | No | Modello IAC moderatamente completo | Sì | Sì 
+| Sola lettura | No | Modello IAC moderatamente completo | Sì | Sì 
 
 
-| Automatizzare | Automazione completa | Modello IAC completo con automazione completa | Sì | Sì 
+| Lettura/scrittura | Automazione completa | Modello IAC completo con automazione completa | Sì | Sì 
 |===
 
 
@@ -59,10 +59,10 @@ Non esiste un selettore da impostare in workload Factory per identificare la mod
 | Di base | Non richiesto | Non richiesto 
 
 
-| Leggi | Sola lettura | Non richiesto 
+| Sola lettura | Sola lettura | Non richiesto 
 
 
-| Automatizzare | Credenziali di lettura/scrittura | Obbligatorio 
+| Lettura/scrittura | Credenziali di lettura/scrittura | Obbligatorio 
 |===
 https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Ulteriori informazioni sui collegamenti"^]
 
@@ -70,7 +70,7 @@ https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Ulteriori 
 
 === Esempi di modalità operativa
 
-Puoi impostare le tue credenziali per fornire una modalità per un componente di carico di lavoro e un'altra per un altro componente. Ad esempio, puoi configurare la modalità automatica per le operazioni in cui stai implementando e gestendo file system FSX per ONTAP, ma configurare solo la modalità di lettura per creare e implementare carichi di lavoro del database tramite workload factory.
+Puoi impostare le tue credenziali per fornire una modalità per un componente di carico di lavoro e un'altra per un altro componente. Ad esempio, è possibile configurare la modalità di lettura/scrittura per le operazioni in cui si sta distribuendo e gestendo FSX per i file system ONTAP, ma configurare solo la modalità di lettura per la creazione e la distribuzione di carichi di lavoro di database tramite workload factory.
 
 È possibile fornire queste funzionalità all'interno di un singolo set di credenziali in un account di fabbrica del carico di lavoro oppure creare più set di credenziali quando ciascuna credenziale fornisce funzionalità di distribuzione del carico di lavoro uniche.
 
@@ -78,11 +78,11 @@ Puoi impostare le tue credenziali per fornire una modalità per un componente di
 
 ==== Esempio 1
 
-Gli utenti degli account che utilizzano le credenziali a cui sono state assegnate le seguenti autorizzazioni avranno il controllo completo (modalità automatica) per la creazione di file system FSX per ONTAP, la distribuzione dei database e la visualizzazione degli altri tipi di storage AWS utilizzati nell'account.
+Gli utenti degli account che utilizzano le credenziali a cui sono state assegnate le seguenti autorizzazioni avranno il controllo completo (modalità lettura/scrittura) per la creazione di file system FSX per ONTAP, la distribuzione di database e la visualizzazione di altri tipi di storage AWS utilizzati nell'account.
 
 image:screenshot-credentials1.png["Uno screenshot che mostra un set di credenziali che fornisce due tipi di autorizzazioni per i carichi di lavoro."]
 
-Tuttavia, non avranno controlli di automazione per la creazione e l'implementazione di carichi di lavoro VMware (modalità base) da workload Factory. Se si desidera creare carichi di lavoro VMware, è necessario copiare il codice dalla Codebox, accedere manualmente al proprio account AWS e inserire manualmente le voci mancanti nel codice generato per utilizzare questa funzionalità.
+Tuttavia, non avranno controlli di automazione per la creazione e l'implementazione di carichi di lavoro VMware (modalità Basic) da workload factory. Se si desidera creare carichi di lavoro VMware, è necessario copiare il codice dalla Codebox, accedere manualmente al proprio account AWS e inserire manualmente le voci mancanti nel codice generato per utilizzare questa funzionalità.
 
 
 

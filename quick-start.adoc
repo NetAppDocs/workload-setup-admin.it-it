@@ -24,7 +24,7 @@ link:sign-up-saas.html["Scopri come iscriversi e creare un account"].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Aggiungi le credenziali AWS alla fabbrica del workload
 [role="quick-margin-para"]
-Questo passaggio è facoltativo. Puoi utilizzare la fabbrica dei carichi di lavoro in modalità _Basic_ senza aggiungere credenziali per accedere all'account AWS. L'aggiunta delle credenziali AWS alla fabbrica dei carichi di lavoro in modalità _lettura_ o _automatizza_ fornisce all'account della fabbrica dei carichi di lavoro le autorizzazioni necessarie per creare e gestire file system FSX per ONTAP, oltre all'implementazione e alla gestione di workload specifici, come database e Genai.
+Questo passaggio è facoltativo. Puoi utilizzare la fabbrica dei carichi di lavoro in modalità _Basic_ senza aggiungere credenziali per accedere all'account AWS. L'aggiunta delle credenziali AWS alla fabbrica dei carichi di lavoro in modalità _sola lettura_ o _lettura/scrittura_ fornisce all'account della fabbrica dei carichi di lavoro le autorizzazioni necessarie per creare e gestire file system FSX per ONTAP, nonché per implementare e gestire workload specifici, come database e Genai.
 
 [role="quick-margin-para"]
 link:add-credentials.html["Scopri come aggiungere credenziali al tuo account"].
