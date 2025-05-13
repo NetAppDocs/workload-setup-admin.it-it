@@ -1116,8 +1116,6 @@
   <block id="c0ee691320caa89b529bc0bcaf9cc696" category="paragraph">Tuttavia, non avranno controlli di automazione per la creazione e l'implementazione di carichi di lavoro VMware (modalità Basic) da workload factory. Se si desidera creare carichi di lavoro VMware, è necessario copiare il codice dalla Codebox, accedere manualmente al proprio account AWS e inserire manualmente le voci mancanti nel codice generato per utilizzare questa funzionalità.</block>
   <block id="b91c58f3e94e0488074053d96cd4bbec" category="paragraph">Quando fornisci autorizzazioni in modalità di sola lettura o di lettura/scrittura, workload Factory allega una policy all'istanza con autorizzazioni per gestire risorse e processi all'interno di tale account AWS. Ciò consente a workload factory di eseguire diverse operazioni a partire dal rilevamento degli ambienti storage, fino all'implementazione di risorse AWS, come file system nella gestione dello storage o knowledge base per i workload Genai.</block>
   <block id="4d372922f30597b3e046274dbb3cecd2" category="list-text">Sola lettura</block>
-  <block id="d066bc059c61c75a41706f175a5b3f8b" category="cell">Workload Factory passa ai registri di Amazon CloudWatch per l'istanza SQL in caso di troncamento dell'output SSM.</block>
-  <block id="2e50818bd890a03b645105690ca2ee60" category="list-text">Valutazione dello storage</block>
   <block id="38ef2c2517cd341233b9181c09ba8071" category="paragraph">I criteri IAM Genai sono disponibili solo in modalità lettura/scrittura:</block>
   <block id="123ce9aa4e0770ecb435c005fa9b436c" category="cell">Elencare le applicazioni aziendali Amazon Q</block>
   <block id="4f3c534c90392632c7d275f54d5b35a0" category="cell">Qbusiness:ListApplications</block>
@@ -1127,7 +1125,6 @@
   <block id="9dd35b54afccc27a1cc96eab777dbc8e" category="cell">Creare un gruppo di log Amazon CloudWatch per i registri Amazon Bedrock durante la creazione dello stack durante le operazioni di distribuzione e ricostruzione</block>
   <block id="dac96c84baa92faab0eb342df5283a1b" category="section-title">4 maggio 2025</block>
   <block id="b1351fb22e71d3c2b886e8e0819e632f" category="paragraph">Il seguente permesso è ora disponibile in modalità _Read/Write_ per GenAI:<block ref="4f3c534c90392632c7d275f54d5b35a0" prefix=" " category="inline-code"></block>.</block>
-  <block id="17cf827d0ea669f390d3f954ed27424d" category="paragraph">Il seguente permesso è ora disponibile in modalità _sola lettura_ per i database:<block ref="6d952035baa97bd601f4d280f10fcc53" prefix=" " category="inline-code"></block>.</block>
   <block id="83300e091c617144cede34b6c898e63b" category="paragraph">Il seguente permesso è ora disponibile in modalità _sola lettura_ per i database:<block ref="3320749a6854264e1889d72d7f41a0bf" prefix=" " category="inline-code"></block>.</block>
   <block id="be999711faeee231a254e996141ed09f" category="paragraph">Le seguenti autorizzazioni sono ora disponibili in modalità _lettura/scrittura_ per GenAI:</block>
   <block id="9f4fc0ded0d1671253e5c8e38cd9464f" category="paragraph">Il seguente permesso è stato rimosso dalla modalità _Read/Write_ per GenAI:<block ref="8a44b1c8d2e06b1acd7404fbb70437cc" prefix=" " category="inline-code"></block>.</block>
@@ -1140,4 +1137,12 @@
   <block id="7a0e532396f167d85a7b425f941d0613" category="list-text">*La modalità sola lettura* migliora l'esperienza della modalità di base aiutando l'utente a rilevare varie risorse e strumenti e, di conseguenza, a completare le procedure guidate pertinenti.</block>
   <block id="4951a0172d4fd2c8116296e71073f31c" category="list-text">*La modalità lettura/scrittura* rappresenta una relazione di attendibilità completa ed è progettata per eseguire e automatizzare per conto dell'utente insieme alle credenziali assegnate che dispongono delle autorizzazioni necessarie e convalidate per l'esecuzione.</block>
   <block id="1c9640aa9075334712c6c2b922771c50" category="paragraph"><block ref="1c9640aa9075334712c6c2b922771c50" category="inline-link-rx"></block></block>
+  <block id="5474924c6e07cdae5b2fb3dcc561d06d" category="cell">Workload Factory passa ai registri di Amazon CloudWatch per l'istanza SQL in caso di troncamento dell'output SSM</block>
+  <block id="5d1d5ff6c3c427c682d491550e8f89b3" category="list-text">Valutazione dello storage (ottimizzazione)</block>
+  <block id="515b5649d13529809187e8bce4dca692" category="cell">Consentire a workload Factory di ottenere gli attuali gruppi di log e verificare che sia stata impostata la conservazione per i gruppi di log creati da workload Factory</block>
+  <block id="c1fe33a4a51fbfbc7672aeed10dd19b9" category="cell">Consente a workload Factory di impostare un criterio di conservazione di un giorno per i gruppi di log creati da workload Factory per evitare l'accumulo non necessario di flussi di log per gli output dei comandi SSM</block>
+  <block id="19c89da108a378e8d938a37afe67bcab" category="paragraph">Le seguenti autorizzazioni sono ora disponibili in modalità _sola lettura_ per i database:</block>
+  <block id="1636ccb01570c55081666deb02ddfb9c" category="list-text"><block ref="6d952035baa97bd601f4d280f10fcc53" prefix="" category="inline-code"></block></block>
+  <block id="c4a094604e7db845f5356b4563efc223" category="list-text"><block ref="99a70cb6d5b807589a0a1aa9bbcfea7d" prefix="" category="inline-code"></block></block>
+  <block id="555669c70b999168141bdf48d9c2de24" category="paragraph">Il seguente permesso è ora disponibile in modalità _Read/Write_ per i database:<block ref="9c72603737d6e2074ae7fab048b5d3d1" prefix=" " category="inline-code"></block>.</block>
 </blocks>
