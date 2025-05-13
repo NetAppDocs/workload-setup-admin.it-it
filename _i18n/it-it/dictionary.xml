@@ -1140,9 +1140,9 @@
   <block id="5474924c6e07cdae5b2fb3dcc561d06d" category="cell">Workload Factory passa ai registri di Amazon CloudWatch per l'istanza SQL in caso di troncamento dell'output SSM</block>
   <block id="5d1d5ff6c3c427c682d491550e8f89b3" category="list-text">Valutazione dello storage (ottimizzazione)</block>
   <block id="515b5649d13529809187e8bce4dca692" category="cell">Consentire a workload Factory di ottenere gli attuali gruppi di log e verificare che sia stata impostata la conservazione per i gruppi di log creati da workload Factory</block>
-  <block id="c1fe33a4a51fbfbc7672aeed10dd19b9" category="cell">Consente a workload Factory di impostare un criterio di conservazione di un giorno per i gruppi di log creati da workload Factory per evitare l'accumulo non necessario di flussi di log per gli output dei comandi SSM</block>
   <block id="19c89da108a378e8d938a37afe67bcab" category="paragraph">Le seguenti autorizzazioni sono ora disponibili in modalità _sola lettura_ per i database:</block>
   <block id="1636ccb01570c55081666deb02ddfb9c" category="list-text"><block ref="6d952035baa97bd601f4d280f10fcc53" prefix="" category="inline-code"></block></block>
   <block id="c4a094604e7db845f5356b4563efc223" category="list-text"><block ref="99a70cb6d5b807589a0a1aa9bbcfea7d" prefix="" category="inline-code"></block></block>
   <block id="555669c70b999168141bdf48d9c2de24" category="paragraph">Il seguente permesso è ora disponibile in modalità _Read/Write_ per i database:<block ref="9c72603737d6e2074ae7fab048b5d3d1" prefix=" " category="inline-code"></block>.</block>
+  <block id="b29cc709bba52572eccdff0248448fed" category="cell">Consentire a workload Factory di impostare un criterio di conservazione di un giorno per i gruppi di log creati da workload Factory per evitare l'accumulo non necessario di flussi di log per gli output dei comandi SSM</block>
 </blocks>

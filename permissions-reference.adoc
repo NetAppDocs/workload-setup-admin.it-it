@@ -1356,7 +1356,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 | Sola lettura 
 
 
-| Consente a workload Factory di impostare un criterio di conservazione di un giorno per i gruppi di log creati da workload Factory per evitare l'accumulo non necessario di flussi di log per gli output dei comandi SSM | Registri:PutRetentionPolicy  a| 
+| Consentire a workload Factory di impostare un criterio di conservazione di un giorno per i gruppi di log creati da workload Factory per evitare l'accumulo non necessario di flussi di log per gli output dei comandi SSM | Registri:PutRetentionPolicy  a| 
 * Valutazione dello storage (ottimizzazione)
 * Inventario
 
