@@ -1762,6 +1762,14 @@ I criteri IAM Genai sono disponibili solo in modalità lettura/scrittura:
       "Resource": "*"
     },
     {
+      "Sid": "S3",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListAllMyBuckets"
+      ],
+      "Resource": "*"
+    },
+    {
       "Effect": "Allow",
       "Action": [
         "iam:SimulatePrincipalPolicy"
@@ -1792,6 +1800,9 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 
 
 | Visualizzare le etichette del motore ai | ec2:DescripteTag | Implementazione | Lettura/scrittura 
+
+
+| Elenca i bucket S3 | s3:ListAllMyBucket | Implementazione | Lettura/scrittura 
 
 
 | Elenca gli endpoint VPC prima della creazione dello stack del motore ai | EC2:CreateVpcEndpoint | Implementazione | Lettura/scrittura 
@@ -2297,6 +2308,12 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 == Registro delle modifiche
 
 Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle sezioni seguenti.
+
+
+
+=== 3 giugno 2025
+
+Il seguente permesso è ora disponibile in modalità _Read/Write_ per GenAI: `s3:ListAllMyBuckets`.
 
 
 

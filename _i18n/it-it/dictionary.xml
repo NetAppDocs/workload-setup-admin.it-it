@@ -1152,5 +1152,9 @@
   <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">*CLI CloudShell*: Workload Factory include una CLI CloudShell per gestire e utilizzare ambienti AWS e NetApp tra diversi account da un'unica CLI basata su browser. Accedi a CloudShell dalla barra superiore della console workload Factory.</block>
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*API REST*: Utilizza le API REST DI workload factory per implementare e gestire i file system FSX per ONTAP e altre risorse AWS.</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation*: Utilizzare il codice AWS CloudFormation per eseguire le azioni definite nella console workload factory in modo da modellare, eseguire il provisioning e gestire risorse AWS e di terze parti dallo stack CloudFormation nell'account AWS.</block>
-  <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">*Terraform BlueXP  workload Factory Provider*: USA Terraform per costruire e gestire i flussi di lavoro infrastrutturali generati nella console di workload Factory.</block>
+  <block id="beec07f99f03a1aa1948ba788ce7e6c1" category="cell">Elenca i bucket S3</block>
+  <block id="e21c94a36c6dbf24001a64bddce9456f" category="cell">s3:ListAllMyBucket</block>
+  <block id="c34c5eed5692ab9466e57060b06ae6ae" category="section-title">3 giugno 2025</block>
+  <block id="c918d3e0e49fdadeab4e77e3905135bd" category="paragraph">Il seguente permesso è ora disponibile in modalità _Read/Write_ per GenAI:<block ref="e21c94a36c6dbf24001a64bddce9456f" prefix=" " category="inline-code"></block>.</block>
+  <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP  workload Factory Provider*: USA Terraform per costruire e gestire i flussi di lavoro infrastrutturali generati nella console di workload Factory.</block>
 </blocks>
