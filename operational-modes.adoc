@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: operational-modes.html 
-keywords: modes, zero-trust, full-trust, read, basic, automate, aws, aws accounts, keys, multiple accounts, permissions, aws permissions, policy, policies, credentials 
-summary: 'Workload Factory offre tre modalità operative che ti consentono di controllare con attenzione l"accesso tra la fabbrica del carico di lavoro e il patrimonio cloud in base alle policy IT. La modalità operativa utilizzata è determinata dal livello di autorizzazioni AWS fornito alla fabbrica dei carichi di lavoro.' 
+keywords: modes, zero-trust, full-trust, read-only, basic, read/write, aws, aws accounts, keys, multiple accounts, permissions, aws permissions, policy, policies, credentials 
+summary: 'Workload Factory offre tre modalità operative che ti consentono di controllare con attenzione l"accesso tra la fabbrica del carico di lavoro e il patrimonio cloud in base alle policy IT.' 
 ---
 = Scopri le modalità operative e le credenziali AWS
 :allow-uri-read: 
@@ -70,7 +70,7 @@ https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Ulteriori 
 
 === Esempi di modalità operativa
 
-Puoi impostare le tue credenziali per fornire una modalità per un componente di carico di lavoro e un'altra per un altro componente. Ad esempio, è possibile configurare la modalità di lettura/scrittura per le operazioni in cui si sta distribuendo e gestendo FSX per i file system ONTAP, ma configurare solo la modalità di lettura per la creazione e la distribuzione di carichi di lavoro di database tramite workload factory.
+Puoi impostare le tue credenziali per fornire una modalità per un componente di carico di lavoro e un'altra per un altro componente. Ad esempio, è possibile configurare la modalità di lettura/scrittura per le operazioni in cui si distribuiscono e si gestiscono file system FSx per ONTAP, ma configurare la modalità di sola lettura solo per la creazione e la distribuzione di carichi di lavoro del database tramite Workload Factory.
 
 È possibile fornire queste funzionalità all'interno di un singolo set di credenziali in un account di fabbrica del carico di lavoro oppure creare più set di credenziali quando ciascuna credenziale fornisce funzionalità di distribuzione del carico di lavoro uniche.
 
@@ -78,7 +78,7 @@ Puoi impostare le tue credenziali per fornire una modalità per un componente di
 
 ==== Esempio 1
 
-Gli utenti degli account che utilizzano le credenziali a cui sono state assegnate le seguenti autorizzazioni avranno il controllo completo (modalità lettura/scrittura) per la creazione di file system FSX per ONTAP, la distribuzione di database e la visualizzazione di altri tipi di storage AWS utilizzati nell'account.
+Gli utenti dell'account che utilizzano le credenziali a cui sono state concesse le seguenti autorizzazioni avranno il controllo completo (modalità lettura/scrittura) per la creazione di file system FSx per ONTAP, la distribuzione di database e la visualizzazione di altri tipi di storage AWS utilizzati nell'account.
 
 image:screenshot-credentials1.png["Uno screenshot che mostra un set di credenziali che fornisce due tipi di autorizzazioni per i carichi di lavoro."]
 
@@ -90,7 +90,7 @@ Tuttavia, non avranno controlli di automazione per la creazione e l'implementazi
 
 In questo caso, l'utente ha creato due set di credenziali per consentire diverse funzionalità operative a seconda del set di credenziali selezionato. Generalmente, ogni set di credenziali viene accoppiato a un account AWS diverso.
 
-Il primo set di credenziali include autorizzazioni che offrono agli utenti il controllo completo sulla creazione dei file system FSX per ONTAP (e la possibilità di visualizzare altri tipi di storage AWS utilizzati nell'account), ma autorizzazioni di lettura solo quando si lavora con i workload VMware.
+Il primo set di credenziali include autorizzazioni che forniscono agli utenti il controllo completo sulla creazione di file system FSx for ONTAP (e la possibilità di visualizzare altri tipi di storage AWS utilizzati nell'account), ma solo autorizzazioni di sola lettura quando si lavora con carichi di lavoro VMware.
 
 image:screenshot-credentials-comparison-example-1.png["Uno screenshot che mostra un set di credenziali che fornisce due tipi di autorizzazioni per i carichi di lavoro."]
 

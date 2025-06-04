@@ -20,7 +20,7 @@ Per utilizzare i servizi e le funzionalità di fabbrica dei carichi di lavoro Bl
 
 == Perché utilizzare le autorizzazioni
 
-Quando fornisci autorizzazioni in modalità di sola lettura o di lettura/scrittura, workload Factory allega una policy all'istanza con autorizzazioni per gestire risorse e processi all'interno di tale account AWS. Ciò consente a workload factory di eseguire diverse operazioni a partire dal rilevamento degli ambienti storage, fino all'implementazione di risorse AWS, come file system nella gestione dello storage o knowledge base per i workload Genai.
+Quando si forniscono autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_, Workload Factory associa una policy all'istanza con le autorizzazioni per gestire risorse e processi all'interno di quell'account AWS. Ciò consente a workload factory di eseguire diverse operazioni a partire dal rilevamento degli ambienti storage, fino all'implementazione di risorse AWS, come file system nella gestione dello storage o knowledge base per i workload Genai.
 
 Per i carichi di lavoro del database, ad esempio, quando viene concessa la fabbrica del carico di lavoro con le autorizzazioni richieste, analizza tutte le EC2 istanze di un determinato account e area e filtra tutte le macchine basate su Windows. Se AWS Systems Manager (SSM) Agent è installato e in esecuzione sull'host e la rete di System Manager è configurata correttamente, workload Factory può accedere al computer Windows e verificare se il software SQL Server è installato o meno.
 
@@ -1512,7 +1512,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 I criteri IAM per i carichi di lavoro VMware forniscono le autorizzazioni necessarie per la workload Factory per VMware per gestire le risorse e i processi all'interno dell'ambiente di cloud pubblico in base alla modalità operativa in cui operi.
 
-I criteri IAM Genai sono disponibili solo in modalità lettura/scrittura:
+I criteri GenAI IAM sono disponibili solo in modalità _lettura/scrittura_:
 
 .Policy IAM per i carichi di lavoro Genai
 [%collapsible]
@@ -2327,14 +2327,14 @@ Le seguenti autorizzazioni sono ora disponibili in modalità _sola lettura_ per 
 * `logs:DescribeLogGroups`
 
 
-Il seguente permesso è ora disponibile in modalità _Read/Write_ per i database:
-`logs:PutRetentionPolicy`.
+La seguente autorizzazione è ora disponibile in modalità _lettura/scrittura_ per i database: 
+`logs:PutRetentionPolicy` .
 
 
 
 === 2 aprile 2025
 
-Il seguente permesso è ora disponibile in modalità _sola lettura_ per i database: `ssm:DescribeInstanceInformation`.
+La seguente autorizzazione è ora disponibile in modalità _sola lettura_ per i database:  `ssm:DescribeInstanceInformation` .
 
 
 
@@ -2344,7 +2344,7 @@ Il seguente permesso è ora disponibile in modalità _sola lettura_ per i databa
 
 ==== Aggiornamento delle autorizzazioni del carico di lavoro Genai
 
-Le seguenti autorizzazioni sono ora disponibili in modalità _lettura/scrittura_ per GenAI:
+Le seguenti autorizzazioni sono ora disponibili in _modalità lettura/scrittura_ per GenAI:
 
 * `bedrock:PutModelInvocationLoggingConfiguration`
 * `iam:AttachRolePolicy`
@@ -2353,7 +2353,7 @@ Le seguenti autorizzazioni sono ora disponibili in modalità _lettura/scrittura_
 * `bedrock:ListInferenceProfiles`
 
 
-Il seguente permesso è stato rimosso dalla modalità _Read/Write_ per GenAI: `Bedrock:GetFoundationModel`.
+La seguente autorizzazione è stata rimossa dalla _modalità lettura/scrittura_ per GenAI:  `Bedrock:GetFoundationModel` .
 
 
 
@@ -2365,10 +2365,10 @@ L' `iam:SimulatePrincipalPolicy`autorizzazione fa parte di tutte le policy di au
 
 === 2 marzo 2025
 
-Il seguente permesso è ora disponibile in modalità _Read/Write_ per GenAI: `bedrock:GetFoundationModel`.
+La seguente autorizzazione è ora disponibile in modalità _lettura/scrittura_ per GenAI:  `bedrock:GetFoundationModel` .
 
 
 
 === 3 febbraio 2025
 
-Il seguente permesso è ora disponibile in modalità _sola lettura_ per i database: `iam:SimulatePrincipalPolicy`.
+La seguente autorizzazione è ora disponibile in modalità _sola lettura_ per i database:  `iam:SimulatePrincipalPolicy` .

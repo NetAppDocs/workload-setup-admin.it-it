@@ -111,7 +111,7 @@ https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Ulteriori 
 
 Codebox è un co-pilota Infrastructure as Code (IAC) che aiuta sviluppatori e tecnici DevOps a generare il codice necessario per eseguire qualsiasi operazione supportata da workload Factory. I formati del codice includono API REST per i workload, l'interfaccia a riga di comando di AWS e AWS CloudFormation.
 
-Codebox è allineato alle modalità operative di fabbrica del carico di lavoro (Basic, Read e Automate) e imposta un percorso chiaro per la preparazione all'esecuzione, nonché un catalogo di automazione per un riutilizzo rapido in futuro.
+Codebox è allineato con le modalità operative della fabbrica del carico di lavoro (_base_, _sola lettura_ e _lettura/scrittura_) e definisce un percorso chiaro per la prontezza all'esecuzione nonché un catalogo di automazione per un rapido riutilizzo futuro.
 
 Il riquadro Codebox mostra l'IAC generato da una specifica operazione di flusso di lavoro e associato a una procedura guidata grafica o a un'interfaccia di conversazione testuale. Anche se Codebox supporta la codifica a colori e la ricerca per una facile navigazione e analisi, non consente la modifica. È possibile solo copiare o salvare nel catalogo di automazione.
 
