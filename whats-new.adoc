@@ -19,6 +19,14 @@ Scopri le novità relative alle funzionalità di amministrazione di fabbrica dei
 
 
 
+=== Aggiornamento delle autorizzazioni per i database
+
+La seguente autorizzazione è ora disponibile in modalità _sola lettura_ per i database:  `cloudwatch:GetMetricData` .
+
+https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["Registro delle modifiche di riferimento delle autorizzazioni"]
+
+
+
 === Supporto del servizio di notifica di fabbrica del carico di lavoro BlueXP
 
 Il servizio di notifica di BlueXP Workload Factory consente a Workload Factory di inviare notifiche al servizio di avvisi BlueXP o a un argomento Amazon SNS. Le notifiche inviate agli avvisi BlueXP vengono visualizzate nel pannello degli avvisi BlueXP. Quando Workload Factory pubblica notifiche su un argomento Amazon SNS, i sottoscrittori dell'argomento (ad esempio persone o altre applicazioni) ricevono le notifiche sugli endpoint configurati per l'argomento (ad esempio, tramite e-mail o SMS).

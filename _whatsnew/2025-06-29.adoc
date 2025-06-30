@@ -1,6 +1,14 @@
-= Supporto del servizio di notifica di fabbrica del carico di lavoro BlueXP
+= Aggiornamento delle autorizzazioni per i database
 :allow-uri-read: 
 
+
+
+
+=== Aggiornamento delle autorizzazioni per i database
+
+La seguente autorizzazione è ora disponibile in modalità _sola lettura_ per i database:  `cloudwatch:GetMetricData` .
+
+https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["Registro delle modifiche di riferimento delle autorizzazioni"]
 
 
 

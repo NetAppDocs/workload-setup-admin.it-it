@@ -640,12 +640,8 @@
   <block id="9fd6274c053251e7fdd752215a510290" category="cell">Ottieni metriche su file system e volumi</block>
   <block id="f63e0d20057299c9c16bd0c2c9e92a5c" category="cell">Cloudwatch:GetMetricData</block>
   <block id="3a902f1e8a6db9861a0a7608e2c5f711" category="cell">Cloudwatch:GetMetricStatistics</block>
-  <block id="659cdc74d03020d9c8bbdcda0749ab88" category="section-title">Autorizzazioni per i carichi di lavoro dei database</block>
-  <block id="2ceb20f97dd8f727dfbba8dbbe9a3496" category="paragraph">Le policy IAM disponibili per i carichi di lavoro dei database forniscono le autorizzazioni di cui la fabbrica dei carichi di lavoro ha bisogno per gestire le risorse e i processi all'interno dell'ambiente di cloud pubblico in base alla modalità operativa in cui operi.</block>
-  <block id="6f652f163aedad876c63ce0e89417171" category="example-title">Criteri IAM per i carichi di lavoro dei database</block>
   <block id="685902496cc1b2431527838eb3dd51f8" category="paragraph">Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di lavoro del database.</block>
   <block id="0647b03c182e6a539e314bf5657eba2e" category="example-title">Tabella delle autorizzazioni per i carichi di lavoro del database</block>
-  <block id="8fb4617a750c0b3b751013d02219f99b" category="cell">Ottieni statistiche metriche per FSX per ONTAP, EBS ed FSX per Windows file Server</block>
   <block id="9d0f530f355f04b5462f43ae04528fde" category="cell">Elencare e impostare i trigger per gli eventi</block>
   <block id="124f2c65b8b708241b7552a865ae2f29" category="cell">sns:ListTopics</block>
   <block id="b561747f1044749aaeab8082f02c0c2f" category="cell">ec2:DescripteKeyPairs</block>
@@ -746,7 +742,6 @@
   <block id="da044dbe1821a39f63f98e823344b062" category="cell">Cloudformation:DescripbeStackEvents</block>
   <block id="f404fc6d0850472807e4fcd86203a313" category="cell">Cloudformation:DescripteStack</block>
   <block id="6f25bb2faea408ecb06dc30a96791ac2" category="cell">Cloud formation:ValidateTemplate</block>
-  <block id="039c0d5ce3b1eaded6c4634f95b0978c" category="cell">Recuperare le metriche per la raccomandazione sull'ottimizzazione del calcolo</block>
   <block id="6ecc76cab2e7449f332b847599e62d5f" category="cell">Recuperare le directory disponibili nella regione</block>
   <block id="f4e46229f95e1a17f96ebacbac65751b" category="cell">Aggiungere le regole per il gruppo di protezione collegato alle istanze EC2 con provisioning</block>
   <block id="1f4dd9a69501cc464524fc5da8bcd1b7" category="cell">Creare modelli di stack nidificati per riprovare e ripristinare</block>
@@ -1108,7 +1103,6 @@
   <block id="1311c4cbbe5b925c15d25fe5ff7b022b" category="cell">Bedrock:GetFoundationModel</block>
   <block id="9dd35b54afccc27a1cc96eab777dbc8e" category="cell">Creare un gruppo di log Amazon CloudWatch per i registri Amazon Bedrock durante la creazione dello stack durante le operazioni di distribuzione e ricostruzione</block>
   <block id="dac96c84baa92faab0eb342df5283a1b" category="section-title">4 maggio 2025</block>
-  <block id="b1351fb22e71d3c2b886e8e0819e632f" category="paragraph">Il seguente permesso è ora disponibile in modalità _Read/Write_ per GenAI:<block ref="4f3c534c90392632c7d275f54d5b35a0" prefix=" " category="inline-code"></block>.</block>
   <block id="bf0dcc34b100cf0ff91c26bbd98029f7" category="list-text">Supporto completamento automatico: Iniziare a digitare un comando e utilizzare il tasto *Tab* per visualizzare le opzioni disponibili</block>
   <block id="822748e99c70e9162ce5432b2e1eff5c" category="section-title">04 maggio 2025</block>
   <block id="7a0e532396f167d85a7b425f941d0613" category="list-text">*La modalità sola lettura* migliora l'esperienza della modalità di base aiutando l'utente a rilevare varie risorse e strumenti e, di conseguenza, a completare le procedure guidate pertinenti.</block>
@@ -1116,7 +1110,6 @@
   <block id="5474924c6e07cdae5b2fb3dcc561d06d" category="cell">Workload Factory passa ai registri di Amazon CloudWatch per l'istanza SQL in caso di troncamento dell'output SSM</block>
   <block id="5d1d5ff6c3c427c682d491550e8f89b3" category="list-text">Valutazione dello storage (ottimizzazione)</block>
   <block id="515b5649d13529809187e8bce4dca692" category="cell">Consentire a workload Factory di ottenere gli attuali gruppi di log e verificare che sia stata impostata la conservazione per i gruppi di log creati da workload Factory</block>
-  <block id="19c89da108a378e8d938a37afe67bcab" category="paragraph">Le seguenti autorizzazioni sono ora disponibili in modalità _sola lettura_ per i database:</block>
   <block id="1636ccb01570c55081666deb02ddfb9c" category="list-text"><block ref="6d952035baa97bd601f4d280f10fcc53" prefix="" category="inline-code"></block></block>
   <block id="c4a094604e7db845f5356b4563efc223" category="list-text"><block ref="99a70cb6d5b807589a0a1aa9bbcfea7d" prefix="" category="inline-code"></block></block>
   <block id="b29cc709bba52572eccdff0248448fed" category="cell">Consentire a workload Factory di impostare un criterio di conservazione di un giorno per i gruppi di log creati da workload Factory per evitare l'accumulo non necessario di flussi di log per gli output dei comandi SSM</block>
@@ -1131,7 +1124,6 @@
   <block id="beec07f99f03a1aa1948ba788ce7e6c1" category="cell">Elenca i bucket S3</block>
   <block id="e21c94a36c6dbf24001a64bddce9456f" category="cell">s3:ListAllMyBucket</block>
   <block id="c34c5eed5692ab9466e57060b06ae6ae" category="section-title">3 giugno 2025</block>
-  <block id="c918d3e0e49fdadeab4e77e3905135bd" category="paragraph">Il seguente permesso è ora disponibile in modalità _Read/Write_ per GenAI:<block ref="e21c94a36c6dbf24001a64bddce9456f" prefix=" " category="inline-code"></block>.</block>
   <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP  workload Factory Provider*: USA Terraform per costruire e gestire i flussi di lavoro infrastrutturali generati nella console di workload Factory.</block>
   <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">L'interfaccia utente e la documentazione della Workload Factory ora utilizzano "sola lettura" per fare riferimento alle autorizzazioni di lettura e "lettura/scrittura" per fare riferimento alle autorizzazioni di automazione.</block>
   <block id="db17079394a3464c0d2748f3f16fbfbf" category="paragraph">La fabbrica del carico di lavoro opererà in modalità _Basic_ a meno che non vengano aggiunte le credenziali dell'account AWS. È possibile aggiungere credenziali per abilitare altre modalità operative, come la modalità _sola lettura_ e la modalità _lettura/scrittura_. <block ref="3ecbe38d325fe0025957d871a4619a77" category="inline-link-macro-rx"></block>.</block>
@@ -1163,4 +1155,14 @@
   <block id="2e600fc81eb21acd31aa44d1697dc84f" category="list-text">Accedere a <block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block>.</block>
   <block id="cec87015738d7f42431131824e107880" category="paragraph">Puoi accedere a workload Factory da BlueXP . Oltre a utilizzare BlueXP Workload Factory per le funzionalità di archiviazione e carico di lavoro di AWS, puoi anche accedere ad altri servizi della piattaforma BlueXP come Copia e sincronizzazione, Portafoglio digitale e altro ancora.</block>
   <block id="7454fc4c14df2a987637928e569efe3a" category="section-title">29 giugno 2025</block>
+  <block id="cb30bdb55bb8a7a0530a31a5e6cdd0bb" category="paragraph">La seguente autorizzazione è ora disponibile in modalità _sola lettura_ per i database: <block ref="f63e0d20057299c9c16bd0c2c9e92a5c" prefix=" " category="inline-code"></block> .</block>
+  <block id="e429c7230e4b94caf26e6020e5ea6f7a" category="paragraph"><block ref="e429c7230e4b94caf26e6020e5ea6f7a" category="inline-link-rx"></block></block>
+  <block id="4da84f2c396b854d2e6828b8992fe2a6" category="section-title">Autorizzazioni per i carichi di lavoro del database</block>
+  <block id="a1de7ac981533bac2ba982c9a691d511" category="paragraph">I criteri IAM disponibili per i carichi di lavoro del database forniscono le autorizzazioni di cui la fabbrica dei carichi di lavoro ha bisogno per gestire risorse e processi all'interno dell'ambiente cloud pubblico in base alla modalità operativa in cui si opera.</block>
+  <block id="b09fc7726cc5650dddd20718f2586995" category="example-title">Criteri IAM per i carichi di lavoro del database</block>
+  <block id="3399757d7ea2a9e2fd7770bc1e6f5aa1" category="cell">Ottieni statistiche metriche per FSx per ONTAP, EBS e FSx per Windows File Server e per consigli sull'ottimizzazione del calcolo</block>
+  <block id="c79482c3221294b91b9c5eeecca327a6" category="cell">Raccogli i parametri delle prestazioni salvati su Amazon CloudWatch dai nodi SQL registrati. I dati vengono generati in grafici di tendenza delle prestazioni nella schermata di gestione delle istanze SQL registrate.</block>
+  <block id="bf8eef80d28e69579638cd56629c94fb" category="paragraph">La seguente autorizzazione è ora disponibile in modalità _lettura/scrittura_ per GenAI: <block ref="e21c94a36c6dbf24001a64bddce9456f" prefix=" " category="inline-code"></block> .</block>
+  <block id="b8be7a72d02de0cfb42fb93375981cdb" category="paragraph">La seguente autorizzazione è ora disponibile in modalità _lettura/scrittura_ per GenAI: <block ref="4f3c534c90392632c7d275f54d5b35a0" prefix=" " category="inline-code"></block> .</block>
+  <block id="bebb3c7ec8a634b68ad1060e27e7dc42" category="paragraph">Le seguenti autorizzazioni sono ora disponibili in modalità _sola lettura_ per i database:</block>
 </blocks>

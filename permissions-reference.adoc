@@ -362,13 +362,13 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 ====
 
 
-=== Autorizzazioni per i carichi di lavoro dei database
+=== Autorizzazioni per i carichi di lavoro del database
 
-Le policy IAM disponibili per i carichi di lavoro dei database forniscono le autorizzazioni di cui la fabbrica dei carichi di lavoro ha bisogno per gestire le risorse e i processi all'interno dell'ambiente di cloud pubblico in base alla modalità operativa in cui operi.
+I criteri IAM disponibili per i carichi di lavoro del database forniscono le autorizzazioni di cui la fabbrica dei carichi di lavoro ha bisogno per gestire risorse e processi all'interno dell'ambiente cloud pubblico in base alla modalità operativa in cui si opera.
 
 Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
 
-.Criteri IAM per i carichi di lavoro dei database
+.Criteri IAM per i carichi di lavoro del database
 [%collapsible]
 ====
 [role="tabbed-block"]
@@ -385,6 +385,7 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
       "Effect": "Allow",
       "Action": [
         "cloudwatch:GetMetricStatistics",
+        "cloudwatch:GetMetricData",
         "sns:ListTopics",
         "ec2:DescribeInstances",
         "ec2:DescribeVpcs",
@@ -678,7 +679,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 | Scopo | Azione | Dove usato | Modalità 
 
 
-| Ottieni statistiche metriche per FSX per ONTAP, EBS ed FSX per Windows file Server | Cloudwatch:GetMetricStatistics  a| 
+| Ottieni statistiche metriche per FSx per ONTAP, EBS e FSx per Windows File Server e per consigli sull'ottimizzazione del calcolo | Cloudwatch:GetMetricStatistics  a| 
 * Inventario
 * Scopri i risparmi
 
@@ -687,6 +688,9 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 * Lettura/scrittura
 
 
+
+
+| Raccogli i parametri delle prestazioni salvati su Amazon CloudWatch dai nodi SQL registrati. I dati vengono generati in grafici di tendenza delle prestazioni nella schermata di gestione delle istanze SQL registrate. | Cloudwatch:GetMetricData | Inventario | Sola lettura 
 
 
 | Elencare e impostare i trigger per gli eventi | sns:ListTopics | Implementazione  a| 
@@ -1209,9 +1213,6 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 
 | Cloud formation:ValidateTemplate | Implementazione | Lettura/scrittura 
-
-
-| Recuperare le metriche per la raccomandazione sull'ottimizzazione del calcolo | Cloudwatch:GetMetricStatistics | Scopri i risparmi | Lettura/scrittura 
 
 
 | Recuperare le directory disponibili nella regione | ds:DescribeDirectories | Implementazione | Lettura/scrittura 
@@ -2311,15 +2312,21 @@ Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle s
 
 
 
+=== 29 giugno 2025
+
+La seguente autorizzazione è ora disponibile in modalità _sola lettura_ per i database:  `cloudwatch:GetMetricData` .
+
+
+
 === 3 giugno 2025
 
-Il seguente permesso è ora disponibile in modalità _Read/Write_ per GenAI: `s3:ListAllMyBuckets`.
+La seguente autorizzazione è ora disponibile in modalità _lettura/scrittura_ per GenAI:  `s3:ListAllMyBuckets` .
 
 
 
 === 4 maggio 2025
 
-Il seguente permesso è ora disponibile in modalità _Read/Write_ per GenAI: `qbusiness:ListApplications`.
+La seguente autorizzazione è ora disponibile in modalità _lettura/scrittura_ per GenAI:  `qbusiness:ListApplications` .
 
 Le seguenti autorizzazioni sono ora disponibili in modalità _sola lettura_ per i database:
 
