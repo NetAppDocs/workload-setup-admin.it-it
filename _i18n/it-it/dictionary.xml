@@ -1159,62 +1159,8 @@
   <block id="c0ae6f0ec7cb1322a1c6b72f77e783f2" category="paragraph">Il servizio di notifica di BlueXP Workload Factory consente a Workload Factory di inviare notifiche al servizio di avvisi BlueXP o a un argomento Amazon SNS. Le notifiche inviate agli avvisi BlueXP vengono visualizzate nel pannello degli avvisi BlueXP. Quando Workload Factory pubblica notifiche su un argomento Amazon SNS, i sottoscrittori dell'argomento (ad esempio persone o altre applicazioni) ricevono le notifiche sugli endpoint configurati per l'argomento (ad esempio, tramite e-mail o SMS).</block>
   <block id="76490568879e4523bb6bd6d8263472a9" category="inline-link">Configurare le notifiche di fabbrica del carico di lavoro BlueXP</block>
   <block id="533a43c23a4d81612b2392465e022a51" category="paragraph"><block ref="533a43c23a4d81612b2392465e022a51" category="inline-link-rx"></block></block>
-  <block id="2dda35be60147096ab6dcce42dede6b8" category="summary">È possibile configurare BlueXP Workload Factory per inviare notifiche a una persona o a un'altra applicazione quando si verificano determinati tipi di eventi.</block>
-  <block id="72d9710675d7970263ff88acdf0fcb66" category="paragraph">È possibile configurare il servizio di notifica della Workload Factory di BlueXP per inviare notifiche al servizio di avvisi BlueXP o a un argomento Amazon SNS. Le notifiche inviate agli avvisi BlueXP vengono visualizzate nel pannello degli avvisi BlueXP. Quando la Workload Factory pubblica notifiche su un argomento Amazon SNS, i sottoscrittori dell'argomento (ad esempio persone o altre applicazioni) ricevono le notifiche sugli endpoint configurati per l'argomento (ad esempio, tramite e-mail o SMS).</block>
-  <block id="0a7323d1562ccdc63a56a3101b1dfc69" category="section-title">Tipi di notifica e messaggi</block>
-  <block id="5a7513075d19cc4be93d3cf73f88603e" category="paragraph">Workload Factory invia notifiche per i seguenti eventi:</block>
-  <block id="a4ecfc70574394990cf17bd83df499f7" category="cell">Evento</block>
-  <block id="9e89e978c220a2a733d027866cb12907" category="cell">Tipo di notifica</block>
-  <block id="007cc9547ae8884ad597cd92ba505422" category="cell">Severità</block>
-  <block id="68eaabb91b0d1c52be44217a24f27b91" category="cell">Carico di lavoro</block>
-  <block id="53a002434dc37d0a5f8e2aac58da6296" category="cell">Tipo di risorsa</block>
-  <block id="05c77d02041a1213dcefbe713f2f79fc" category="cell">Alcune istanze del database nel tuo account non sono ben progettate</block>
-  <block id="11091ad57516013f76674cb4ef3a9a6a" category="cell">Tutte le istanze di Microsoft SQL Server nel tuo account sono state analizzate per problemi di architettura corretta. La descrizione di questo evento indica il numero di istanze di architettura corretta e non ottimizzate. Esamina i risultati e le raccomandazioni relative allo stato di architettura corretta nell'inventario dei database dalla console della Workload Factory.</block>
-  <block id="64096d5dd63fb80716eda8d7d149213d" category="cell">Ben progettato</block>
-  <block id="c76e3867213cff8946148c6510af0736" category="cell">Consiglio</block>
-  <block id="ea2ef9b0d095bf991f4973633b485340" category="cell">Database</block>
-  <block id="49e4c802abd20d6ed77d1f0421411716" category="cell">Istanza di Microsoft SQL Server</block>
-  <block id="434aae113a8df34dcafb760acae04817" category="cell">Distribuzione del server Microsoft SQL Server/PostgreSQL riuscita</block>
-  <block id="9f65a8622771b19d6c80a1fea621d39f" category="cell">L'implementazione dell'host Microsoft SQL Server o PostgreSQL è riuscita. Per ulteriori informazioni, consultare il monitoraggio dei job.</block>
-  <block id="505a83f220c02df2f85c3810cd9ceb38" category="cell">Successo</block>
-  <block id="a2e86ce39492ca1b92893ce168dc6fbb" category="cell">FSx per ONTAP, host DB</block>
-  <block id="1ec0c15b651e4cd44325912e997a204c" category="cell">Distribuzione del server Microsoft SQL Server/PostgreSQL non riuscita</block>
-  <block id="3a966eb1052bbc81baf1db313011eddf" category="cell">L'implementazione dell'host Microsoft SQL Server o PostgreSQL non è riuscita. Per ulteriori informazioni, consultare il monitoraggio dei job.</block>
-  <block id="902b0d55fddef6f8d651fe1035b7d4bd" category="cell">Errore</block>
-  <block id="237aaa83425818925b08506a76908e10" category="section-title">Configurare le notifiche di Workload Factory</block>
-  <block id="cd052ec21a26111d70b96d3c1780fed2" category="paragraph">Configura le notifiche di Workload Factory tramite la console BlueXP o la console di Workload Factory. Se utilizzi la console BlueXP, puoi configurare Workload Factory per inviare notifiche agli avvisi BlueXP o a un argomento Amazon SNS. Puoi configurare gli avvisi BlueXP dall'area *Impostazioni avvisi e notifiche* di BlueXP.</block>
-  <block id="9ccebe6954a81c5c1f9a57ddc658596a" category="list-text">È necessario configurare Amazon SNS e creare argomenti Amazon SNS tramite la console Amazon SNS o AWS CLI.</block>
-  <block id="b5dff08e1a7f13984de22b0326ba3d57" category="list-text">Si noti che Workload Factory supporta il tipo di argomento *Standard*. Questo tipo di argomento non garantisce che le notifiche vengano inviate agli abbonati nell'ordine in cui sono state ricevute, quindi è consigliabile tenerlo in considerazione in caso di notifiche critiche o di emergenza.</block>
-  <block id="5d146607ad7e1a4c8178f137a935e71b" category="open-title">Configurare le notifiche dalla console BlueXP</block>
   <block id="413b76e8d3566fbbd4af2e2a84ed79cb" category="list-text">Accedere a <block ref="391de7a3bac2bc77fa53dffb3f53801a" category="inline-link-macro-rx"></block>.</block>
-  <block id="7330391de12fa6f64dbbe05f2bf2943a" category="list-text">Dalla barra dei menu di Workload Factory, selezionare il menu di configurazione.</block>
-  <block id="ebb0c20a2883844bf338eec0442bd3d9" category="list-text">Nel menu, seleziona *Configurazione notifiche Workload Factory*.</block>
-  <block id="c1f26547e61b3cf682eb671f8d31e7ea" category="list-text">Facoltativo: seleziona *Abilita notifiche BlueXP* per configurare Workload Factory in modo che invii notifiche agli avvisi BlueXP.</block>
-  <block id="9bc635b321d7a10ffec6283dfaa84aa0" category="list-text">Seleziona *Abilita notifiche SNS*.</block>
-  <block id="677c7dc689b0afdcb0633b635edd3a87" category="list-text">Segui le istruzioni per configurare Amazon SNS dalla console di Amazon SNS.</block>
-  <block id="5fda11ac3857aaeb1a1a9e3bb6aedef5" category="paragraph">Dopo aver creato l'argomento, copia l'ARN dell'argomento e inseriscilo nel campo *ARN argomento SNS* nella finestra di dialogo *Impostazione notifiche*.</block>
-  <block id="2339afaee28d73e91f81e490b67a4b5c" category="list-text">Dopo aver verificato la configurazione inviando una notifica di prova, seleziona *Applica*.</block>
-  <block id="a596c719a1239c601cd009ed03cda388" category="paragraph">La fabbrica dei carichi di lavoro è configurata per inviare notifiche all'argomento Amazon SNS specificato.</block>
-  <block id="99405553b799dda5850e27264cbad120" category="open-title">Configurare le notifiche dalla console di Workload Factory</block>
   <block id="2e600fc81eb21acd31aa44d1697dc84f" category="list-text">Accedere a <block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block>.</block>
-  <block id="bbb5c9d7fd1535e42e50af70cae99495" category="list-text">Aprire il menu dell'account dalla barra di navigazione in alto.</block>
-  <block id="5bbc9d3e1cf8f1e46acf248093877f06" category="list-text">Nel menu, seleziona *Impostazione notifiche*.</block>
-  <block id="5e5392f4dcdf5502f0937be76da274d0" category="section-title">Iscriviti all'argomento Amazon SNS</block>
-  <block id="cbde2df6a7c89370edc449dc5705d30c" category="inline-link">istruzioni</block>
-  <block id="f796ddcb3cbbbd6b219cbc54c800ab86" category="paragraph">Dopo aver configurato la fabbrica del carico di lavoro per inviare notifiche a un argomento, seguire le istruzioni <block ref="88c7b6108316e02c36e39863bedc2019" category="inline-link-rx"></block> nella documentazione di Amazon SNS per iscriverti all'argomento in modo da poter ricevere notifiche da Workload Factory.</block>
-  <block id="e457faf451b04c78c6b2c6bc25491ad1" category="section-title">Filtra le notifiche</block>
-  <block id="3180a00483bf6ffa5db8c6178c4eb67a" category="paragraph">È possibile ridurre il traffico di notifiche non necessario e indirizzare tipi di notifiche specifici a utenti specifici applicando filtri alle notifiche. È possibile farlo utilizzando una policy Amazon SNS per le notifiche SNS e le impostazioni di notifica BlueXP per le notifiche BlueXP.</block>
-  <block id="4ccc3070ee3f76f6afb040d5f99b3bdd" category="section-title">Filtra le notifiche di Amazon SNS</block>
-  <block id="103130451f8943db9cb57de31a66dc79" category="paragraph">Quando ti iscrivi a un argomento di Amazon SNS, ricevi per impostazione predefinita tutte le notifiche pubblicate su quell'argomento. Se desideri ricevere solo notifiche specifiche dall'argomento, puoi utilizzare una policy di filtro per controllare quali notifiche ricevere.</block>
-  <block id="3f6971d458153040675cf8e95795f3b0" category="inline-link">Documentazione Amazon SNS</block>
-  <block id="c7fbd94f814dfe1f2c13e1ea015a39d7" category="paragraph">Per ulteriori informazioni sulla creazione di criteri di filtro, fare riferimento a <block ref="c589c7fc86bb393dc58d099c6c8ea47e" category="inline-link-rx"></block> .</block>
-  <block id="aacb2329b4899fc1a4b8f0f2f67b0398" category="inline-link">Criteri di filtro di esempio di Amazon SNS</block>
-  <block id="0ef8ad02e6dcecafa6e5e696fe553279" category="paragraph">Per esempi di criteri di filtro, fare riferimento a <block ref="7c3f3bfbc0dabec1aca15cb9aeb0e326" category="inline-link-rx"></block> .</block>
-  <block id="92bb95ca7ce65dc7bedcbf84528f75fd" category="section-title">Filtra le notifiche BlueXP</block>
-  <block id="ac6e44b462d88f56828f381faa7907ca" category="paragraph">Puoi utilizzare le impostazioni di avvisi e notifiche di BlueXP per filtrare gli avvisi e le notifiche ricevuti in BlueXP in base al livello di gravità, ad esempio Critico, Info o Avviso.</block>
-  <block id="eeb8e055593f1709925a03e2ebb13265" category="inline-link">Documentazione BlueXP</block>
-  <block id="7572b4e37ed025014a17bc1ae86c60a9" category="paragraph">Per ulteriori informazioni sul filtraggio delle notifiche in BlueXP, fare riferimento a <block ref="f8c744992c7f60894906e0753601fc52" category="inline-link-rx"></block> .</block>
   <block id="cec87015738d7f42431131824e107880" category="paragraph">Puoi accedere a workload Factory da BlueXP . Oltre a utilizzare BlueXP Workload Factory per le funzionalità di archiviazione e carico di lavoro di AWS, puoi anche accedere ad altri servizi della piattaforma BlueXP come Copia e sincronizzazione, Portafoglio digitale e altro ancora.</block>
-  <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">03 giugno 2025</block>
-  <block id="19a5158f1235c29843008925adb7baf8" category="sidebar">Configurare le notifiche</block>
+  <block id="7454fc4c14df2a987637928e569efe3a" category="section-title">29 giugno 2025</block>
 </blocks>
