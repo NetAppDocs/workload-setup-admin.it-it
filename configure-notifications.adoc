@@ -98,11 +98,79 @@ Dopo aver configurato la fabbrica del carico di lavoro per inviare notifiche a u
 
 === Filtra le notifiche di Amazon SNS
 
-Quando ti iscrivi a un argomento di Amazon SNS, ricevi per impostazione predefinita tutte le notifiche pubblicate su quell'argomento. Se desideri ricevere solo notifiche specifiche dall'argomento, puoi utilizzare una policy di filtro per controllare quali notifiche ricevere.
+Quando ti iscrivi a un argomento Amazon SNS, per impostazione predefinita ricevi tutte le notifiche pubblicate su quell'argomento.  Se desideri ricevere solo notifiche specifiche dall'argomento, puoi utilizzare un criterio di filtro per controllare quali notifiche ricevere.  I criteri di filtro fanno sì che Amazon SNS invii all'abbonato solo le notifiche che corrispondono al criterio di filtro.
 
-Per ulteriori informazioni sulla creazione di criteri di filtro, fare riferimento a  https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html["Documentazione Amazon SNS"^] .
+Puoi filtrare le notifiche di Amazon SNS in base ai seguenti criteri:
 
-Per esempi di criteri di filtro, fare riferimento a  https://docs.aws.amazon.com/sns/latest/dg/example-filter-policies.html["Criteri di filtro di esempio di Amazon SNS"^] .
+[cols="3*"]
+|===
+| Descrizione | Nome del campo del criterio di filtro | Valori possibili 
+
+
+| Tipo di risorsa | `resourceType`  a| 
+* `DB`
+* `Microsoft SQL Server host`
+* `PostgreSQL Server host`
+
+
+
+
+| Carico di lavoro | `workload` | `WLMDB` 
+
+
+| Priorità | `priority`  a| 
+* `Success`
+* `Info`
+* `Recommendation`
+* `Warning`
+* `Error`
+* `Critical`
+
+
+
+
+| Tipo di notifica | `notificationType`  a| 
+* `Deployment`
+* `Well-architected`
+
+
+|===
+.Fasi
+. Nella console Amazon SNS, modifica i dettagli dell'abbonamento per l'argomento SNS.
+. Nell'area *Criteri di filtro abbonamento*, seleziona per filtrare in base agli *Attributi del messaggio*.
+. Abilitare l'opzione *Criterio filtro abbonamento*.
+. Immettere un criterio di filtro JSON nella casella *Editor JSON*.
++
+Ad esempio, il seguente criterio di filtro JSON accetta notifiche dalla risorsa Microsoft SQL Server correlate al carico di lavoro WLMDB, hanno una priorità di Successo o Errore e forniscono dettagli sullo stato Well-architected:
+
++
+[source, json]
+----
+{
+  "accountId": [
+    "account-a"
+  ],
+  "resourceType": [
+    "Microsoft SQL Server host"
+  ],
+  "workload": [
+    "WLMDB"
+  ],
+  "priority": [
+    "Success",
+    "Error"
+  ],
+  "notificationType": [
+    "Well-architected"
+  ]
+}
+----
+. Seleziona *Salva modifiche*.
+
+
+Per altri esempi di criteri di filtro, fare riferimento a https://docs.aws.amazon.com/sns/latest/dg/example-filter-policies.html["Criteri di filtro di esempio di Amazon SNS"^] .
+
+Per ulteriori informazioni sulla creazione di criteri di filtro, fare riferimento a https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html["Documentazione Amazon SNS"^] .
 
 
 
