@@ -31,6 +31,12 @@ Workload Factory invia notifiche per i seguenti eventi:
 
 
 | Distribuzione del server Microsoft SQL Server/PostgreSQL non riuscita | L'implementazione dell'host Microsoft SQL Server o PostgreSQL non è riuscita. Per ulteriori informazioni, consultare il monitoraggio dei job. | Implementazione | Errore | Database | FSx per ONTAP, host DB 
+
+
+| Creazione della relazione di replicazione non riuscita | La creazione di una relazione di replica SnapMirror non è riuscita.  Per maggiori informazioni, visita Tracker. | Replicazione | Critico | Deposito generale | FSx per ONTAP 
+
+
+| Errore nella creazione di FSx per ONTAP | Il processo di creazione del file system FSx for ONTAP non è riuscito.  Per maggiori informazioni, visita Tracker. | FSx per l'azione del file system ONTAP | Critico | Deposito generale | FSx per ONTAP 
 |===
 
 

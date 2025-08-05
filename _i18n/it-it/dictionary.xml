@@ -1251,4 +1251,13 @@
   <block id="302ef561e28f7d7cd13d1042cece78e1" category="list-text">Seleziona *Salva modifiche*.</block>
   <block id="179469fcde96eae5af1f559799d08b2a" category="paragraph">Per altri esempi di criteri di filtro, fare riferimento a<block ref="7c3f3bfbc0dabec1aca15cb9aeb0e326" category="inline-link-rx"></block> .</block>
   <block id="b52828f726867aaf1bf7b2a16b29e5e2" category="paragraph">Per ulteriori informazioni sulla creazione di criteri di filtro, fare riferimento a<block ref="c589c7fc86bb393dc58d099c6c8ea47e" category="inline-link-rx"></block> .</block>
+  <block id="f06afead014f9779fefbb6d2a2224bfd" category="cell">Creazione della relazione di replicazione non riuscita</block>
+  <block id="4d99e7fabf8a3228a9ae1e670f61053c" category="cell">La creazione di una relazione di replica SnapMirror non è riuscita.  Per maggiori informazioni, visita Tracker.</block>
+  <block id="8c340dc334134096f68b880b42a8692c" category="cell">Replicazione</block>
+  <block id="278d01e5af56273bae1bb99a98b370cd" category="cell">Critico</block>
+  <block id="c31576c9f98b33a8fa810835cefa86d2" category="cell">Deposito generale</block>
+  <block id="36df1b975561708b246ef1801ea416e5" category="cell">FSx per ONTAP</block>
+  <block id="521987edc4d9059fc32abee2d3f5d6ae" category="cell">Errore nella creazione di FSx per ONTAP</block>
+  <block id="dd34477f0a88e199c56ea0813db3e18d" category="cell">Il processo di creazione del file system FSx for ONTAP non è riuscito.  Per maggiori informazioni, visita Tracker.</block>
+  <block id="dfe4f4248d3875aa3b31ac02e60b0e87" category="cell">FSx per l'azione del file system ONTAP</block>
 </blocks>
