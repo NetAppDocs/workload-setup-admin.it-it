@@ -36,7 +36,7 @@ sidebar:
       url: "/sign-up-saas.html"
     - title: Aggiungi le credenziali AWS
       url: "/add-credentials.html"
-    - title: Cosa fare in seguito
+    - title: Ottimizza i carichi di lavoro con Workload Factory
       url: "/whats-next.html"
   - title: Amministrare workload Factory
     entries:

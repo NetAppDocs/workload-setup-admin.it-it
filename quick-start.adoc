@@ -31,23 +31,7 @@ link:add-credentials.html["Scopri come aggiungere credenziali al tuo account"].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Ottimizza i tuoi carichi di lavoro con FSX per ONTAP
 [role="quick-margin-para"]
-Ora che hai effettuato la registrazione, creato un account e facoltativamente hai aggiunto le credenziali AWS, puoi iniziare a utilizzare la fabbrica dei carichi di lavoro per ottimizzare i tuoi carichi di lavoro utilizzando FSX per ONTAP. Utilizza i link seguenti per seguire le istruzioni dettagliate per ciascun tipo di carico di lavoro.
+Dopo esserti registrato, aver creato un account e, facoltativamente, aver aggiunto le credenziali AWS, puoi iniziare a utilizzare Workload Factory per ottimizzare i tuoi carichi di lavoro tramite FSx per ONTAP.
 
-[role="quick-margin-list"]
-* https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Amazon FSX per NetApp ONTAP"^]
-+
-Valuta e analizza gli ambienti dati correnti per ottenere potenziali risparmi sui costi usando FSX per ONTAP come infrastruttura storage, effettua il provisioning e Templatizza le implementazioni di FSX per ONTAP in base alle Best practice e accedi a funzioni di gestione avanzate.
-
-* https://docs.netapp.com/us-en/workload-genai/index.html["Genai"^]
-+
-Implementa e gestisci un'infrastruttura RAG (Retrieval-Augmented Generation) per migliorare la precisione e l'unicità delle tue applicazioni ai. Crea una knowledge base RAG su FSX per ONTAP con sicurezza e conformità dei dati integrate.
-
-* https://docs.netapp.com/us-en/workload-databases/index.html["Workload dei database"^]
-+
-Rileva il tuo ambiente di database esistente in AWS, valuta i potenziali risparmi sui costi con FSX per ONTAP, implementa database end-to-end con Best practice integrate per l'ottimizzazione e automatizza il thin cloning per le pipeline ci/CD.
-
-* https://docs.netapp.com/us-en/workload-vmware/index.html["Workload VMware"^]
-+
-Ottimizza migrazioni e operazioni con consigli smart e correzioni automatiche. Distribuire backup efficienti e un disaster recovery solido. Monitora e risolvi i problemi delle macchine virtuali.
-
-
+[role="quick-margin-para"]
+link:whats-next.html["Ottimizza i tuoi carichi di lavoro con FSx per ONTAP"] .
