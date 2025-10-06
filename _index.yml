@@ -1,25 +1,24 @@
 ---
 indexpage:
-  title: Documentazione di configurazione e amministrazione della fabbrica del carico
-    di lavoro BlueXP 
-  summary: Inizia subito con la fabbrica di carichi di lavoro BlueXP  per ottenere
-    il massimo dai carichi di lavoro quando utilizzi Amazon FSX per NetApp ONTAP.
-    Una volta completata la configurazione, puoi creare, ottimizzare e gestire i file
-    system FSX per ONTAP per i tuoi carichi di lavoro, esplorare i risparmi sui costi
-    con FSX per ONTAP, utilizzare il co-pilot integrato di Infrastructure-as-Code
-    per l'automazione tra le piattaforme e gestire i carichi di lavoro in fabbrica.
-  keywords: workload factory, fsx, account, credentials, users, permissions, log in,
+  title: Documentazione di configurazione e amministrazione di NetApp Workload Factory
+  summary: Inizia subito a usare NetApp Workload Factory per sfruttare al meglio i
+    tuoi carichi di lavoro quando utilizzi Amazon FSx for NetApp ONTAP.  Una volta
+    completata la configurazione, puoi creare, ottimizzare e gestire i file system
+    FSx for ONTAP per i tuoi carichi di lavoro, esplorare i risparmi sui costi con
+    FSx for ONTAP, utilizzare il copilota Infrastructure-as-Code integrato per l'automazione
+    su più piattaforme e gestire i tuoi carichi di lavoro in Workload Factory.
+  keywords: Workload Factory, fsx, account, credentials, users, permissions, log in,
     calculator, codebox
-  lead: Inizia subito con la fabbrica di carichi di lavoro BlueXP  per ottenere il
-    massimo dai carichi di lavoro quando utilizzi Amazon FSX per NetApp ONTAP. Una
-    volta completata la configurazione, puoi creare, ottimizzare e gestire i file
-    system FSX per ONTAP per i tuoi carichi di lavoro, esplorare i risparmi sui costi
-    con FSX per ONTAP, utilizzare il co-pilot integrato di Infrastructure-as-Code
-    per l'automazione tra le piattaforme e gestire i carichi di lavoro in fabbrica.
+  lead: Inizia subito a usare NetApp Workload Factory per sfruttare al meglio i tuoi
+    carichi di lavoro quando utilizzi Amazon FSx for NetApp ONTAP.  Una volta completata
+    la configurazione, puoi creare, ottimizzare e gestire i file system FSx for ONTAP
+    per i tuoi carichi di lavoro, esplorare i risparmi sui costi con FSx for ONTAP,
+    utilizzare il copilota Infrastructure-as-Code integrato per l'automazione su più
+    piattaforme e gestire i tuoi carichi di lavoro in Workload Factory.
   tiles:
   - title: Inizia subito
     links:
-    - title: Scopri di più sulla BlueXP  workload Factory
+    - title: Scopri di più su NetApp Workload Factory
       url: workload-factory-overview.html
     - title: Registrati
       url: sign-up-saas.html
@@ -39,9 +38,9 @@ indexpage:
       url: use-codebox.html
   - title: Blog e community
     links:
+    - title: Console NetApp
+      url: https://www.netapp.com/console
+    - title: Servizi dati NetApp
+      url: https://www.netapp.com/data-services/
     - title: Community NetApp
-      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
-    - title: Blog BlueXP
-      url: https://bluexp.netapp.com/blog
-    - title: Webinar sul cloud
-      url: https://bluexp.netapp.com/events
+      url: https://community.netapp.com/

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: configure-notifications.html 
 keywords: amazon, sns, notification, topic, notifications, notifications service, alerts 
-summary: 'È possibile configurare BlueXP Workload Factory per inviare notifiche a una persona o a un"altra applicazione quando si verificano determinati tipi di eventi.' 
+summary: 'È possibile configurare NetApp Workload Factory per inviare notifiche a una persona o a un"altra applicazione quando si verificano determinati tipi di eventi.' 
 ---
-= Configurare le notifiche di fabbrica del carico di lavoro BlueXP
+= Configurare le notifiche di NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-È possibile configurare il servizio di notifica della Workload Factory di BlueXP per inviare notifiche al servizio di avvisi BlueXP o a un argomento Amazon SNS. Le notifiche inviate agli avvisi BlueXP vengono visualizzate nel pannello degli avvisi BlueXP. Quando la Workload Factory pubblica notifiche su un argomento Amazon SNS, i sottoscrittori dell'argomento (ad esempio persone o altre applicazioni) ricevono le notifiche sugli endpoint configurati per l'argomento (ad esempio, tramite e-mail o SMS).
+È possibile configurare il servizio di notifica NetApp Workload Factory per inviare notifiche come avvisi nella console NetApp o a un argomento Amazon SNS.  Le notifiche inviate come avvisi vengono visualizzate nella console NetApp quando è distribuito un agente o un collegamento della console.  Quando Workload Factory pubblica notifiche su un argomento Amazon SNS, gli abbonati all'argomento (ad esempio persone o altre applicazioni) ricevono le notifiche negli endpoint configurati per l'argomento (ad esempio messaggi e-mail o SMS).
 
 
 
@@ -24,7 +24,7 @@ Workload Factory invia notifiche per i seguenti eventi:
 | Evento | Descrizione | Tipo di notifica | Severità | Carico di lavoro | Tipo di risorsa 
 
 
-| Alcune istanze del database nel tuo account non sono ben progettate | Tutte le istanze di Microsoft SQL Server nel tuo account sono state analizzate per problemi di architettura corretta. La descrizione di questo evento indica il numero di istanze di architettura corretta e non ottimizzate. Esamina i risultati e le raccomandazioni relative allo stato di architettura corretta nell'inventario dei database dalla console della Workload Factory. | Ben progettato | Consiglio | Database | Istanza di Microsoft SQL Server 
+| Alcune istanze del database nel tuo account non sono ben progettate | Tutte le istanze di Microsoft SQL Server nel tuo account sono state analizzate per individuare eventuali problemi ben progettati.  La descrizione di questo evento fornisce il numero di istanze ben progettate e di istanze non ottimizzate.  Esaminare i risultati e le raccomandazioni sullo stato ben progettati nell'inventario dei database dalla console Workload Factory. | Ben progettato | Consiglio | Database | Istanza di Microsoft SQL Server 
 
 
 | Distribuzione del server Microsoft SQL Server/PostgreSQL riuscita | L'implementazione dell'host Microsoft SQL Server o PostgreSQL è riuscita. Per ulteriori informazioni, consultare il monitoraggio dei job. | Implementazione | Successo | Database | FSx per ONTAP, host DB 
@@ -37,54 +37,57 @@ Workload Factory invia notifiche per i seguenti eventi:
 
 
 | Errore nella creazione di FSx per ONTAP | Il processo di creazione del file system FSx for ONTAP non è riuscito.  Per maggiori informazioni, visita Tracker. | FSx per l'azione del file system ONTAP | Critico | Deposito generale | FSx per ONTAP 
+
+
+| Rilevato problema FSx per ONTAP | Tutti i file system FSx per ONTAP sono stati analizzati per individuare eventuali problemi di architettura corretta.  La scansione ha rilevato uno o più problemi.  Per ulteriori informazioni, consultare l'analisi ben progettata nella dashboard Storage nella console Workload Factory. | Analisi ben progettata | Consiglio | Deposito generale | FSx per file system ONTAP 
 |===
 
 
 == Configurare le notifiche di Workload Factory
 
-Configura le notifiche di Workload Factory tramite la console BlueXP o la console di Workload Factory. Se utilizzi la console BlueXP, puoi configurare Workload Factory per inviare notifiche agli avvisi BlueXP o a un argomento Amazon SNS. Puoi configurare gli avvisi BlueXP dall'area *Impostazioni avvisi e notifiche* di BlueXP.
+Configurare le notifiche di Workload Factory utilizzando la console NetApp o la console Workload Factory.  Se utilizzi la console NetApp , puoi configurare Workload Factory per inviare notifiche come avvisi nella console NetApp o a un argomento Amazon SNS.  È possibile configurare le notifiche dalle *Impostazioni notifiche* nella console NetApp .
 
 .Prima di iniziare
 * È necessario configurare Amazon SNS e creare argomenti Amazon SNS tramite la console Amazon SNS o AWS CLI.
-* Si noti che Workload Factory supporta il tipo di argomento *Standard*. Questo tipo di argomento non garantisce che le notifiche vengano inviate agli abbonati nell'ordine in cui sono state ricevute, quindi è consigliabile tenerlo in considerazione in caso di notifiche critiche o di emergenza.
+* Si noti che Workload Factory supporta il tipo di argomento *Standard*.  Questo tipo di argomento non garantisce che le notifiche vengano inviate agli abbonati nell'ordine in cui sono state ricevute, quindi tienilo in considerazione se hai notifiche critiche o di emergenza.
 
 
 [role="tabbed-block"]
 ====
-.Configurare le notifiche dalla console BlueXP
+.Configurare le notifiche dalla console NetApp
 --
 .Fasi
-. Accedere a link:https://console.bluexp.netapp.com["Console BlueXP"^].
-. Selezionare *carichi di lavoro* dal menu di navigazione a sinistra.
-. Selezionare *Home* per visualizzare tutti i carichi di lavoro o selezionare un carico di lavoro come *archiviazione* o *database*.
-. Dalla barra dei menu di Workload Factory, selezionare il menu di configurazione.
-. Nel menu, seleziona *Configurazione notifiche Workload Factory*.
-. Facoltativo: seleziona *Abilita notifiche BlueXP* per configurare Workload Factory in modo che invii notifiche agli avvisi BlueXP.
-. Seleziona *Abilita notifiche SNS*.
-. Segui le istruzioni per configurare Amazon SNS dalla console di Amazon SNS.
+. Accedi allink:https://console.netapp.com["Console NetApp"^] .
+. Dal menu della console NetApp , selezionare *Carichi di lavoro*, *Amministrazione* e quindi *Impostazione notifiche*.
+. Nella pagina di configurazione delle notifiche, procedi come segue:
 +
-Dopo aver creato l'argomento, copia l'ARN dell'argomento e inseriscilo nel campo *ARN argomento SNS* nella finestra di dialogo *Impostazione notifiche*.
+.. Facoltativo: seleziona *Abilita notifiche NetApp Console* per configurare Workload Factory in modo che invii notifiche nella NetApp Console.
+.. Seleziona *Abilita notifiche SNS*.
+.. Segui le istruzioni per configurare Amazon SNS dalla console di Amazon SNS.
++
+Dopo aver creato l'argomento, copia l'ARN dell'argomento e inseriscilo nel campo *ARN argomento SNS* nella pagina *Impostazione notifiche*.
+
+
 
 . Dopo aver verificato la configurazione inviando una notifica di prova, seleziona *Applica*.
 
 
 .Risultato
-La fabbrica dei carichi di lavoro è configurata per inviare notifiche all'argomento Amazon SNS specificato.
+Workload Factory è configurato per inviare notifiche all'argomento Amazon SNS specificato.
 
 --
-.Configurare le notifiche dalla console di Workload Factory
+.Configurare le notifiche dalla console Workload Factory
 --
 .Fasi
-. Accedere a link:https://console.workloads.netapp.com["console di fabbrica del carico di lavoro"^].
-. Aprire il menu dell'account dalla barra di navigazione in alto.
-. Nel menu, seleziona *Impostazione notifiche*.
+. Accedi allink:https://console.workloads.netapp.com["Console Workload Factory"^] .
+. Dal menu della console Workload Factory, seleziona *Carichi di lavoro*, *Amministrazione* e quindi *Impostazione notifiche*.
 . Seleziona *Abilita notifiche SNS*.
 . Segui le istruzioni per configurare Amazon SNS dalla console di Amazon SNS.
 . Dopo aver verificato la configurazione inviando una notifica di prova, seleziona *Applica*.
 
 
 .Risultato
-La fabbrica dei carichi di lavoro è configurata per inviare notifiche all'argomento Amazon SNS specificato.
+Workload Factory è configurato per inviare notifiche all'argomento Amazon SNS specificato.
 
 --
 ====
@@ -92,13 +95,13 @@ La fabbrica dei carichi di lavoro è configurata per inviare notifiche all'argom
 
 == Iscriviti all'argomento Amazon SNS
 
-Dopo aver configurato la fabbrica del carico di lavoro per inviare notifiche a un argomento, seguire le istruzioni  https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html["istruzioni"] nella documentazione di Amazon SNS per iscriverti all'argomento in modo da poter ricevere notifiche da Workload Factory.
+Dopo aver configurato Workload Factory per inviare notifiche a un argomento, seguire le istruzioni https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html["istruzioni"] nella documentazione di Amazon SNS per iscriverti all'argomento in modo da poter ricevere notifiche da Workload Factory.
 
 
 
 == Filtra le notifiche
 
-È possibile ridurre il traffico di notifiche non necessario e indirizzare tipi di notifiche specifici a utenti specifici applicando filtri alle notifiche. È possibile farlo utilizzando una policy Amazon SNS per le notifiche SNS e le impostazioni di notifica BlueXP per le notifiche BlueXP.
+È possibile ridurre il traffico di notifiche non necessario e indirizzare tipi di notifiche specifici a utenti specifici applicando filtri alle notifiche.  È possibile farlo utilizzando una policy Amazon SNS per le notifiche SNS e le impostazioni delle notifiche nella console NetApp .
 
 
 
@@ -180,8 +183,8 @@ Per ulteriori informazioni sulla creazione di criteri di filtro, fare riferiment
 
 
 
-=== Filtra le notifiche BlueXP
+=== Filtra le notifiche nella console NetApp
 
-Puoi utilizzare le impostazioni di avvisi e notifiche di BlueXP per filtrare gli avvisi e le notifiche ricevuti in BlueXP in base al livello di gravità, ad esempio Critico, Info o Avviso.
+È possibile utilizzare le impostazioni delle notifiche della console NetApp per filtrare le notifiche ricevute nella console in base al livello di gravità, ad esempio Critico, Informazioni o Avviso.
 
-Per ulteriori informazioni sul filtraggio delle notifiche in BlueXP, fare riferimento a  https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#filter-notifications["Documentazione BlueXP"^] .
+Per ulteriori informazioni sul filtraggio delle notifiche nella Console, fare riferimento a https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#filter-notifications["Documentazione della console NetApp"^] .

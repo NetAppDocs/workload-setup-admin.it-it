@@ -2,36 +2,36 @@
 sidebar: sidebar 
 permalink: quick-start.html 
 keywords: quick start 
-summary: Inizia subito con la workload Factory preparando il networking per la console workload Factory, iscrivendo e creando un account e aggiungendo credenziali in modo che la workload Factory possa gestire direttamente le risorse AWS. 
+summary: Per iniziare a utilizzare Workload Factory, prepara la rete per la console di Workload Factory, registrati e crea un account e aggiungi le credenziali in modo che Workload Factory possa gestire direttamente le risorse AWS. 
 ---
-= Avvio rapido per la fabbrica di workload BlueXP 
+= Avvio rapido per NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Inizia a utilizzare la workflow factory sottoscrivendo e creando un account, aggiungendo credenziali in modo che la fabbrica dei carichi di lavoro possa gestire direttamente le risorse AWS, quindi ottimizza i carichi di lavoro utilizzando Amazon FSX per NetApp ONTAP.
+Per iniziare a usare NetApp Workload Factory, registrati e crea un account, aggiungi le credenziali in modo che Workload Factory possa gestire direttamente le risorse AWS e quindi ottimizzare i tuoi carichi di lavoro utilizzando Amazon FSx for NetApp ONTAP.
 
-Workload Factory è accessibile agli utenti come servizio cloud dalla console basata su web. Prima di iniziare, è necessario conoscere link:workload-factory-overview.html["fabbrica dei carichi di lavoro"] e link:operational-modes.html["modalità operative"].
+NetApp Workload Factory è accessibile agli utenti come servizio cloud dalla console basata sul Web.  Prima di iniziare, dovresti avere una comprensione dilink:workload-factory-overview.html["Fabbrica del carico di lavoro"] Elink:operational-modes.html["modalità operative"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Registrati e crea un account
 [role="quick-margin-para"]
-Accedere a https://console.workloads.netapp.com["console di fabbrica del carico di lavoro"^], iscriversi e creare un account.
+Vai al https://console.workloads.netapp.com["Console Workload Factory"^] , registrati e crea un account.
 
 [role="quick-margin-para"]
 link:sign-up-saas.html["Scopri come iscriversi e creare un account"].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Aggiungi le credenziali AWS alla fabbrica del workload
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]Aggiungi le credenziali AWS a Workload Factory
 [role="quick-margin-para"]
-Questo passaggio è facoltativo. Puoi utilizzare la fabbrica dei carichi di lavoro in modalità _Basic_ senza aggiungere credenziali per accedere all'account AWS. L'aggiunta delle credenziali AWS alla Workload Factory in modalità _sola lettura_ o _lettura/scrittura_ fornisce all'account della Workload Factory le autorizzazioni necessarie per creare e gestire i file system FSx for ONTAP e per distribuire e gestire carichi di lavoro specifici, come database e GenAI.
+Questo passaggio è facoltativo. Puoi utilizzare Workload Factory in modalità _Basic_ senza aggiungere credenziali per accedere al tuo account AWS.  L'aggiunta delle credenziali AWS a Workload Factory in modalità _sola lettura_ o _lettura/scrittura_ fornisce al tuo account Workload Factory le autorizzazioni necessarie per creare e gestire i file system FSx for ONTAP e per distribuire e gestire carichi di lavoro specifici, come database e GenAI.
 
 [role="quick-margin-para"]
 link:add-credentials.html["Scopri come aggiungere credenziali al tuo account"].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Ottimizza i tuoi carichi di lavoro con FSX per ONTAP
 [role="quick-margin-para"]
-Dopo esserti registrato, aver creato un account e, facoltativamente, aver aggiunto le credenziali AWS, puoi iniziare a utilizzare Workload Factory per ottimizzare i tuoi carichi di lavoro tramite FSx per ONTAP.
+Dopo esserti registrato, aver creato un account e, facoltativamente, aver aggiunto le credenziali AWS, puoi iniziare a utilizzare Workload Factory per ottimizzare i tuoi carichi di lavoro tramite FSx for ONTAP.
 
 [role="quick-margin-para"]
 link:whats-next.html["Ottimizza i tuoi carichi di lavoro con FSx per ONTAP"] .

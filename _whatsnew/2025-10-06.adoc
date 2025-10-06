@@ -1,0 +1,15 @@
+= La BlueXP workload factory ora è NetApp Workload Factory
+:allow-uri-read: 
+
+
+
+
+=== La BlueXP workload factory ora è NetApp Workload Factory
+
+BlueXP è stato rinominato e riprogettato per riflettere meglio il ruolo che svolge nella gestione dell'infrastruttura dati. Di conseguenza, BlueXP workload factory è stato rinominato NetApp Workload Factory.
+
+
+
+=== Integrazione Ask Me con MCP
+
+Ask Me, l'assistente AI di Workload Factory, è integrato con il Model Context Protocol (MCP).  Utilizzando MCP, Ask Me interagisce in modo sicuro con ambienti esterni e interroga gli strumenti API per fornire risposte personalizzate in base al tuo specifico ambiente di archiviazione.

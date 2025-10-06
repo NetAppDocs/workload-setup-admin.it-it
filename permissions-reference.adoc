@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: permissions-reference.html 
 keywords: permissions, actions 
-summary: 'Per utilizzare i servizi e le funzionalità di fabbrica dei carichi di lavoro BlueXP , dovrai fornire le autorizzazioni necessarie affinché la fabbrica dei carichi di lavoro possa eseguire le operazioni nell"ambiente cloud.' 
+summary: Per utilizzare le funzionalità e i servizi di NetApp Workload Factory, è necessario fornire le autorizzazioni necessarie affinché Workload Factory possa eseguire operazioni nel tuo ambiente cloud. 
 ---
-= Autorizzazioni per la fabbrica del carico di lavoro BlueXP 
+= Autorizzazioni per NetApp Workload Factory
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,27 +14,27 @@ summary: 'Per utilizzare i servizi e le funzionalità di fabbrica dei carichi di
 
 
 [role="lead"]
-Per utilizzare i servizi e le funzionalità di fabbrica dei carichi di lavoro BlueXP , dovrai fornire le autorizzazioni necessarie affinché la fabbrica dei carichi di lavoro possa eseguire le operazioni nell'ambiente cloud.
+Per utilizzare le funzionalità e i servizi di NetApp Workload Factory, è necessario fornire le autorizzazioni necessarie affinché Workload Factory possa eseguire operazioni nel tuo ambiente cloud.
 
 
 
 == Perché utilizzare le autorizzazioni
 
-Quando si forniscono autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_, Workload Factory associa una policy all'istanza con le autorizzazioni per gestire risorse e processi all'interno di quell'account AWS. Ciò consente a workload factory di eseguire diverse operazioni a partire dal rilevamento degli ambienti storage, fino all'implementazione di risorse AWS, come file system nella gestione dello storage o knowledge base per i workload Genai.
+Quando si forniscono autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_, Workload Factory associa una policy all'istanza con autorizzazioni per gestire risorse e processi all'interno di quell'account AWS.  Ciò consente a Workload Factory di eseguire diverse operazioni, a partire dalla scoperta degli ambienti di storage fino alla distribuzione di risorse AWS, come file system nella gestione dello storage o knowledge base per carichi di lavoro GenAI.
 
-Per i carichi di lavoro del database, ad esempio, quando viene concessa la fabbrica del carico di lavoro con le autorizzazioni richieste, analizza tutte le EC2 istanze di un determinato account e area e filtra tutte le macchine basate su Windows. Se AWS Systems Manager (SSM) Agent è installato e in esecuzione sull'host e la rete di System Manager è configurata correttamente, workload Factory può accedere al computer Windows e verificare se il software SQL Server è installato o meno.
+Ad esempio, per i carichi di lavoro del database, quando a Workload Factory vengono concesse le autorizzazioni necessarie, vengono analizzate tutte le istanze EC2 in un determinato account e in una determinata regione e vengono filtrati tutti i computer basati su Windows.  Se l'agente AWS Systems Manager (SSM) è installato e in esecuzione sull'host e la rete di System Manager è configurata correttamente, Workload Factory può accedere alla macchina Windows e verificare se il software SQL Server è installato o meno.
 
 
 
 == Autorizzazioni per carico di lavoro
 
-Ogni carico di lavoro utilizza le autorizzazioni per eseguire determinati task in fabbrica dei carichi di lavoro. Scorri fino al carico di lavoro utilizzato per visualizzare l'elenco delle autorizzazioni, il loro scopo, il luogo in cui vengono utilizzate e le modalità che le supportano.
+Ogni carico di lavoro utilizza autorizzazioni per eseguire determinate attività in Workload Factory.  Scorri fino al carico di lavoro che utilizzi per visualizzare l'elenco delle autorizzazioni, il loro scopo, dove vengono utilizzate e quali modalità le supportano.
 
 
 
 === Autorizzazioni per l'archiviazione
 
-I criteri IAM disponibili per lo storage forniscono le autorizzazioni necessarie alla fabbrica dei carichi di lavoro per gestire le risorse e i processi nell'ambiente di cloud pubblico in base alla modalità operativa in cui operi.
+I criteri IAM disponibili per Storage forniscono le autorizzazioni di cui Workload Factory ha bisogno per gestire risorse e processi all'interno del tuo ambiente cloud pubblico in base alla modalità operativa in cui operi.
 
 Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
 
@@ -364,7 +364,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 
 === Autorizzazioni per i carichi di lavoro del database
 
-I criteri IAM disponibili per i carichi di lavoro del database forniscono le autorizzazioni di cui la fabbrica dei carichi di lavoro ha bisogno per gestire risorse e processi all'interno dell'ambiente cloud pubblico in base alla modalità operativa in cui si opera.
+I criteri IAM disponibili per i carichi di lavoro del database forniscono le autorizzazioni di cui Workload Factory ha bisogno per gestire risorse e processi all'interno dell'ambiente cloud pubblico in base alla modalità operativa in cui si opera.
 
 Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
 
@@ -467,7 +467,7 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "EC2Group",
+      "Sid": "EC2TagGroup",
       "Effect": "Allow",
       "Action": [
         "ec2:AllocateAddress",
@@ -539,6 +539,7 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
         "cloudformation:ValidateTemplate",
         "cloudformation:DescribeAccountLimits",
         "cloudwatch:GetMetricStatistics",
+        "cloudwatch:GetMetricData",
         "ds:DescribeDirectories",
         "ec2:CreateLaunchTemplate",
         "ec2:CreateLaunchTemplateVersion",
@@ -546,27 +547,50 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
         "ec2:CreateSecurityGroup",
         "ec2:CreateTags",
         "ec2:CreateVpcEndpoint",
-        "ec2:Describe*",
-        "ec2:Get*",
+        "ec2:DescribeInstances",
+        "ec2:DescribeVolumes",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeImages",
+        "ec2:DescribeKeyPairs",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeTags",
+        "ec2:DescribeAddresses",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DescribeRegions",
+        "ec2:DescribeRouteTables",
+        "ec2:DescribeInstanceTypes",
+        "ec2:DescribeVpcEndpoints",
+        "ec2:DescribeInstanceTypeOfferings",
+        "ec2:DescribeSnapshots",
+        "ec2:DescribeLaunchTemplates",
         "ec2:RunInstances",
         "ec2:ModifyVpcAttribute",
-        "ec2messages:*",
         "fsx:CreateFileSystem",
         "fsx:UpdateFileSystem",
         "fsx:CreateStorageVirtualMachine",
         "fsx:CreateVolume",
         "fsx:UpdateVolume",
-        "fsx:Describe*",
-        "fsx:List*",
+        "fsx:DescribeFileSystems",
+        "fsx:DescribeStorageVirtualMachines",
+        "fsx:DescribeVolumes",
+        "fsx:DescribeFileSystemAliases",
+        "fsx:DescribeBackups",
+        "fsx:ListTagsForResource",
         "kms:CreateGrant",
-        "kms:Describe*",
-        "kms:List*",
+        "kms:DescribeKey",
+        "kms:DescribeCustomKeyStores",
+        "kms:ListAliases",
+        "kms:ListKeys",
         "kms:GenerateDataKey",
         "kms:Decrypt",
         "logs:CreateLogGroup",
         "logs:CreateLogStream",
-        "logs:DescribeLog*",
-        "logs:GetLog*",
+        "logs:DescribeLogGroups",
+        "logs:DescribeLogStreams",
+        "logs:GetLogEvents",
+        "logs:GetLogGroupFields",
+        "logs:GetLogRecord",
         "logs:ListLogDeliveries",
         "logs:PutLogEvents",
         "logs:TagResource",
@@ -574,9 +598,13 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
         "servicequotas:ListServiceQuotas",
         "sns:ListTopics",
         "sns:Publish",
-        "ssm:Describe*",
-        "ssm:Get*",
-        "ssm:List*",
+        "ssm:DescribeInstanceInformation",
+        "ssm:DescribeInstancePatchStates",
+        "ssm:DescribePatchBaselines",
+        "ssm:GetParametersByPath",
+        "ssm:GetCommandInvocation",
+        "ssm:GetConnectionStatus",
+        "ssm:ListCommands",
         "ssm:PutComplianceItems",
         "ssm:PutConfigurePackageResult",
         "ssm:PutInventory",
@@ -584,13 +612,23 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
         "ssm:UpdateAssociationStatus",
         "ssm:UpdateInstanceAssociationStatus",
         "ssm:UpdateInstanceInformation",
-        "ssmmessages:*",
+        "ssmmessages:CreateControlChannel",
+        "ssmmessages:CreateDataChannel",
+        "ssmmessages:OpenControlChannel",
+        "ssmmessages:OpenDataChannel",
         "compute-optimizer:GetEnrollmentStatus",
         "compute-optimizer:PutRecommendationPreferences",
         "compute-optimizer:GetEffectiveRecommendationPreferences",
         "compute-optimizer:GetEC2InstanceRecommendations",
         "autoscaling:DescribeAutoScalingGroups",
-        "autoscaling:DescribeAutoScalingInstances"
+        "autoscaling:DescribeAutoScalingInstances",
+        "bedrock:GetFoundationModelAvailability",
+        "bedrock:ListInferenceProfiles",
+        "iam:GetPolicy",
+        "iam:GetPolicyVersion",
+        "iam:GetRole",
+        "iam:GetRolePolicy",
+        "iam:GetUser"
       ],
       "Resource": "*"
     },
@@ -606,28 +644,28 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
       ]
     },
     {
-      "Sid": "IAMGroup",
+      "Sid": "IAMGroup1",
       "Effect": "Allow",
       "Action": [
         "iam:AddRoleToInstanceProfile",
         "iam:CreateInstanceProfile",
-        "iam:CreateRole",
         "iam:DeleteInstanceProfile",
-        "iam:GetPolicy",
-        "iam:GetPolicyVersion",
-        "iam:GetRole",
-        "iam:GetRolePolicy",
-        "iam:GetUser",
         "iam:PutRolePolicy",
         "iam:RemoveRoleFromInstanceProfile"
       ],
-      "Resource": "*"
+      "Resource": [
+        "arn:aws:iam::*:instance-profile/*",
+        "arn:aws:iam::*:role/WLMDB*"
+      ]
     },
     {
-      "Sid": "IAMGroup1",
+      "Sid": "IAMGroup2",
       "Effect": "Allow",
       "Action": "iam:CreateServiceLinkedRole",
-      "Resource": "*",
+      "Resource": [
+        "arn:aws:iam::*:instance-profile/*",
+        "arn:aws:iam::*:role/WLMDB*"
+      ],
       "Condition": {
         "StringLike": {
           "iam:AWSServiceName": "ec2.amazonaws.com"
@@ -635,15 +673,24 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
       }
     },
     {
-      "Sid": "IAMGroup2",
+      "Sid": "IAMGroup3",
       "Effect": "Allow",
       "Action": "iam:PassRole",
-      "Resource": "*",
+      "Resource": [
+        "arn:aws:iam::*:instance-profile/*",
+        "arn:aws:iam::*:role/WLMDB*"
+      ],
       "Condition": {
         "StringEquals": {
           "iam:PassedToService": "ec2.amazonaws.com"
         }
       }
+    },
+    {
+      "Sid": "IAMGroup4",
+      "Effect": "Allow",
+      "Action": "iam:CreateRole",
+      "Resource": "arn:aws:iam::*:role/WLMDB*"
     },
     {
       "Sid": "SSMParameterStore",
@@ -1242,29 +1289,17 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 | Eliminare il gruppo di protezione creato temporaneamente per i nodi di convalida | ec2:DeleteSecurityGroup | Implementazione | Lettura/scrittura 
 
 
-.2+| Ottieni dettagli delle istanze per il provisioning | EC2:descrivere*  a| 
-* Implementazione
-* Inventario
-* Scopri i risparmi
-
+.2+| Ottieni dettagli delle istanze per il provisioning | ec2:DescriviIndirizzi  a| 
+Implementazione
 | Lettura/scrittura 
 
 
-| EC2:Get*  a| 
-* Implementazione
-* Inventario
-* Scopri i risparmi
-
+| ec2:DescribeLaunchTemplates  a| 
+Implementazione
 | Lettura/scrittura 
 
 
 | Avviare le istanze create | ec2:RunInstances | Implementazione | Lettura/scrittura 
-
-
-| Systems Manager utilizza l'endpoint del servizio di consegna dei messaggi AWS per le operazioni API | ec2messages:*  a| 
-* Distribuzione *inventario
-
-| Lettura/scrittura 
 
 
 .3+| Crea risorse FSX per ONTAP richieste per il provisioning. Per i sistemi esistenti di FSX per ONTAP, viene creata una nuova SVM per ospitare i volumi SQL. | fsx:CreateFileSystem | Implementazione | Lettura/scrittura 
@@ -1280,226 +1315,206 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 | Lettura/scrittura 
 
 
-.2+| Ottieni i dettagli di FSX per ONTAP | fsx:descrivere*  a| 
-* Implementazione
-* Inventario
-* Gestire le operazioni
-* Scopri i risparmi
-
+.2+| Ottieni i dettagli di FSX per ONTAP | fsx:DescribeFileSystemAliases  a| 
+Implementazione
 | Lettura/scrittura 
 
 
-| fsx: Elenco*  a| 
+| Ridimensiona FSX per il file system ONTAP per rimediare allo spazio a disposizione del file system | fsx:Updatefilesystem | Ottimizzazione 
+
+
+| Lettura/scrittura | Ridimensionamento dei volumi per correggere le dimensioni dei dischi di log e TempDB | fsx:UpdateVolume | Ottimizzazione 
+
+
+| Lettura/scrittura .3+| Ottieni dettagli chiave KMS e utilizza la crittografia per FSX for ONTAP | Km: CreateGrant | Implementazione 
+
+
+| Lettura/scrittura | kms:DescribeCustomKeyStores | Implementazione 
+
+
+| Lettura/scrittura | Km:GenerateDataKey | Implementazione 
+
+
+| Lettura/scrittura .8+| Creare log di CloudWatch per la convalida e il provisioning di script in esecuzione su istanze EC2 | Registri:CreateLogGroup | Implementazione 
+
+
+| Lettura/scrittura | Registri:CreateLogStream | Implementazione 
+
+
+| Lettura/scrittura | Registri:DescribeLogStreams  a| 
 * Implementazione
-* Inventario
-
-| Lettura/scrittura 
+* Valutazione
 
 
-| Ridimensiona FSX per il file system ONTAP per rimediare allo spazio a disposizione del file system | fsx:Updatefilesystem | Ottimizzazione | Lettura/scrittura 
 
 
-| Ridimensionamento dei volumi per correggere le dimensioni dei dischi di log e TempDB | fsx:UpdateVolume | Ottimizzazione | Lettura/scrittura 
+| Lettura/scrittura | registri:GetLogGroupFields | Implementazione 
 
 
-.4+| Ottieni dettagli chiave KMS e utilizza la crittografia per FSX for ONTAP | Km: CreateGrant | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | registri:GetLogRecord | Implementazione 
 
 
-| Km:descrivere* | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | Registri:ListLogDeliveries | Implementazione 
 
 
-| Km: Elenco* | Implementazione | Lettura/scrittura 
-
-
-| Km:GenerateDataKey | Implementazione | Lettura/scrittura 
-
-
-.7+| Creare log di CloudWatch per la convalida e il provisioning di script in esecuzione su istanze EC2 | Registri:CreateLogGroup | Implementazione | Lettura/scrittura 
-
-
-| Registri:CreateLogStream | Implementazione | Lettura/scrittura 
-
-
-| Registri:DescribeLog* | Implementazione | Lettura/scrittura 
-
-
-| Registri:GetLog* | Implementazione | Lettura/scrittura 
-
-
-| Registri:ListLogDeliveries | Implementazione | Lettura/scrittura 
-
-
-| Registri:PutLogEvents  a| 
+| Lettura/scrittura | Registri:PutLogEvents  a| 
 * Implementazione
 * Gestire le operazioni
 
-| Lettura/scrittura 
 
 
-| Registri:TagResource | Implementazione | Lettura/scrittura 
+
+| Lettura/scrittura | Registri:TagResource | Implementazione 
 
 
-| Workload Factory passa ai registri di Amazon CloudWatch per l'istanza SQL in caso di troncamento dell'output SSM | Registri:GetLogEvents  a| 
+| Lettura/scrittura | Workload Factory passa ai log di Amazon CloudWatch per l'istanza SQL quando rileva un troncamento dell'output SSM | Registri:GetLogEvents  a| 
 * Valutazione dello storage (ottimizzazione)
 * Inventario
+
+
+
 
  a| 
 * Sola lettura
 * Lettura/scrittura
 
-
-
-
-| Consentire a workload Factory di ottenere gli attuali gruppi di log e verificare che sia stata impostata la conservazione per i gruppi di log creati da workload Factory | Registri:DescribeLogGroups  a| 
+| Consenti a Workload Factory di ottenere i gruppi di log correnti e verifica che la conservazione sia impostata per i gruppi di log creati da Workload Factory | Registri:DescribeLogGroups  a| 
 * Valutazione dello storage (ottimizzazione)
 * Inventario
 
-| Sola lettura 
 
 
-| Consentire a workload Factory di impostare un criterio di conservazione di un giorno per i gruppi di log creati da workload Factory per evitare l'accumulo non necessario di flussi di log per gli output dei comandi SSM | Registri:PutRetentionPolicy  a| 
+
+| Sola lettura | Consenti a Workload Factory di impostare un criterio di conservazione di un giorno per i gruppi di log creati da Workload Factory per evitare un accumulo non necessario di flussi di log per gli output dei comandi SSM | Registri:PutRetentionPolicy  a| 
 * Valutazione dello storage (ottimizzazione)
 * Inventario
+
+
+
 
  a| 
 * Sola lettura
 * Lettura/scrittura
 
+| Creare segreti in un account utente per le credenziali fornite per SQL, dominio e FSX per ONTAP | Services equotas:ListServiceQuotas | Implementazione 
 
 
-
-| Creare segreti in un account utente per le credenziali fornite per SQL, dominio e FSX per ONTAP | Services equotas:ListServiceQuotas | Implementazione | Lettura/scrittura 
-
-
-.2+| Elencare gli argomenti SNS dei clienti e pubblicarli su SNS back-end WLMDB e SNS dei clienti, se selezionati | sns:ListTopics | Implementazione | Lettura/scrittura 
+| Lettura/scrittura .2+| Elencare gli argomenti SNS dei clienti e pubblicarli su SNS back-end WLMDB e SNS dei clienti, se selezionati | sns:ListTopics | Implementazione 
 
 
-| sns: Pubblica | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | sns: Pubblica | Implementazione 
 
 
-.11+| Autorizzazioni SSM richieste per eseguire lo script di rilevamento sulle istanze SQL sottoposte a provisioning e per recuperare l'elenco più recente delle regioni AWS supportate da FSX per ONTAP. | ssm:descrivere* | Implementazione | Lettura/scrittura 
+| Lettura/scrittura .11+| Autorizzazioni SSM richieste per eseguire lo script di rilevamento sulle istanze SQL sottoposte a provisioning e per recuperare l'elenco più recente delle regioni AWS supportate da FSX per ONTAP. | ssm: PutComplianceItems | Implementazione 
 
 
-| ssm:Get*  a| 
-* Implementazione
-* Gestire le operazioni
-
-| Lettura/scrittura 
+| Lettura/scrittura | ssm:PutConfigurePackageResult | Implementazione 
 
 
-| ssm:elenco* | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | ssm:PutInventory | Implementazione 
 
 
-| ssm: PutComplianceItems | Implementazione | Lettura/scrittura 
-
-
-| ssm:PutConfigurePackageResult | Implementazione | Lettura/scrittura 
-
-
-| ssm:PutInventory | Implementazione | Lettura/scrittura 
-
-
-| ssm:SendCommand  a| 
+| Lettura/scrittura | ssm:SendCommand  a| 
 * Implementazione
 * Inventario
 * Gestire le operazioni
 
-| Lettura/scrittura 
 
 
-| ssm:UpdateAssociationStatus | Implementazione | Lettura/scrittura 
+
+| Lettura/scrittura | ssm:UpdateAssociationStatus | Implementazione 
 
 
-| ssm:UpdateInstanceAssociationStatus | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | ssm:UpdateInstanceAssociationStatus | Implementazione 
 
 
-| ssm:UpdateInstanceInformation | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | ssm:UpdateInstanceInformation | Implementazione 
 
 
-| smmessages:*  a| 
+| Lettura/scrittura | ssmmessages:CreateControlChannel | Implementazione 
+
+
+| Lettura/scrittura | ssmmessages:CreateDataChannel | Implementazione 
+
+
+| Lettura/scrittura | ssmmessages:OpenControlChannel | Implementazione 
+
+
+| Lettura/scrittura | ssmmessages:OpenDataChannel | Implementazione 
+
+
+| Lettura/scrittura .4+| Salva credenziali per FSX per ONTAP, Active Directory e utente SQL (solo per l'autenticazione utente SQL) | ssm:getParameter ^1^  a| 
 * Implementazione
-* Inventario
 * Gestire le operazioni
-
-| Lettura/scrittura 
-
-
-.4+| Salva credenziali per FSX per ONTAP, Active Directory e utente SQL (solo per l'autenticazione utente SQL) | ssm:getParameter ^1^  a| 
-* Implementazione
-* Gestire le operazioni
-* Inventario
-
-| Lettura/scrittura 
-
-
-| ssm:GetParameters ^1^  a| 
-* Implementazione
 * Inventario
 
-| Lettura/scrittura 
 
 
-| ssm:PutParameter ^1^  a| 
+
+| Lettura/scrittura | ssm:GetParameters ^1^  a| 
+* Implementazione
+* Inventario
+
+
+
+
+| Lettura/scrittura | ssm:PutParameter ^1^  a| 
 * Implementazione
 * Gestire le operazioni
 
-| Lettura/scrittura 
 
 
-| ssm:DeleteParameters ^1^  a| 
+
+| Lettura/scrittura | ssm:DeleteParameters ^1^  a| 
 * Implementazione
 * Gestire le operazioni
 
-| Lettura/scrittura 
 
 
-| Segnala lo stack CloudFormation in caso di successo o errore. | Formazione del cloud:SignalResource ^1^ | Implementazione | Lettura/scrittura 
+
+| Lettura/scrittura | Segnala lo stack CloudFormation in caso di successo o errore. | Formazione del cloud:SignalResource ^1^ | Implementazione 
 
 
-| Aggiungere il ruolo EC2 creato da modello al profilo di istanza di EC2 per consentire agli script di EC2 di accedere alle risorse necessarie per la distribuzione. | iam:AddRoleToInstanceProfile | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | Aggiungere il ruolo EC2 creato da modello al profilo di istanza di EC2 per consentire agli script di EC2 di accedere alle risorse necessarie per la distribuzione. | iam:AddRoleToInstanceProfile | Implementazione 
 
 
-| Creare un profilo di istanza per EC2 e allegare il ruolo EC2 creato. | iam:CreateInstanceProfile | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | Creare un profilo di istanza per EC2 e allegare il ruolo EC2 creato. | iam:CreateInstanceProfile | Implementazione 
 
 
-| Creare un ruolo EC2 tramite il modello con le autorizzazioni elencate di seguito | iam: CreateRole | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | Creare un ruolo EC2 tramite il modello con le autorizzazioni elencate di seguito | iam: CreateRole | Implementazione 
 
 
-| Creare un ruolo collegato al servizio EC2 | iam:CreateServiceEnumerRole ^2^ | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | Creare un ruolo collegato al servizio EC2 | iam:CreateServiceEnumerRole ^2^ | Implementazione 
 
 
-| Eliminare il profilo di istanza creato durante la distribuzione specificamente per i nodi di convalida | iam:DeleteInstanceProfile | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | Eliminare il profilo di istanza creato durante la distribuzione specificamente per i nodi di convalida | iam:DeleteInstanceProfile | Implementazione 
 
 
-.5+| Ottieni i dettagli del ruolo e della policy per determinare eventuali lacune nelle autorizzazioni e convalidare per la distribuzione | iam:GetPolicy | Implementazione | Lettura/scrittura 
+| Lettura/scrittura .5+| Ottieni i dettagli del ruolo e della policy per determinare eventuali lacune nelle autorizzazioni e convalidare per la distribuzione | iam:GetPolicy | Implementazione 
 
 
-| iam:GetPolicyVersion | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | iam:GetPolicyVersion | Implementazione 
 
 
-| iam: GetRole | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | iam: GetRole | Implementazione 
 
 
-| iam:GetRolePolicy | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | iam:GetRolePolicy | Implementazione 
 
 
-| iam:GetUser | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | iam:GetUser | Implementazione 
 
 
-| Passare il ruolo creato all'istanza EC2 | iam:PassRole ^3^ | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | Passare il ruolo creato all'istanza EC2 | iam:PassRole ^3^ | Implementazione 
 
 
-| Aggiungere policy con autorizzazioni richieste al ruolo EC2 creato | iam:PutRolePolicy | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | Aggiungere policy con autorizzazioni richieste al ruolo EC2 creato | iam:PutRolePolicy | Implementazione 
 
 
-| Scollega il ruolo dal profilo di istanza EC2 di cui è stato eseguito il provisioning | iam:RemoveRoleFromInstanceProfile | Implementazione | Lettura/scrittura 
+| Lettura/scrittura | Scollega il ruolo dal profilo di istanza EC2 di cui è stato eseguito il provisioning | iam:RemoveRoleFromInstanceProfile | Implementazione 
 
 
-| Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione  a| 
-* Sola lettura
-* Lettura/scrittura
-
-
+| Lettura/scrittura | Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione 
 |===
 . L'autorizzazione è limitata alle risorse che iniziano con WLMDB.
 . "iam:CreateServiceEnumerRole" limitato da "iam:AWSServiceName": "ec2.amazonaws.com"*
@@ -1511,7 +1526,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 === Autorizzazioni per i carichi di lavoro Genai
 
-I criteri IAM per i carichi di lavoro VMware forniscono le autorizzazioni necessarie per la workload Factory per VMware per gestire le risorse e i processi all'interno dell'ambiente di cloud pubblico in base alla modalità operativa in cui operi.
+I criteri IAM per i carichi di lavoro VMware forniscono le autorizzazioni di cui Workload Factory per VMware ha bisogno per gestire risorse e processi all'interno dell'ambiente cloud pubblico in base alla modalità operativa in cui si opera.
 
 I criteri GenAI IAM sono disponibili solo in modalità _lettura/scrittura_:
 
@@ -1866,9 +1881,6 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | ec2:AuthorizeSecurityGroupIngress | Implementazione | Lettura/scrittura 
 
 
-| Eseguire una query sullo stato di registrazione di Amazon Bedrock/Amazon CloudWatch durante l'implementazione del motore ai | Bedrock:GetModelInvocationLoggingConfiguration | Implementazione | Lettura/scrittura 
-
-
 | Avviare una richiesta di chat su uno dei modelli di base | Bedrock:InvokeModelWithResponseStream | Implementazione | Lettura/scrittura 
 
 
@@ -1977,18 +1989,6 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 | Registri:TagResource | Implementazione | Lettura/scrittura 
 
 
-| Invia i registri delle pedine ad Amazon CloudWatch | Bedrock:PutModelInvocationLoggingConfiguration | Risoluzione dei problemi | Lettura/scrittura 
-
-
-| Crea il ruolo che consente di inviare i registri Amazon Bedrock ad Amazon CloudWatch | iam:AttachRolePolicy | Risoluzione dei problemi | Lettura/scrittura 
-
-
-| Crea il ruolo che consente di inviare i registri Amazon Bedrock ad Amazon CloudWatch | iam: PassRole | Risoluzione dei problemi | Lettura/scrittura 
-
-
-| Crea il ruolo che consente di inviare i registri Amazon Bedrock ad Amazon CloudWatch | iam:createPolicy | Risoluzione dei problemi | Lettura/scrittura 
-
-
 | Elenca profili di deduzione per il modello | Bedrock:ListInferenceProfiles | Risoluzione dei problemi | Lettura/scrittura 
 |===
 ====
@@ -1996,7 +1996,7 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 
 === Autorizzazioni per i carichi di lavoro VMware
 
-I criteri IAM per i carichi di lavoro VMware forniscono le autorizzazioni necessarie per la workload Factory per VMware per gestire le risorse e i processi all'interno dell'ambiente di cloud pubblico in base alla modalità operativa in cui operi.
+I criteri IAM per i carichi di lavoro VMware forniscono le autorizzazioni di cui Workload Factory per VMware ha bisogno per gestire risorse e processi all'interno dell'ambiente cloud pubblico in base alla modalità operativa in cui si opera.
 
 Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
 
@@ -2312,6 +2312,19 @@ Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle s
 
 
 
+=== 5 ottobre 2025
+
+Le seguenti autorizzazioni sono state rimosse da GenAI e ora sono gestite dal motore GenAI:
+
+* `bedrock:GetModelInvocationLoggingConfiguration`
+* `bedrock:PutModelInvocationLoggingConfiguration`
+* `iam:AttachRolePolicy`
+* `iam:PassRole`
+* `iam:CreatePolicy`
+
+
+
+
 === 29 giugno 2025
 
 La seguente autorizzazione è ora disponibile in modalità _sola lettura_ per i database:  `cloudwatch:GetMetricData` .
@@ -2366,7 +2379,7 @@ La seguente autorizzazione è stata rimossa dalla _modalità lettura/scrittura_ 
 
 ==== iam:aggiornamento delle autorizzazioni di SimulatePrincipalPolicy
 
-L' `iam:SimulatePrincipalPolicy`autorizzazione fa parte di tutte le policy di autorizzazione dei workload se si attiva il controllo automatico delle autorizzazioni quando si aggiungono ulteriori credenziali di account AWS o si aggiunge una nuova funzionalità per il workload dalla console della workload Factory. L'autorizzazione simula le operazioni dei carichi di lavoro e controlla se disponi delle autorizzazioni necessarie per gli account AWS prima di implementare le risorse dalla fabbrica dei carichi di lavoro. L'attivazione di questo controllo riduce il tempo e gli sforzi necessari per eliminare le risorse da operazioni non riuscite e per aggiungere autorizzazioni mancanti.
+IL `iam:SimulatePrincipalPolicy` l'autorizzazione fa parte di tutte le policy di autorizzazione del carico di lavoro se si abilita il controllo automatico delle autorizzazioni quando si aggiungono ulteriori credenziali dell'account AWS o si aggiunge una nuova funzionalità del carico di lavoro dalla console Workload Factory.  L'autorizzazione simula le operazioni del carico di lavoro e verifica se si dispone delle autorizzazioni necessarie per l'account AWS prima di distribuire le risorse da Workload Factory.  L'abilitazione di questo controllo riduce il tempo e lo sforzo necessari per ripulire le risorse dalle operazioni non riuscite e per aggiungere autorizzazioni mancanti.
 
 
 
