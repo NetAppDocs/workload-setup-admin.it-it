@@ -6,6 +6,6 @@
 
 === Nuova notifica per Storage
 
-Il servizio di notifica NetApp Workload Factory include la notifica per la gestione automatica della capacità per l'archiviazione.
+Il servizio di notifica BlueXP workload factory include la notifica per la gestione automatica della capacità per l'archiviazione.
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Notifiche per NetApp Workload Factory"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Notifiche per la BlueXP workload factory"]
