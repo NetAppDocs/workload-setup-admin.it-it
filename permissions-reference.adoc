@@ -1315,206 +1315,208 @@ Implementazione
 | Lettura/scrittura 
 
 
-.2+| Ottieni i dettagli di FSX per ONTAP | fsx:DescribeFileSystemAliases  a| 
-Implementazione
-| Lettura/scrittura 
+| Ottieni i dettagli di FSX per ONTAP | fsx:DescribeFileSystemAliases | Implementazione | Lettura/scrittura 
 
 
-| Ridimensiona FSX per il file system ONTAP per rimediare allo spazio a disposizione del file system | fsx:Updatefilesystem | Ottimizzazione 
+| Ridimensiona FSX per il file system ONTAP per rimediare allo spazio a disposizione del file system | fsx:Updatefilesystem | Ottimizzazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Ridimensionamento dei volumi per correggere le dimensioni dei dischi di log e TempDB | fsx:UpdateVolume | Ottimizzazione 
+| Ridimensionamento dei volumi per correggere le dimensioni dei dischi di log e TempDB | fsx:UpdateVolume | Ottimizzazione | Lettura/scrittura 
 
 
-| Lettura/scrittura .3+| Ottieni dettagli chiave KMS e utilizza la crittografia per FSX for ONTAP | Km: CreateGrant | Implementazione 
+.3+| Ottieni dettagli chiave KMS e utilizza la crittografia per FSX for ONTAP | Km: CreateGrant | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | kms:DescribeCustomKeyStores | Implementazione 
+| kms:DescribeCustomKeyStores | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Km:GenerateDataKey | Implementazione 
+| Km:GenerateDataKey | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura .8+| Creare log di CloudWatch per la convalida e il provisioning di script in esecuzione su istanze EC2 | Registri:CreateLogGroup | Implementazione 
+.8+| Creare log di CloudWatch per la convalida e il provisioning di script in esecuzione su istanze EC2 | Registri:CreateLogGroup | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Registri:CreateLogStream | Implementazione 
+| Registri:CreateLogStream | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Registri:DescribeLogStreams  a| 
+| Registri:DescribeLogStreams  a| 
 * Implementazione
 * Valutazione
 
+| Lettura/scrittura 
 
 
-
-| Lettura/scrittura | registri:GetLogGroupFields | Implementazione 
-
-
-| Lettura/scrittura | registri:GetLogRecord | Implementazione 
+| registri:GetLogGroupFields | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Registri:ListLogDeliveries | Implementazione 
+| registri:GetLogRecord | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Registri:PutLogEvents  a| 
+| Registri:ListLogDeliveries | Implementazione | Lettura/scrittura 
+
+
+| Registri:PutLogEvents  a| 
 * Implementazione
 * Gestire le operazioni
 
+| Lettura/scrittura 
 
 
+| Registri:TagResource | Implementazione | Lettura/scrittura 
 
-| Lettura/scrittura | Registri:TagResource | Implementazione 
 
-
-| Lettura/scrittura | Workload Factory passa ai log di Amazon CloudWatch per l'istanza SQL quando rileva un troncamento dell'output SSM | Registri:GetLogEvents  a| 
+| Workload Factory passa ai log di Amazon CloudWatch per l'istanza SQL quando rileva un troncamento dell'output SSM | Registri:GetLogEvents  a| 
 * Valutazione dello storage (ottimizzazione)
 * Inventario
-
-
-
 
  a| 
 * Sola lettura
 * Lettura/scrittura
+
+
+
 
 | Consenti a Workload Factory di ottenere i gruppi di log correnti e verifica che la conservazione sia impostata per i gruppi di log creati da Workload Factory | Registri:DescribeLogGroups  a| 
 * Valutazione dello storage (ottimizzazione)
 * Inventario
 
+| Sola lettura 
 
 
-
-| Sola lettura | Consenti a Workload Factory di impostare un criterio di conservazione di un giorno per i gruppi di log creati da Workload Factory per evitare un accumulo non necessario di flussi di log per gli output dei comandi SSM | Registri:PutRetentionPolicy  a| 
+| Consenti a Workload Factory di impostare un criterio di conservazione di un giorno per i gruppi di log creati da Workload Factory per evitare un accumulo non necessario di flussi di log per gli output dei comandi SSM | Registri:PutRetentionPolicy  a| 
 * Valutazione dello storage (ottimizzazione)
 * Inventario
-
-
-
 
  a| 
 * Sola lettura
 * Lettura/scrittura
 
-| Creare segreti in un account utente per le credenziali fornite per SQL, dominio e FSX per ONTAP | Services equotas:ListServiceQuotas | Implementazione 
 
 
-| Lettura/scrittura .2+| Elencare gli argomenti SNS dei clienti e pubblicarli su SNS back-end WLMDB e SNS dei clienti, se selezionati | sns:ListTopics | Implementazione 
+
+| Creare segreti in un account utente per le credenziali fornite per SQL, dominio e FSX per ONTAP | Services equotas:ListServiceQuotas | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | sns: Pubblica | Implementazione 
+.2+| Elencare gli argomenti SNS dei clienti e pubblicarli su SNS back-end WLMDB e SNS dei clienti, se selezionati | sns:ListTopics | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura .11+| Autorizzazioni SSM richieste per eseguire lo script di rilevamento sulle istanze SQL sottoposte a provisioning e per recuperare l'elenco più recente delle regioni AWS supportate da FSX per ONTAP. | ssm: PutComplianceItems | Implementazione 
+| sns: Pubblica | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | ssm:PutConfigurePackageResult | Implementazione 
+.11+| Autorizzazioni SSM richieste per eseguire lo script di rilevamento sulle istanze SQL sottoposte a provisioning e per recuperare l'elenco più recente delle regioni AWS supportate da FSX per ONTAP. | ssm: PutComplianceItems | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | ssm:PutInventory | Implementazione 
+| ssm:PutConfigurePackageResult | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | ssm:SendCommand  a| 
+| ssm:PutInventory | Implementazione | Lettura/scrittura 
+
+
+| ssm:SendCommand  a| 
 * Implementazione
 * Inventario
 * Gestire le operazioni
 
+| Lettura/scrittura 
 
 
-
-| Lettura/scrittura | ssm:UpdateAssociationStatus | Implementazione 
-
-
-| Lettura/scrittura | ssm:UpdateInstanceAssociationStatus | Implementazione 
+| ssm:UpdateAssociationStatus | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | ssm:UpdateInstanceInformation | Implementazione 
+| ssm:UpdateInstanceAssociationStatus | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | ssmmessages:CreateControlChannel | Implementazione 
+| ssm:UpdateInstanceInformation | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | ssmmessages:CreateDataChannel | Implementazione 
+| ssmmessages:CreateControlChannel | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | ssmmessages:OpenControlChannel | Implementazione 
+| ssmmessages:CreateDataChannel | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | ssmmessages:OpenDataChannel | Implementazione 
+| ssmmessages:OpenControlChannel | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura .4+| Salva credenziali per FSX per ONTAP, Active Directory e utente SQL (solo per l'autenticazione utente SQL) | ssm:getParameter ^1^  a| 
+| ssmmessages:OpenDataChannel | Implementazione | Lettura/scrittura 
+
+
+.4+| Salva credenziali per FSX per ONTAP, Active Directory e utente SQL (solo per l'autenticazione utente SQL) | ssm:getParameter ^1^  a| 
 * Implementazione
 * Gestire le operazioni
 * Inventario
 
+| Lettura/scrittura 
 
 
-
-| Lettura/scrittura | ssm:GetParameters ^1^  a| 
+| ssm:GetParameters ^1^  a| 
 * Implementazione
 * Inventario
 
+| Lettura/scrittura 
 
 
-
-| Lettura/scrittura | ssm:PutParameter ^1^  a| 
+| ssm:PutParameter ^1^  a| 
 * Implementazione
 * Gestire le operazioni
 
+| Lettura/scrittura 
 
 
-
-| Lettura/scrittura | ssm:DeleteParameters ^1^  a| 
+| ssm:DeleteParameters ^1^  a| 
 * Implementazione
 * Gestire le operazioni
 
+| Lettura/scrittura 
 
 
-
-| Lettura/scrittura | Segnala lo stack CloudFormation in caso di successo o errore. | Formazione del cloud:SignalResource ^1^ | Implementazione 
-
-
-| Lettura/scrittura | Aggiungere il ruolo EC2 creato da modello al profilo di istanza di EC2 per consentire agli script di EC2 di accedere alle risorse necessarie per la distribuzione. | iam:AddRoleToInstanceProfile | Implementazione 
+| Segnala lo stack CloudFormation in caso di successo o errore. | Formazione del cloud:SignalResource ^1^ | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Creare un profilo di istanza per EC2 e allegare il ruolo EC2 creato. | iam:CreateInstanceProfile | Implementazione 
+| Aggiungere il ruolo EC2 creato da modello al profilo di istanza di EC2 per consentire agli script di EC2 di accedere alle risorse necessarie per la distribuzione. | iam:AddRoleToInstanceProfile | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Creare un ruolo EC2 tramite il modello con le autorizzazioni elencate di seguito | iam: CreateRole | Implementazione 
+| Creare un profilo di istanza per EC2 e allegare il ruolo EC2 creato. | iam:CreateInstanceProfile | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Creare un ruolo collegato al servizio EC2 | iam:CreateServiceEnumerRole ^2^ | Implementazione 
+| Creare un ruolo EC2 tramite il modello con le autorizzazioni elencate di seguito | iam: CreateRole | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Eliminare il profilo di istanza creato durante la distribuzione specificamente per i nodi di convalida | iam:DeleteInstanceProfile | Implementazione 
+| Creare un ruolo collegato al servizio EC2 | iam:CreateServiceEnumerRole ^2^ | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura .5+| Ottieni i dettagli del ruolo e della policy per determinare eventuali lacune nelle autorizzazioni e convalidare per la distribuzione | iam:GetPolicy | Implementazione 
+| Eliminare il profilo di istanza creato durante la distribuzione specificamente per i nodi di convalida | iam:DeleteInstanceProfile | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | iam:GetPolicyVersion | Implementazione 
+.5+| Ottieni i dettagli del ruolo e della policy per determinare eventuali lacune nelle autorizzazioni e convalidare per la distribuzione | iam:GetPolicy | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | iam: GetRole | Implementazione 
+| iam:GetPolicyVersion | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | iam:GetRolePolicy | Implementazione 
+| iam: GetRole | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | iam:GetUser | Implementazione 
+| iam:GetRolePolicy | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Passare il ruolo creato all'istanza EC2 | iam:PassRole ^3^ | Implementazione 
+| iam:GetUser | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Aggiungere policy con autorizzazioni richieste al ruolo EC2 creato | iam:PutRolePolicy | Implementazione 
+| Passare il ruolo creato all'istanza EC2 | iam:PassRole ^3^ | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Scollega il ruolo dal profilo di istanza EC2 di cui è stato eseguito il provisioning | iam:RemoveRoleFromInstanceProfile | Implementazione 
+| Aggiungere policy con autorizzazioni richieste al ruolo EC2 creato | iam:PutRolePolicy | Implementazione | Lettura/scrittura 
 
 
-| Lettura/scrittura | Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione 
+| Scollega il ruolo dal profilo di istanza EC2 di cui è stato eseguito il provisioning | iam:RemoveRoleFromInstanceProfile | Implementazione | Lettura/scrittura 
+
+
+| Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione  a| 
+* Sola lettura
+* Lettura/scrittura
+
+
 |===
 . L'autorizzazione è limitata alle risorse che iniziano con WLMDB.
 . "iam:CreateServiceEnumerRole" limitato da "iam:AWSServiceName": "ec2.amazonaws.com"*
