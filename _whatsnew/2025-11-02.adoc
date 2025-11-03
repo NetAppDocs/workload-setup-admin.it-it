@@ -1,0 +1,27 @@
+= Aggiornamento dei permessi
+:allow-uri-read: 
+
+
+
+
+=== Aggiornamento dei permessi
+
+In questa versione abbiamo apportato aggiornamenti significativi ai criteri di autorizzazione per i carichi di lavoro di archiviazione, database e VMware per migliorare la sicurezza e il controllo degli utenti.  Puoi personalizzare le impostazioni delle autorizzazioni in modo più dettagliato, aggiungendo o eliminando autorizzazioni come preferisci.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Riferimento alle autorizzazioni per Workload Factory"]
+
+
+
+=== Nuova notifica per Storage
+
+Il servizio di notifica NetApp Workload Factory include la notifica per la gestione automatica degli inode per Storage.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Notifiche per NetApp Workload Factory"]
+
+
+
+=== Avvisi di soglia per la gestione automatica della capacità e degli inode
+
+È possibile impostare la gestione automatica della capacità e degli inode per l'archiviazione con una soglia di avviso che attiva una notifica dal servizio di notifica Workload Factory.  Per utilizzare questa funzionalità, è necessario prima abilitare il servizio di notifica Workload Factory.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Configurare le notifiche per NetApp Workload Factory"]

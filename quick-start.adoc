@@ -13,7 +13,7 @@ summary: Per iniziare a utilizzare Workload Factory, prepara la rete per la cons
 [role="lead"]
 Per iniziare a usare NetApp Workload Factory, registrati e crea un account, aggiungi le credenziali in modo che Workload Factory possa gestire direttamente le risorse AWS e quindi ottimizzare i tuoi carichi di lavoro utilizzando Amazon FSx for NetApp ONTAP.
 
-NetApp Workload Factory è accessibile agli utenti come servizio cloud dalla console basata sul Web.  Prima di iniziare, dovresti avere una comprensione dilink:workload-factory-overview.html["Fabbrica del carico di lavoro"] Elink:operational-modes.html["modalità operative"] .
+NetApp Workload Factory è accessibile agli utenti come servizio cloud dalla console basata sul Web.  Prima di iniziare, dovresti avere una comprensione dilink:workload-factory-overview.html["Fabbrica del carico di lavoro"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Registrati e crea un account
 [role="quick-margin-para"]
@@ -24,7 +24,7 @@ link:sign-up-saas.html["Scopri come iscriversi e creare un account"].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]Aggiungi le credenziali AWS a Workload Factory
 [role="quick-margin-para"]
-Questo passaggio è facoltativo. Puoi utilizzare Workload Factory in modalità _Basic_ senza aggiungere credenziali per accedere al tuo account AWS.  L'aggiunta delle credenziali AWS a Workload Factory in modalità _sola lettura_ o _lettura/scrittura_ fornisce al tuo account Workload Factory le autorizzazioni necessarie per creare e gestire i file system FSx for ONTAP e per distribuire e gestire carichi di lavoro specifici, come database e GenAI.
+Questo passaggio è facoltativo. Puoi utilizzare Workload Factory senza aggiungere credenziali per accedere al tuo account AWS.  Aggiungendo le credenziali AWS a Workload Factory, il tuo account Workload Factory ottiene le autorizzazioni necessarie per creare e gestire i file system FSx for ONTAP e per distribuire e gestire carichi di lavoro specifici, come database e GenAI.
 
 [role="quick-margin-para"]
 link:add-credentials.html["Scopri come aggiungere credenziali al tuo account"].

@@ -46,6 +46,12 @@ Workload Factory invia notifiche per i seguenti eventi:
 
 
 | Rilevato problema FSx per ONTAP | Tutti i file system FSx per ONTAP sono stati analizzati per individuare eventuali problemi di architettura corretta.  La scansione ha rilevato uno o più problemi.  Per ulteriori informazioni, consultare l'analisi ben progettata nella dashboard Storage nella console Workload Factory. | Analisi ben progettata | Consiglio | Deposito generale | FSx per file system ONTAP 
+
+
+| Evento di gestione automatica della capacità per FSx per ONTAP | Il livello di prestazioni SSD per il file system FSx for ONTAP ha raggiunto la soglia di avviso capacità/percentuale totale. | Gestione della capacità | Avvertimento | Deposito generale | FSx per file system ONTAP 
+
+
+| Evento di gestione automatica degli inode per FSx per ONTAP | Il conteggio degli inode per il volume FSx for ONTAP ha raggiunto la soglia di avviso conteggio/percentuale totale. | Gestione della capacità | Avvertimento | Deposito generale | FSx per file system ONTAP 
 |===
 
 

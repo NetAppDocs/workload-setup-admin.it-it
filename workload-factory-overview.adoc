@@ -91,16 +91,11 @@ link:manage-service-accounts.html["Scopri come gestire gli account di servizio"]
 
 
 
-=== Modalità operative
+=== Permessi
 
-Workload Factory offre tre modalità operative che consentono di controllare attentamente l'accesso al proprio ambiente cloud e di assegnare un livello di attendibilità incrementale a Workload Factory in base alle policy IT.
+Workload Factory fornisce policy di autorizzazione flessibili che consentono di controllare attentamente l'accesso al proprio ambiente cloud e di assegnare un livello di attendibilità incrementale a Workload Factory in base alle policy IT.
 
-* La *modalità di base* rappresenta una relazione di zero trust ed è progettata per l'esplorazione iniziale di Workload Factory e l'utilizzo delle varie procedure guidate per creare l'infrastruttura come codice necessaria.  Questo codice può essere copiato e utilizzato manualmente dall'utente insieme alle relative credenziali AWS.
-* *La modalità sola lettura* migliora l'esperienza della modalità di base aiutando l'utente a rilevare varie risorse e strumenti e, di conseguenza, a completare le procedure guidate pertinenti.
-* *La modalità lettura/scrittura* rappresenta una relazione di attendibilità completa ed è progettata per eseguire e automatizzare per conto dell'utente insieme alle credenziali assegnate che dispongono delle autorizzazioni necessarie e convalidate per l'esecuzione.
-
-
-link:operational-modes.html["Scopri di più sulle modalità operative di Workload Factory"] .
+link:permissions-reference.html["Scopri di più sui criteri di autorizzazione di Workload Factory"].
 
 
 

@@ -22,14 +22,10 @@ indexpage:
       url: workload-factory-overview.html
     - title: Registrati
       url: sign-up-saas.html
-  - title: Modalità operative e credenziali
-    links:
-    - title: Informazioni sulle modalità operative
-      url: operational-modes.html
     - title: Aggiungi le credenziali AWS
       url: add-credentials.html
-    - title: Rimuovere le credenziali
-      url: manage-credentials.html
+    - title: Autorizzazioni per Workload Factory
+      url: permissions-reference.html
   - title: Automazione tramite Codebox
     links:
     - title: Informazioni su Codebox

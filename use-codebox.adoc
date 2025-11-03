@@ -13,7 +13,7 @@ summary: È possibile utilizzare Codebox per generare il codice necessario per e
 [role="lead"]
 È possibile utilizzare Codebox per generare il codice necessario per eseguire qualsiasi operazione supportata da NetApp Workload Factory.  È possibile generare codice che può essere utilizzato ed eseguito tramite le API REST di Workload Factory, AWS CLI e AWS CloudFormation.
 
-Codebox è allineato alle modalità operative di Workload Factory (_base_, _sola lettura_ e _lettura/scrittura_) popolando i dati appropriati nel codice in base alle autorizzazioni AWS fornite nell'account Workload Factory per ciascun utente.  Il codice può essere utilizzato come modello in cui è possibile inserire le informazioni mancanti (ad esempio, le credenziali) o personalizzare determinati dati prima di eseguire il codice.
+Codebox è allineato alle policy di autorizzazione di Workload Factory compilando i dati appropriati nel codice in base alle autorizzazioni AWS fornite nell'account Workload Factory per ciascun utente. Il codice può essere utilizzato come modello in cui è possibile inserire le informazioni mancanti (ad esempio, le credenziali) o personalizzare determinati dati prima di eseguire il codice.
 
 
 
