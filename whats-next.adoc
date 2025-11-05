@@ -29,4 +29,8 @@ Implementa e gestisci un'infrastruttura RAG (Retrieval-Augmented Generation) per
 +
 Ottimizza migrazioni e operazioni con consigli smart e correzioni automatiche. Distribuire backup efficienti e un disaster recovery solido. Monitora e risolvi i problemi delle macchine virtuali.
 
+* https://docs.netapp.com/us-en/workload-builders/index.html["Carichi di lavoro del costruttore"^]
++
+Semplifica l'utilizzo e l'accesso alle versioni del software consentendo l'integrazione immediata dei cloni con i sistemi di controllo delle versioni e i flussi CI/CD, risparmiando tempo e risorse.
+
 
