@@ -111,6 +111,7 @@ Visualizza i criteri IAM richiesti:
         "fsx:TagResource",
         "fsx:UntagResource",
         "bedrock:InvokeModelWithResponseStream",
+        "bedrock:InvokeModel",
         "bedrock:ListInferenceProfiles",
         "bedrock:GetInferenceProfile"
       ],
@@ -286,13 +287,16 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 | Elenca i tag per le risorse di FSX per ONTAP | fsx:ListTagsForResource | Inventario | Visualizzazione, pianificazione e analisi 
 
 
-.2+| Gestire l'uscita e l'ingresso dei gruppi di sicurezza per un file system FSX per ONTAP | ec2:RevokeSecurityGroupIngress | Operazioni di gestione | Creazione ed eliminazione del file system 
+.3+| Gestire l'uscita e l'ingresso dei gruppi di sicurezza per un file system FSX per ONTAP | ec2:RevokeSecurityGroupIngress | Operazioni di gestione | Creazione ed eliminazione del file system 
+
+
+| ec2: Revoca SecurityGroupEgress | Operazioni di gestione | Creazione ed eliminazione del file system 
 
 
 | ec2:DeleteSecurityGroup | Operazioni di gestione | Creazione ed eliminazione del file system 
 
 
-.17+| Crea, visualizza e gestisci risorse di file system FSX per ONTAP | fsx:CreateVolume | Operazioni di gestione | Operazioni e bonifica 
+.18+| Crea, visualizza e gestisci risorse di file system FSX per ONTAP | fsx:CreateVolume | Operazioni di gestione | Operazioni e bonifica 
 
 
 | FSX:TagResource | Operazioni di gestione | Operazioni e bonifica 
@@ -343,6 +347,9 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 | fsx:CreaVolumeDaBackup | Operazioni di gestione | Operazioni e bonifica 
 
 
+| fsx:EliminaBackup | Operazioni di gestione | Operazioni e bonifica 
+
+
 .2+| Ottieni metriche su file system e volumi | Cloudwatch:GetMetricData | Operazioni di gestione | Visualizzazione, pianificazione e analisi 
 
 
@@ -350,6 +357,24 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 
 
 | Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione | Tutto 
+
+
+.4+| Recupera FSx per gli eventi ONTAP EMS | Bedrock:ListInferenceProfiles | FSx per l'analisi ONTAP EMS | Operazioni e bonifica 
+
+
+| bedrock:GetInferenceProfile | FSx per l'analisi ONTAP EMS | Operazioni e bonifica 
+
+
+| bedrock:InvokeModelWihResponseStream | FSx per l'analisi ONTAP EMS | Operazioni e bonifica 
+
+
+| Bedrock:InvokeModel | FSx per l'analisi ONTAP EMS | Operazioni e bonifica 
+
+
+.2+| Ottieni dati sui costi e sull'utilizzo per i file system FSx for ONTAP da AWS Cost Explorer | ce:GetCostAndUsage | Analisi dei costi e dell'utilizzo | Visualizzazione, pianificazione e analisi 
+
+
+| ce:OttieniTag | Analisi dei costi e dell'utilizzo | Visualizzazione, pianificazione e analisi 
 |===
 ====
 
@@ -1984,6 +2009,18 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 == Registro delle modifiche
 
 Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle sezioni seguenti.
+
+
+
+=== 27 novembre 2025
+
+Sono state aggiunte le seguenti autorizzazioni al carico di lavoro Archiviazione:
+
+* `bedrock:ListInferenceProfiles`
+* `bedrock:GetInferenceProfile`
+* `bedrock:InvokeModelWithResponseStream`
+* `bedrock:InvokeModel`
+
 
 
 

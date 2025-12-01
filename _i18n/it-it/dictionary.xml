@@ -267,7 +267,6 @@
   <block id="bd282943a337f4287ca0d70f9a836261" category="section-title">Automazione del codebox</block>
   <block id="7c408fda146892c9e1c039f91fee3cd3" category="paragraph">Il riquadro Codebox mostra l'IAC generato da una specifica operazione di flusso di lavoro e associato a una procedura guidata grafica o a un'interfaccia di conversazione testuale. Anche se Codebox supporta la codifica a colori e la ricerca per una facile navigazione e analisi, non consente la modifica. È possibile solo copiare o salvare nel catalogo di automazione.</block>
   <block id="ec6b8f7cd0c5cd9853d947bc13f72f4b" category="inline-link-macro">Ulteriori informazioni su Codebox</block>
-  <block id="7221d615997ca03d4480df5a43dae047" category="paragraph"><block ref="491e45ff3f847be901c7d8962829a3f8" category="inline-link-macro-rx"></block>.</block>
   <block id="c257f5c852c12409e63afb17104f69c5" category="section-title">API REST</block>
   <block id="0fe398a436a33849be29455ed17d4185" category="list-text">Le API sono state progettate sulla base della tecnologia REST e delle Best practice correnti. Le tecnologie principali includono HTTP e JSON.</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Inizia subito</block>
@@ -313,7 +312,6 @@
   <block id="c938676b28ab6dd4d5cc28ebdf8c49b9" category="doc">Esperienze di console</block>
   <block id="ecbeaffbfe15c72e3bf702b0d0bf9694" category="section-title">11 novembre 2024</block>
   <block id="7b2ab109a7f028a1314cfd59fab7b820" category="list-text">Calcolatori del risparmio per risparmiare i costi</block>
-  <block id="02161797e05b29a1a7b7b7f28b9e274a" category="paragraph">Ulteriori informazioni sui diversi <block ref="307484147c616be6cc5c203f4bb58b5b" category="inline-link-macro-rx"></block>.</block>
   <block id="1a34f743bd98b1658401ce2f8206ff9a" category="paragraph"><block ref="1a34f743bd98b1658401ce2f8206ff9a" category="inline-link-macro-rx"></block></block>
   <block id="fd1a283b46f9e16faf592b1eb5138a94" category="list-text">Lifecycle management del database</block>
   <block id="47b4ea23585c5454c4427e68acf95fc4" category="list-text">Scopri i carichi di lavoro dei database e analizza i risparmi sui costi con Amazon FSX per NetApp ONTAP; sfrutta i vantaggi delle applicazioni e dello storage durante la migrazione dei database di SQL Server in FSX per lo storage ONTAP; implementa server SQL, database e cloni di database che implementano le Best practice dei vendor; utilizza un co-pilot Infrastructure as Code per automatizzare le operazioni e monitora costantemente e ottimizza le proprietà di SQL Server per migliorare performance, disponibilità, protezione ed efficienza dei costi.</block>
@@ -348,7 +346,6 @@
   <block id="13b1a844b08d2d7b8144e4c0db6b5552" category="paragraph">Quando crei un account, sei il singolo utente _account admin_ per quell'account.</block>
   <block id="c33f7c2cbeaca5f1462c1b3e1c276145" category="section-title">Account di servizio</block>
   <block id="25e9dc09fd109741b1c7237f825ab46e" category="inline-link-macro">Scopri come gestire gli account di servizio</block>
-  <block id="09c9cabc1664a7683d1d411a37775b39" category="paragraph"><block ref="f09e11341fa2be3f754588bca37990f8" category="inline-link-macro-rx"></block>.</block>
   <block id="ca475a2b63c70fedcf8f6650024d480b" category="doc">Autorizzazioni predefinite per i workload BlueXP </block>
   <block id="5291909ce92037a20a37f7a0c86dd921" category="paragraph">Ora puoi vedere le autorizzazioni utilizzate dalla fabbrica del carico di lavoro BlueXP  per eseguire varie operazioni a partire dal rilevamento degli ambienti storage fino all'implementazione di risorse AWS come file system in storage o knowledge base per i carichi di lavoro Genai. Puoi visualizzare le policy e i permessi IAM per i workload Storage, Database, VMware e Genai.</block>
   <block id="f157db6a1ae10e7a29a28440d21f5cb8" category="paragraph"><block ref="f157db6a1ae10e7a29a28440d21f5cb8" category="inline-link-macro-rx"></block></block>
@@ -958,7 +955,6 @@
   <block id="3b06bcb45233697647a5a550960f8d05" category="list-text">* Console NetApp *: offre un'esperienza ibrida in cui puoi gestire i file system FSx for ONTAP e i carichi di lavoro in esecuzione su Amazon FSx for NetApp ONTAP nello stesso posto.</block>
   <block id="3b94caaa5f175aae2e16887d7ce147da" category="list-text">*Console Workload Factory*: offre un'esperienza Workload Factory dedicata, focalizzata sui carichi di lavoro in esecuzione su Amazon FSx for NetApp ONTAP.</block>
   <block id="0fe6cec212fb1ba5af4d190a28fa03ba" category="section-title">Accedi a Workload Factory nella console NetApp</block>
-  <block id="4aebb3c6d2632b0a47717c897adea664" category="paragraph">È possibile accedere a Workload Factory dalla console NetApp .  Oltre a utilizzare Workload Factory per le funzionalità di archiviazione e carico di lavoro di AWS, puoi anche accedere ad altri servizi dati come NetApp Copy and Sync, NetApp Digital Wallet e altro ancora.</block>
   <block id="e0cfef909774dee6f2988d39c62d2aa4" category="list-text">Dal menu NetApp Console, seleziona *Carichi di lavoro* e poi *Panoramica*.</block>
   <block id="39d4b213cdbfaee4bf8255d21e45d7b3" category="section-title">Accedi a Workload Factory nella console Workload Factory</block>
   <block id="a30f0e49926a18e020f6f949bd717e28" category="paragraph">È possibile accedere a Workload Factory dalla console Workload Factory.</block>
@@ -1234,9 +1230,29 @@
   <block id="bf7bed6002efd423b3f090dfda4fb38c" category="paragraph">Codebox è allineato alle policy di autorizzazione di Workload Factory compilando i dati appropriati nel codice in base alle autorizzazioni AWS fornite nell'account Workload Factory per ciascun utente. Il codice può essere utilizzato come modello in cui è possibile inserire le informazioni mancanti (ad esempio, le credenziali) o personalizzare determinati dati prima di eseguire il codice.</block>
   <block id="fd7910c842c61985f2e90af78f1b304f" category="paragraph">Workload Factory fornisce policy di autorizzazione flessibili che consentono di controllare attentamente l'accesso al proprio ambiente cloud e di assegnare un livello di attendibilità incrementale a Workload Factory in base alle policy IT.</block>
   <block id="1b512d78c8df2f0c24a19da35f804ca3" category="inline-link-macro">Scopri di più sui criteri di autorizzazione di Workload Factory</block>
-  <block id="9de83ea21033a65a11f8b135f0dfca93" category="paragraph"><block ref="14d3fbf26a974628349cadb25ac5954d" category="inline-link-macro-rx"></block>.</block>
   <block id="c51a57db8914c4d0002701f58f6f3d36" category="sidebar">Autorizzazioni per Workload Factory</block>
   <block id="67cc1fa9f1a93753f08cfa64d81c9661" category="inline-link">Carichi di lavoro del costruttore</block>
   <block id="fadf0a6a0fc7dcefddc336cf580be28f" category="list-text"><block ref="fadf0a6a0fc7dcefddc336cf580be28f" category="inline-link-rx"></block></block>
   <block id="4dbca6300d097acc1ed4450a1e0d70d7" category="paragraph">Semplifica l'utilizzo e l'accesso alle versioni del software consentendo l'integrazione immediata dei cloni con i sistemi di controllo delle versioni e i flussi CI/CD, risparmiando tempo e risorse.</block>
+  <block id="97364a76409afb35bcf8e78ca91dd72d" category="paragraph">È possibile accedere a Workload Factory dalla NetApp Console. Oltre a utilizzare Workload Factory per le funzionalità di archiviazione e carico di lavoro di AWS, puoi anche accedere ad altri servizi dati come NetApp Copy and Sync e altro ancora.</block>
+  <block id="01984b12c408bdab681895b084bd6c06" category="cell">ec2: Revoca SecurityGroupEgress</block>
+  <block id="c8f3ab0d5795ea54c17a7c0f85e22fbd" category="cell">fsx:EliminaBackup</block>
+  <block id="efd5fd045b2b5a8ad184072097e91070" category="cell">Recupera FSx per gli eventi ONTAP EMS</block>
+  <block id="b2ebd142eb09c979a63764f09a9ebbd9" category="cell">FSx per l'analisi ONTAP EMS</block>
+  <block id="fdd997ab8b4252f76acdda855bb7b890" category="cell">bedrock:GetInferenceProfile</block>
+  <block id="b67afe892c78b2491b3d4ac0b4c2f0b0" category="cell">bedrock:InvokeModelWihResponseStream</block>
+  <block id="101559ddc6f7b830adb3e15629c9d132" category="cell">Ottieni dati sui costi e sull'utilizzo per i file system FSx for ONTAP da AWS Cost Explorer</block>
+  <block id="bba6542a0e46014b21a818003b1e41d2" category="cell">ce:GetCostAndUsage</block>
+  <block id="e740b3f6978df04ae224fdb7fe816cb4" category="cell">Analisi dei costi e dell'utilizzo</block>
+  <block id="f74e5982a82afd7d2755b24355dd08c6" category="cell">ce:OttieniTag</block>
+  <block id="815e75619b370a1b845eccec6979ed74" category="section-title">27 novembre 2025</block>
+  <block id="43481cea67e4e51df745177b32433321" category="paragraph">Sono state aggiunte le seguenti autorizzazioni al carico di lavoro Archiviazione:</block>
+  <block id="4e736cb1760a43a4bf2b5d861b6deb96" category="list-text"><block ref="fdd997ab8b4252f76acdda855bb7b890" prefix="" category="inline-code"></block></block>
+  <block id="1ed1b1bc988715ea858abe38c168d87a" category="list-text"><block ref="00fe52afa6e3b9a0d389f529a2b88242" prefix="" category="inline-code"></block></block>
+  <block id="f80c2c54334d4ddca4016b89152c6684" category="list-text"><block ref="93804e96d3f417a0088c564647dd28e9" prefix="" category="inline-code"></block></block>
+  <block id="4ea213845e0e4bd9b85ae5f5095fef40" category="inline-link-macro">Scopri di più sulle diverse esperienze della console</block>
+  <block id="0452a6e2337cd59ec7a4e17bd80cc097" category="paragraph"><block ref="0452a6e2337cd59ec7a4e17bd80cc097" category="inline-link-macro-rx"></block></block>
+  <block id="f09e11341fa2be3f754588bca37990f8" category="paragraph"><block ref="f09e11341fa2be3f754588bca37990f8" category="inline-link-macro-rx"></block></block>
+  <block id="14d3fbf26a974628349cadb25ac5954d" category="paragraph"><block ref="14d3fbf26a974628349cadb25ac5954d" category="inline-link-macro-rx"></block></block>
+  <block id="491e45ff3f847be901c7d8962829a3f8" category="paragraph"><block ref="491e45ff3f847be901c7d8962829a3f8" category="inline-link-macro-rx"></block></block>
 </blocks>
