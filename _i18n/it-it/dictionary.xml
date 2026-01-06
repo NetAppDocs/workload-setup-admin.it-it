@@ -1231,9 +1231,6 @@
   <block id="fd7910c842c61985f2e90af78f1b304f" category="paragraph">Workload Factory fornisce policy di autorizzazione flessibili che consentono di controllare attentamente l'accesso al proprio ambiente cloud e di assegnare un livello di attendibilità incrementale a Workload Factory in base alle policy IT.</block>
   <block id="1b512d78c8df2f0c24a19da35f804ca3" category="inline-link-macro">Scopri di più sui criteri di autorizzazione di Workload Factory</block>
   <block id="c51a57db8914c4d0002701f58f6f3d36" category="sidebar">Autorizzazioni per Workload Factory</block>
-  <block id="67cc1fa9f1a93753f08cfa64d81c9661" category="inline-link">Carichi di lavoro del costruttore</block>
-  <block id="fadf0a6a0fc7dcefddc336cf580be28f" category="list-text"><block ref="fadf0a6a0fc7dcefddc336cf580be28f" category="inline-link-rx"></block></block>
-  <block id="4dbca6300d097acc1ed4450a1e0d70d7" category="paragraph">Semplifica l'utilizzo e l'accesso alle versioni del software consentendo l'integrazione immediata dei cloni con i sistemi di controllo delle versioni e i flussi CI/CD, risparmiando tempo e risorse.</block>
   <block id="97364a76409afb35bcf8e78ca91dd72d" category="paragraph">È possibile accedere a Workload Factory dalla NetApp Console. Oltre a utilizzare Workload Factory per le funzionalità di archiviazione e carico di lavoro di AWS, puoi anche accedere ad altri servizi dati come NetApp Copy and Sync e altro ancora.</block>
   <block id="01984b12c408bdab681895b084bd6c06" category="cell">ec2: Revoca SecurityGroupEgress</block>
   <block id="c8f3ab0d5795ea54c17a7c0f85e22fbd" category="cell">fsx:EliminaBackup</block>
@@ -1266,4 +1263,7 @@
   <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">Chiedimi l'integrazione della home page dell'assistente AI</block>
   <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">La home page della console Workload Factory incorpora l'assistente Chiedimi AI, che ti consente di porre domande sul tuo spazio di archiviazione, ottenere informazioni personalizzate direttamente dal tuo ambiente e fare riferimento a conversazioni precedenti. Puoi interagire con Ask me per comprendere i tuoi carichi di lavoro, risolvere problemi e scoprire di più su Workload Factory, il tutto senza uscire dalla console.</block>
   <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">04 gennaio 2026</block>
+  <block id="2bc4b4a88d694b207aacb90573eb4b7f" category="inline-link">Carichi di lavoro EDA</block>
+  <block id="f5051781c2f560348461adb9d928d406" category="list-text"><block ref="f5051781c2f560348461adb9d928d406" category="inline-link-rx"></block></block>
+  <block id="ce9f0edfab2350bf4aa1961cdca492ac" category="paragraph">Ottimizza FSx per ONTAP su più file system per aumentare le prestazioni e ridurre i costi operativi tramite la gestione automatizzata dei parametri di archiviazione.</block>
 </blocks>
