@@ -359,7 +359,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 | Simula le operazioni del carico di lavoro per validare le autorizzazioni disponibili e confrontarle con le autorizzazioni necessarie per gli account AWS | iam:SimulatePrincipalPolicy | Implementazione | Tutto 
 
 
-.4+| Recupera FSx per gli eventi ONTAP EMS | Bedrock:ListInferenceProfiles | FSx per l'analisi ONTAP EMS | Operazioni e bonifica 
+.4+| Fornire informazioni basate sull'intelligenza artificiale per FSx per gli eventi ONTAP EMS | Bedrock:ListInferenceProfiles | FSx per l'analisi ONTAP EMS | Operazioni e bonifica 
 
 
 | bedrock:GetInferenceProfile | FSx per l'analisi ONTAP EMS | Operazioni e bonifica 
