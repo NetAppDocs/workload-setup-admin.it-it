@@ -125,10 +125,11 @@ link:codebox-automation.html["Ulteriori informazioni su Codebox"]
 
 === Calcolatori del risparmio
 
-Workload Factory fornisce calcolatori di risparmio che consentono di confrontare i costi dei propri ambienti di archiviazione o dei carichi di lavoro del database sui file system FSx for ONTAP rispetto a Elastic Block Store (EBS), Elastic File Systems (EFS) e FSx for Windows File Server.  A seconda delle tue esigenze di archiviazione, potresti scoprire che FSx per i file system ONTAP è l'opzione più conveniente per te.
+Workload Factory fornisce calcolatori di risparmio che ti consentono di confrontare i costi dei tuoi ambienti di archiviazione, database o carichi di lavoro VMware sui file system FSx for ONTAP rispetto ad altri servizi Amazon. A seconda delle tue esigenze di archiviazione, potresti scoprire che FSx per i file system ONTAP è l'opzione più conveniente per te.
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html["Scopri come risparmiare per i tuoi ambienti storage"^]
 * link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Scopri come esplorare i risparmi per i carichi di lavoro del tuo database"^]
+* link:https://docs.netapp.com/us-en/workload-vmware/calculate-evs-savings.html["Scopri come esplorare i risparmi per i tuoi carichi di lavoro VMware"^]
 
 
 
