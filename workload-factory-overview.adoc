@@ -134,6 +134,14 @@ Workload Factory fornisce calcolatori di risparmio che ti consentono di confront
 
 
 
+=== Carichi di lavoro ben progettati
+
+Workload Factory ti aiuta a gestire e gestire configurazioni di database e storage affidabili, sicure, efficienti e convenienti, in linea con AWS Well-Architected Framework. Workload Factory esegue quotidianamente la scansione di FSx per individuare i file system ONTAP , le distribuzioni di database SQL Server e Oracle, per fornire informazioni su potenziali configurazioni errate e consigliare azioni manuali o automatiche per risolvere i problemi.
+
+link:well-architected-workloads.html["Scopri di più sui carichi di lavoro ben progettati"]
+
+
+
 == Strumenti per utilizzare NetApp Workload Factory
 
 È possibile utilizzare NetApp Workload Factory con i seguenti strumenti:
@@ -146,14 +154,6 @@ Workload Factory fornisce calcolatori di risparmio che ti consentono di confront
 * *CloudFormation*: utilizza il codice AWS CloudFormation per eseguire le azioni definite nella console Workload Factory per modellare, fornire e gestire risorse AWS e di terze parti dallo stack CloudFormation nel tuo account AWS.
 * *Provider Terraform NetApp Workload Factory*: utilizza Terraform per creare e gestire i flussi di lavoro dell'infrastruttura generati nella console Workload Factory.
 
-
-
-
-=== Carichi di lavoro ben progettati
-
-Workload Factory ti aiuta a gestire e gestire configurazioni di database e storage affidabili, sicure, efficienti e convenienti, in linea con AWS Well-Architected Framework. Workload Factory esegue quotidianamente la scansione di FSx per individuare i file system ONTAP , le distribuzioni di database SQL Server e Oracle, per fornire informazioni su potenziali configurazioni errate e consigliare azioni manuali o automatiche per risolvere i problemi.
-
-link:well-architected-workloads.html["Scopri di più sui carichi di lavoro ben progettati"]
 
 
 
