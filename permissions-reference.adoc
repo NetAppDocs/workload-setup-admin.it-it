@@ -73,9 +73,6 @@ Visualizza i criteri IAM richiesti:
         "elasticfilesystem:DescribeFileSystems",
         "ce:GetCostAndUsage",
         "ce:GetTags",
-        "ce:GetCostAndUsageWithResources",
-        "ce:GetCostForecast",
-        "ce:GetUsageForecast"
       ],
       "Resource": "*"
     },
@@ -110,10 +107,32 @@ Visualizza i criteri IAM richiesti:
         "fsx:DeleteBackup",
         "fsx:TagResource",
         "fsx:UntagResource",
+        "fsx:CreateAndAttachS3AccessPoint",
+        "fsx:DetachAndDeleteS3AccessPoint",
+        "s3:CreateAccessPoint",
+        "s3:DeleteAccessPoint",
+        "s3:GetObjectTagging",
         "bedrock:InvokeModelWithResponseStream",
         "bedrock:InvokeModel",
         "bedrock:ListInferenceProfiles",
-        "bedrock:GetInferenceProfile"
+        "bedrock:GetInferenceProfile",
+        "s3tables:CreateTableBucket",
+        "s3tables:ListTables",
+        "s3tables:GetTable",
+        "s3tables:GetTableMetadataLocation",
+        "s3tables:CreateTable",
+        "s3tables:GetNamespace",
+        "s3tables:PutTableData",
+        "s3tables:CreateNamespace",
+        "s3tables:GetTableData",
+        "s3tables:ListNamespaces",
+        "s3tables:ListTableBuckets",
+        "s3tables:GetTableBucket",
+        "s3tables:UpdateTableMetadataLocation",
+        "s3tables:ListTagsForResource",
+        "s3tables:TagResource",
+        "s3:GetObjectTagging",
+        "s3:ListBucket"
       ],
       "Resource": "*"
     },
@@ -375,6 +394,60 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 
 
 | ce:OttieniTag | Analisi dei costi e dell'utilizzo | Visualizzazione, pianificazione e analisi 
+
+
+| Crea un punto di accesso S3 e lo collega a un file system FSx for ONTAP | fsx:CreateAndAttachS3AccessPoint | Gestione del punto di accesso S3 | Operazioni e bonifica 
+
+
+| Scollega un punto di accesso S3 da un file system FSx for ONTAP ed eliminalo | fsx:DetachAndDeleteS3AccessPoint | Gestione del punto di accesso S3 | Operazioni e bonifica 
+
+
+| Crea un punto di accesso S3 per una gestione semplificata dell'accesso al bucket | s3:CreateAccessPoint | Gestione del punto di accesso S3 | Operazioni e bonifica 
+
+
+| Elimina un access point S3 | s3:DeleteAccessPoint | Gestione del punto di accesso S3 | Operazioni e bonifica 
+
+
+| Aggiungi tag a un punto di accesso S3 | s3:TagResource | Gestione del punto di accesso S3 | Operazioni e bonifica 
+
+
+| Elenca e visualizza i tag su un access point S3 | s3:ListTagsForResource | Gestione del punto di accesso S3 | Operazioni e bonifica 
+
+
+| Rimuovere i tag da un access point S3 | s3:UntagResource | Gestione del punto di accesso S3 | Operazioni e bonifica 
+
+
+| Scopri gli oggetti in un bucket S3 access point | s3:ListBucket | Operazioni del bucket S3 | Operazioni e bonifica 
+
+
+| Elenca, crea e descrivi i bucket delle tabelle S3 | s3tables:ListTableBuckets s3tables:CreateTableBucket s3tables:GetTableBucket | Gestione dei bucket delle tabelle S3 | Operazioni e bonifica 
+
+
+| Elenca, crea e recupera tabelle S3 | s3tables:ListTables s3tables:CreateTable s3tables:GetTable | Operazioni sulla tabella S3 | Operazioni e bonifica 
+
+
+| Leggi la posizione dei metadati della tabella | s3tables:GetTableMetadataLocation | Operazioni sui metadati della tabella S3 | Operazioni e bonifica 
+
+
+| Aggiorna la posizione dei metadati della tabella | s3tables:UpdateTableMetadataLocation | Operazioni sui metadati della tabella S3 | Operazioni e bonifica 
+
+
+| Elenca, crea e recupera gli spazi dei nomi delle tabelle | s3tables:ListNamespaces s3tables:CreateNamespace s3tables:GetNamespace | Operazioni dello spazio dei nomi S3 | Operazioni e bonifica 
+
+
+| Leggere i dati della tabella (select, scan) | s3tables:GetTableData | Operazioni sui dati della tabella S3 | Operazioni e bonifica 
+
+
+| Scrivi dati della tabella (inserisci) | s3tables:PutTableData | Operazioni sui dati della tabella S3 | Operazioni e bonifica 
+
+
+| Elenca i tag su una tabella di inventario (ottieni FSx for NetApp ONTAP, storage VM, ID volume) | s3tables:ListTagsForResource | Operazioni sui tag della tabella S3 | Operazioni e bonifica 
+
+
+| Etichetta una tabella di inventario per la ricerca in NetApp Workload Factory | s3tables:TagResource | Operazioni sui tag della tabella S3 | Operazioni e bonifica 
+
+
+| Recupera l'etichettatura degli oggetti tramite il punto di accesso | s3:GetObjectTagging | Operazioni sugli oggetti S3 | Operazioni e bonifica 
 |===
 ====
 
@@ -827,7 +900,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 | fsx:DescribeStorageVirtualMachines  a| 
 * Implementazione
-* Gestire le operazioni
+* Operazioni di gestione
 * Inventario
 
 | Visualizzazione, pianificazione e analisi 
@@ -835,14 +908,14 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 | fsx:DescribeFileSystems  a| 
 * Implementazione
-* Gestire le operazioni
+* Operazioni di gestione
 * Inventario
 * Scopri i risparmi
 
 | Visualizzazione, pianificazione e analisi 
 
 
-| fsx:ListTagsForResource | Gestire le operazioni | Visualizzazione, pianificazione e analisi 
+| fsx:ListTagsForResource | Operazioni di gestione | Visualizzazione, pianificazione e analisi 
 
 
 | Ottieni limiti di quota del servizio per CloudFormation e VPC / Crea segreti in un account utente per le credenziali fornite per SQL, dominio e FSx per ONTAP | Services equotas:ListServiceQuotas | Implementazione | Visualizzazione, pianificazione e analisi 
@@ -851,8 +924,8 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 | Utilizzare la query basata su SSM per ottenere l'elenco aggiornato delle aree supportate da FSX per ONTAP | ssm:GetParametersByPath | Implementazione | Visualizzazione, pianificazione e analisi 
 
 
-| Esegui il polling per la risposta SSM dopo l'invio del comando per gestire le operazioni dopo la distribuzione | ssm:GetCommandInvocation  a| 
-* Gestire le operazioni
+| Verifica della risposta SSM dopo l'invio del comando per le operazioni di gestione post deployment | ssm:GetCommandInvocation  a| 
+* Operazioni di gestione
 * Inventario
 * Scopri i risparmi
 * Ottimizzazione
@@ -861,7 +934,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 
 | Invia comandi tramite SSM alle istanze EC2 per l'individuazione e la gestione | ssm:SendCommand  a| 
-* Gestire le operazioni
+* Operazioni di gestione
 * Inventario
 * Scopri i risparmi
 * Ottimizzazione
@@ -870,7 +943,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 
 | Ottenere lo stato di connettività SSM sulle istanze dopo la distribuzione | ssm:GetConnectionStatus  a| 
-* Gestire le operazioni
+* Operazioni di gestione
 * Inventario
 * Ottimizzazione
 
@@ -933,7 +1006,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 .4+| Ottieni, elenca, crea ed elimina i parametri SSM per le credenziali utente ad, FSX per ONTAP e SQL utilizzate durante l'implementazione o gestite nell'account AWS | ssm:getParameter ^1^  a| 
 * Implementazione
-* Gestire le operazioni
+* Operazioni di gestione
 * Inventario
 
 | Visualizzazione, pianificazione e analisi 
@@ -941,7 +1014,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 | ssm:GetParameters ^1^  a| 
 * Implementazione
-* Gestire le operazioni
+* Operazioni di gestione
 * Inventario
 
 | Visualizzazione, pianificazione e analisi 
@@ -949,14 +1022,14 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 | ssm:PutParameter ^1^  a| 
 * Implementazione
-* Gestire le operazioni
+* Operazioni di gestione
 
 | Visualizzazione, pianificazione e analisi 
 
 
 | ssm:DeleteParameters ^1^  a| 
 * Implementazione
-* Gestire le operazioni
+* Operazioni di gestione
 
 | Visualizzazione, pianificazione e analisi 
 
@@ -1077,7 +1150,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 | Contrassegnare i valori personalizzati per le risorse Amazon FSX per NetApp ONTAP create da WLMDB per ottenere i dettagli di fatturazione durante la gestione delle risorse | fsx:TagResource ^1^  a| 
 * Implementazione
-* Gestire le operazioni
+* Operazioni di gestione
 
 | Creazione dell'host del database 
 
@@ -1129,7 +1202,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 | fsx:CreateVolume  a| 
 * Implementazione
-* Gestire le operazioni
+* Operazioni di gestione
 
 | Creazione dell'host del database 
 
@@ -1169,7 +1242,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 
 | Registri:PutLogEvents  a| 
 * Implementazione
-* Gestire le operazioni
+* Operazioni di gestione
 
 | Creazione dell'host del database 
 
@@ -2009,6 +2082,46 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 == Registro delle modifiche
 
 Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle sezioni seguenti.
+
+
+
+=== 1 febbraio 2025
+
+Sono state aggiunte le seguenti autorizzazioni al carico di lavoro Archiviazione:
+
+* `s3:TagResource`
+* `s3:ListTagsForResource`
+* `s3:UntagResource`
+* `s3tables:CreateTableBucket`
+* `s3tables:ListTables`
+* `s3tables:GetTable`
+* `s3tables:GetTableMetadataLocation`
+* `s3tables:CreateTable`
+* `s3tables:GetNamespace`
+* `s3tables:PutTableData`
+* `s3tables:CreateNamespace`
+* `s3tables:GetTableData`
+* `s3tables:ListNamespaces`
+* `s3tables:ListTableBuckets`
+* `s3tables:GetTableBucket`
+* `s3tables:UpdateTableMetadataLocation`
+* `s3tables:ListTagsForResource`
+* `s3tables:TagResource`
+* `s3:GetObjectTagging`
+* `s3:ListBucket`
+
+
+
+
+=== 04 dicembre 2025
+
+Sono state aggiunte le seguenti autorizzazioni al carico di lavoro Archiviazione:
+
+* `fsx:CreateAndAttachS3AccessPoint`
+* `fsx:DetachAndDeleteS3AccessPoint`
+* `s3:CreateAccessPoint`
+* `s3:DeleteAccessPoint`
+
 
 
 

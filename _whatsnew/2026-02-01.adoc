@@ -1,0 +1,44 @@
+= Aggiornamenti ben progettati
+:allow-uri-read: 
+
+
+
+
+=== Aggiornamenti ben progettati
+
+NetApp Workload Factory include la valutazione ben progettata per i carichi di lavoro Elastic VMware Service (EVS) e aggiunge nuove configurazioni per i carichi di lavoro Storage e Database.
+
+* *Carichi di lavoro VMware* NetApp Workload Factory fornisce best practice e raccomandazioni per l'esecuzione di carichi di lavoro Amazon Elastic VMware Service (EVS) ben architettati.
++
+link:https://docs.netapp.com/us-en/workload-vmware/view-evs-well-architected.html["Implementare configurazioni EVS ben architettate"^]
+
+* *Carichi di lavoro di archiviazione* Sono state aggiunte diverse nuove configurazioni alla funzionalità ben progettata nel carico di lavoro di archiviazione, in modo da avere una visione più approfondita sulle performance dello storage e sui costi.
++
+** Reporting logico della Storage VM
+** Ottimizza la dimensione del volume della cache
+** Dispositivi a blocchi orfani
++
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html["Implementare configurazioni di file system ben progettate per i carichi di lavoro Storage"^]
+
+
+
+* *Carichi di lavoro del database* Workload Factory for Databases include una nuova configurazione dello storage per Oracle per abilitare e configurare Direct NFS (dNFS) per migliorare le prestazioni di I/O e ridurre il carico sull'host e sul sistema storage.
++
+** Abilitazione dNFS
+** Risoluzione IP coerente dNFS
+** file di configurazione dNFS
+** dNFS `nosharecache`
++
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["Implementare carichi di lavoro di database ben progettati"^]
+
+
+
+
+
+
+
+=== Nuove autorizzazioni per Storage
+
+Sono state aggiunte nuove autorizzazioni al workload Storage per miglioramenti nella gestione dei punti di accesso S3.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["Registro delle modifiche di riferimento delle autorizzazioni"]
