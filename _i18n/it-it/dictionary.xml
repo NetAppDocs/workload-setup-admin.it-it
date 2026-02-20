@@ -1501,7 +1501,6 @@
   <block id="a49bf929860657a29ec7b321ff7a63ba" category="list-text">*Reporting logico della Storage VM*</block>
   <block id="7edda8ec9be79d47927f4aa7e27bd776" category="paragraph">Workload Factory consiglia di impostare l'impostazione di reporting predefinita su logica per una storage VM per garantire una migliore visibilità sull'utilizzo dello storage a livello di volume.</block>
   <block id="394c926099d3d2cf7e0d7477f17faf38" category="paragraph">L'ottimizzazione dei costi ti aiuta a ottenere il massimo valore per la tua attività mantenendo bassi i costi.</block>
-  <block id="6d281baa5967f3e1be000f071dda6d92" category="list-text">*Dispositivi a blocchi orfani*</block>
   <block id="934ae55c0ac8033312b0dd4fc00ad677" category="paragraph">Dopo che un dispositivo a blocchi non viene utilizzato per sette giorni, Workload Factory consiglia di archiviare i dati del dispositivo a blocchi o di eliminare il dispositivo a blocchi non utilizzato per ridurre i costi.</block>
   <block id="08e31d66d631ac235f15db15294a1bed" category="paragraph">Per le migliori performance dello storage, crea i volumi FSx for ONTAP sul livello SSD primario. L'utilizzo del livello pool di capacità potrebbe rendere le performance più lente e aumentare la latenza.</block>
   <block id="c882de88255b448709010276c1779e90" category="paragraph">Per ottimizzare le performance dello storage, imposta la capacità del file system su 1,35 volte la dimensione totale dei tuoi volumi.</block>
@@ -1518,4 +1517,5 @@
   <block id="9bcd13fbdffcddd84a7b637f7ec4e9b8" category="list-text">*Gestione dei nodi del cluster*</block>
   <block id="240380a5970626d74754b96038898f5e" category="paragraph">Assicuratevi che i nodi del cluster EVS dispongano di un'adeguata protezione di arresto e terminazione EC2 configurata. I nodi EVS ESXi devono essere gestiti esclusivamente tramite vCenter o altri strumenti di gestione a livello VMware. Senza adeguate protezioni a livello EC2, i nodi potrebbero essere arrestati o terminati accidentalmente dalla console EC2, il che può portare a indisponibilità dei dati delle macchine virtuali o a perdita di dati.</block>
   <block id="d1fabbd85b7cc34641739e525d26f652" category="section-title">01 febbraio 2026</block>
+  <block id="c359614024935abd3712075452782fa3" category="list-text">*Dispositivi a blocco inattivi*</block>
 </blocks>

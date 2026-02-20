@@ -147,7 +147,7 @@ L'ottimizzazione dei costi ti aiuta a ottenere il massimo valore per la tua atti
 +
 Per ridurre i costi, è opportuno eliminare gli snapshot e i backup non più necessari.
 
-* *Dispositivi a blocchi orfani*
+* *Dispositivi a blocco inattivi*
 +
 Dopo che un dispositivo a blocchi non viene utilizzato per sette giorni, Workload Factory consiglia di archiviare i dati del dispositivo a blocchi o di eliminare il dispositivo a blocchi non utilizzato per ridurre i costi.
 
