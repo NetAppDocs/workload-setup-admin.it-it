@@ -1,0 +1,19 @@
+= Come funziona
+:allow-uri-read: 
+
+
+
+
+== Come funziona
+
+Workload Factory analizza quotidianamente i carichi di lavoro in esecuzione sulle implementazioni dei file system Amazon FSx for NetApp ONTAP. L'analisi fornisce stato ben architettato, approfondimenti e raccomandazioni.
+
+Una volta completata l'analisi giornaliera, le configurazioni vengono visualizzate come "ottimizzate" o "non ottimizzate" nella dashboard Well-architected per la distribuzione. Troverai il punteggio di ottimizzazione totale, i problemi di configurazione per categoria e un elenco di problemi di configurazione e raccomandazioni. È possibile rivedere i consigli per i problemi di configurazione. Alcuni problemi possono essere risolti automaticamente da Workload Factory, mentre altri richiedono un intervento manuale. In questo caso, Workload Factory fornisce istruzioni dettagliate per aiutarti a implementare le modifiche consigliate.
+
+È possibile ignorare l'analisi delle configurazioni che non si applicano ai propri ambienti. In questo modo si evitano avvisi non necessari e risultati di ottimizzazione imprecisi. Quando si ignora un'analisi di configurazione specifica, Workload Factory non include la configurazione nel punteggio di ottimizzazione totale.
+
+
+
+== Perché è importante
+
+Workload Factory applica le best practice ad ambienti di storage, database e VMware di grandi dimensioni, combinando valutazioni continue con suggerimenti e interventi correttivi. Le correzioni automatiche applicate nella console di Workload Factory riducono gli errori umani, garantiscono una gestione uniforme e preservano prestazioni e affidabilità nelle infrastrutture di workload.
