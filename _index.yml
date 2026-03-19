@@ -36,12 +36,12 @@ indexpage:
       url: "/use-codebox.html"
   - title: Carichi di lavoro ben progettati
     links:
-    - title: Costruire e gestire carichi di lavoro ben progettati
-      url: "/well-architected-workloads.html"
     - title: Implementare FSx ben progettato per i file system ONTAP
       url: https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html
     - title: Implementare carichi di lavoro di database ben progettati
       url: https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html
+    - title: Implementare configurazioni Elastic VMware Service ben strutturate
+      url: https://docs.netapp.com/us-en/workload-vmware/view-evs-well-architected.html
   - title: Analizzare i carichi di lavoro
     links:
     - title: Analizza i log degli errori per i carichi di lavoro del database
