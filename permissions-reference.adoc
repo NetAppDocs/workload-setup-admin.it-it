@@ -555,32 +555,42 @@ Selezionare la modalità operativa per visualizzare i criteri IAM richiesti:
 --
 [source, json]
 ----
-[
+{
+  "Version": "2012-10-17",
+  "Statement": [
     {
-        "Sid": "FSxRemediation",
-        "Effect": "Allow",
-        "Action": [
-            "fsx:UpdateFileSystem",
-            "fsx:UpdateVolume"
-        ],
-        "Resource": "*"
+      "Sid": "FSxRemediation",
+      "Effect": "Allow",
+      "Action": [
+        "fsx:UpdateFileSystem",
+        "fsx:UpdateVolume"
+      ],
+      "Resource": "*"
     },
     {
-        "Sid": "EC2Remediation",
-        "Effect": "Allow",
-        "Action": [
-            "ec2:StartInstances",
-            "ec2:ModifyInstanceAttribute",
-            "ec2:StopInstances"
-        ],
-        "Resource": "*",
-        "Condition": {
-            "StringLike": {
-                "ec2:ResourceTag/aws:cloudformation:stack-name": "WLMDB*"
-            }
+      "Sid": "EC2Remediation",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:StartInstances",
+        "ec2:ModifyInstanceAttribute",
+        "ec2:StopInstances"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringLike": {
+          "ec2:ResourceTag/aws:cloudformation:stack-name": "WLMDB*"
         }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
     }
-]
+  ]
+}
 ----
 --
 .Creazione dell'host del database
@@ -2085,7 +2095,7 @@ Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle s
 
 
 
-=== 1 febbraio 2025
+=== 1 febbraio 2026
 
 Sono state aggiunte le seguenti autorizzazioni al carico di lavoro Archiviazione:
 
