@@ -15,6 +15,18 @@ Scopri le novità sulle funzionalità di amministrazione di Workload Factory: cr
 
 
 
+== 6 aprile 2026
+
+
+
+=== Nuova notifica per Storage
+
+Il servizio di notifica NetApp Workload Factory include la notifica per NetApp Autonomous Ransomware Protection con AI (ARP/AI) per Storage.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Notifiche per NetApp Workload Factory"]
+
+
+
 == 01 marzo 2026
 
 
