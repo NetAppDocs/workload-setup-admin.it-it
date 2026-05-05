@@ -1,0 +1,21 @@
+= Notifiche e-mail per Workload Factory
+:allow-uri-read: 
+
+
+
+
+=== Notifiche e-mail per Workload Factory
+
+Ora puoi ricevere le notifiche di Workload Factory via email senza dover configurare un argomento Amazon SNS. Abilita le notifiche email per inviarle a tutti gli indirizzi email associati all'account.
+
+È possibile configurare le notifiche e-mail sia dalla console di Workload Factory che dalla NetApp Console. La NetApp Console offre anche la possibilità di configurare le notifiche della NetApp Console che vengono visualizzate sotto l'icona a forma di campana.
+
+Se si configurano le notifiche nella NetApp Console, NetApp Console assume il controllo della distribuzione delle notifiche. Le impostazioni di notifica nella console di Workload Factory diventano di sola lettura per evitare notifiche duplicate.
+
+
+
+=== Nuova notifica per latenza EDA
+
+Il servizio di notifica NetApp Workload Factory include la notifica per la latenza EDA che ti avvisa quando la latenza di un'operazione EDA supera una certa soglia.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Configurare le notifiche di Workload Factory"]

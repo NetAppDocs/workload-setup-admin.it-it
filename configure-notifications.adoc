@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: configure-notifications.html 
-keywords: amazon, sns, notification, topic, notifications, notifications service, alerts 
+keywords: amazon, sns, notification, topic, notifications, notifications service, alerts, email, email notifications, console notifications, filter, filtering 
 summary: 'È possibile configurare NetApp Workload Factory per inviare notifiche a una persona o a un"altra applicazione quando si verificano determinati tipi di eventi.' 
 ---
 = Configurare le notifiche di NetApp Workload Factory
@@ -11,7 +11,7 @@ summary: 'È possibile configurare NetApp Workload Factory per inviare notifiche
 
 
 [role="lead"]
-È possibile configurare il servizio di notifica NetApp Workload Factory per inviare notifiche come avvisi nella console NetApp o a un argomento Amazon SNS.  Le notifiche inviate come avvisi vengono visualizzate nella console NetApp quando è distribuito un agente o un collegamento della console.  Quando Workload Factory pubblica notifiche su un argomento Amazon SNS, gli abbonati all'argomento (ad esempio persone o altre applicazioni) ricevono le notifiche negli endpoint configurati per l'argomento (ad esempio messaggi e-mail o SMS).
+È possibile configurare il servizio di notifica NetApp Workload Factory per inviare notifiche come avvisi nella NetApp Console, a qualsiasi indirizzo email associato all'account o a un argomento Amazon SNS. Le notifiche inviate come avvisi vengono visualizzate nella NetApp Console quando è stato distribuito un agente o un collegamento Console. Quando Workload Factory pubblica notifiche su un argomento Amazon SNS, gli iscritti all'argomento (ad esempio, persone o altre applicazioni) ricevono le notifiche agli endpoint configurati per l'argomento (ad esempio, email o SMS).
 
 
 
@@ -55,14 +55,41 @@ Workload Factory invia notifiche per i seguenti eventi:
 
 
 | Attività sospetta sui volumi rilevata in FSx for ONTAP file system | NetApp Autonomous Ransomware Protection con intelligenza artificiale (ARP/AI) ha rilevato attività sospette sul volume. | Protezione contro i ransomware | Critico | Deposito generale | FSx per file system ONTAP 
+
+
+| Rilevata violazione della soglia di latenza | Uno o più volumi nel cluster FSx for ONTAP hanno superato la soglia di latenza. | Monitoraggio delle prestazioni | Avvertimento | EDA | FSx per file system ONTAP 
 |===
 
 
 == Configurare le notifiche di Workload Factory
 
-Configurare le notifiche di Workload Factory utilizzando la console NetApp o la console Workload Factory.  Se utilizzi la console NetApp , puoi configurare Workload Factory per inviare notifiche come avvisi nella console NetApp o a un argomento Amazon SNS.  È possibile configurare le notifiche dalle *Impostazioni notifiche* nella console NetApp .
+È possibile configurare le notifiche di Workload Factory tramite NetApp Console o la console di Workload Factory.
+
+Le opzioni per ricevere le notifiche includono:
+
+
+
+=== Console NetApp
+
+* *Notifiche*: Configura Workload Factory per inviare notifiche che vengono visualizzate sotto l'icona a forma di campana nella NetApp Console.
+* *Email*: Abilita le notifiche e-mail in NetApp Console per ricevere notifiche a qualsiasi indirizzo e-mail associato all'account senza dover configurare Amazon SNS.
+* *Amazon SNS*: Configura Workload Factory per inviare notifiche a un argomento Amazon SNS.
+
+
+
+
+=== Console Workload Factory
+
+* *Email*: Abilita le notifiche e-mail nella console di Workload Factory per ricevere notifiche a qualsiasi indirizzo e-mail associato all'account senza dover configurare Amazon SNS.
+* *Amazon SNS*: Configura Workload Factory per inviare notifiche a un argomento Amazon SNS tramite la NetApp Workload Factory console.
+
+
+
+IMPORTANT: Quando si configurano le notifiche in NetApp Console, quest'ultima assume il controllo della distribuzione delle notifiche e le opzioni di notifica della console di Workload Factory vengono disabilitate e visualizzate in modalità di sola lettura. Un tooltip indica che le notifiche vengono gestite da NetApp Console. È quindi possibile gestire le notifiche esclusivamente da NetApp Console.
 
 .Prima di iniziare
+I seguenti prerequisiti si applicano solo durante la configurazione delle notifiche di Amazon SNS:
+
 * È necessario configurare Amazon SNS e creare argomenti Amazon SNS tramite la console Amazon SNS o AWS CLI.
 * Si noti che Workload Factory supporta il tipo di argomento *Standard*.  Questo tipo di argomento non garantisce che le notifiche vengano inviate agli abbonati nell'ordine in cui sono state ricevute, quindi tienilo in considerazione se hai notifiche critiche o di emergenza.
 
@@ -74,11 +101,11 @@ Configurare le notifiche di Workload Factory utilizzando la console NetApp o la 
 .Fasi
 . Accedi allink:https://console.netapp.com["Console NetApp"^] .
 . Dal menu della console NetApp , selezionare *Carichi di lavoro*, *Amministrazione* e quindi *Impostazione notifiche*.
-. Nella pagina di configurazione delle notifiche, procedi come segue:
+. Nella pagina di configurazione delle notifiche, abilita uno o più dei seguenti tipi di notifica:
 +
-.. Facoltativo: seleziona *Abilita notifiche NetApp Console* per configurare Workload Factory in modo che invii notifiche nella NetApp Console.
-.. Seleziona *Abilita notifiche SNS*.
-.. Segui le istruzioni per configurare Amazon SNS dalla console di Amazon SNS.
+.. *NetApp Console notifiche*: Seleziona *Abilita NetApp Console notifiche* per configurare Workload Factory in modo che invii notifiche in NetApp Console.
+.. *Notifiche e-mail*: Seleziona *Abilita notifiche e-mail* per configurare Workload Factory in modo che invii notifiche a tutti gli indirizzi e-mail associati all'account.
+.. *Notifiche Amazon SNS*: Seleziona *Abilita notifiche SNS*, quindi segui le istruzioni per configurare Amazon SNS dalla console Amazon SNS.
 +
 Dopo aver creato l'argomento, copia l'ARN dell'argomento e inseriscilo nel campo *ARN argomento SNS* nella pagina *Impostazione notifiche*.
 
@@ -87,22 +114,22 @@ Dopo aver creato l'argomento, copia l'ARN dell'argomento e inseriscilo nel campo
 . Dopo aver verificato la configurazione inviando una notifica di prova, seleziona *Applica*.
 
 
-.Risultato
-Workload Factory è configurato per inviare notifiche all'argomento Amazon SNS specificato.
-
 --
 .Configurare le notifiche dalla console Workload Factory
 --
 .Fasi
 . Accedi allink:https://console.workloads.netapp.com["Console Workload Factory"^] .
 . Dal menu della console Workload Factory, seleziona *Carichi di lavoro*, *Amministrazione* e quindi *Impostazione notifiche*.
-. Seleziona *Abilita notifiche SNS*.
-. Segui le istruzioni per configurare Amazon SNS dalla console di Amazon SNS.
-. Dopo aver verificato la configurazione inviando una notifica di prova, seleziona *Applica*.
+. Abilita uno o più dei seguenti tipi di notifica:
++
+** *Notifiche via email*: Seleziona *Abilita notifiche via email*. Tutti gli indirizzi email associati all'account vengono visualizzati in modalità di sola lettura.
+** *Notifiche Amazon SNS*: Seleziona *Abilita notifiche SNS*, quindi segui le istruzioni per configurare Amazon SNS dalla console Amazon SNS.
++
+Dopo aver verificato la configurazione inviando una notifica di prova, seleziona *Applica*.
 
 
-.Risultato
-Workload Factory è configurato per inviare notifiche all'argomento Amazon SNS specificato.
+
+
 
 --
 ====
@@ -116,7 +143,7 @@ Dopo aver configurato Workload Factory per inviare notifiche a un argomento, seg
 
 == Filtra le notifiche
 
-È possibile ridurre il traffico di notifiche non necessario e indirizzare tipi di notifiche specifici a utenti specifici applicando filtri alle notifiche.  È possibile farlo utilizzando una policy Amazon SNS per le notifiche SNS e le impostazioni delle notifiche nella console NetApp .
+È possibile ridurre il traffico di notifiche non necessario e indirizzare tipi di notifiche specifici a utenti specifici applicando dei filtri alle notifiche. È possibile farlo utilizzando una policy Amazon SNS per le notifiche SNS e tramite le impostazioni delle notifiche nella NetApp Console.
 
 
 
@@ -198,8 +225,8 @@ Per ulteriori informazioni sulla creazione di criteri di filtro, fare riferiment
 
 
 
-=== Filtra le notifiche nella console NetApp
+=== Filtra le notifiche in NetApp Console
 
-È possibile utilizzare le impostazioni delle notifiche della console NetApp per filtrare le notifiche ricevute nella console in base al livello di gravità, ad esempio Critico, Informazioni o Avviso.
+È possibile utilizzare le impostazioni delle notifiche della NetApp Console per filtrare le notifiche ricevute nella Console in base al livello di gravità, come Critico, Info o Avviso.
 
 Per ulteriori informazioni sul filtraggio delle notifiche nella Console, fare riferimento a https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#filter-notifications["Documentazione della console NetApp"^] .
