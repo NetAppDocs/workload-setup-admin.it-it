@@ -58,6 +58,9 @@ Workload Factory invia notifiche per i seguenti eventi:
 
 
 | Rilevata violazione della soglia di latenza | Uno o più volumi nel cluster FSx for ONTAP hanno superato la soglia di latenza. | Monitoraggio delle prestazioni | Avvertimento | EDA | FSx per file system ONTAP 
+
+
+| Rapporto mensile sui costi | Riepilogo mensile dei costi per il tuo account, con indicazione delle tendenze di spesa, delle variazioni anomale e delle migliori opportunità di risparmio per FSx for ONTAP file systems. | Rapporto sui costi | Consiglio | Deposito generale | FSx per file system ONTAP 
 |===
 
 
