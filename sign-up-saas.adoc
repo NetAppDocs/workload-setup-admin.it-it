@@ -45,12 +45,15 @@ Nel modulo di iscrizione sono consentiti solo caratteri inglesi.
 Questo passaggio è necessario prima di effettuare l'accesso.
 
 . Quando richiesto, leggere il Contratto di licenza per l'utente finale e accettare i termini, quindi selezionare *continua*.
-. Nella pagina *account*, immettere un nome per l'account e, se necessario, selezionare la descrizione del lavoro.
+. Nella pagina *Account*, crea un account. Un account è l'elemento di livello superiore nella piattaforma di identità di NetApp e ti consente di aggiungere e gestire autorizzazioni e credenziali.
 +
-Un account è l'elemento di primo livello della piattaforma di identità di NetApp e ti consente di aggiungere e gestire autorizzazioni e credenziali.
+image:screenshot-account-selection-govcloud.png["Schermata della pagina account visualizzata quando si accede con un nuovo account."]
 
 +
-image:screenshot-account-selection.png["Schermata della pagina account visualizzata quando si accede con un nuovo account."]
+.. Inserisci un nome per l'account.
+.. Facoltativamente, è possibile rendere l'account un account AWS GovCloud (US). Questo tipo di account utilizza solo endpoint e regioni AWS GovCloud (US) per la configurazione e le operazioni. Le credenziali e i segreti rimangono in GovCloud. Questa selezione è permanente.
+.. Facoltativamente, è possibile fornire una descrizione del lavoro per l'account.
+
 
 . Selezionare *Crea* e verrà visualizzata la home page di Workload Factory.
 

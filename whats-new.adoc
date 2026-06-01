@@ -15,6 +15,26 @@ Scopri le novità relative alle funzionalità di amministrazione di Workload Fac
 
 
 
+== 31 maggio 2026
+
+
+
+=== Nuova notifica per i file system FSx for ONTAP
+
+Il servizio di notifica NetApp Workload Factory include la notifica relativa al ritardo di replica.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Configurare le notifiche di Workload Factory"]
+
+
+
+=== Supporto per gli account AWS GovCloud (US)
+
+Ora è possibile creare account AWS GovCloud (USA) in Workload Factory. Questo tipo di account utilizza solo endpoint e regioni AWS US GovCloud per la configurazione e le operazioni. Le credenziali e i segreti rimangono in GovCloud. Le regioni GovCloud (USA) sono supportate.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Crea un account AWS GovCloud (US) in Workload Factory"]
+
+
+
 == 03 maggio 2026
 
 

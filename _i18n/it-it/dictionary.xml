@@ -5,8 +5,6 @@
   <block id="1a04b786edc8b8251d22307b11cb2a8d" category="list-text">*Automaticamente*: È possibile acquisire una quantità minima di informazioni sulle autorizzazioni e utilizzare uno stack CloudFormation per creare i criteri e il ruolo IAM per le credenziali.</block>
   <block id="3e704746794b6c6da13402ca9df54660" category="section-title">Aggiungere manualmente le credenziali a un account</block>
   <block id="ea106b6fa0504ddb53d4506dcd8e7755" category="paragraph">Le credenziali vengono create in tre parti:</block>
-  <block id="b4968210d824a9808cbfac903e6a2461" category="list-text">Seleziona i servizi e i livelli di autorizzazioni che desideri utilizzare, quindi crea le policy IAM dalla Console di gestione AWS.</block>
-  <block id="3b022a10e2c2436d37f59e86b18713f7" category="list-text">Creare un ruolo IAM dalla Console di gestione AWS.</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Prima di iniziare</block>
   <block id="36a8744ea109fc8ef18fd018d5d97aa0" category="paragraph">Devi disporre delle credenziali per accedere al tuo account AWS.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Fasi</block>
@@ -193,10 +191,7 @@
   <block id="422588021a93cfdaa26ce8d7d46dfeda" category="list-text">Controlla la posta in arrivo per un messaggio e-mail da NetApp che includa le istruzioni per la verifica dell'indirizzo e-mail.</block>
   <block id="94f38e991501c8594d502e52dd265abd" category="paragraph">Questo passaggio è necessario prima di effettuare l'accesso.</block>
   <block id="94d337ef5b62bd31ee54e5111cfec45f" category="list-text">Quando richiesto, leggere il Contratto di licenza per l'utente finale e accettare i termini, quindi selezionare *continua*.</block>
-  <block id="b789a2d1c7228d0b2d7174302e2c6996" category="list-text">Nella pagina *account*, immettere un nome per l'account e, se necessario, selezionare la descrizione del lavoro.</block>
-  <block id="f54bc40f2305bb493aa6597d8c67d892" category="paragraph">Un account è l'elemento di primo livello della piattaforma di identità di NetApp e ti consente di aggiungere e gestire autorizzazioni e credenziali.</block>
   <block id="2b7293baeca5711138792716543c991a" category="inline-image-macro">Schermata della pagina account visualizzata quando si accede con un nuovo account.</block>
-  <block id="28fc544db57c6f54a41eaa5c6ebc4a57" category="paragraph"><block ref="28fc544db57c6f54a41eaa5c6ebc4a57" category="inline-image-macro-rx" type="image"></block></block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">Registrati per ricevere assistenza</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Panoramica sulla registrazione del supporto</block>
   <block id="856edc4caec68fece6859c4be9360f3c" category="section-title">Registra il tuo account per il supporto NetApp</block>
@@ -893,10 +888,8 @@
   <block id="287ae8bc216279a75c04344894e04b7f" category="doc">Aggiungi le credenziali AWS a Workload Factory</block>
   <block id="5adad9ce28422d9fe7825511e24aa601" category="paragraph">Aggiungi e gestisci le credenziali AWS in modo che NetApp Workload Factory disponga delle autorizzazioni necessarie per distribuire e gestire le risorse cloud nei tuoi account AWS.</block>
   <block id="7f76e91e5513affc227459b415e2e1cf" category="paragraph">È possibile aggiungere le credenziali AWS a un account Workload Factory esistente dalla pagina Credenziali.  Ciò fornisce a Workload Factory le autorizzazioni necessarie per gestire risorse e processi all'interno del tuo ambiente cloud AWS.</block>
-  <block id="ebb29cdb5a9f5368e3f445c808c91552" category="list-text">*Manualmente*: crei la policy IAM e il ruolo IAM nel tuo account AWS mentre aggiungi le credenziali in Workload Factory.</block>
   <block id="c3ba6c13344137feef1d3795c8b29466" category="paragraph">Puoi aggiungere manualmente le credenziali AWS a Workload Factory per concedere al tuo account Workload Factory le autorizzazioni necessarie per gestire le risorse AWS che utilizzerai per eseguire i tuoi carichi di lavoro esclusivi.  Ogni set di credenziali aggiunto includerà una o più policy IAM in base alle funzionalità del carico di lavoro che si desidera utilizzare e un ruolo IAM assegnato al proprio account.</block>
   <block id="9b311c0df60f3fcb1498372665b63e61" category="admonition">È possibile aggiungere le credenziali AWS a un account dalla console Workload Factory o dalla console NetApp .</block>
-  <block id="875b761ddc794776aadfc56fc5a6fc34" category="list-text">Da Workload Factory, inserisci un nome e aggiungi le credenziali.</block>
   <block id="8fd935558171bd50056871ef9ee7bd05" category="inline-link">Console Workload Factory</block>
   <block id="6c8ca72a28d9651706405d888093910e" category="list-text">Accedi al<block ref="04c72ef1cb137ba02eafcfdeb6fc7765" category="inline-link-rx"></block> .</block>
   <block id="6191b3848b93c4178f95391680ab2108" category="list-text">Dal menu, seleziona *Amministrazione* e poi *Credenziali*.</block>
@@ -1423,4 +1416,24 @@
   <block id="e3e28d348f2fd8f74a410b0565f54037" category="cell">Riepilogo mensile dei costi per il tuo account, con indicazione delle tendenze di spesa, delle variazioni anomale e delle migliori opportunità di risparmio per FSx for ONTAP file systems.</block>
   <block id="e298f728c751f07eb265d52e8b508cc2" category="cell">Rapporto sui costi</block>
   <block id="f983e68b5fe658be13decdbe22777f19" category="summary">Scopri le novità relative alle funzionalità di amministrazione di Workload Factory, come le credenziali del cloud provider, i miglioramenti a Codebox e altro ancora.</block>
+  <block id="3bb5ae684d139ecc39b584ffe9e6033b" category="paragraph">Il servizio di notifica NetApp Workload Factory include la notifica relativa al ritardo di replica.</block>
+  <block id="bdd14b3b036670ed34f9ec4d3b52c70c" category="section-title">Supporto per gli account AWS GovCloud (US)</block>
+  <block id="bc2438830b45cc61abad63e0b037a228" category="paragraph">Ora è possibile creare account AWS GovCloud (USA) in Workload Factory. Questo tipo di account utilizza solo endpoint e regioni AWS US GovCloud per la configurazione e le operazioni. Le credenziali e i segreti rimangono in GovCloud. Le regioni GovCloud (USA) sono supportate.</block>
+  <block id="b6d9ef2d00d295b73db4c150b66667c7" category="inline-link-macro">Crea un account AWS GovCloud (US) in Workload Factory</block>
+  <block id="02235c7f58acbfe62b6b373b8f8ef557" category="paragraph"><block ref="02235c7f58acbfe62b6b373b8f8ef557" category="inline-link-macro-rx"></block></block>
+  <block id="79031a3594e961554e9c04f8abe20efa" category="list-text">*Manualmente*: È necessario creare la policy IAM e il ruolo IAM nel proprio account AWS durante l'aggiunta delle credenziali in Workload Factory. Le credenziali AWS GovCloud (US) devono essere aggiunte manualmente.</block>
+  <block id="792c9140da9b146f94c73ec223b6fc51" category="paragraph">Workload Factory non supporta l'automazione negli account GovCloud.</block>
+  <block id="60071fa639c31fcd4a70e99949388fc9" category="paragraph">Le credenziali AWS GovCloud(US) devono essere aggiunte manualmente.</block>
+  <block id="45bf4c80f61944fd3fcaad58870d0db3" category="list-text">Passaggio 1: Seleziona i servizi e il livello di autorizzazioni che desideri utilizzare, quindi crea le policy IAM dalla console di gestione AWS.</block>
+  <block id="5fe86d852cf356c78e39b05d0e9745e8" category="list-text">Passaggio 2: Creare un ruolo IAM dalla console di gestione AWS.</block>
+  <block id="e4d64fd268d05c9bc7e7e0c0300d69ba" category="list-text">Passaggio 3: Da Workload Factory, inserisci un nome e aggiungi le credenziali.</block>
+  <block id="64faf5c72ad7f70350cc60a29e7ec76e" category="admonition">L'aggiunta di credenziali a un account AWS GovCloud (USA) tramite CloudFormation non è supportata.</block>
+  <block id="5038f398ec0b8521dc65bd49c565199c" category="cell">Ritardo di replica</block>
+  <block id="7e3ba9b3dfe6a66c23b3a8d2e106e2dc" category="cell">La replicazione sta richiedendo più tempo del previsto.</block>
+  <block id="6a34595811c59ce6c3f72924ac92f741" category="list-text">Nella pagina *Account*, crea un account. Un account è l'elemento di livello superiore nella piattaforma di identità di NetApp e ti consente di aggiungere e gestire autorizzazioni e credenziali.</block>
+  <block id="91cf9192d8e3e7c1c5d93a04ee02a619" category="paragraph"><block ref="91cf9192d8e3e7c1c5d93a04ee02a619" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c983ef2dda673a36e8455e61f88625fc" category="list-text">Inserisci un nome per l'account.</block>
+  <block id="d097d681103ac768d9ca87aa43096db9" category="list-text">Facoltativamente, è possibile rendere l'account un account AWS GovCloud (US). Questo tipo di account utilizza solo endpoint e regioni AWS GovCloud (US) per la configurazione e le operazioni. Le credenziali e i segreti rimangono in GovCloud. Questa selezione è permanente.</block>
+  <block id="5aa69fed46341f59b5dc6e550c082135" category="list-text">Facoltativamente, è possibile fornire una descrizione del lavoro per l'account.</block>
+  <block id="92ee6e4d72d15689a675017ce0db2fa1" category="section-title">31 maggio 2026</block>
 </blocks>
