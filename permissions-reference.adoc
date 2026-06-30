@@ -39,6 +39,10 @@ I criteri IAM disponibili per Storage forniscono le autorizzazioni di cui Worklo
 L'archiviazione dispone delle seguenti policy di autorizzazione tra cui scegliere:
 
 * *Visualizzazione, pianificazione e analisi*: visualizza i file system FSx per ONTAP , scopri di più sullo stato del sistema, ottieni un'analisi ben progettata per i tuoi sistemi ed esplora i risparmi.
++
+
+NOTE: AWS GovCloud non supporta AWS Cost Explorer, quindi non ti servono queste autorizzazioni: `ce:GetCostAndUsage` e  `ce:GetTags`. Se le includi, la policy funzionerà comunque.
+
 * *Operazioni e risoluzione*: esegui attività operative come la regolazione della capacità del file system e la risoluzione dei problemi relativi alle configurazioni del file system.
 * *Creazione ed eliminazione del file system*: crea ed elimina FSx per i file system ONTAP e le VM di archiviazione.
 
