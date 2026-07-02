@@ -115,6 +115,9 @@ Visualizza i criteri IAM richiesti:
         "fsx:DetachAndDeleteS3AccessPoint",
         "s3:CreateAccessPoint",
         "s3:DeleteAccessPoint",
+        "s3:TagResource",
+        "s3:UntagResource",
+        "s3:ListTagsForResource",
         "s3:GetObjectTagging",
         "bedrock:InvokeModelWithResponseStream",
         "bedrock:InvokeModel",
@@ -139,6 +142,19 @@ Visualizza i criteri IAM richiesti:
         "s3:ListBucket"
       ],
       "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudtrail:PutEventSelectors",
+        "cloudtrail:GetEventSelectors"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:ResourceTag/netapp-fsx-s3-metadata": "journal"
+        }
+      }
     },
     {
       "Effect": "Allow",
@@ -452,6 +468,12 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 
 
 | Recupera l'etichettatura degli oggetti tramite il punto di accesso | s3:GetObjectTagging | Operazioni sugli oggetti S3 | Operazioni e bonifica 
+
+
+| Recupera la configurazione corrente del selettore di eventi del trail AWS CloudTrail | cloudtrail:GetEventSelectors | Operazioni di journaling del punto di accesso S3 | Operazioni e bonifica 
+
+
+| Configura o aggiorna i selettori di eventi AWS CloudTrail abilitando o disabilitando l'associazione tra il punto di accesso FSx for ONTAP S3 e il trail CloudTrail | cloudtrail:PutEventSelectors | Operazioni di journaling del punto di accesso S3 | Operazioni e bonifica 
 |===
 ====
 
