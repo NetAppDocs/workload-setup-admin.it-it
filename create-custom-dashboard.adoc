@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: create-custom-dashboard.html 
+keywords: create dashboard, custom dashboard, AI dashboard, dashboard creation, personalized dashboard 
+summary: 'Crea una dashboard personalizzata utilizzando suggerimenti guidati dall"intelligenza artificiale per monitorare ciò che conta di più per i tuoi carichi di lavoro e le tue priorità operative.' 
+---
+= Crea una dashboard personalizzata
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Crea dashboard personalizzate descrivendo in modo semplice cosa vuoi monitorare. L'intelligenza artificiale ti guida nella configurazione così le tue dashboard corrispondono ai tuoi carichi di lavoro e alle tue priorità.
+
+.A proposito di questa attività
+Le dashboard personalizzate utilizzano un dialogo guidato dall'intelligenza artificiale per capire cosa vuoi visualizzare. Descrivi le tue esigenze di monitoraggio in linguaggio naturale e il sistema fa domande di chiarimento per assicurarsi che la dashboard soddisfi le tue richieste.
+
+Una volta creata, puoi aggiornare la dashboard per vedere i dati aggiornati.
+
+Ricorda che le dashboard personalizzate sono, per impostazione predefinita, di sola lettura e non possono apportare modifiche alle configurazioni di storage o workload.
+
+.Prima di iniziare
+* Hai bisogno dell'autorizzazione per accedere alle risorse che vuoi monitorare sulla tua dashboard.
+* Configura i tuoi carichi di lavoro in Workload Factory prima di creare dashboard per monitorarli.
+
+
+
+
+== Crea una dashboard
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro come storage, eda, ai, databases, vmware e amministrazione."] e poi seleziona *Panoramica dei carichi di lavoro* > *Dashboard personalizzate*.
++
+Se questa è la tua prima dashboard, vedrai una schermata vuota con dei prompt di esempio per aiutarti a iniziare. Puoi selezionare *Copia prompt* per copiare un prompt di esempio nella casella di testo della finestra di dialogo AI.
+
+. Seleziona *Crea nuova dashboard*.
+. Nella finestra di dialogo dell'AI, descrivi cosa vuoi monitorare.
++
+Descrivilo in parole semplici. L'intelligenza artificiale ti farà alcune domande per capire meglio le tue esigenze.
+
+. Seleziona image:arrow.png["L'icona del menu viene utilizzata per iniziare a generare dashboard., width=18"].
+. Rispondi alle domande di chiarimento dell'IA.
++
+L'IA potrebbe chiederti di scegliere tra diverse opzioni per comprendere meglio le tue esigenze. Rispondi a ogni domanda e seleziona *Continua* oppure seleziona *Salta* per passare oltre le domande facoltative.
+
+. Dopo aver risposto a tutte le domande, seleziona *Continua* per creare la tua dashboard.
+
+
+.Risultato
+La tua dashboard personalizzata è ora nel catalogo delle dashboard. Tutti gli utenti del tuo account Workload Factory possono accedervi e visualizzarla.
+
+.Cosa c'è dopo
+Dopo la creazione, puoi:
+
+* Aggiorna i dati del pannello di controllo per vedere le informazioni più recenti
+* Modifica le dashboard per cambiare ciò che mostrano
+* Elimina le dashboard che non ti servono più
+* Visualizza i dettagli della dashboard, inclusi chi l'ha creata e quando è stata aggiornata l'ultima volta
+
+
+
+
+== Informazioni correlate
+
+* link:manage-custom-dashboards.html["Gestisci le tue dashboard personalizzate"]
+* link:troubleshoot-custom-dashboards.html["Risolvi i problemi delle dashboard personalizzate"]
+

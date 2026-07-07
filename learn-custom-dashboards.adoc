@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: learn-custom-dashboards.html 
+keywords: custom dashboards, dashboards, personalized dashboards, AI dashboards, operational visibility, workload monitoring 
+summary: 'Crea dashboard basate sull"intelligenza artificiale, personalizzate in base ai tuoi carichi di lavoro e alle tue priorità, per una maggiore visibilità operativa senza essere vincolato da visualizzazioni predefinite.' 
+---
+= Scopri le dashboard personalizzate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Come amministratore di cloud e storage, le dashboard personalizzate ti danno una visione chiara dei sistemi e dei carichi di lavoro che gestisci. Ti permettono di creare e personalizzare visualizzazioni che si adattano al tuo lavoro, alle tue priorità e ai tuoi obiettivi aziendali, invece di essere limitato a layout preimpostati.
+
+Le dashboard personalizzate utilizzano l'intelligenza artificiale per creare visualizzazioni personalizzate del tuo ambiente Workload Factory. Ti basta descrivere in linguaggio naturale cosa vuoi monitorare e il sistema crea automaticamente grafici visivi in base alle tue esigenze.
+
+Tutti gli utenti del tuo account Workload Factory possono visualizzare tutte le dashboard personalizzate. Questa configurazione condivisa aiuta i team a collaborare e a vedere le stesse informazioni operative in tutta l'organizzazione.
+
+
+
+== Perché usare dashboard personalizzate
+
+Gli utenti di Workload Factory gestiscono numerosi carichi di lavoro, ambienti e priorità, ma le dashboard standard mostrano solo visualizzazioni predefinite. Le dashboard personalizzate aiutano a risolvere diverse problematiche operative:
+
+* *Rispondi rapidamente alle domande chiave*: concentrati sulle domande più importanti o sulle lacune nella tua comprensione invece che sulle statistiche generali del sistema.
+* *Monitora ciò che conta ora*: Tieni traccia delle metriche che corrispondono alle tue priorità attuali, non di un insieme fisso di indicatori di salute.
+* *Collega i dati tecnici ai risultati aziendali*: mostra come le prestazioni del sistema influenzano le operazioni e gli obiettivi aziendali.
+* *Evita di passare da uno strumento all'altro*: visualizza tutte le informazioni rilevanti in un unico posto, senza bisogno di passare da uno strumento all'altro, da una pagina all'altra o da un'esportazione all'altra.
+
+
+
+
+== Cosa puoi fare con le dashboard personalizzate
+
+Durante la configurazione, la finestra di dialogo guidata dall'IA ti aiuta a definire:
+
+* Carichi di lavoro e risorse da monitorare
+* Metriche chiave che contano per il tuo lavoro
+* Intervalli temporali e periodi da confrontare
+* Visualizzazioni per regione, carico di lavoro o altre categorie
+* Regole o requisiti che devi monitorare e mostrare
+
+
+
+
+== Considerazioni e limitazioni
+
+
+
+=== Permessi
+
+Per creare o visualizzare dashboard personalizzate, devi avere le autorizzazioni AWS IAM corrette per le risorse che vuoi monitorare. Assicurati che l'account Workload Factory abbia accesso in lettura alle origini dati usate dalle dashboard.
+
+link:add-credentials.html["Scopri come aggiungere le credenziali AWS e configurare le autorizzazioni IAM"^].
+
+
+
+=== Progettazione di sola lettura
+
+Le dashboard personalizzate sono di sola lettura. Non possono modificare le impostazioni di archiviazione o di carico di lavoro. Questo ti permette di monitorare il sistema senza cambiare nulla per errore.
+
+
+
+=== Limitazioni
+
+Attualmente, le dashboard personalizzate sono soggette alle seguenti limitazioni:
+
+* Non puoi condividere dashboard al di fuori del tuo account Workload Factory
+* Solo un utente può modificare una dashboard alla volta
+* La modifica simultanea non è supportata
+
+
+
+
+=== Ambiente demo
+
+Se usi un account demo di Workload Factory, sono disponibili alcune dashboard predefinite. Queste ti aiutano a vedere cosa possono fare le dashboard personalizzate. Ogni dashboard mostra un'esigenza di monitoraggio comune: stato del disaster recovery, capacità e costi tra le regioni e se le regole di protezione dello storage vengono rispettate.
+
+
+
+=== Esempi di prompt
+
+I seguenti esempi mostrano come descrivere le tue esigenze di monitoraggio in modo semplice:
+
+* *Monitoraggio del disaster recovery*: "Sto configurando una soluzione di disaster recovery in AWS per i miei sistemi on-premises. Voglio vedere un elenco completo delle mie risorse on-premises e lo stato di ciascuna presso il sito di disaster recovery nella regione US East, incluso se è configurata, attiva e in salute."
+* *Capacità e costi multi-regione*: "Gestisco lo storage su diverse regioni cloud e applicazioni. Voglio una visibilità chiara sulla quantità di storage allocato, su quanto viene utilizzato e sui relativi costi, con dettagli per ogni regione e ogni applicazione."
+* *Conformità alla protezione dello storage*: "Sto configurando una nuova strategia di protezione dello storage basata sugli standard della mia organizzazione. Mostrami tutti i file system e se soddisfano questi requisiti:
++
+** Carichi di lavoro database: 12 snapshot giornalieri per volume e 2 snapshot a prova di manomissione a settimana.
+** Condivisioni NFS e SMB: 7 snapshot giornalieri per volume e 1 snapshot a prova di manomissione a settimana.
+** ARP deve essere abilitato su tutti i volumi.
+
+
+
+
+
+
+== Prossimi passi
+
+* link:create-custom-dashboard.html["Crea una dashboard personalizzata"]
+* link:manage-custom-dashboards.html["Gestisci dashboard personalizzate"]
+* link:troubleshoot-custom-dashboards.html["Risolvi i problemi delle dashboard personalizzate"]
+

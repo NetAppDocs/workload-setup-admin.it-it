@@ -1,0 +1,15 @@
+= dashboard personalizzate
+:allow-uri-read: 
+
+
+
+
+=== dashboard personalizzate
+
+Crea dashboard basate sull'intelligenza artificiale che si adattino ai tuoi carichi di lavoro e alle tue priorità, così puoi vedere facilmente come stanno andando le tue operazioni. Invece di affidarti a visualizzazioni predefinite, le dashboard personalizzate ti permettono di concentrarti sulle informazioni che contano di più.
+
+Descrivi in parole semplici cosa vuoi monitorare e l'AI creerà una dashboard basata sulla tua richiesta. Ad esempio, puoi monitorare lo stato del disaster recovery, la capacità e i costi nelle diverse regioni, la conformità alla protezione dello storage e altre metriche operative.
+
+Le dashboard personalizzate sono di sola lettura, quindi non possono modificare le impostazioni di archiviazione o di carico di lavoro. Chiunque nel tuo account Workload Factory può visualizzare e gestire queste dashboard, facilitando la condivisione di informazioni e mantenendo l'allineamento tra i team.
+
+link:learn-custom-dashboards.html["Scopri di più sulle dashboard personalizzate"]

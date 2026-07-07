@@ -48,6 +48,14 @@ indexpage:
       url: https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html
     - title: Visualizza e analizza gli eventi EMS per i carichi di lavoro di archiviazione
       url: https://docs.netapp.com/us-en/workload-fsx-ontap/analyze-events.html
+  - title: dashboard personalizzate
+    links:
+    - title: Scopri le dashboard personalizzate
+      url: "/learn-custom-dashboards.html"
+    - title: Crea una dashboard personalizzata
+      url: "/create-custom-dashboard.html"
+    - title: Gestisci dashboard personalizzate
+      url: "/manage-custom-dashboards.html"
   - title: Blog e community
     links:
     - title: Console NetApp

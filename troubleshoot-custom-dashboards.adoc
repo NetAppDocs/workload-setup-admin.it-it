@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: troubleshoot-custom-dashboards.html 
+keywords: troubleshooting, dashboard errors, dashboard issues, failed creation, failed to load, dashboard not loading 
+summary: Risolvi i problemi più comuni relativi alle dashboard personalizzate, tra cui errori di creazione, problemi di caricamento dei dati e problemi di accesso. 
+---
+= Risolvi i problemi delle dashboard personalizzate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Usa queste informazioni per risolvere i problemi comuni che potresti incontrare quando crei o usi dashboard personalizzate.
+
+
+
+== Creazione dashboard non riuscita
+
+**Problema:** Vedi il messaggio di errore "Impossibile comprendere la richiesta e generare il codice" quando crei una dashboard.
+
+**Causa:** Il sistema non è riuscito a comprendere la tua richiesta o non è stato in grado di creare la visualizzazione dalla tua richiesta.
+
+**Soluzione:** Prova quanto segue:
+
+* Riscrivi la tua richiesta con dettagli più chiari su ciò che vuoi monitorare.
+* Inizia con uno dei prompt di esempio in link:create-custom-dashboard.html["Crea una dashboard personalizzata"].
+* Suddividi le esigenze di monitoraggio complesse in diverse dashboard più semplici.
+* Specifica i carichi di lavoro, le metriche, gli intervalli di tempo o le dimensioni che vuoi monitorare.
+
+
+
+
+== Impossibile caricare i dati della dashboard
+
+**Problema:** La dashboard è stata creata, ma mostra errori durante il caricamento dei dati.
+
+**Causa:** Questo accade solitamente a causa di problemi di autorizzazione o fonti di dati non disponibili.
+
+**Soluzione:**
+
+* **Verifica le autorizzazioni:** Assicurati che il tuo account Workload Factory abbia accesso in lettura ai carichi di lavoro e alle risorse utilizzate dalla dashboard. Esamina i requisiti di autorizzazione in link:learn-custom-dashboards.html#permissions["Permessi"].
+* **Verifica le credenziali:** Conferma che le tue credenziali AWS siano valide e non scadute. Vedi link:add-credentials.html["Aggiungi le credenziali AWS"] per i dettagli.
+* **Verifica la configurazione del carico di lavoro:** Assicurati che i carichi di lavoro che desideri monitorare siano configurati correttamente in Workload Factory e che siano attualmente in esecuzione.
+
+
+
+
+== La dashboard non si carica o si carica lentamente
+
+**Problema:** La dashboard si carica lentamente o alcuni widget non vengono visualizzati.
+
+**Causa:** Il caricamento lento può essere causato da problemi di rete, grandi quantità di dati o ritardi temporanei del servizio.
+
+**Soluzione:**
+
+* **Verifica la tua connessione internet:** Assicurati che la tua connessione internet sia stabile.
+* **Aggiorna il browser:** Prova ad aggiornare la pagina per vedere se la dashboard si carica correttamente.
+* **Cancella la cache e i cookie del tuo browser:** Questo può aiutare a risolvere i problemi di caricamento causati da dati obsoleti o danneggiati.
+* **Attendi e riprova:** Se il problema persiste, attendi qualche minuto e riprova.
+
+
+
+
+== Impossibile modificare la dashboard
+
+**Problema:** Quando provi a modificare una dashboard, vedi il messaggio "Attualmente in fase di modifica da parte di [nome utente]".
+
+**Causa:** Un altro utente del tuo account Workload Factory sta modificando la dashboard. Solo un utente alla volta può modificare una dashboard.
+
+**Soluzione:**
+
+* Attendi che l'altro utente finisca e salvi le modifiche.
+* Contatta la persona indicata nel messaggio per coordinare la modifica.
+* Se non stai più modificando ma il blocco rimane, chiudi la finestra di modifica per rilasciare il blocco.
+
+
+
+
+== Cruscotti mancanti
+
+**Problema:** Una dashboard che hai creato non è più presente nel catalogo delle dashboard.
+
+**Causa:** Un altro utente del tuo account Workload Factory potrebbe averlo eliminato.
+
+**Soluzione:**
+
+* Assicurati di aver effettuato l'accesso all'account Workload Factory corretto.
+* Chiedi agli altri utenti del tuo account se qualcuno ha eliminato la dashboard.
+* Se necessario, ricrea la dashboard utilizzando i requisiti originali.
+
+
+Tutti gli utenti di un account Workload Factory possono visualizzare ed eliminare dashboard personalizzate. Coordina con il tuo team quando gestisci le dashboard condivise.
+
+
+
+== Aiuto aggiuntivo
+
+Se continui a riscontrare problemi con le dashboard personalizzate, consulta link:get-help.html["Richiedi assistenza"] per informazioni su come contattare l'assistenza NetApp.
