@@ -30,7 +30,7 @@ Ricorda che le dashboard personalizzate sono, per impostazione predefinita, di s
 == Crea una dashboard
 
 .Fasi
-. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Accedi utilizzando uno dei link:console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro come storage, eda, ai, databases, vmware e amministrazione."] e poi seleziona *Panoramica dei carichi di lavoro* > *Dashboard personalizzate*.
 +
 Se questa è la tua prima dashboard, vedrai una schermata vuota con dei prompt di esempio per aiutarti a iniziare. Puoi selezionare *Copia prompt* per copiare un prompt di esempio nella casella di testo della finestra di dialogo AI.

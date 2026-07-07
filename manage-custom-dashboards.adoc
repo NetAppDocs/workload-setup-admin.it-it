@@ -26,7 +26,7 @@ Devi avere almeno una dashboard personalizzata nel tuo account Workload Factory.
 == Accedi al catalogo della dashboard
 
 .Fasi
-. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Accedi utilizzando uno dei link:console-experiences.html["esperienze di console"^].
 . Dal menu, seleziona *Panoramica dei carichi di lavoro* e poi *Dashboard personalizzate*.
 +
 Il catalogo delle dashboard mostra tutte le dashboard personalizzate nel tuo account Workload Factory.
