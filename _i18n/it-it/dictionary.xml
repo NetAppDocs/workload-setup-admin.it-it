@@ -1461,8 +1461,6 @@
   <block id="463a1f1058198f82800c115a2a913de5" category="paragraph">Le dashboard personalizzate utilizzano un dialogo guidato dall'intelligenza artificiale per capire cosa vuoi visualizzare. Descrivi le tue esigenze di monitoraggio in linguaggio naturale e il sistema fa domande di chiarimento per assicurarsi che la dashboard soddisfi le tue richieste.</block>
   <block id="5af1607522ddad534f7fc3e5976684e5" category="paragraph">Una volta creata, puoi aggiornare la dashboard per vedere i dati aggiornati.</block>
   <block id="a8f8e9b8eb3f376a4b560c169094087e" category="paragraph">Ricorda che le dashboard personalizzate sono, per impostazione predefinita, di sola lettura e non possono apportare modifiche alle configurazioni di storage o workload.</block>
-  <block id="7f2caa1403d5a00e4abbc779c525c170" category="list-text">Hai bisogno dell'autorizzazione per accedere alle risorse che vuoi monitorare sulla tua dashboard.</block>
-  <block id="aae9aa18bcac1ee780a470bdbbc81875" category="list-text">Configura i tuoi carichi di lavoro in Workload Factory prima di creare dashboard per monitorarli.</block>
   <block id="1490f3908001d2cdf7587ba480973340" category="section-title">Crea una dashboard</block>
   <block id="342a19841e494c61bf9c06a5879eaffa" category="inline-image-macro">L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro come storage, eda, ai, databases, vmware e amministrazione.</block>
   <block id="2e73b76e7b232c5b1f77e0a5880d5ad5" category="list-text">Seleziona il menu <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> e poi seleziona *Panoramica dei carichi di lavoro* &gt; *Dashboard personalizzate*.</block>
@@ -1479,7 +1477,6 @@
   <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">Cosa c'è dopo</block>
   <block id="fb3b6f147b0a44a08f4c961dc053571e" category="paragraph">Dopo la creazione, puoi:</block>
   <block id="a5c04615d2baa4c3104d2afbb5b85c59" category="list-text">Aggiorna i dati del pannello di controllo per vedere le informazioni più recenti</block>
-  <block id="caace49efbd64662add845d2ed5e7042" category="list-text">Modifica le dashboard per cambiare ciò che mostrano</block>
   <block id="7bff2130a08698224667671d85a34ed4" category="list-text">Elimina le dashboard che non ti servono più</block>
   <block id="ed5184af3d39b3e314759db5b95ba675" category="list-text">Visualizza i dettagli della dashboard, inclusi chi l'ha creata e quando è stata aggiornata l'ultima volta</block>
   <block id="d10995cac5dfc264a5da7f4abec9025d" category="inline-link-macro">Gestisci le tue dashboard personalizzate</block>
@@ -1513,8 +1510,6 @@
   <block id="e646e16bee8b32e6ea29e30d01970a6c" category="section-title">Limitazioni</block>
   <block id="9b7e15be2b250373f1f4204c0d8a313a" category="paragraph">Attualmente, le dashboard personalizzate sono soggette alle seguenti limitazioni:</block>
   <block id="af58cbb6f48e75ca1858deb5b23d424e" category="list-text">Non puoi condividere dashboard al di fuori del tuo account Workload Factory</block>
-  <block id="8842d5599593f1c220f6f9c200222fdc" category="list-text">Solo un utente può modificare una dashboard alla volta</block>
-  <block id="8031af406fb376c22555c37f323588ea" category="list-text">La modifica simultanea non è supportata</block>
   <block id="8fbadf27f5b9fe2779015430fdb5baac" category="section-title">Ambiente demo</block>
   <block id="372d2f979722e867e21cf5dc86365106" category="paragraph">Se usi un account demo di Workload Factory, sono disponibili alcune dashboard predefinite. Queste ti aiutano a vedere cosa possono fare le dashboard personalizzate. Ogni dashboard mostra un'esigenza di monitoraggio comune: stato del disaster recovery, capacità e costi tra le regioni e se le regole di protezione dello storage vengono rispettate.</block>
   <block id="79092ffcd78270a38b45ed11da4ef893" category="section-title">Esempi di prompt</block>
@@ -1529,10 +1524,6 @@
   <block id="817e038e8ee419f03c8a12275438f8d7" category="list-text"><block ref="817e038e8ee419f03c8a12275438f8d7" category="inline-link-macro-rx"></block></block>
   <block id="62403e3fa28afe128e2c0e15bf0333f7" category="inline-link-macro">Gestisci dashboard personalizzate</block>
   <block id="09327b0cff12718fff46be13c240b39f" category="list-text"><block ref="09327b0cff12718fff46be13c240b39f" category="inline-link-macro-rx"></block></block>
-  <block id="c9d9548c92d24e0dc83c6a1818848b58" category="summary">Accedi al catalogo delle dashboard per visualizzare, modificare, aggiornare ed eliminare le dashboard personalizzate in Workload Factory.</block>
-  <block id="48f5d174a835c1fb6c38af1c4800bcdb" category="paragraph">Gestisci le tue dashboard personalizzate dal catalogo delle dashboard. Da lì puoi visualizzare i dettagli, aggiornare i dati, modificare le impostazioni della dashboard o eliminare le dashboard che non ti servono più.</block>
-  <block id="426dd2be6d0917b0febd591b1f25bc0a" category="paragraph">Tutti gli utenti del tuo account Workload Factory possono accedere a tutte le dashboard personalizzate. Ogni dashboard mostra dettagli di base come il nome del creatore, la data di creazione e se qualcuno la sta modificando al momento.</block>
-  <block id="8a57aae4a94bc002578416ca2a1f301a" category="paragraph">Le dashboard personalizzate sono di sola lettura. Non possono modificare le impostazioni di storage o del carico di lavoro. Puoi modificare la dashboard stessa, ma non le risorse che monitora.</block>
   <block id="76fc0fde7a5041f5e2df3b114841202c" category="paragraph">Devi avere almeno una dashboard personalizzata nel tuo account Workload Factory.</block>
   <block id="19f40b5f5943ee4953075403d9783061" category="section-title">Accedi al catalogo della dashboard</block>
   <block id="94ab7238c8d6eb39314e6dc172cba073" category="list-text">Dal menu, seleziona *Panoramica dei carichi di lavoro* e poi *Dashboard personalizzate*.</block>
@@ -1541,15 +1532,6 @@
   <block id="9e3f16aef1d22400bdae48c5cb77b00f" category="section-title">Aggiorna i dati della dashboard</block>
   <block id="4e424a1ad37782627141d4d50f79b586" category="paragraph">I dati del dashboard vengono caricati quando apri il dashboard. Puoi aggiornarlo per vedere le informazioni più recenti.</block>
   <block id="6835e72df37e141c78401ea8d4bfcf90" category="paragraph">La dashboard ricarica i dati dai tuoi carichi di lavoro. L'ora dell'ultimo aggiornamento cambia per indicare quando i dati sono stati aggiornati.</block>
-  <block id="ad322a64b7af5e88132bf6cb538fccd0" category="section-title">Modifica una dashboard</block>
-  <block id="ce7194dc740d6f8db1edf5435d1a57b4" category="paragraph">Puoi modificare una dashboard per cambiare ciò che mostra, incluse le metriche e i grafici.</block>
-  <block id="b13bad0dcb6df4e403e8e2af9058dfe5" category="list-text">Nella pagina *Dashboard personalizzate*, individua la dashboard che vuoi modificare.</block>
-  <block id="d431f68c965a7131bbc2f48128983c25" category="list-text">Dal menu *Azioni* per quella dashboard, seleziona *Modifica dashboard*.</block>
-  <block id="212f24e309c20769800e812e5d15c2e3" category="paragraph">Se un altro utente sta modificando la dashboard, visualizzerai un messaggio come "Attualmente in fase di modifica da parte di [nome utente]". Attendi che abbia finito o coordinati con lui.</block>
-  <block id="63f40ecf20824ff6d561a306d3a25fd1" category="list-text">Nella finestra di dialogo dell'IA, descrivi le modifiche che desideri apportare.</block>
-  <block id="3184c7e78934ef4b37ea845f1d56789a" category="paragraph">Questo processo è simile alla creazione di una nuova dashboard. Puoi modificare i carichi di lavoro, le metriche o gli intervalli di tempo che la dashboard tiene traccia.</block>
-  <block id="f66306510aaf399aef8bdf649739a15e" category="list-text">Rivedi le modifiche e seleziona **Salva**.</block>
-  <block id="89806ea6a9ed9b0bb6cb322f912aff65" category="paragraph">La dashboard si aggiorna con le tue modifiche. Anche la data dell'ultima modifica si aggiorna.</block>
   <block id="74ee9feffcb1603b7eeb47c099c0e5a5" category="section-title">Elimina una dashboard</block>
   <block id="e54360b7371199d6607f76cd1ae6ad17" category="paragraph">Elimina le dashboard che non ti servono più. Questa operazione è permanente e non può essere annullata.</block>
   <block id="3325f3a5c13a73bb87ed2dabebb0b6a3" category="list-text">Nella pagina *Custom dashboards*, individua la dashboard che desideri rimuovere.</block>
@@ -1572,9 +1554,7 @@
   <block id="6cf9da3bc18ab877793e971ea5fdf80d" category="paragraph">**Problema:** La dashboard è stata creata, ma mostra errori durante il caricamento dei dati.</block>
   <block id="423c766e8a7076c3dd890fe7460b5785" category="paragraph">**Causa:** Questo accade solitamente a causa di problemi di autorizzazione o fonti di dati non disponibili.</block>
   <block id="6342c16a39a9eb2f31fa733eb76963b7" category="paragraph">**Soluzione:**</block>
-  <block id="fb7bac53b48882cef2221ea2bff55443" category="list-text">**Verifica le autorizzazioni:** Assicurati che il tuo account Workload Factory abbia accesso in lettura ai carichi di lavoro e alle risorse utilizzate dalla dashboard. Esamina i requisiti di autorizzazione in <block ref="79e11e6e61bebfcf73bb53d91696114e" category="inline-link-macro-rx"></block>.</block>
   <block id="a92d27a2e307df461574cc29f2358257" category="list-text">**Verifica le credenziali:** Conferma che le tue credenziali AWS siano valide e non scadute. Vedi <block ref="b2fa8f8bcb70f53fbee747df0674d6ae" category="inline-link-macro-rx"></block> per i dettagli.</block>
-  <block id="fee56bf45b6270228ee20fa9d1d5d88a" category="list-text">**Verifica la configurazione del carico di lavoro:** Assicurati che i carichi di lavoro che desideri monitorare siano configurati correttamente in Workload Factory e che siano attualmente in esecuzione.</block>
   <block id="a82708a710bdc7f66cc4d1b5721a359c" category="section-title">La dashboard non si carica o si carica lentamente</block>
   <block id="7b8a6ade8ac0e93d1993c6d3ee222a27" category="paragraph">**Problema:** La dashboard si carica lentamente o alcuni widget non vengono visualizzati.</block>
   <block id="c66f626cb62bfd00b1514c2f1a4ec699" category="paragraph">**Causa:** Il caricamento lento può essere causato da problemi di rete, grandi quantità di dati o ritardi temporanei del servizio.</block>
@@ -1582,12 +1562,6 @@
   <block id="e39625dee78ba95654668e1fce54e45f" category="list-text">**Aggiorna il browser:** Prova ad aggiornare la pagina per vedere se la dashboard si carica correttamente.</block>
   <block id="f86d0248af765f101ea3563fcc677a18" category="list-text">**Cancella la cache e i cookie del tuo browser:** Questo può aiutare a risolvere i problemi di caricamento causati da dati obsoleti o danneggiati.</block>
   <block id="e7347594ee6cffce40f1598054f4f163" category="list-text">**Attendi e riprova:** Se il problema persiste, attendi qualche minuto e riprova.</block>
-  <block id="7a2ffa8b9064d2842f2e8203776a80e0" category="section-title">Impossibile modificare la dashboard</block>
-  <block id="83e74e6ee1cf72780d556b5b56524b07" category="paragraph">**Problema:** Quando provi a modificare una dashboard, vedi il messaggio "Attualmente in fase di modifica da parte di [nome utente]".</block>
-  <block id="89bb98bf1c9d56355ec74ce488a3f9f8" category="paragraph">**Causa:** Un altro utente del tuo account Workload Factory sta modificando la dashboard. Solo un utente alla volta può modificare una dashboard.</block>
-  <block id="21aa7960bf24b27392547adc57724345" category="list-text">Attendi che l'altro utente finisca e salvi le modifiche.</block>
-  <block id="3e99de69e606821e37746a29904f9fc6" category="list-text">Contatta la persona indicata nel messaggio per coordinare la modifica.</block>
-  <block id="0fced5615d0fc04d9397c731329e549e" category="list-text">Se non stai più modificando ma il blocco rimane, chiudi la finestra di modifica per rilasciare il blocco.</block>
   <block id="318369ae5a2f25e9c7cb0b7b846d1775" category="section-title">Cruscotti mancanti</block>
   <block id="732976f9f9cc4b9938c0a1a9c2569828" category="paragraph">**Problema:** Una dashboard che hai creato non è più presente nel catalogo delle dashboard.</block>
   <block id="d0a35413e8843c3f263cb1fad4f4cb3e" category="paragraph">**Causa:** Un altro utente del tuo account Workload Factory potrebbe averlo eliminato.</block>
@@ -1598,4 +1572,14 @@
   <block id="e2a43aebbf3f114c3e1dfc54b469c13e" category="section-title">Aiuto aggiuntivo</block>
   <block id="a56bacdffec3c1404856b40a1b27f955" category="paragraph">Se continui a riscontrare problemi con le dashboard personalizzate, consulta <block ref="c470f3409940cee13ddda9c09bf54b60" category="inline-link-macro-rx"></block> per informazioni su come contattare l'assistenza NetApp.</block>
   <block id="708d52dc7d2f1cb4787bfd74e41bfab5" category="list-text">Accedi utilizzando uno dei <block ref="730226d90433792895dc2ec640283d2d" category="inline-link-macro-rx"></block>.</block>
+  <block id="97911b3c54a4e826b34c1f79026316c5" category="section-title">Credenziali e autorizzazioni AWS</block>
+  <block id="d65de0ffa05b31f0beebf22d3e28dbde" category="section-title">Collegamento a FSx per ONTAP</block>
+  <block id="575660b25d9cb74a47a89172d359da91" category="paragraph">Workload Factory richiede un Link per connettersi ai file system Amazon FSx for ONTAP. Un Link crea una relazione di trust e connettività tra Workload Factory e uno o più file system Amazon FSx for ONTAP. Questo ti permette di monitorare e gestire alcune funzionalità del file system direttamente tramite le chiamate REST API di ONTAP che non sono disponibili tramite l'API di Amazon FSx for ONTAP.</block>
+  <block id="68cd2ca9724f378c0a2815415eeecfbd" category="inline-link">Impara come creare un link</block>
+  <block id="11a7b8f6e5b40124f50c5d30e3fedda3" category="paragraph"><block ref="35d312ad6c576252ccfa87842dc6e767" category="inline-link-rx"></block>.</block>
+  <block id="90b29202abc7a1c38c887ae166296c46" category="summary">Accedi al catalogo delle dashboard per visualizzare, aggiornare ed eliminare le dashboard personalizzate in Workload Factory.</block>
+  <block id="b0929267f27be355fe20aa6662a8ff91" category="paragraph">Gestisci le tue dashboard personalizzate dal catalogo delle dashboard. Da lì, puoi visualizzare i dettagli, aggiornare i dati o eliminare le dashboard che non ti servono più.</block>
+  <block id="21984c4de187dab774a2262572d5c108" category="paragraph">Tutti gli utenti del tuo account Workload Factory possono accedere a tutte le dashboard personalizzate. Ogni dashboard mostra dettagli di base come il nome del creatore e la data di creazione.</block>
+  <block id="a83695a886882e5b4baf753ee607f66f" category="paragraph">Le dashboard personalizzate sono di sola lettura. Non possono modificare le impostazioni di storage o del carico di lavoro.</block>
+  <block id="dc3bd384dcb2bc2324eb0b2de08dda55" category="list-text">**Verifica le autorizzazioni:** Assicurati che il tuo account Workload Factory abbia accesso in lettura ai carichi di lavoro e alle risorse utilizzate dalla dashboard. Esamina i requisiti di autorizzazione in <block ref="7630a8b182c80d5ddb5d9ce1be672fef" category="inline-link-macro-rx"></block>.</block>
 </blocks>

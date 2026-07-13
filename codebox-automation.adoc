@@ -15,6 +15,7 @@ Codebox è un copilota Infrastructure as Code (IaC) che aiuta gli sviluppatori e
 
 
 
+[[codebox-capabilities]]
 == Funzionalità Codebox
 
 Codebox offre due funzionalità IAC principali:
@@ -27,6 +28,7 @@ Inoltre, quando si impostano le credenziali di Workload Factory, Codebox visuali
 
 
 
+[[supported-code-formats]]
 == Formati di codice supportati
 
 I formati di codice supportati includono:
@@ -39,6 +41,7 @@ I formati di codice supportati includono:
 
 
 
+[[related-information]]
 == Informazioni correlate
 
 link:use-codebox.html["Informazioni sull'utilizzo di Codebox"].

@@ -15,6 +15,7 @@ Apri CloudShell per eseguire comandi AWS o ONTAP CLI da qualsiasi punto della co
 
 
 
+[[about-this-task]]
 == A proposito di questa attività
 
 CloudShell consente di eseguire comandi AWS CLI o comandi ONTAP CLI in un ambiente simile a una shell dalla console Workload Factory.  Simula sessioni di terminale nel browser, fornendo funzionalità di terminale e messaggi proxy tramite il backend di Workload Factory.  Ti consente di utilizzare le credenziali AWS e ONTAP che hai fornito nel tuo account NetApp .
@@ -32,6 +33,7 @@ Le funzionalità di CloudShell includono:
 
 
 
+[[cloudshell-commands]]
 == Comandi CloudShell
 
 All'interno dell'interfaccia grafica di CloudShell, è possibile immettere `help` per visualizzare i comandi CloudShell disponibili. Dopo aver inviato il `help` comando, viene visualizzato il seguente riferimento.
@@ -71,6 +73,7 @@ Gli operatori shell come pipe `|`, esecuzione in background `&` e reindirizzamen
 
 
 
+[[before-you-begin]]
 == Prima di iniziare
 
 CloudShell funziona nel contesto delle tue credenziali AWS. Per utilizzare CloudShell, devi fornire almeno una credenziale AWS.
@@ -80,6 +83,7 @@ NOTE: CloudShell è disponibile per l'esecuzione di qualsiasi comando della CLI 
 
 
 
+[[deploy-cloudshell]]
 == Distribuzione di CloudShell
 
 Puoi distribuire CloudShell da qualsiasi punto della console NetApp Workload Factory.  È anche possibile distribuire CloudShell dalla console NetApp .
@@ -138,6 +142,7 @@ image:screenshot-cloudshell-tab-menu.png["Screenshot che mostra il menu delle az
 
 
 
+[[rename-a-cloudshell-session-tab]]
 == Rinominare una scheda di sessione CloudShell
 
 È possibile rinominare una scheda di sessione CloudShell per identificare la sessione.
@@ -153,6 +158,7 @@ Il nuovo nome viene visualizzato nella scheda della sessione CloudShell.
 
 
 
+[[duplicate-cloudshell-session-tab]]
 == Scheda della sessione CloudShell duplicata
 
 È possibile duplicare una scheda di sessione CloudShell per creare una nuova sessione con lo stesso nome, le stesse credenziali e la stessa regione. Il codice della scheda originale non viene duplicato nella scheda duplicata.
@@ -167,6 +173,7 @@ Viene visualizzata la nuova scheda con lo stesso nome della scheda originale.
 
 
 
+[[close-cloudshell-session-tabs]]
 == Chiudere le schede della sessione CloudShell
 
 Puoi chiudere le schede di CloudShell una alla volta, chiudere le altre schede su cui non stai lavorando o chiudere tutte le schede contemporaneamente.
@@ -187,6 +194,7 @@ Le schede della sessione CloudShell selezionate si chiudono.
 
 
 
+[[split-cloudshell-session-tabs]]
 == Dividi schede di sessione CloudShell
 
 È possibile dividere le schede delle sessioni di CloudShell per visualizzare due o più schede contemporaneamente.
@@ -198,6 +206,7 @@ image:screenshot-cloudshell-split-view.png["Schermata che mostra due schede Clou
 
 
 
+[[update-settings-for-a-cloudshell-session]]
 == Aggiornare le impostazioni per una sessione CloudShell
 
 È possibile aggiornare le impostazioni del tipo di carattere e di output per le sessioni CloudShell.

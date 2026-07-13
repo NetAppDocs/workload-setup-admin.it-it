@@ -4,6 +4,7 @@
 
 
 
+[[permissions-update-for-storage]]
 === Aggiornamento delle autorizzazioni per l'archiviazione
 
 L'analizzatore di eventi FSx for ONTAP EMS utilizza le seguenti autorizzazioni Amazon Bedrock nella policy di autorizzazione _operations and remediation_ per recuperare i dati degli eventi per il carico di lavoro di archiviazione.

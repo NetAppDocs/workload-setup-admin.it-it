@@ -4,6 +4,7 @@
 
 
 
+[[custom-dashboards]]
 === dashboard personalizzate
 
 Crea dashboard basate sull'intelligenza artificiale che si adattino ai tuoi carichi di lavoro e alle tue priorità, così puoi vedere facilmente come stanno andando le tue operazioni. Invece di affidarti a visualizzazioni predefinite, le dashboard personalizzate ti permettono di concentrarti sulle informazioni che contano di più.

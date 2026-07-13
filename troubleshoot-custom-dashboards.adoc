@@ -15,6 +15,7 @@ Usa queste informazioni per risolvere i problemi comuni che potresti incontrare 
 
 
 
+[[dashboard-creation-failed]]
 == Creazione dashboard non riuscita
 
 **Problema:** Vedi il messaggio di errore "Impossibile comprendere la richiesta e generare il codice" quando crei una dashboard.
@@ -31,6 +32,7 @@ Usa queste informazioni per risolvere i problemi comuni che potresti incontrare 
 
 
 
+[[dashboard-failed-to-load-data]]
 == Impossibile caricare i dati della dashboard
 
 **Problema:** La dashboard è stata creata, ma mostra errori durante il caricamento dei dati.
@@ -39,13 +41,13 @@ Usa queste informazioni per risolvere i problemi comuni che potresti incontrare 
 
 **Soluzione:**
 
-* **Verifica le autorizzazioni:** Assicurati che il tuo account Workload Factory abbia accesso in lettura ai carichi di lavoro e alle risorse utilizzate dalla dashboard. Esamina i requisiti di autorizzazione in link:learn-custom-dashboards.html#permissions["Permessi"].
+* **Verifica le autorizzazioni:** Assicurati che il tuo account Workload Factory abbia accesso in lettura ai carichi di lavoro e alle risorse utilizzate dalla dashboard. Esamina i requisiti di autorizzazione in link:learn-custom-dashboards.html#aws-credentials-and-permissions["Credenziali e autorizzazioni AWS"].
 * **Verifica le credenziali:** Conferma che le tue credenziali AWS siano valide e non scadute. Vedi link:add-credentials.html["Aggiungi le credenziali AWS"] per i dettagli.
-* **Verifica la configurazione del carico di lavoro:** Assicurati che i carichi di lavoro che desideri monitorare siano configurati correttamente in Workload Factory e che siano attualmente in esecuzione.
 
 
 
 
+[[dashboard-not-loading-or-loading-slowly]]
 == La dashboard non si carica o si carica lentamente
 
 **Problema:** La dashboard si carica lentamente o alcuni widget non vengono visualizzati.
@@ -62,21 +64,7 @@ Usa queste informazioni per risolvere i problemi comuni che potresti incontrare 
 
 
 
-== Impossibile modificare la dashboard
-
-**Problema:** Quando provi a modificare una dashboard, vedi il messaggio "Attualmente in fase di modifica da parte di [nome utente]".
-
-**Causa:** Un altro utente del tuo account Workload Factory sta modificando la dashboard. Solo un utente alla volta può modificare una dashboard.
-
-**Soluzione:**
-
-* Attendi che l'altro utente finisca e salvi le modifiche.
-* Contatta la persona indicata nel messaggio per coordinare la modifica.
-* Se non stai più modificando ma il blocco rimane, chiudi la finestra di modifica per rilasciare il blocco.
-
-
-
-
+[[missing-dashboards]]
 == Cruscotti mancanti
 
 **Problema:** Una dashboard che hai creato non è più presente nel catalogo delle dashboard.
@@ -94,6 +82,7 @@ Tutti gli utenti di un account Workload Factory possono visualizzare ed eliminar
 
 
 
+[[additional-help]]
 == Aiuto aggiuntivo
 
 Se continui a riscontrare problemi con le dashboard personalizzate, consulta link:get-help.html["Richiedi assistenza"] per informazioni su come contattare l'assistenza NetApp.

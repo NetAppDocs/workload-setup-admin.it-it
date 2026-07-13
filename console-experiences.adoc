@@ -19,6 +19,7 @@ NetApp Workload Factory è accessibile tramite due console basate sul Web.  Scop
 
 
 
+[[access-workload-factory-in-the-netapp-console]]
 == Accedi a Workload Factory nella console NetApp
 
 È possibile accedere a Workload Factory dalla NetApp Console. Oltre a utilizzare Workload Factory per le funzionalità di archiviazione e carico di lavoro di AWS, puoi anche accedere ad altri servizi dati come NetApp Copy and Sync e altro ancora.
@@ -30,6 +31,7 @@ NetApp Workload Factory è accessibile tramite due console basate sul Web.  Scop
 
 
 
+[[access-workload-factory-in-the-workload-factory-console]]
 == Accedi a Workload Factory nella console Workload Factory
 
 È possibile accedere a Workload Factory dalla console Workload Factory.

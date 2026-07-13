@@ -18,6 +18,7 @@ Per utilizzare le funzionalità e i servizi di NetApp Workload Factory, è neces
 
 
 
+[[why-use-permissions]]
 == Perché utilizzare le autorizzazioni
 
 Quando si forniscono le autorizzazioni, Workload Factory associa una policy all'istanza con le autorizzazioni per gestire risorse e processi all'interno di quell'account AWS.  Ciò consente a Workload Factory di eseguire diverse operazioni, a partire dalla scoperta degli ambienti di storage fino alla distribuzione di risorse AWS, come file system nella gestione dello storage o knowledge base per carichi di lavoro GenAI.
@@ -26,12 +27,14 @@ Ad esempio, per i carichi di lavoro del database, quando a Workload Factory veng
 
 
 
+[[permissions-by-workload]]
 == Autorizzazioni per carico di lavoro
 
 Ogni carico di lavoro utilizza autorizzazioni per eseguire determinate attività in Workload Factory.  Le autorizzazioni sono raggruppate in criteri di autorizzazione definiti.  Scorri fino al carico di lavoro che utilizzi per scoprire di più sui criteri di autorizzazione, sul JSON copiabile per i criteri di autorizzazione e su una tabella che elenca tutti i permessi, il loro scopo, dove vengono utilizzati e quali criteri di autorizzazione li supportano.
 
 
 
+[[permissions-for-storage]]
 === Autorizzazioni per l'archiviazione
 
 I criteri IAM disponibili per Storage forniscono le autorizzazioni di cui Workload Factory ha bisogno per gestire risorse e processi all'interno del tuo ambiente cloud pubblico.
@@ -478,6 +481,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 ====
 
 
+[[permissions-for-database-workloads]]
 === Autorizzazioni per i carichi di lavoro del database
 
 I criteri IAM disponibili per i carichi di lavoro del database forniscono le autorizzazioni di cui Workload Factory ha bisogno per gestire risorse e processi all'interno del tuo ambiente cloud pubblico.
@@ -1401,6 +1405,7 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per i carichi di l
 ====
 
 
+[[permissions-for-genai-workloads]]
 === Autorizzazioni per i carichi di lavoro Genai
 
 I criteri IAM per i carichi di lavoro VMware forniscono le autorizzazioni di cui Workload Factory per VMware ha bisogno per gestire risorse e processi all'interno dell'ambiente cloud pubblico in base alla modalità operativa in cui si opera.
@@ -1874,6 +1879,7 @@ La tabella seguente fornisce dettagli sulle autorizzazioni per i carichi di lavo
 ====
 
 
+[[permissions-for-vmware-workloads]]
 === Autorizzazioni per i carichi di lavoro VMware
 
 Per i carichi di lavoro VMware è possibile scegliere tra le seguenti policy di autorizzazione:
@@ -2115,12 +2121,14 @@ Nella tabella seguente vengono forniti dettagli sulle autorizzazioni per i caric
 ====
 
 
+[[change-log]]
 == Registro delle modifiche
 
 Man mano che le autorizzazioni vengono aggiunte e rimosse, le annoteremo nelle sezioni seguenti.
 
 
 
+[[1-february-2026]]
 === 1 febbraio 2026
 
 Sono state aggiunte le seguenti autorizzazioni al carico di lavoro Archiviazione:
@@ -2149,6 +2157,7 @@ Sono state aggiunte le seguenti autorizzazioni al carico di lavoro Archiviazione
 
 
 
+[[04-december-2025]]
 === 04 dicembre 2025
 
 Sono state aggiunte le seguenti autorizzazioni al carico di lavoro Archiviazione:
@@ -2161,6 +2170,7 @@ Sono state aggiunte le seguenti autorizzazioni al carico di lavoro Archiviazione
 
 
 
+[[27-november-2025]]
 === 27 novembre 2025
 
 Sono state aggiunte le seguenti autorizzazioni al carico di lavoro Archiviazione:
@@ -2173,12 +2183,14 @@ Sono state aggiunte le seguenti autorizzazioni al carico di lavoro Archiviazione
 
 
 
+[[2-november-2025]]
 === 2 novembre 2025
 
 I criteri di autorizzazione "sola lettura" e "lettura/scrittura" sono stati sostituiti nei carichi di lavoro di archiviazione, database e VMware per garantire maggiore granularità e flessibilità nell'assegnazione delle autorizzazioni.
 
 
 
+[[5-october-2025]]
 === 5 ottobre 2025
 
 Le seguenti autorizzazioni sono state rimosse da GenAI e ora sono gestite dal motore GenAI:
@@ -2192,18 +2204,21 @@ Le seguenti autorizzazioni sono state rimosse da GenAI e ora sono gestite dal mo
 
 
 
+[[29-june-2025]]
 === 29 giugno 2025
 
 La seguente autorizzazione è ora disponibile in modalità _sola lettura_ per i database:  `cloudwatch:GetMetricData` .
 
 
 
+[[3-june-2025]]
 === 3 giugno 2025
 
 La seguente autorizzazione è ora disponibile in modalità _lettura/scrittura_ per GenAI:  `s3:ListAllMyBuckets` .
 
 
 
+[[4-may-2025]]
 === 4 maggio 2025
 
 La seguente autorizzazione è ora disponibile in modalità _lettura/scrittura_ per GenAI:  `qbusiness:ListApplications` .
@@ -2219,12 +2234,14 @@ La seguente autorizzazione è ora disponibile in modalità _lettura/scrittura_ p
 
 
 
+[[2-april-2025]]
 === 2 aprile 2025
 
 La seguente autorizzazione è ora disponibile in modalità _sola lettura_ per i database:  `ssm:DescribeInstanceInformation` .
 
 
 
+[[30-march-2025]]
 === 30 marzo 2025
 
 
@@ -2250,12 +2267,14 @@ IL `iam:SimulatePrincipalPolicy` l'autorizzazione fa parte di tutte le policy di
 
 
 
+[[2-march-2025]]
 === 2 marzo 2025
 
 La seguente autorizzazione è ora disponibile in modalità _lettura/scrittura_ per GenAI:  `bedrock:GetFoundationModel` .
 
 
 
+[[3-february-2025]]
 === 3 febbraio 2025
 
 La seguente autorizzazione è ora disponibile in modalità _sola lettura_ per i database:  `iam:SimulatePrincipalPolicy` .

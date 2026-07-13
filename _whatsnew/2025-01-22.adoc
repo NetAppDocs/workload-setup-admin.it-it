@@ -4,6 +4,7 @@
 
 
 
+[[bluexp-workload-factory-permissions]]
 === Autorizzazioni predefinite per i workload BlueXP 
 
 Ora puoi vedere le autorizzazioni utilizzate dalla fabbrica del carico di lavoro BlueXP  per eseguire varie operazioni a partire dal rilevamento degli ambienti storage fino all'implementazione di risorse AWS come file system in storage o knowledge base per i carichi di lavoro Genai. Puoi visualizzare le policy e i permessi IAM per i workload Storage, Database, VMware e Genai.

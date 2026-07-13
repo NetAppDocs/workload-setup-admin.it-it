@@ -17,6 +17,7 @@ Puoi anche invitare altri ad unirsi al tuo account Workload Factory in modo che 
 
 
 
+[[sign-up-to-workload-factory]]
 == Iscriviti a Workload Factory
 
 Puoi registrarti a Workload Factory utilizzando una delle seguenti opzioni:
@@ -63,6 +64,7 @@ Ora hai un login e un account Workload Factory.  Sei considerato un amministrato
 
 
 
+[[invite-others-to-join-an-account-in-workload-factory]]
 == Invita altri a unirsi a un account in Workload Factory
 
 In qualità di amministratore dell'account, puoi invitare altri a unirsi al tuo account Workload Factory in modo che possano accedere e utilizzare Workload Factory. La gestione dell'account è possibile solo dalla NetApp Console.

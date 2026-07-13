@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: manage-custom-dashboards.html 
-keywords: manage dashboards, edit dashboard, delete dashboard, refresh dashboard, dashboard catalog 
-summary: Accedi al catalogo delle dashboard per visualizzare, modificare, aggiornare ed eliminare le dashboard personalizzate in Workload Factory. 
+keywords: manage dashboards, delete dashboard, refresh dashboard, dashboard catalog 
+summary: Accedi al catalogo delle dashboard per visualizzare, aggiornare ed eliminare le dashboard personalizzate in Workload Factory. 
 ---
 = Gestisci dashboard personalizzate
 :allow-uri-read: 
@@ -11,18 +11,19 @@ summary: Accedi al catalogo delle dashboard per visualizzare, modificare, aggior
 
 
 [role="lead"]
-Gestisci le tue dashboard personalizzate dal catalogo delle dashboard. Da lì puoi visualizzare i dettagli, aggiornare i dati, modificare le impostazioni della dashboard o eliminare le dashboard che non ti servono più.
+Gestisci le tue dashboard personalizzate dal catalogo delle dashboard. Da lì, puoi visualizzare i dettagli, aggiornare i dati o eliminare le dashboard che non ti servono più.
 
 .A proposito di questa attività
-Tutti gli utenti del tuo account Workload Factory possono accedere a tutte le dashboard personalizzate. Ogni dashboard mostra dettagli di base come il nome del creatore, la data di creazione e se qualcuno la sta modificando al momento.
+Tutti gli utenti del tuo account Workload Factory possono accedere a tutte le dashboard personalizzate. Ogni dashboard mostra dettagli di base come il nome del creatore e la data di creazione.
 
-Le dashboard personalizzate sono di sola lettura. Non possono modificare le impostazioni di storage o del carico di lavoro. Puoi modificare la dashboard stessa, ma non le risorse che monitora.
+Le dashboard personalizzate sono di sola lettura. Non possono modificare le impostazioni di storage o del carico di lavoro.
 
 .Prima di iniziare
 Devi avere almeno una dashboard personalizzata nel tuo account Workload Factory.
 
 
 
+[[access-the-dashboard-catalog]]
 == Accedi al catalogo della dashboard
 
 .Fasi
@@ -36,6 +37,7 @@ Il catalogo delle dashboard mostra tutte le dashboard personalizzate nel tuo acc
 
 
 
+[[refresh-dashboard-data]]
 == Aggiorna i dati della dashboard
 
 I dati del dashboard vengono caricati quando apri il dashboard. Puoi aggiornarlo per vedere le informazioni più recenti.
@@ -44,28 +46,7 @@ La dashboard ricarica i dati dai tuoi carichi di lavoro. L'ora dell'ultimo aggio
 
 
 
-== Modifica una dashboard
-
-Puoi modificare una dashboard per cambiare ciò che mostra, incluse le metriche e i grafici.
-
-.Fasi
-. Nella pagina *Dashboard personalizzate*, individua la dashboard che vuoi modificare.
-. Dal menu *Azioni* per quella dashboard, seleziona *Modifica dashboard*.
-+
-Se un altro utente sta modificando la dashboard, visualizzerai un messaggio come "Attualmente in fase di modifica da parte di [nome utente]". Attendi che abbia finito o coordinati con lui.
-
-. Nella finestra di dialogo dell'IA, descrivi le modifiche che desideri apportare.
-+
-Questo processo è simile alla creazione di una nuova dashboard. Puoi modificare i carichi di lavoro, le metriche o gli intervalli di tempo che la dashboard tiene traccia.
-
-. Rivedi le modifiche e seleziona **Salva**.
-
-
-.Risultato
-La dashboard si aggiorna con le tue modifiche. Anche la data dell'ultima modifica si aggiorna.
-
-
-
+[[delete-a-dashboard]]
 == Elimina una dashboard
 
 Elimina le dashboard che non ti servono più. Questa operazione è permanente e non può essere annullata.
@@ -81,6 +62,7 @@ La dashboard viene rimossa definitivamente dal tuo account Workload Factory e tu
 
 
 
+[[related-information]]
 == Informazioni correlate
 
 * link:create-custom-dashboard.html["Crea dashboard personalizzate aggiuntive"]

@@ -4,6 +4,7 @@
 
 
 
+[[well-architected-updates]]
 === Aggiornamenti ben progettati
 
 NetApp Workload Factory include la valutazione ben progettata per i carichi di lavoro Elastic VMware Service (EVS) e aggiunge nuove configurazioni per i carichi di lavoro Storage e Database.
@@ -37,6 +38,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[new-permissions-for-storage]]
 === Nuove autorizzazioni per Storage
 
 Sono state aggiunte nuove autorizzazioni al workload Storage per miglioramenti nella gestione dei punti di accesso S3.

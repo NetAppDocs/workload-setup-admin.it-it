@@ -19,6 +19,7 @@ Tutti gli utenti del tuo account Workload Factory possono visualizzare tutte le 
 
 
 
+[[why-use-custom-dashboards]]
 == Perché usare dashboard personalizzate
 
 Gli utenti di Workload Factory gestiscono numerosi carichi di lavoro, ambienti e priorità, ma le dashboard standard mostrano solo visualizzazioni predefinite. Le dashboard personalizzate aiutano a risolvere diverse problematiche operative:
@@ -31,6 +32,7 @@ Gli utenti di Workload Factory gestiscono numerosi carichi di lavoro, ambienti e
 
 
 
+[[what-you-can-do-with-custom-dashboards]]
 == Cosa puoi fare con le dashboard personalizzate
 
 Durante la configurazione, la finestra di dialogo guidata dall'IA ti aiuta a definire:
@@ -44,11 +46,13 @@ Durante la configurazione, la finestra di dialogo guidata dall'IA ti aiuta a def
 
 
 
+[[considerations-and-limitations]]
 == Considerazioni e limitazioni
 
 
 
-=== Permessi
+[[aws-credentials-and-permissions]]
+=== Credenziali e autorizzazioni AWS
 
 Per creare o visualizzare dashboard personalizzate, devi avere le autorizzazioni AWS IAM corrette per le risorse che vuoi monitorare. Assicurati che l'account Workload Factory abbia accesso in lettura alle origini dati usate dalle dashboard.
 
@@ -56,29 +60,40 @@ link:add-credentials.html["Scopri come aggiungere le credenziali AWS e configura
 
 
 
+[[link-to-fsx-for-ontap]]
+=== Collegamento a FSx per ONTAP
+
+Workload Factory richiede un Link per connettersi ai file system Amazon FSx for ONTAP. Un Link crea una relazione di trust e connettività tra Workload Factory e uno o più file system Amazon FSx for ONTAP. Questo ti permette di monitorare e gestire alcune funzionalità del file system direttamente tramite le chiamate REST API di ONTAP che non sono disponibili tramite l'API di Amazon FSx for ONTAP.
+
+https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Impara come creare un link"^].
+
+
+
+[[read-only-design]]
 === Progettazione di sola lettura
 
 Le dashboard personalizzate sono di sola lettura. Non possono modificare le impostazioni di archiviazione o di carico di lavoro. Questo ti permette di monitorare il sistema senza cambiare nulla per errore.
 
 
 
+[[limitations]]
 === Limitazioni
 
 Attualmente, le dashboard personalizzate sono soggette alle seguenti limitazioni:
 
 * Non puoi condividere dashboard al di fuori del tuo account Workload Factory
-* Solo un utente può modificare una dashboard alla volta
-* La modifica simultanea non è supportata
 
 
 
 
+[[demo-environment]]
 === Ambiente demo
 
 Se usi un account demo di Workload Factory, sono disponibili alcune dashboard predefinite. Queste ti aiutano a vedere cosa possono fare le dashboard personalizzate. Ogni dashboard mostra un'esigenza di monitoraggio comune: stato del disaster recovery, capacità e costi tra le regioni e se le regole di protezione dello storage vengono rispettate.
 
 
 
+[[sample-prompts]]
 === Esempi di prompt
 
 I seguenti esempi mostrano come descrivere le tue esigenze di monitoraggio in modo semplice:
@@ -96,6 +111,7 @@ I seguenti esempi mostrano come descrivere le tue esigenze di monitoraggio in mo
 
 
 
+[[next-steps]]
 == Prossimi passi
 
 * link:create-custom-dashboard.html["Crea una dashboard personalizzata"]

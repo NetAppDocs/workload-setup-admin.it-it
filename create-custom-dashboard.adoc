@@ -20,13 +20,9 @@ Una volta creata, puoi aggiornare la dashboard per vedere i dati aggiornati.
 
 Ricorda che le dashboard personalizzate sono, per impostazione predefinita, di sola lettura e non possono apportare modifiche alle configurazioni di storage o workload.
 
-.Prima di iniziare
-* Hai bisogno dell'autorizzazione per accedere alle risorse che vuoi monitorare sulla tua dashboard.
-* Configura i tuoi carichi di lavoro in Workload Factory prima di creare dashboard per monitorarli.
 
 
-
-
+[[create-a-dashboard]]
 == Crea una dashboard
 
 .Fasi
@@ -55,13 +51,13 @@ La tua dashboard personalizzata è ora nel catalogo delle dashboard. Tutti gli u
 Dopo la creazione, puoi:
 
 * Aggiorna i dati del pannello di controllo per vedere le informazioni più recenti
-* Modifica le dashboard per cambiare ciò che mostrano
 * Elimina le dashboard che non ti servono più
 * Visualizza i dettagli della dashboard, inclusi chi l'ha creata e quando è stata aggiornata l'ultima volta
 
 
 
 
+[[related-information]]
 == Informazioni correlate
 
 * link:manage-custom-dashboards.html["Gestisci le tue dashboard personalizzate"]
