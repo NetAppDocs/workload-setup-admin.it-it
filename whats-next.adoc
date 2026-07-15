@@ -21,10 +21,6 @@ Valuta e analizza gli ambienti dati correnti per ottenere potenziali risparmi su
 +
 Rileva il tuo ambiente di database esistente in AWS, valuta i potenziali risparmi sui costi passando a FSX per ONTAP, implementa database end-to-end con Best practice integrate per l'ottimizzazione e automatizza il thin cloning per pipeline ci/CD.
 
-* https://docs.netapp.com/us-en/workload-genai/index.html["Genai"^]
-+
-Implementa e gestisci un'infrastruttura RAG (Retrieval-Augmented Generation) per migliorare la precisione e l'unicità delle tue applicazioni ai. Crea una knowledge base RAG su FSX per ONTAP con sicurezza e conformità dei dati integrate.
-
 * https://docs.netapp.com/us-en/workload-vmware/index.html["Workload VMware"^]
 +
 Ottimizza migrazioni e operazioni con consigli smart e correzioni automatiche. Distribuire backup efficienti e un disaster recovery solido. Monitora e risolvi i problemi delle macchine virtuali.
