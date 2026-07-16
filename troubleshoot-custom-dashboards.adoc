@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: troubleshoot-custom-dashboards.html 
 keywords: troubleshooting, dashboard errors, dashboard issues, failed creation, failed to load, dashboard not loading 
-summary: Risolvi i problemi più comuni relativi alle dashboard personalizzate, tra cui errori di creazione, problemi di caricamento dei dati e problemi di accesso. 
+summary: Risolvi i problemi più comuni relativi alle dashboard personalizzate, inclusi errori di configurazione, problemi di caricamento dei dati e problemi di accesso. 
 ---
 = Risolvi i problemi delle dashboard personalizzate
 :allow-uri-read: 

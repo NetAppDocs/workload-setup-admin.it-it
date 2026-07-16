@@ -56,6 +56,8 @@ Durante la configurazione, la finestra di dialogo guidata dall'IA ti aiuta a def
 
 Per creare o visualizzare dashboard personalizzate, devi avere le autorizzazioni AWS IAM corrette per le risorse che vuoi monitorare. Assicurati che l'account Workload Factory abbia accesso in lettura alle origini dati usate dalle dashboard.
 
+Per creare dashboard, Workload Factory utilizza credenziali AWS di sola lettura. Queste credenziali consentono solo azioni di lettura, come  `fsx:DescribeVolumes` e  `fsx:DescribeFileSystems`, per i seguenti servizi: EC2, FSx, CloudWatch, Resource Groups Tagging API, Backup, CloudWatch Logs, KMS ed EFS.
+
 link:add-credentials.html["Scopri come aggiungere le credenziali AWS e configurare le autorizzazioni IAM"^].
 
 

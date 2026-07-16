@@ -1467,7 +1467,6 @@
   <block id="22e8351c82677bcc78bd23d6fb170bc8" category="paragraph">La dashboard viene rimossa definitivamente dal tuo account Workload Factory e tutti gli utenti perdono l'accesso ad essa.</block>
   <block id="9537d9160ef701530bdd875698475957" category="inline-link-macro">Crea dashboard personalizzate aggiuntive</block>
   <block id="1258b44f1520a3cf10d648fb08dbf72e" category="list-text"><block ref="1258b44f1520a3cf10d648fb08dbf72e" category="inline-link-macro-rx"></block></block>
-  <block id="87377124bfbafaf3a36cd9e53255e829" category="summary">Risolvi i problemi più comuni relativi alle dashboard personalizzate, tra cui errori di creazione, problemi di caricamento dei dati e problemi di accesso.</block>
   <block id="0c5896a9e6c8d2cff1b4d007852b1732" category="paragraph">Usa queste informazioni per risolvere i problemi comuni che potresti incontrare quando crei o usi dashboard personalizzate.</block>
   <block id="2e00365fe32c89b1fd1ad214f291ca85" category="section-title">Creazione dashboard non riuscita</block>
   <block id="09a8c59ab236b488dde6ce993a012c63" category="paragraph">**Problema:** Vedi il messaggio di errore "Impossibile comprendere la richiesta e generare il codice" quando crei una dashboard.</block>
@@ -1491,7 +1490,6 @@
   <block id="e7347594ee6cffce40f1598054f4f163" category="list-text">**Attendi e riprova:** Se il problema persiste, attendi qualche minuto e riprova.</block>
   <block id="318369ae5a2f25e9c7cb0b7b846d1775" category="section-title">Cruscotti mancanti</block>
   <block id="732976f9f9cc4b9938c0a1a9c2569828" category="paragraph">**Problema:** Una dashboard che hai creato non è più presente nel catalogo delle dashboard.</block>
-  <block id="d0a35413e8843c3f263cb1fad4f4cb3e" category="paragraph">**Causa:** Un altro utente del tuo account Workload Factory potrebbe averlo eliminato.</block>
   <block id="4d6f4bd604a33b7ae11eceb4c29146f9" category="list-text">Assicurati di aver effettuato l'accesso all'account Workload Factory corretto.</block>
   <block id="86d37fb397f8d1a33dc0e6cb1de913ae" category="list-text">Chiedi agli altri utenti del tuo account se qualcuno ha eliminato la dashboard.</block>
   <block id="62ad02c42e5e548dcaf80a64c2d0eefd" category="list-text">Se necessario, ricrea la dashboard utilizzando i requisiti originali.</block>
@@ -1513,4 +1511,7 @@
   <block id="ef18329e66f7a0f5b022b9a400dd74ed" category="paragraph">Il carico di lavoro GenAI è stato rimosso dalla console di Workload Factory.</block>
   <block id="7548d07d123f53ef8a847c6be983f3e5" category="paragraph">Quando fornisci le autorizzazioni, Workload Factory associa all'istanza una policy con i permessi per gestire risorse e processi all'interno di quell'account AWS. Questo permette a Workload Factory di eseguire varie operazioni, dal rilevamento dei tuoi ambienti di storage fino al deployment di risorse AWS come i file system nella gestione dello storage.</block>
   <block id="b0e0fd1b2977dcfd6e5719ca7a3a6e37" category="paragraph">Questo passaggio è facoltativo. Puoi usare Workload Factory senza aggiungere credenziali per accedere al tuo account AWS. Aggiungere le credenziali AWS a Workload Factory dà al tuo account Workload Factory i permessi necessari per creare e gestire file system FSx for ONTAP e per distribuire e gestire carichi di lavoro specifici come i database.</block>
+  <block id="00436cf3153058a6cc1bda7834e2df46" category="paragraph">Per creare dashboard, Workload Factory utilizza credenziali AWS di sola lettura. Queste credenziali consentono solo azioni di lettura, come <block ref="24ca8966cf3ca7c9dc7c9de631b31ff0" prefix=" " category="inline-code"></block> e <block ref="0054238c3be20aab765346f029c558a4" prefix=" " category="inline-code"></block>, per i seguenti servizi: EC2, FSx, CloudWatch, Resource Groups Tagging API, Backup, CloudWatch Logs, KMS ed EFS.</block>
+  <block id="660503a3fa3804fff2a7f84301e40d4a" category="summary">Risolvi i problemi più comuni relativi alle dashboard personalizzate, inclusi errori di configurazione, problemi di caricamento dei dati e problemi di accesso.</block>
+  <block id="e3c8b96b5757e581b1d0e7900d690797" category="paragraph">**Causa:** Un altro utente del tuo account Workload Factory potrebbe averlo eliminato.</block>
 </blocks>
