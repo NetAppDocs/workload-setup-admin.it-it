@@ -116,7 +116,7 @@ Per iniziare a usare Workload Factory non è necessario un collegamento, ma in a
 
 Attualmente, i link sfruttano AWS Lambda.
 
-https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Ulteriori informazioni sui collegamenti"^]
+https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Scopri di più sui link"^]
 
 
 
