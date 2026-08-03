@@ -1515,7 +1515,6 @@
   <block id="e9e3af45119a834b75ee5ce8ad5fc96d" category="paragraph">Le autorizzazioni per i database sono state aggiornate per migliorare l'accesso alle funzionalità e limitare l'accesso a SSM dove non necessario.</block>
   <block id="6f70bfe68d48e1ab770cfb69bea59dfd" category="paragraph">Le autorizzazioni di visualizzazione, pianificazione e analisi sono limitate ai documenti AWS SSM. Con queste autorizzazioni, puoi visualizzare host, istanze e database. Puoi anche eseguire un'analisi well-architected di base on-demand delle tue risorse.</block>
   <block id="e9ad7ba5991717b52c215bd25e788b28" category="paragraph">Le autorizzazioni di operazione e correzione ti permettono di apportare modifiche alle tue risorse, analizzare i registri degli errori, ottenere un'analisi completa e ben strutturata delle tue risorse e risolvere i problemi di configurazione.</block>
-  <block id="0c92fa03ad5e533f4ef42de9a2ae598f" category="paragraph"><block ref="167e20b67f84068555b3081057c696b8" category="inline-link-macro-rx"></block> === Dashboard personalizzate</block>
   <block id="d5eb0f9120b28b557f3e367589adf4bb" category="section-title">Notifiche per dashboard personalizzate</block>
   <block id="fb5e135dfdab99cdebbb946a22093655" category="paragraph">Workload Factory ora ti avvisa quando la tua dashboard personalizzata è pronta o se la creazione non riesce.</block>
   <block id="7a99102fbba6a5729480bc61967c8423" category="paragraph">Dopo aver creato una dashboard personalizzata, riceverai una notifica con un link diretto per visualizzarla. Se la creazione non riesce, riceverai una notifica con un link all'inventario delle dashboard personalizzate per riprovare.</block>
@@ -1641,4 +1640,5 @@
   <block id="1cdbc8bcb26cc8d5e894a97b9e7f269f" category="section-title">5 luglio 2026</block>
   <block id="8fb2a31345fc5c5e72c947d436b5077b" category="admonition">Gli amministratori dell'account possono attivare o disattivare le funzionalità di intelligenza artificiale. Se un amministratore le disattiva, l'assistente AI Ask Me non sarà disponibile. <block ref="56d2e09cbb0a828478db20ff2d11774d" category="inline-link-macro-rx"></block>.</block>
   <block id="959c1faca1dbb57f8dac1b5058bf9c58" category="paragraph"><block ref="959c1faca1dbb57f8dac1b5058bf9c58" category="inline-link-macro-rx"></block></block>
+  <block id="167e20b67f84068555b3081057c696b8" category="paragraph"><block ref="167e20b67f84068555b3081057c696b8" category="inline-link-macro-rx"></block></block>
 </blocks>

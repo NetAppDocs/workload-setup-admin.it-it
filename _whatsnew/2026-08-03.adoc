@@ -13,7 +13,12 @@ Le autorizzazioni di visualizzazione, pianificazione e analisi sono limitate ai 
 
 Le autorizzazioni di operazione e correzione ti permettono di apportare modifiche alle tue risorse, analizzare i registri degli errori, ottenere un'analisi completa e ben strutturata delle tue risorse e risolvere i problemi di configurazione.
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Riferimento autorizzazioni"] === Dashboard personalizzate
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Riferimento autorizzazioni"]
+
+
+
+[[custom-dashboards]]
+=== dashboard personalizzate
 
 
 
