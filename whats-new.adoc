@@ -46,9 +46,9 @@ Dopo aver creato una dashboard personalizzata, riceverai una notifica con un lin
 
 Questo ti aiuta a capire quando la tua dashboard è pronta e rende facile rivederla o ricrearla.
 
-link:create-custom-dashboard.html["Scopri come creare dashboard personalizzate"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-custom-dashboard.html["Scopri come creare dashboard personalizzate"]
 
-link:configure-notifications.html["Scopri come configurare le notifiche"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Scopri come configurare le notifiche"]
 
 
 
@@ -60,9 +60,9 @@ Le nuove dashboard sono private per impostazione predefinita e visibili solo a t
 
 Ogni scheda del dashboard mostra l'etichetta "Privato" o "Pubblico" così puoi vedere rapidamente quali dashboard sono condivise.
 
-link:learn-custom-dashboards.html#dashboard-visibility-and-sharing["Scopri la visibilità e la condivisione della dashboard"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/learn-custom-dashboards.html#view-and-share-dashboards["Scopri la visibilità e la condivisione della dashboard"]
 
-link:manage-custom-dashboards.html#change-dashboard-visibility["Scopri come condividere le dashboard"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-custom-dashboards.html#change-dashboard-visibility["Scopri come condividere le dashboard"]
 
 
 
@@ -81,7 +81,7 @@ Le funzionalità AI includono Ask Me, dashboard personalizzate, rule builder e a
 
 Se le funzionalità di intelligenza artificiale sono disattivate, gli utenti vedranno un messaggio che indica che l'AI non è disponibile.
 
-link:manage-genai-features.html["Scopri come gestire le funzionalità di intelligenza artificiale"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Scopri come gestire le funzionalità di intelligenza artificiale"]
 
 
 
