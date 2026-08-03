@@ -65,6 +65,12 @@ Workload Factory invia notifiche per i seguenti eventi:
 
 
 | Ritardo di replica | La replicazione sta richiedendo più tempo del previsto. | Replicazione | Critico | Deposito generale | FSx per file system ONTAP 
+
+
+| Creazione dashboard personalizzato riuscita | La tua dashboard personalizzata è stata creata correttamente ed è pronta per essere visualizzata. | Cruscotti personalizzati | Successo | Deposito generale | Account Workload Factory 
+
+
+| Creazione dashboard personalizzata non riuscita | Workload Factory non è riuscita a creare la tua dashboard personalizzata. Prova a creare di nuovo la dashboard. | Cruscotti personalizzati | Errore | Deposito generale | Account Workload Factory 
 |===
 
 

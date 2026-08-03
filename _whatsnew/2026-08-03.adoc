@@ -1,0 +1,63 @@
+= Aggiornate le policy di autorizzazione IAM per i database
+:allow-uri-read: 
+
+
+
+
+[[updated-iam-permission-policies-for-databases]]
+=== Aggiornate le policy di autorizzazione IAM per i database
+
+Le autorizzazioni per i database sono state aggiornate per migliorare l'accesso alle funzionalità e limitare l'accesso a SSM dove non necessario.
+
+Le autorizzazioni di visualizzazione, pianificazione e analisi sono limitate ai documenti AWS SSM. Con queste autorizzazioni, puoi visualizzare host, istanze e database. Puoi anche eseguire un'analisi well-architected di base on-demand delle tue risorse.
+
+Le autorizzazioni di operazione e correzione ti permettono di apportare modifiche alle tue risorse, analizzare i registri degli errori, ottenere un'analisi completa e ben strutturata delle tue risorse e risolvere i problemi di configurazione.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Riferimento autorizzazioni"] === Dashboard personalizzate
+
+
+
+==== Notifiche per dashboard personalizzate
+
+Workload Factory ora ti avvisa quando la tua dashboard personalizzata è pronta o se la creazione non riesce.
+
+Dopo aver creato una dashboard personalizzata, riceverai una notifica con un link diretto per visualizzarla. Se la creazione non riesce, riceverai una notifica con un link all'inventario delle dashboard personalizzate per riprovare.
+
+Questo ti aiuta a capire quando la tua dashboard è pronta e rende facile rivederla o ricrearla.
+
+link:create-custom-dashboard.html["Scopri come creare dashboard personalizzate"]
+
+link:configure-notifications.html["Scopri come configurare le notifiche"]
+
+
+
+==== Dashboard personalizzate private e pubbliche
+
+Ora le dashboard personalizzate includono le impostazioni di condivisione. Puoi mantenere una dashboard privata o condividerla con il tuo team.
+
+Le nuove dashboard sono private per impostazione predefinita e visibili solo a te. Puoi rendere pubblica una dashboard in qualsiasi momento per condividerla con tutti nel tuo account Workload Factory.
+
+Ogni scheda del dashboard mostra l'etichetta "Privato" o "Pubblico" così puoi vedere rapidamente quali dashboard sono condivise.
+
+link:learn-custom-dashboards.html#dashboard-visibility-and-sharing["Scopri la visibilità e la condivisione della dashboard"]
+
+link:manage-custom-dashboards.html#change-dashboard-visibility["Scopri come condividere le dashboard"]
+
+
+
+[[ai-features-administration]]
+=== Amministrazione delle funzionalità di AI
+
+Puoi controllare l'accesso alle funzionalità di intelligenza artificiale in tutta l'organizzazione tramite le seguenti impostazioni nell'amministrazione di Workload Factory.
+
+* Usa Bedrock gestito da NetApp (consigliato e abilitato di default, con limiti di credito mensili)
+* Disattiva tutte le funzionalità di AI
+
+
+La nuova pagina di amministrazione ti permette di gestire queste impostazioni in un unico posto.
+
+Le funzionalità AI includono Ask Me, dashboard personalizzate, rule builder e analizzatori per EMS, log di database e latenza dei volumi.
+
+Se le funzionalità di intelligenza artificiale sono disattivate, gli utenti vedranno un messaggio che indica che l'AI non è disponibile.
+
+link:manage-genai-features.html["Scopri come gestire le funzionalità di intelligenza artificiale"]

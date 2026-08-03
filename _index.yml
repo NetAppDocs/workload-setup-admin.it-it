@@ -22,6 +22,8 @@ indexpage:
       url: "/workload-factory-overview.html"
     - title: Registrati
       url: sign-up-saas.html
+    - title: Gestisci le funzionalità di intelligenza artificiale
+      url: "/manage-genai-features.html"
   - title: Credenziali e permessi
     links:
     - title: Aggiungi le credenziali AWS

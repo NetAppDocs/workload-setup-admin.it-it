@@ -21,6 +21,9 @@ Una volta creata, puoi aggiornare la dashboard per vedere i dati aggiornati.
 Ricorda che le dashboard personalizzate sono, per impostazione predefinita, di sola lettura e non possono apportare modifiche alle configurazioni di storage o workload.
 
 
+NOTE: Se l'amministratore del tuo account ha disattivato le funzionalità di intelligenza artificiale, visualizzerai un messaggio e non potrai creare dashboard. Contatta il tuo amministratore o link:manage-genai-features.html["Scopri come amministrare l'AI"].
+
+
 
 [[create-a-dashboard]]
 == Crea una dashboard
@@ -44,12 +47,17 @@ L'IA potrebbe chiederti di scegliere tra diverse opzioni per comprendere meglio 
 . Dopo aver risposto a tutte le domande, seleziona *Continua* per creare la tua dashboard.
 
 
+La tua dashboard è in fase di creazione. Potrebbe volerci un momento.
+
 .Risultato
-La tua dashboard personalizzata è ora nel catalogo delle dashboard. Tutti gli utenti del tuo account Workload Factory possono accedervi e visualizzarla.
+La tua dashboard personalizzata è stata creata e aggiunta al catalogo delle dashboard. Per impostazione predefinita, la dashboard è privata e visibile solo a te. Puoi modificarne la visibilità in pubblica se vuoi condividerla con altri utenti del tuo account Workload Factory. link:manage-custom-dashboards.html#change-dashboard-visibility["Scopri come modificare la visibilità della dashboard"].
+
+Riceverai una notifica quando la tua dashboard sarà pronta. Se non può essere creata, riceverai una notifica con un link per riprovare. link:configure-notifications.html["Scopri come configurare le notifiche"].
 
 .Cosa c'è dopo
 Dopo la creazione, puoi:
 
+* Modifica la visibilità del dashboard per condividerlo con il tuo team
 * Aggiorna i dati del pannello di controllo per vedere le informazioni più recenti
 * Elimina le dashboard che non ti servono più
 * Visualizza i dettagli della dashboard, inclusi chi l'ha creata e quando è stata aggiornata l'ultima volta

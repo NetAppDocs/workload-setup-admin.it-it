@@ -18,6 +18,9 @@ Le dashboard personalizzate utilizzano l'intelligenza artificiale per creare vis
 Tutti gli utenti del tuo account Workload Factory possono visualizzare tutte le dashboard personalizzate. Questa configurazione condivisa aiuta i team a collaborare e a vedere le stesse informazioni operative in tutta l'organizzazione.
 
 
+NOTE: Se l'amministratore del tuo account ha disattivato le funzionalità di intelligenza artificiale, visualizzerai un messaggio e non potrai creare dashboard. Contatta il tuo amministratore o link:manage-genai-features.html["Scopri come amministrare l'AI"].
+
+
 
 [[why-use-custom-dashboards]]
 == Perché usare dashboard personalizzate
@@ -43,6 +46,21 @@ Durante la configurazione, la finestra di dialogo guidata dall'IA ti aiuta a def
 * Visualizzazioni per regione, carico di lavoro o altre categorie
 * Regole o requisiti che devi monitorare e mostrare
 
+
+
+
+[[view-and-share-dashboards]]
+== Visualizza e condividi dashboard
+
+Le nuove dashboard sono private per impostazione predefinita, quindi solo tu puoi visualizzarle. Puoi rendere pubblica una dashboard in qualsiasi momento per condividerla con il tuo team.
+
+* *Dashboard private*: Solo tu puoi visualizzare queste dashboard. Usale per il monitoraggio personale, i test o il lavoro in corso.
+* *Dashboard pubbliche*: Tutti gli utenti del tuo account Workload Factory possono visualizzare queste dashboard. Utilizzale per condividere le visualizzazioni di monitoraggio e mantenere il tuo team allineato su carichi di lavoro, priorità e obiettivi aziendali.
+
+
+Ogni scheda della dashboard mostra se la dashboard è privata o pubblica, così puoi vedere rapidamente quali dashboard sono condivise.
+
+link:manage-custom-dashboards.html#change-dashboard-visibility["Scopri come modificare la visibilità della dashboard"].
 
 
 
@@ -83,7 +101,7 @@ Le dashboard personalizzate sono di sola lettura. Non possono modificare le impo
 
 Attualmente, le dashboard personalizzate sono soggette alle seguenti limitazioni:
 
-* Non puoi condividere dashboard al di fuori del tuo account Workload Factory
+* Non puoi condividere dashboard al di fuori del tuo account Workload Factory. La condivisione delle dashboard è limitata agli utenti dello stesso account Workload Factory.
 
 
 
