@@ -26,10 +26,6 @@ Puoi ignorare l'analisi delle configurazioni che non si applicano ai tuoi ambien
 
 Puoi anche creare regole personalizzate in linguaggio naturale per convalidare i tuoi ambienti rispetto agli standard della tua organizzazione e alle best practice di NetApp. Testa le regole con una simulazione, poi pianifica la loro esecuzione su tutti i tuoi ambienti. link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["Scopri di più sulle regole personalizzate"^].
 
-Puoi anche creare regole personalizzate in linguaggio naturale per convalidare i tuoi ambienti rispetto agli standard della tua organizzazione e alle best practice di NetApp. Prova le regole con una simulazione, poi pianifica la loro esecuzione su tutti i tuoi ambienti.
-
-link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["Scopri di più sulle regole personalizzate"^].
-
 
 
 [[why-it-matters]]
