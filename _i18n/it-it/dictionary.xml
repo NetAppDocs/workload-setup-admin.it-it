@@ -1677,4 +1677,7 @@
   <block id="ddfa0843a8d65e78d4c6e602bca78098" category="summary">Tieni traccia di FSx for ONTAP, delle credenziali e delle operazioni sui collegamenti e monitora l'avanzamento dei processi con Tracker in NetApp Workload Factory for Storage.</block>
   <block id="367e536ee2f4e237a6e344129f6d1033" category="doc">Monitora le operazioni con Tracker in NetApp Workload Factory</block>
   <block id="00ae0cd12340f0b4bbba6b466e757a65" category="sidebar">Operazioni di monitoraggio</block>
+  <block id="8d8c52a0c2cdf249c1bf6acdbd825469" category="doc">Nuova esperienza di onboarding per credenziali e link</block>
+  <block id="4f9abf683fceb68d04e55eccea1aef30" category="paragraph">Workload Factory migliora l'esperienza di onboarding per le credenziali e i link, semplificando l'avvio. Dopo che hai creato il tuo account ed effettuato l'accesso, seleziona *Inizia* in qualsiasi riquadro workload, ad esempio *Storage*, e la pagina successiva ti guida passo passo nel processo di configurazione.</block>
+  <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">30 agosto 2026</block>
 </blocks>

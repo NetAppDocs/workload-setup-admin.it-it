@@ -15,6 +15,18 @@ Scopri le novità relative alle funzionalità di amministrazione di Workload Fac
 
 
 
+[[30-august-2026]]
+== 30 agosto 2026
+
+
+
+[[new-onboarding-experience-for-credentials-and-links]]
+=== Nuova esperienza di onboarding per credenziali e link
+
+Workload Factory migliora l'esperienza di onboarding per le credenziali e i link, semplificando l'avvio. Dopo che hai creato il tuo account ed effettuato l'accesso, seleziona *Inizia* in qualsiasi riquadro workload, ad esempio *Storage*, e la pagina successiva ti guida passo passo nel processo di configurazione.
+
+
+
 [[03-august-2026]]
 == 03 agosto 2026
 
