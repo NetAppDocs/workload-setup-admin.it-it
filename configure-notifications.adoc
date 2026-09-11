@@ -15,65 +15,6 @@ summary: 'È possibile configurare NetApp Workload Factory per inviare notifiche
 
 
 
-[[notification-types-and-messages]]
-== Tipi di notifica e messaggi
-
-Workload Factory invia notifiche per i seguenti eventi:
-
-[cols="6*"]
-|===
-| Evento | Descrizione | Tipo di notifica | Severità | Carico di lavoro | Tipo di risorsa 
-
-
-| Alcune istanze del database nel tuo account non sono ben progettate | Tutte le istanze di Microsoft SQL Server nel tuo account sono state analizzate per individuare eventuali problemi ben progettati.  La descrizione di questo evento fornisce il numero di istanze ben progettate e di istanze non ottimizzate.  Esaminare i risultati e le raccomandazioni sullo stato ben progettati nell'inventario dei database dalla console Workload Factory. | Ben progettato | Consiglio | Database | Istanza di Microsoft SQL Server 
-
-
-| Distribuzione del server Microsoft SQL Server/PostgreSQL riuscita | L'implementazione dell'host Microsoft SQL Server o PostgreSQL è riuscita. Per ulteriori informazioni, consultare il monitoraggio dei job. | Implementazione | Successo | Database | FSx per ONTAP, host DB 
-
-
-| Distribuzione del server Microsoft SQL Server/PostgreSQL non riuscita | L'implementazione dell'host Microsoft SQL Server o PostgreSQL non è riuscita. Per ulteriori informazioni, consultare il monitoraggio dei job. | Implementazione | Errore | Database | FSx per ONTAP, host DB 
-
-
-| Creazione della relazione di replicazione non riuscita | La creazione di una relazione di replica SnapMirror non è riuscita.  Per maggiori informazioni, visita Tracker. | Replicazione | Critico | Deposito generale | FSx per ONTAP 
-
-
-| Errore nella creazione di FSx per ONTAP | Il processo di creazione del file system FSx for ONTAP non è riuscito.  Per maggiori informazioni, visita Tracker. | FSx per l'azione del file system ONTAP | Critico | Deposito generale | FSx per ONTAP 
-
-
-| La capacità SSD automatica o gli inode aumentano il successo | Durante un recente aggiornamento automatico della gestione della capacità, il file system FSx per ONTAP ha aumentato con successo la capacità SSD o gli inode del volume. Per maggiori informazioni, visita Tracker. | Gestione della capacità | Successo | Deposito generale | FSx per file ONTAP 
-
-
-| La capacità automatica dell'SSD o gli inode aumentano il guasto | Durante un recente aggiornamento automatico della gestione della capacità, il file system FSx per ONTAP non è riuscito ad aumentare la capacità SSD o gli inode del volume. Per maggiori informazioni, visita Tracker. | Gestione della capacità | Critico | Deposito generale | FSx per file system ONTAP 
-
-
-| Rilevato problema FSx per ONTAP | Tutti i file system FSx per ONTAP sono stati analizzati per individuare eventuali problemi di architettura corretta.  La scansione ha rilevato uno o più problemi.  Per ulteriori informazioni, consultare l'analisi ben progettata nella dashboard Storage nella console Workload Factory. | Analisi ben progettata | Consiglio | Deposito generale | FSx per file system ONTAP 
-
-
-| Evento di gestione automatica della capacità per FSx per ONTAP | Il livello di prestazioni SSD per il file system FSx for ONTAP ha raggiunto la soglia di avviso capacità/percentuale totale. | Gestione della capacità | Avvertimento | Deposito generale | FSx per file system ONTAP 
-
-
-| Evento di gestione automatica degli inode per FSx per ONTAP | Il conteggio degli inode per il volume FSx for ONTAP ha raggiunto la soglia di avviso conteggio/percentuale totale. | Gestione della capacità | Avvertimento | Deposito generale | FSx per file system ONTAP 
-
-
-| Attività sospetta sui volumi rilevata in FSx for ONTAP file system | NetApp Autonomous Ransomware Protection con intelligenza artificiale (ARP/AI) ha rilevato attività sospette sul volume. | Protezione contro i ransomware | Critico | Deposito generale | FSx per file system ONTAP 
-
-
-| Rilevata violazione della soglia di latenza | Uno o più volumi nel cluster FSx for ONTAP hanno superato la soglia di latenza. | Monitoraggio delle prestazioni | Avvertimento | EDA | FSx per file system ONTAP 
-
-
-| Rapporto mensile sui costi | Riepilogo mensile dei costi per il tuo account, con indicazione delle tendenze di spesa, delle variazioni anomale e delle migliori opportunità di risparmio per FSx for ONTAP file systems. | Rapporto sui costi | Consiglio | Deposito generale | FSx per file system ONTAP 
-
-
-| Ritardo di replica | La replicazione sta richiedendo più tempo del previsto. | Replicazione | Critico | Deposito generale | FSx per file system ONTAP 
-
-
-| Creazione dashboard personalizzato riuscita | La tua dashboard personalizzata è stata creata correttamente ed è pronta per essere visualizzata. | Cruscotti personalizzati | Successo | Deposito generale | Account Workload Factory 
-
-
-| Creazione dashboard personalizzata non riuscita | Workload Factory non è riuscita a creare la tua dashboard personalizzata. Prova a creare di nuovo la dashboard. | Cruscotti personalizzati | Errore | Deposito generale | Account Workload Factory 
-|===
-
-
 [[configure-workload-factory-notifications]]
 == Configurare le notifiche di Workload Factory
 
@@ -251,3 +192,63 @@ Per ulteriori informazioni sulla creazione di criteri di filtro, fare riferiment
 È possibile utilizzare le impostazioni delle notifiche della NetApp Console per filtrare le notifiche ricevute nella Console in base al livello di gravità, come Critico, Info o Avviso.
 
 Per ulteriori informazioni sul filtraggio delle notifiche nella Console, fare riferimento a https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#filter-notifications["Documentazione della console NetApp"^] .
+
+
+
+[[notification-types-and-messages]]
+== Tipi di notifica e messaggi
+
+Workload Factory invia notifiche per i seguenti eventi:
+
+[cols="6*"]
+|===
+| Evento | Descrizione | Tipo di notifica | Severità | Carico di lavoro | Tipo di risorsa 
+
+
+| Alcune istanze del database nel tuo account non sono ben progettate | Tutte le istanze di Microsoft SQL Server nel tuo account sono state analizzate per individuare eventuali problemi ben progettati.  La descrizione di questo evento fornisce il numero di istanze ben progettate e di istanze non ottimizzate.  Esaminare i risultati e le raccomandazioni sullo stato ben progettati nell'inventario dei database dalla console Workload Factory. | Ben progettato | Consiglio | Database | Istanza di Microsoft SQL Server 
+
+
+| Distribuzione del server Microsoft SQL Server/PostgreSQL riuscita | L'implementazione dell'host Microsoft SQL Server o PostgreSQL è riuscita. Per ulteriori informazioni, consultare il monitoraggio dei job. | Implementazione | Successo | Database | FSx per ONTAP, host DB 
+
+
+| Distribuzione del server Microsoft SQL Server/PostgreSQL non riuscita | L'implementazione dell'host Microsoft SQL Server o PostgreSQL non è riuscita. Per ulteriori informazioni, consultare il monitoraggio dei job. | Implementazione | Errore | Database | FSx per ONTAP, host DB 
+
+
+| Creazione della relazione di replicazione non riuscita | La creazione di una relazione di replica SnapMirror non è riuscita.  Per maggiori informazioni, visita Tracker. | Replicazione | Critico | Deposito generale | FSx per ONTAP 
+
+
+| Errore nella creazione di FSx per ONTAP | Il processo di creazione del file system FSx for ONTAP non è riuscito.  Per maggiori informazioni, visita Tracker. | FSx per l'azione del file system ONTAP | Critico | Deposito generale | FSx per ONTAP 
+
+
+| La capacità SSD automatica o gli inode aumentano il successo | Durante un recente aggiornamento automatico della gestione della capacità, il file system FSx per ONTAP ha aumentato con successo la capacità SSD o gli inode del volume. Per maggiori informazioni, visita Tracker. | Gestione della capacità | Successo | Deposito generale | FSx per file ONTAP 
+
+
+| La capacità automatica dell'SSD o gli inode aumentano il guasto | Durante un recente aggiornamento automatico della gestione della capacità, il file system FSx per ONTAP non è riuscito ad aumentare la capacità SSD o gli inode del volume. Per maggiori informazioni, visita Tracker. | Gestione della capacità | Critico | Deposito generale | FSx per file system ONTAP 
+
+
+| Rilevato problema FSx per ONTAP | Tutti i file system FSx per ONTAP sono stati analizzati per individuare eventuali problemi di architettura corretta.  La scansione ha rilevato uno o più problemi.  Per ulteriori informazioni, consultare l'analisi ben progettata nella dashboard Storage nella console Workload Factory. | Analisi ben progettata | Consiglio | Deposito generale | FSx per file system ONTAP 
+
+
+| Evento di gestione automatica della capacità per FSx per ONTAP | Il livello di prestazioni SSD per il file system FSx for ONTAP ha raggiunto la soglia di avviso capacità/percentuale totale. | Gestione della capacità | Avvertimento | Deposito generale | FSx per file system ONTAP 
+
+
+| Evento di gestione automatica degli inode per FSx per ONTAP | Il conteggio degli inode per il volume FSx for ONTAP ha raggiunto la soglia di avviso conteggio/percentuale totale. | Gestione della capacità | Avvertimento | Deposito generale | FSx per file system ONTAP 
+
+
+| Attività sospetta sui volumi rilevata in FSx for ONTAP file system | NetApp Autonomous Ransomware Protection con intelligenza artificiale (ARP/AI) ha rilevato attività sospette sul volume. | Protezione contro i ransomware | Critico | Deposito generale | FSx per file system ONTAP 
+
+
+| Rilevata violazione della soglia di latenza | Uno o più volumi nel cluster FSx for ONTAP hanno superato la soglia di latenza. | Monitoraggio delle prestazioni | Avvertimento | EDA | FSx per file system ONTAP 
+
+
+| Rapporto mensile sui costi | Riepilogo mensile dei costi per il tuo account, con indicazione delle tendenze di spesa, delle variazioni anomale e delle migliori opportunità di risparmio per FSx for ONTAP file systems. | Rapporto sui costi | Consiglio | Deposito generale | FSx per file system ONTAP 
+
+
+| Ritardo di replica | La replicazione sta richiedendo più tempo del previsto. | Replicazione | Critico | Deposito generale | FSx per file system ONTAP 
+
+
+| Creazione dashboard personalizzato riuscita | La tua dashboard personalizzata è stata creata correttamente ed è pronta per essere visualizzata. | Cruscotti personalizzati | Successo | Deposito generale | Account Workload Factory 
+
+
+| Creazione dashboard personalizzata non riuscita | Workload Factory non è riuscita a creare la tua dashboard personalizzata. Prova a creare di nuovo la dashboard. | Cruscotti personalizzati | Errore | Deposito generale | Account Workload Factory 
+|===

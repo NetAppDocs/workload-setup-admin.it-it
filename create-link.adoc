@@ -1,0 +1,317 @@
+---
+sidebar: sidebar 
+permalink: create-link.html 
+keywords: connect, connection, link, lambda link, associate link, create link, authenticate link 
+summary: Puoi creare e gestire collegamenti per fornire una relazione di fiducia e connettività tra un account NetApp Workload Factory e uno o più file system FSx for ONTAP. 
+---
+= Connettiti a un file system Amazon FSx for ONTAP tramite un collegamento Lambda
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per eseguire operazioni di gestione avanzate di ONTAP, configura una connessione tra il tuo account Workload Factory e uno o più file system FSx for ONTAP. Questo comporta l'associazione di collegamenti Lambda nuovi ed esistenti e l'autenticazione dei collegamenti. L'associazione dei collegamenti ti permette di monitorare e gestire alcune funzionalità direttamente dal file system FSx for ONTAP che non sono disponibili tramite l'API Amazon FSx for ONTAP.
+
+link:links-overview.html["Scopri di più sui link"].
+
+.A proposito di questa attività
+I link utilizzano AWS Lambda per eseguire codice in risposta agli eventi e gestiscono automaticamente le risorse di calcolo necessarie a tale codice. I link che crei fanno parte del tuo NetApp account e sono associati a un account AWS.
+
+Puoi creare un link nel tuo account quando definisci un file system FSx for ONTAP. Usi il link per quel file system e puoi usarlo anche per altri file system FSx for ONTAP. Puoi anche associare un link a un file system in seguito.
+
+I collegamenti richiedono l'autenticazione. Puoi autenticare i collegamenti usando le credenziali memorizzate nel servizio credenziali di Workload Factory o con le tue credenziali memorizzate in AWS Secrets Manager. È supportato un solo metodo di autenticazione per collegamento. Ad esempio, se scegli l'autenticazione del collegamento con AWS Secrets Manager, non puoi cambiare il metodo di autenticazione in seguito.
+
+
+NOTE: AWS Secrets Manager non è supportato quando usi un agente Console.
+
+
+
+[[associate-a-new-link]]
+== Associa un nuovo collegamento
+
+L'associazione di un nuovo collegamento include la creazione e l'associazione del collegamento.
+
+In questo flusso di lavoro hai due opzioni per creare i collegamenti: automaticamente o manualmente. Se hai un account AWS GovCloud, devi creare un nuovo collegamento manualmente.
+
+* Automaticamente: crea un link con registrazione automatica tramite Workload Factory. Un link creato automaticamente richiede token per l'automazione di Workload Factory e il codice CloudFormation ha una durata limitata. Può essere utilizzato solo per un massimo di sei ore.
+* Manualmente: crea un collegamento con registrazione manuale utilizzando CloudFormation o Terraform da Codebox. Il codice persiste dandoti più tempo per completare l'operazione. Questo è utile quando lavori con team diversi, come Sicurezza e DevOps, che potrebbero prima dover concedere le autorizzazioni necessarie per completare la creazione del collegamento.
+
+
+.Prima di iniziare
+* Dovresti valutare quale opzione di creazione del link utilizzerai.
+* Devi avere almeno un file system FSx for ONTAP in Workload Factory. Per individuare i file system FSx for ONTAP, devi avere un account AWS con autorizzazioni per le istanze FSx for ONTAP e link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["aggiungi le credenziali in Workload Factory"^] con autorizzazioni di visualizzazione, pianificazione e analisi per la gestione dello storage.
+* Le seguenti porte devono essere aperte nel gruppo di sicurezza associato al file system FSx for ONTAP per la connettività del collegamento.
++
+** Per la console di Workload Factory: porta 443 (HTTPS)
+** Per l'analisi degli eventi del sistema di gestione delle emergenze (EMS) di CloudShell e FSx for ONTAP: porta 22 (SSH)
+
+
+* Il collegamento deve essere in grado di connettersi al seguente endpoint: https://api.workloads.netapp.com. La console basata sul web contatta questo endpoint per interagire con le API di NetApp Workload Factory per gestire e utilizzare i carichi di lavoro FSx per ONTAP.
+* Devi avere le seguenti autorizzazioni nel tuo account AWS quando aggiungi un collegamento usando uno stack CloudFormation:
++
+[%collapsible]
+====
+[source, json]
+----
+[
+  "cloudformation:GetTemplateSummary",
+  "cloudformation:CreateStack",
+  "cloudformation:DescribeStacks",
+  "cloudformation:ListStacks",
+  "cloudformation:DescribeStackEvents",
+  "cloudformation:ListStackResources",
+  "ec2:DescribeSubnets",
+  "ec2:DescribeSecurityGroups",
+  "ec2:DescribeVpcs",
+  "iam:ListRoles",
+  "iam:GetRolePolicy",
+  "iam:GetRole",
+  "iam:DeleteRolePolicy",
+  "iam:CreateRole",
+  "iam:DetachRolePolicy",
+  "iam:PutRolePolicy",
+  "iam:DeleteRole",
+  "iam:AttachRolePolicy",
+  "lambda:InvokeFunction",
+  "lambda:GetFunction",
+  "lambda:CreateFunction",
+  "lambda:DeleteFunction",
+  "iam:PassRole",
+  "lambda:TagResource",
+  "ecr:BatchGetImage",
+  "ecr:GetDownloadUrlForLayer",
+  "lambda:AddPermission",
+  "lambda:RemovePermission",
+  "cloudformation:DeleteStack",
+  "kms:CreateGrant",
+  "kms:GenerateDataKey"
+]
+----
+====
+
+
+[role="tabbed-block"]
+====
+.Crea automaticamente
+--
+Usa CloudFormation per creare e registrare automaticamente il collegamento all'interno di Workload Factory.
+
+
+NOTE: La creazione automatica di link non è supportata per gli account AWS GovCloud.
+
+.Fasi
+. Accedi utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro come storage, eda, ai, databases, vmware e amministrazione."] e poi seleziona *Amministrazione*.
+. Dal menu Amministrazione, seleziona *Collegamenti*.
+. Nella pagina Collegamenti, seleziona *Crea e associa*.
+. Nella finestra di dialogo Associa collegamento, seleziona il file system da associare al collegamento e seleziona *Continua*.
+. Seleziona *Crea un nuovo link* e poi seleziona *Continua*.
+. Nella pagina Crea collegamento, seleziona *Crea automaticamente* e poi inserisci quanto segue:
++
+.. *Nome del link*: Inserisci il nome che vuoi usare per questo link. Il nome deve essere univoco all'interno del tuo account.
+.. *AWS Secrets Manager*: Opzionale. Consente a Workload Factory di recuperare le credenziali di accesso FSx for ONTAP dal tuo AWS Secrets Manager.
++
+Lo stack di distribuzione del collegamento aggiunge automaticamente la seguente espressione regolare ARN del secret manager predefinita alla policy di autorizzazione Lambda: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`.
+
++
+Puoi creare segreti in linea con le autorizzazioni predefinite oppure assegnare autorizzazioni personalizzate per la policy dei collegamenti.
+
++
+*Configura l'endpoint privato VPC su AWS Secrets Manager* è disabilitata per impostazione predefinita. Selezionando questa opzione, il segreto viene memorizzato utilizzando l'endpoint privato VPC invece che in locale.
+
+.. *Autorizzazioni del collegamento*: Seleziona una delle seguenti opzioni per le autorizzazioni del collegamento:
++
+*** *Automatico*: Seleziona questa opzione affinché il codice AWS CloudFormation crei automaticamente la policy di autorizzazione Lambda e il ruolo di esecuzione.
+*** *Ruolo di esecuzione fornito dall'utente*: Seleziona questa opzione per assegnare un ruolo di esecuzione Lambda specifico e le relative policy al collegamento Lambda. Per la policy di autorizzazione Lambda sono necessarie le seguenti autorizzazioni. L'autorizzazione  `secretsmanager:GetSecretValue` è richiesta solo se hai abilitato AWS Secrets Manager.
++
+[source, json]
+----
+"ec2:CreateNetworkInterface",
+"ec2:DescribeNetworkInterfaces",
+"ec2:DeleteNetworkInterface",
+"ec2:AssignPrivateIpAddresses",
+"ec2:UnassignPrivateIpAddresses",
+----
++
+Inserisci l'ARN del ruolo di esecuzione Lambda nella casella di testo.
+
+
+
+.. *Tag*: Facoltativamente, aggiungi i tag che vuoi associare a questo link così puoi categorizzare più facilmente le tue risorse. Ad esempio, potresti aggiungere un tag che identifica questo link come utilizzato da Amazon FSx per i file system ONTAP.
++
+Workload Factory recupera automaticamente l'account AWS, la posizione e il gruppo di sicurezza in base al file system FSx for ONTAP.
+
+
+
+. Seleziona *Crea*.
++
+Viene visualizzata la finestra di dialogo "Reindirizza a CloudFormation" che spiega come creare il collegamento dal servizio AWS CloudFormation.
+
+. Seleziona *Continua* per aprire la AWS Management Console, quindi accedi all'account AWS per questo file system FSx for ONTAP.
+. Nella pagina creazione rapida stack, in funzionalità, selezionare *Acknowledge that AWS CloudFormation May create IAM resources* (riconosco che AWS CloudFormation potrebbe creare risorse IAM*).
++
+Il modello CloudFormation concede a Lambda tre autorizzazioni quando lo avvii. Workload Factory utilizza queste autorizzazioni quando usi i link.
+
++
+[source, json]
+----
+"lambda:InvokeFunction",
+"lambda:GetFunction",
+"lambda:UpdateFunctionCode"
+----
+. Seleziona *Crea stack* e poi seleziona *Continua*.
++
+Puoi monitorare lo stato di creazione del link nella pagina Eventi. Questo dovrebbe richiedere non più di cinque minuti.
+
+. Torna all'interfaccia di Workload Factory e vedrai che il collegamento è associato al file system FSx for ONTAP.
+
+
+--
+.Crea manualmente
+--
+Puoi creare un collegamento usando due strumenti Infrastructure-as-Code (IaC) di Codebox: CloudFormation o Terraform. Con questa opzione, estrai l'ARN del collegamento da AWS CloudFormation e lo riporti qui. Workload Factory registra manualmente il collegamento per te.
+
+.Fasi
+. Accedi utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro come storage, eda, ai, databases, vmware e amministrazione."] e poi seleziona *Amministrazione*.
+. Dal menu Amministrazione, seleziona *Collegamenti*.
+. Nella pagina Collegamenti, seleziona *Crea e associa*.
+. Nella finestra di dialogo Associa collegamento, seleziona il file system da associare al collegamento e seleziona *Continua*.
+. Seleziona *Crea un nuovo link* e poi seleziona *Continua*.
+. Nella pagina Crea collegamento, seleziona *Crea manualmente* e poi seleziona CloudFormation o Terraform dalla casella di codice.
+. Nella sezione Dettagli e credenziali, fornisci le seguenti informazioni:
++
+.. *Nome del link*: Inserisci il nome che vuoi usare per questo link. Il nome deve essere univoco all'interno del tuo account.
+.. *AWS Secrets Manager*: Sempre abilitato per gli account GovCloud. Facoltativo per gli altri account. Consente a NetApp Workload Factory di recuperare le credenziali di accesso FSx for ONTAP dal tuo AWS Secrets Manager.
++
+Puoi creare segreti in linea con le autorizzazioni predefinite oppure assegnare autorizzazioni personalizzate per la policy dei collegamenti.
+
++
+*Configura l'endpoint privato VPC su AWS Secrets Manager* è disabilitata per impostazione predefinita. Selezionando questa opzione, il segreto viene memorizzato utilizzando l'endpoint privato VPC invece che in locale.
+
+.. *Autorizzazioni del collegamento*: Seleziona una delle seguenti opzioni per le autorizzazioni del collegamento:
++
+*** *Automatico*: Seleziona questa opzione affinché il codice AWS CloudFormation crei automaticamente la policy di autorizzazione Lambda e il ruolo di esecuzione.
+*** *Fornito dall'utente*: Seleziona questa opzione per assegnare un ruolo di esecuzione Lambda specifico e le relative policy al collegamento Lambda. Per la policy di autorizzazione Lambda sono necessarie le seguenti autorizzazioni. L' `secretsmanager:GetSecretValue` autorizzazione è richiesta solo quando usi AWS Secrets Manager.
++
+[source, json]
+----
+"ec2:CreateNetworkInterface",
+"ec2:DescribeNetworkInterfaces",
+"ec2:DeleteNetworkInterface",
+"ec2:AssignPrivateIpAddresses",
+"ec2:UnassignPrivateIpAddresses"
+----
++
+Inserisci l'ARN del ruolo di esecuzione Lambda nella casella di testo.
+
+
+
+.. *Tag*: Facoltativamente, aggiungi i tag che vuoi associare a questo link così puoi categorizzare più facilmente le tue risorse. Ad esempio, potresti aggiungere un tag che identifica questo link come utilizzato da Amazon FSx per i file system ONTAP.
+.. *Registrazione del link*: Seleziona CloudFormation o Terraform per le istruzioni su come registrare il link e segui le istruzioni.
++
+Il modello CloudFormation concede a Lambda tre autorizzazioni quando lo avvii. Workload Factory utilizza queste autorizzazioni quando usi i link.
+
++
+[source, json]
+----
+"lambda:InvokeFunction",
+"lambda:GetFunction",
+"lambda:UpdateFunctionCode"
+----
++
+... Dopo che hai creato correttamente lo stack, incolla l'ARN di Lambda nella casella di testo nella console di Workload Factory. Workload Factory recupera automaticamente l'account AWS, la posizione e il gruppo di sicurezza in base al file system FSx for ONTAP.
+... Seleziona *Crea*.
++
+Puoi monitorare lo stato di creazione del link nella pagina Eventi. Questo dovrebbe richiedere non più di cinque minuti.
+
+
+
+
+
+
+
+--
+====
+.Risultato
+Workload Factory associa il collegamento al file system FSx for ONTAP. Puoi eseguire operazioni avanzate di ONTAP.
+
+
+
+[[associate-an-existing-link-with-an-fsx-for-ontap-file-system]]
+== Associa un collegamento esistente a un file system Amazon FSx for ONTAP
+
+Dopo aver creato il collegamento, associalo a uno o più file system FSx for ONTAP.
+
+.Fasi
+. Accedi utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro come storage, eda, ai, databases, vmware e amministrazione."] e poi seleziona *Archiviazione*.
+. Dal menu Storage, selezionare *FSx for ONTAP*.
+. Da *FSx per ONTAP*, seleziona il menu delle azioni del file system a cui associare un collegamento e poi seleziona *Associa collegamento*.
+. Nella pagina di associazione dei collegamenti, seleziona *Associa un collegamento esistente*, seleziona il collegamento e seleziona *Continua*.
+. Seleziona la modalità di autenticazione.
++
+** Workload Factory: inserisci la password due volte.
+** AWS Secrets Manager: inserisci l'ARN del segreto.
++
+Verifica che l'ARN segreto contenga le seguenti coppie chiave-valore, anche se il parametro _filesystemID_ è facoltativo.
+
++
+*** filesystemID = FSx_filesystem_id (facoltativo)
+*** utente = FSx_user
+*** password = password_utente
++
+
+NOTE: L'autenticazione con AWS Secrets Manager richiede un utente, cioè l'utente _FSx_user_ che fornisci tu oppure un altro utente creato sul file system FSx for ONTAP. L'utente predefinito è `fsxadmin` se non fornisci un utente.
+
+
+
+
+
+. Selezionare *Applica*.
+
+
+.Risultato
+Il collegamento è associato al file system Amazon FSx for ONTAP. Puoi eseguire operazioni avanzate di ONTAP.
+
+.Informazioni correlate
+link:links-overview.html#when-a-link-is-required["Scopri di più sui link"].
+
+
+
+[[troubleshoot-issues-with-aws-secrets-manager-link-authentication]]
+== Risolvi i problemi con l'autenticazione tramite link di AWS Secrets Manager
+
+Problema:: Il link non dispone delle autorizzazioni per recuperare il segreto.
++
+--
+*Soluzione*: Aggiungi le autorizzazioni dopo che il link è attivo. Accedi alla console AWS, individua il link Lambda e modifica la policy di autorizzazione allegata.
+
+--
+Problema:: Il segreto non è stato trovato.
++
+--
+*Risoluzione*: Fornisci l'ARN segreto corretto.
+
+--
+Problema:: Il segreto non è nel formato giusto.
++
+--
+*Soluzione*: Vai su AWS Secrets Manager e modifica il formato.
+
+Il segreto deve contenere le seguenti coppie chiave-valore:
+
+* filesystemID = FSx_filesystem_id
+* username = FSx_user
+* password = password_utente
+
+
+--
+Problema:: Il segreto non contiene credenziali ONTAP valide per l'autenticazione del file system.
++
+--
+*Risoluzione*: Fornisci le credenziali che possono autenticare i file system FSx for ONTAP in AWS Secrets Manager.
+
+--
+

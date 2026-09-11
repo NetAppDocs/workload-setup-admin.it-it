@@ -4,7 +4,7 @@ permalink: learn-custom-dashboards.html
 keywords: custom dashboards, dashboards, personalized dashboards, AI dashboards, operational visibility, workload monitoring 
 summary: 'Crea dashboard basate sull"intelligenza artificiale, personalizzate in base ai tuoi carichi di lavoro e alle tue priorità, per una maggiore visibilità operativa senza essere vincolato da visualizzazioni predefinite.' 
 ---
-= Scopri le dashboard personalizzate
+= Scopri le dashboard personalizzate in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

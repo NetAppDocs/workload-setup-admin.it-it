@@ -47,7 +47,6 @@
   <block id="3364e8fe52c54126e3d0ebbdc3ebe636" category="list-text">Selezionare *continua* dalla pagina Redirect to CloudFormation.</block>
   <block id="ab44f988398acb833af7b9b2bc6c26b9" category="list-text">Nella pagina creazione rapida stack, in funzionalità, selezionare *Acknowledge that AWS CloudFormation May create IAM resources* (riconosco che AWS CloudFormation potrebbe creare risorse IAM*).</block>
   <block id="69831ef6721ecf7f184cdd4b29af8f45" category="list-text">Selezionare *Crea stack*.</block>
-  <block id="b9d92ff083cdd90473a495ae946507fa" category="doc">Ulteriori informazioni sull'automazione dei codebox</block>
   <block id="c20a9fb18c5ad24194fdd7ccde0a108d" category="section-title">Funzionalità Codebox</block>
   <block id="a60481064d733c1b8603777a0fed54b0" category="paragraph">Codebox offre due funzionalità IAC principali:</block>
   <block id="7b03b939d7a7886fee314498791450ce" category="list-text">_Codebox Viewer_ mostra il file IAC generato da una specifica operazione di flusso di lavoro mediante la corrispondenza di voci e selezioni dalla procedura guidata grafica o dall'interfaccia di conversazione testuale. Anche se Codebox Viewer supporta la codifica a colori per semplificare la navigazione e l'analisi, non consente la modifica, ma solo la copia o il salvataggio del codice nel catalogo di automazione.</block>
@@ -243,8 +242,6 @@
   <block id="922bba58b532e71878d3d5858f7e8194" category="list-text">Scopri, implementa e gestisci i file system Amazon FSX per NetApp ONTAP nel cloud. FSX per ONTAP unisce le funzionalità complete di ONTAP in un servizio gestito nativo di AWS che offre un'esperienza di cloud ibrido coerente.</block>
   <block id="6d46b033eabdea8f60b174a46dfcfb14" category="list-text">Migrazione degli ambienti vSphere on-premise in VMware Cloud su AWS</block>
   <block id="f760ee48ca0d5104a3c884c851536392" category="list-text">Il Migration ADVISOR di VMware Cloud su AWS ti consente di analizzare le configurazioni delle macchine virtuali correnti negli ambienti vSphere on-premise, di generare un piano per implementare i layout di VM consigliati in VMware Cloud su AWS e di utilizzare file system Amazon FSX per NetApp ONTAP customizzati come datastore esterni.</block>
-  <block id="c8556381857e2b130302cd1951b0b62c" category="list-text">Sviluppo di chatbot ai</block>
-  <block id="b74c52466a8f67e18b547bf25d14844f" category="list-text">Sfrutta i file system FSX per ONTAP per memorizzare le origini dei chatbot delle tue organizzazioni e i database del motore ai. Questo ti consente di incorporare i dati non strutturati della tua organizzazione in un'applicazione chatbot aziendale.</block>
   <block id="1a78f887c27cbb9e00745a4c2bb056a1" category="list-text">Analizza le tue implementazioni attuali che utilizzano lo storage Amazon Elastic Block Store (EBS) o Elastic file System (EFS) o Amazon FSX per Windows file Server, per scoprire quanto denaro puoi risparmiare passando ad Amazon FSX per NetApp ONTAP. È inoltre possibile utilizzare la calcolatrice per eseguire uno scenario "what if" per una distribuzione futura che si sta pianificando.</block>
   <block id="902e65d33784bd8924eb05e622aa2dda" category="section-title">Cloud provider supportati</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">Costo</block>
@@ -934,7 +931,6 @@
   <block id="81fe43671919388bf418561882652f2a" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>Aggiungi le credenziali AWS a Workload Factory</block>
   <block id="cfce110bce240e5d147991ff7290a456" category="paragraph">Dopo esserti registrato, aver creato un account e, facoltativamente, aver aggiunto le credenziali AWS, puoi iniziare a utilizzare Workload Factory per ottimizzare i tuoi carichi di lavoro tramite FSx for ONTAP.</block>
   <block id="023c464fc92ec044e83176c4e57027c4" category="summary">Workload Factory è accessibile tramite una console basata sul Web.  Quando inizi a utilizzare Workload Factory, il primo passo è registrarti utilizzando le credenziali del tuo sito di supporto NetApp o creando un accesso cloud NetApp .</block>
-  <block id="68502871f1dfe8846e132f5a8eb8bf26" category="doc">Iscriviti a NetApp Workload Factory</block>
   <block id="060bb32e7b5d621e11afd0c831a87d3e" category="paragraph">NetApp Workload Factory è accessibile tramite una console basata sul Web.  Quando inizi a utilizzare Workload Factory, il primo passo è registrarti utilizzando le credenziali del tuo sito di supporto NetApp o creando un accesso cloud NetApp .</block>
   <block id="9e9a0202d2a4a6551faca1e042e523e5" category="paragraph">Puoi registrarti a Workload Factory utilizzando una delle seguenti opzioni:</block>
   <block id="dd8dfb2c954c59328d486f61112b7dc6" category="list-text">Apri un browser web e vai su<block ref="d98336faa10e493cfae83d68fb7054ec" category="inline-link-rx"></block></block>
@@ -993,7 +989,6 @@
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">06 ottobre 2025</block>
   <block id="7fe837fc0a93acdad81da1d440ee3fd2" category="section-title">05 ottobre 2025</block>
   <block id="516a4939962d11e39f0fbf438b454931" category="summary">Dopo aver effettuato l'accesso e configurato NetApp Workload Factory, è possibile creare e gestire i file system FSx for ONTAP e utilizzare altre funzionalità di Workload Factory.</block>
-  <block id="f00613c02d17c0a20b6a513d63b31e84" category="doc">Ottimizza i carichi di lavoro con NetApp Workload Factory</block>
   <block id="889f832ffc4f3999f71856d95725363c" category="paragraph">Dopo aver effettuato l'accesso e configurato NetApp Workload Factory, puoi iniziare a utilizzare diverse funzionalità di Workload Factory, come la creazione di file system Amazon FSx for ONTAP , la distribuzione di database su file system FSx for ONTAP e la migrazione delle configurazioni delle macchine virtuali su VMware Cloud on AWS utilizzando i file system FSx for ONTAP come datastore esterni.</block>
   <block id="db7932d3f55d0312c05f023910160589" category="summary">NetApp Workload Factory è una potente piattaforma di gestione del ciclo di vita progettata per aiutarti a ottimizzare i tuoi carichi di lavoro utilizzando i file system Amazon FSx for NetApp ONTAP .</block>
   <block id="9a01a95fb1dafcab4b74af822b939ea9" category="doc">Scopri di più su NetApp Workload Factory</block>
@@ -1040,7 +1035,6 @@
   <block id="86dd1f2c1da07102d586b3d680ed37a3" category="sidebar">Iscriviti a Workload Factory</block>
   <block id="a77641000b55773f3d4f4abfc8eaa6ac" category="sidebar">Ottimizza i carichi di lavoro con Workload Factory</block>
   <block id="bec1e3daee54f5a9410751eb03bd867e" category="sidebar">Amministra Workload Factory</block>
-  <block id="7ffef60a0bb1e63a8505f9e4285dab5f" category="sidebar">Accedi a Workload Factory</block>
   <block id="8880bf2394c75ebe6ed859ae103855bd" category="cell">La capacità SSD automatica o gli inode aumentano il successo</block>
   <block id="0f4ae4b5b0836264a3d9e9d0e29731c8" category="cell">Durante un recente aggiornamento automatico della gestione della capacità, il file system FSx per ONTAP ha aumentato con successo la capacità SSD o gli inode del volume. Per maggiori informazioni, visita Tracker.</block>
   <block id="1d19e21de0f93b11f5ceb8b535a3afc2" category="cell">Gestione della capacità</block>
@@ -1285,7 +1279,6 @@
   <block id="4aa1f4ce7ff97e69b143fbe399631234" category="section-title">01 marzo 2026</block>
   <block id="2888fa977354ad1bf513fa2f17fdd7df" category="paragraph">Workload Factory analizza quotidianamente i carichi di lavoro in esecuzione sulle implementazioni dei file system Amazon FSx for NetApp ONTAP. L'analisi fornisce stato ben architettato, approfondimenti e raccomandazioni.</block>
   <block id="1ae45cc8915c23757127ca10c1cc4000" category="paragraph">Workload Factory applica le best practice ad ambienti di storage, database e VMware di grandi dimensioni, combinando valutazioni continue con suggerimenti e interventi correttivi. Le correzioni automatiche applicate nella console di Workload Factory riducono gli errori umani, garantiscono una gestione uniforme e preservano prestazioni e affidabilità nelle infrastrutture di workload.</block>
-  <block id="23b296afc9efdc38bb284c5491538e2f" category="doc">Crea e gestisci carichi di lavoro ben strutturati con NetApp Workload Factory</block>
   <block id="c3a8b5ec0adade5d633e6e6466b483a6" category="paragraph">Workload Factory, la suite di gestione NetApp per Amazon FSx for NetApp ONTAP, ti aiuta a mantenere e gestire configurazioni di carichi di lavoro affidabili, sicure, efficienti e convenienti, in linea con l'AWS Well-Architected Framework. Workload Factory fornisce analisi giornaliere dei tuoi carichi di lavoro, raccomandazioni e correzioni automatiche per promuovere operazioni sane dei carichi di lavoro. Automatizzando questo processo, Workload Factory riduce al minimo gli errori umani e garantisce coerenza nella gestione dei carichi di lavoro.</block>
   <block id="421a8570ce985526e7d5c4e54d3094e2" category="section-title">Inizia a utilizzare Workload Factory per rilevare e correggere le configurazioni errate dei workload</block>
   <block id="7274d50d53fc920babacadb1439892ff" category="sidebar">Implementare configurazioni Elastic VMware Service ben strutturate</block>
@@ -1680,4 +1673,184 @@
   <block id="8d8c52a0c2cdf249c1bf6acdbd825469" category="doc">Nuova esperienza di onboarding per credenziali e link</block>
   <block id="4f9abf683fceb68d04e55eccea1aef30" category="paragraph">Workload Factory migliora l'esperienza di onboarding per le credenziali e i link, semplificando l'avvio. Dopo che hai creato il tuo account ed effettuato l'accesso, seleziona *Inizia* in qualsiasi riquadro workload, ad esempio *Storage*, e la pagina successiva ti guida passo passo nel processo di configurazione.</block>
   <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">30 agosto 2026</block>
+  <block id="86030a79fe9a63670fc44ac2aa712502" category="doc">Scopri l'automazione di Codebox in NetApp Workload Factory</block>
+  <block id="e730dacf98fdefc31c79fa8f3de18e2b" category="doc">Esperienze della console per NetApp Workload Factory</block>
+  <block id="78a68b00b0b76cc261abe8e56546683d" category="doc">Crea una dashboard personalizzata in NetApp Workload Factory</block>
+  <block id="d1b55cbdf6e8ca176a53229f6dc39afc" category="summary">Puoi creare e gestire collegamenti per fornire una relazione di fiducia e connettività tra un account NetApp Workload Factory e uno o più file system FSx for ONTAP.</block>
+  <block id="37b002845528ac0296b86d28bb71e5a5" category="doc">Connettiti a un file system Amazon FSx for ONTAP tramite un collegamento Lambda</block>
+  <block id="5ba5b0aebf03129e0be728e866a2b27b" category="paragraph">Per eseguire operazioni di gestione avanzate di ONTAP, configura una connessione tra il tuo account Workload Factory e uno o più file system FSx for ONTAP. Questo comporta l'associazione di collegamenti Lambda nuovi ed esistenti e l'autenticazione dei collegamenti. L'associazione dei collegamenti ti permette di monitorare e gestire alcune funzionalità direttamente dal file system FSx for ONTAP che non sono disponibili tramite l'API Amazon FSx for ONTAP.</block>
+  <block id="95254aef509d2d84e8ee7dd3052d1b61" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block>.</block>
+  <block id="eb72702456cb13d975ccfacb15b610d0" category="paragraph">I link utilizzano AWS Lambda per eseguire codice in risposta agli eventi e gestiscono automaticamente le risorse di calcolo necessarie a tale codice. I link che crei fanno parte del tuo NetApp account e sono associati a un account AWS.</block>
+  <block id="de753f9064c7210624293a7c1d1e13f9" category="paragraph">Puoi creare un link nel tuo account quando definisci un file system FSx for ONTAP. Usi il link per quel file system e puoi usarlo anche per altri file system FSx for ONTAP. Puoi anche associare un link a un file system in seguito.</block>
+  <block id="8525c310ff1b921b05db83eb21ea6be7" category="paragraph">I collegamenti richiedono l'autenticazione. Puoi autenticare i collegamenti usando le credenziali memorizzate nel servizio credenziali di Workload Factory o con le tue credenziali memorizzate in AWS Secrets Manager. È supportato un solo metodo di autenticazione per collegamento. Ad esempio, se scegli l'autenticazione del collegamento con AWS Secrets Manager, non puoi cambiare il metodo di autenticazione in seguito.</block>
+  <block id="6b7123710c1d7db8c41a9ececb7ce5dd" category="admonition">AWS Secrets Manager non è supportato quando usi un agente Console.</block>
+  <block id="2c1b9e7969c6e96f38bd871fc9f26ae1" category="section-title">Associa un nuovo collegamento</block>
+  <block id="05a2e668e80fd3ace12e9585ebc06578" category="paragraph">L'associazione di un nuovo collegamento include la creazione e l'associazione del collegamento.</block>
+  <block id="0d9cf45fb23b4088730f72dd43be4a9b" category="paragraph">In questo flusso di lavoro hai due opzioni per creare i collegamenti: automaticamente o manualmente. Se hai un account AWS GovCloud, devi creare un nuovo collegamento manualmente.</block>
+  <block id="fa1694d04e308a581d5d23c44b278491" category="list-text">Automaticamente: crea un link con registrazione automatica tramite Workload Factory. Un link creato automaticamente richiede token per l'automazione di Workload Factory e il codice CloudFormation ha una durata limitata. Può essere utilizzato solo per un massimo di sei ore.</block>
+  <block id="952da3361b1e3ca5daa8c23a39780e18" category="list-text">Manualmente: crea un collegamento con registrazione manuale utilizzando CloudFormation o Terraform da Codebox. Il codice persiste dandoti più tempo per completare l'operazione. Questo è utile quando lavori con team diversi, come Sicurezza e DevOps, che potrebbero prima dover concedere le autorizzazioni necessarie per completare la creazione del collegamento.</block>
+  <block id="758ce486f132a2978be7ecfbcd518afa" category="list-text">Dovresti valutare quale opzione di creazione del link utilizzerai.</block>
+  <block id="d6305b17d1542122d978c37db15fd5d3" category="inline-link-macro">aggiungi le credenziali in Workload Factory</block>
+  <block id="4c4658c6e6bcc607d3d1e8c00d38f9b6" category="list-text">Devi avere almeno un file system FSx for ONTAP in Workload Factory. Per individuare i file system FSx for ONTAP, devi avere un account AWS con autorizzazioni per le istanze FSx for ONTAP e <block ref="a253a365fdf90416889360c06d5b56a2" category="inline-link-macro-rx"></block> con autorizzazioni di visualizzazione, pianificazione e analisi per la gestione dello storage.</block>
+  <block id="d7a33a9350fbc2bb6f775eabf85866de" category="list-text">Le seguenti porte devono essere aperte nel gruppo di sicurezza associato al file system FSx for ONTAP per la connettività del collegamento.</block>
+  <block id="3b6158401b21fd0fabd6f75b8d9c8c23" category="list-text">Per la console di Workload Factory: porta 443 (HTTPS)</block>
+  <block id="64153de607e9925466a905a664c31502" category="list-text">Per l'analisi degli eventi del sistema di gestione delle emergenze (EMS) di CloudShell e FSx for ONTAP: porta 22 (SSH)</block>
+  <block id="aca2e051b8b58a53ee4cf20a78bdde8a" category="list-text">Il collegamento deve essere in grado di connettersi al seguente endpoint: https://api.workloads.netapp.com. La console basata sul web contatta questo endpoint per interagire con le API di NetApp Workload Factory per gestire e utilizzare i carichi di lavoro FSx per ONTAP.</block>
+  <block id="22cc060f8b88cfca4c298ec0a9aae3fa" category="list-text">Devi avere le seguenti autorizzazioni nel tuo account AWS quando aggiungi un collegamento usando uno stack CloudFormation:</block>
+  <block id="6903e2b3a86228f4d258e423fb6b913a" category="open-title">Crea automaticamente</block>
+  <block id="e07190df7367fb116bdd913bfce43fbe" category="paragraph">Usa CloudFormation per creare e registrare automaticamente il collegamento all'interno di Workload Factory.</block>
+  <block id="e97bbb69ec6bcd2c1b3d761224ed4559" category="admonition">La creazione automatica di link non è supportata per gli account AWS GovCloud.</block>
+  <block id="36c518eb88267ad8a7105893fd209a46" category="list-text">Dal menu Amministrazione, seleziona *Collegamenti*.</block>
+  <block id="892be23a9211e0d2e6a0d60b06507944" category="list-text">Nella pagina Collegamenti, seleziona *Crea e associa*.</block>
+  <block id="cb045f0740ec2fb29d2864d6c52abff5" category="list-text">Nella finestra di dialogo Associa collegamento, seleziona il file system da associare al collegamento e seleziona *Continua*.</block>
+  <block id="a9dc1217e276dbbc98e08e5bf8b4e0bd" category="list-text">Seleziona *Crea un nuovo link* e poi seleziona *Continua*.</block>
+  <block id="eaa9de7b48a473b999b69f05d59df6c2" category="list-text">Nella pagina Crea collegamento, seleziona *Crea automaticamente* e poi inserisci quanto segue:</block>
+  <block id="89a62ddcc9759060d903ef8b7aee42c3" category="list-text">*Nome del link*: Inserisci il nome che vuoi usare per questo link. Il nome deve essere univoco all'interno del tuo account.</block>
+  <block id="939a8d22db4ccfbdde48d35119ad37a3" category="list-text">*AWS Secrets Manager*: Opzionale. Consente a Workload Factory di recuperare le credenziali di accesso FSx for ONTAP dal tuo AWS Secrets Manager.</block>
+  <block id="049f730a98eb69627912748561a543b8" category="paragraph">Lo stack di distribuzione del collegamento aggiunge automaticamente la seguente espressione regolare ARN del secret manager predefinita alla policy di autorizzazione Lambda:<block ref="218d5bbe44642244cc57db37477be310" prefix=" " category="inline-code"></block>.</block>
+  <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">Puoi creare segreti in linea con le autorizzazioni predefinite oppure assegnare autorizzazioni personalizzate per la policy dei collegamenti.</block>
+  <block id="49af4dcead2678507453b9bff6c332f1" category="paragraph">*Configura l'endpoint privato VPC su AWS Secrets Manager* è disabilitata per impostazione predefinita. Selezionando questa opzione, il segreto viene memorizzato utilizzando l'endpoint privato VPC invece che in locale.</block>
+  <block id="2f33e5a4fe58163ac0df8f3b097df4db" category="list-text">*Autorizzazioni del collegamento*: Seleziona una delle seguenti opzioni per le autorizzazioni del collegamento:</block>
+  <block id="80b014e5654af87ea5edcdf6ec223a6d" category="list-text">*Automatico*: Seleziona questa opzione affinché il codice AWS CloudFormation crei automaticamente la policy di autorizzazione Lambda e il ruolo di esecuzione.</block>
+  <block id="0a447482fbe2f57253df6484a37127e2" category="list-text">*Ruolo di esecuzione fornito dall'utente*: Seleziona questa opzione per assegnare un ruolo di esecuzione Lambda specifico e le relative policy al collegamento Lambda. Per la policy di autorizzazione Lambda sono necessarie le seguenti autorizzazioni. L'autorizzazione <block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> è richiesta solo se hai abilitato AWS Secrets Manager.</block>
+  <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">Inserisci l'ARN del ruolo di esecuzione Lambda nella casella di testo.</block>
+  <block id="68d5729d2a63e62a04de68bac212b9ab" category="list-text">*Tag*: Facoltativamente, aggiungi i tag che vuoi associare a questo link così puoi categorizzare più facilmente le tue risorse. Ad esempio, potresti aggiungere un tag che identifica questo link come utilizzato da Amazon FSx per i file system ONTAP.</block>
+  <block id="dc0b44a6b07f576dd5f2f755574335ed" category="paragraph">Workload Factory recupera automaticamente l'account AWS, la posizione e il gruppo di sicurezza in base al file system FSx for ONTAP.</block>
+  <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">Seleziona *Crea*.</block>
+  <block id="bab25954c067653929b889d687bcb718" category="paragraph">Viene visualizzata la finestra di dialogo "Reindirizza a CloudFormation" che spiega come creare il collegamento dal servizio AWS CloudFormation.</block>
+  <block id="c602cdf8533ce956e9f326890f6d8723" category="list-text">Seleziona *Continua* per aprire la AWS Management Console, quindi accedi all'account AWS per questo file system FSx for ONTAP.</block>
+  <block id="4e4d4587b3d4f525dd0bfabd81edb7d7" category="paragraph">Il modello CloudFormation concede a Lambda tre autorizzazioni quando lo avvii. Workload Factory utilizza queste autorizzazioni quando usi i link.</block>
+  <block id="4d4e41a17abafe417449016add2ee0bd" category="list-text">Seleziona *Crea stack* e poi seleziona *Continua*.</block>
+  <block id="6f0344b8291b1471c971ba88374dce8a" category="paragraph">Puoi monitorare lo stato di creazione del link nella pagina Eventi. Questo dovrebbe richiedere non più di cinque minuti.</block>
+  <block id="7580bfe7832e708a7a254e231956ba42" category="list-text">Torna all'interfaccia di Workload Factory e vedrai che il collegamento è associato al file system FSx for ONTAP.</block>
+  <block id="a85b3f8e5456d47e8056e0372aeccb2a" category="open-title">Crea manualmente</block>
+  <block id="325013ba9d083d4d579a01c87b58a749" category="paragraph">Puoi creare un collegamento usando due strumenti Infrastructure-as-Code (IaC) di Codebox: CloudFormation o Terraform. Con questa opzione, estrai l'ARN del collegamento da AWS CloudFormation e lo riporti qui. Workload Factory registra manualmente il collegamento per te.</block>
+  <block id="7b8171c19525234afed5066a22d0bdbe" category="list-text">Nella pagina Crea collegamento, seleziona *Crea manualmente* e poi seleziona CloudFormation o Terraform dalla casella di codice.</block>
+  <block id="bf419e3bcb855d67fd85a99f9a55eb97" category="list-text">Nella sezione Dettagli e credenziali, fornisci le seguenti informazioni:</block>
+  <block id="d37d952a78337c053485a61317b953df" category="list-text">*AWS Secrets Manager*: Sempre abilitato per gli account GovCloud. Facoltativo per gli altri account. Consente a NetApp Workload Factory di recuperare le credenziali di accesso FSx for ONTAP dal tuo AWS Secrets Manager.</block>
+  <block id="f3a06ea1d47de2a4216fe3fd53364d24" category="list-text">*Fornito dall'utente*: Seleziona questa opzione per assegnare un ruolo di esecuzione Lambda specifico e le relative policy al collegamento Lambda. Per la policy di autorizzazione Lambda sono necessarie le seguenti autorizzazioni. L'<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> autorizzazione è richiesta solo quando usi AWS Secrets Manager.</block>
+  <block id="1ca9512c09f6b26312a475fda293b54a" category="list-text">*Registrazione del link*: Seleziona CloudFormation o Terraform per le istruzioni su come registrare il link e segui le istruzioni.</block>
+  <block id="1425c9b22ae63851bbaa938ebc0a967d" category="list-text">Dopo che hai creato correttamente lo stack, incolla l'ARN di Lambda nella casella di testo nella console di Workload Factory. Workload Factory recupera automaticamente l'account AWS, la posizione e il gruppo di sicurezza in base al file system FSx for ONTAP.</block>
+  <block id="47dfa5e12270c73140e2f3dc8b32a020" category="paragraph">Workload Factory associa il collegamento al file system FSx for ONTAP. Puoi eseguire operazioni avanzate di ONTAP.</block>
+  <block id="48457d7f94975228307244f863f96fee" category="section-title">Associa un collegamento esistente a un file system Amazon FSx for ONTAP</block>
+  <block id="0b1685216b81bbd8b7a0d6bb09435f98" category="paragraph">Dopo aver creato il collegamento, associalo a uno o più file system FSx for ONTAP.</block>
+  <block id="757a7ffb20a279d7239febb013141ad5" category="list-text">Seleziona il menu <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> e poi seleziona *Archiviazione*.</block>
+  <block id="c9183e42d9edf5bc557a95d0fcd830f8" category="list-text">Dal menu Storage, selezionare *FSx for ONTAP*.</block>
+  <block id="40be05127ecd2439f7ee7256f055873a" category="list-text">Da *FSx per ONTAP*, seleziona il menu delle azioni del file system a cui associare un collegamento e poi seleziona *Associa collegamento*.</block>
+  <block id="447f36846a239be6be0faf7dc1fa0364" category="list-text">Nella pagina di associazione dei collegamenti, seleziona *Associa un collegamento esistente*, seleziona il collegamento e seleziona *Continua*.</block>
+  <block id="5b5b11575f2a0c06c832b5cbd1c6dcfe" category="list-text">Seleziona la modalità di autenticazione.</block>
+  <block id="219e99148dae7112d47eedc1f49517ae" category="list-text">Workload Factory: inserisci la password due volte.</block>
+  <block id="b9000423f3d632810a4d8c3550eb4119" category="list-text">AWS Secrets Manager: inserisci l'ARN del segreto.</block>
+  <block id="64c7a4783273d9e14ea971d0631f7ac8" category="paragraph">Verifica che l'ARN segreto contenga le seguenti coppie chiave-valore, anche se il parametro _filesystemID_ è facoltativo.</block>
+  <block id="1023373ba9dff02b999882804d6dc2ef" category="list-text">filesystemID = FSx_filesystem_id (facoltativo)</block>
+  <block id="508e0beab9fc0c907eb4adcaa7a736f7" category="list-text">utente = FSx_user</block>
+  <block id="db1e2f706f83d7a3a9a03793db05422a" category="list-text">password = password_utente</block>
+  <block id="0dcf8b4e3476c0545950d4d61acb625c" category="admonition">L'autenticazione con AWS Secrets Manager richiede un utente, cioè l'utente _FSx_user_ che fornisci tu oppure un altro utente creato sul file system FSx for ONTAP. L'utente predefinito è<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> se non fornisci un utente.</block>
+  <block id="3179fc8078925ef0503270fd907af44c" category="paragraph">Il collegamento è associato al file system Amazon FSx for ONTAP. Puoi eseguire operazioni avanzate di ONTAP.</block>
+  <block id="eb3eec333eedf15738e12e55e183cdb7" category="paragraph"><block ref="c7c8a4154bf78f63993b7572e6143221" category="inline-link-macro-rx"></block>.</block>
+  <block id="db9a0ca8d6bb6376ddaad7f254b049aa" category="section-title">Risolvi i problemi con l'autenticazione tramite link di AWS Secrets Manager</block>
+  <block id="642facf67e0ad311eee88b3ab8381590" category="list-text">Problema</block>
+  <block id="c8a40767f19af94e9fbb95ab3a4c55c3" category="list-text">Il link non dispone delle autorizzazioni per recuperare il segreto.</block>
+  <block id="4d918e036d58715d6e2919d728c5bea9" category="paragraph">*Soluzione*: Aggiungi le autorizzazioni dopo che il link è attivo. Accedi alla console AWS, individua il link Lambda e modifica la policy di autorizzazione allegata.</block>
+  <block id="61eb4620c8bf60aa233a601b6f63ae77" category="list-text">Il segreto non è stato trovato.</block>
+  <block id="ee67bf640d0b52ba5e821e265b1eacf5" category="paragraph">*Risoluzione*: Fornisci l'ARN segreto corretto.</block>
+  <block id="0733070c151f197e780e335f701571f1" category="list-text">Il segreto non è nel formato giusto.</block>
+  <block id="6ef3be28f69c1735acc5b68f50b352ab" category="paragraph">*Soluzione*: Vai su AWS Secrets Manager e modifica il formato.</block>
+  <block id="669b6152234fe8c12012646b005a7d2f" category="paragraph">Il segreto deve contenere le seguenti coppie chiave-valore:</block>
+  <block id="91a73bc4f293d9fc4712c2770316ae08" category="list-text">filesystemID = FSx_filesystem_id</block>
+  <block id="316509fcb5a8d1b5e1280f3f64c594f2" category="list-text">username = FSx_user</block>
+  <block id="ecc4c534126952c05eb3829106343643" category="list-text">Il segreto non contiene credenziali ONTAP valide per l'autenticazione del file system.</block>
+  <block id="b94462bb135856834e40d9c982dbbc8b" category="paragraph">*Risoluzione*: Fornisci le credenziali che possono autenticare i file system FSx for ONTAP in AWS Secrets Manager.</block>
+  <block id="a1a55503b2e2620707db2868ccc2fe24" category="doc">Ottieni aiuto con NetApp Workload Factory</block>
+  <block id="1d85daa8d058598d6553a1e930e88b37" category="doc">Scopri le dashboard personalizzate in NetApp Workload Factory</block>
+  <block id="4d29eb8c304c032e0b8ec00fb7e0ae46" category="summary">Un collegamento Workload Factory crea una relazione di fiducia e connettività tra un account Workload Factory e uno o più file system FSx for ONTAP.</block>
+  <block id="19ecacf22bc9ac252b9476a0a17ca657" category="doc">Scopri i collegamenti di NetApp Workload Factory</block>
+  <block id="87251eaee5bfd306ceab7bcacfbf47f6" category="paragraph">Un collegamento NetApp Workload Factory crea una relazione di fiducia e connettività tra un account Workload Factory e uno o più file system FSx for ONTAP. Questo ti permette di monitorare e gestire alcune funzionalità del file system direttamente tramite le chiamate REST API di ONTAP che non sono disponibili tramite l'API Amazon FSx for ONTAP.</block>
+  <block id="65050310e57f3790fef3c72eb48d33fe" category="section-title">Perché i link sono utili</block>
+  <block id="8db5475a47ce008ca4a3d502a243007d" category="paragraph">I link sono vantaggiosi perché consentono a Workload Factory di eseguire operazioni che non sono disponibili nativamente tramite l'API Amazon FSx for ONTAP. I link abilitano funzionalità e automazioni avanzate di ONTAP, che migliorano la gestione dei file system FSx for ONTAP.</block>
+  <block id="abca8c391b472ef4e80c6577b5d5eb2a" category="paragraph">Ecco alcuni vantaggi dell'utilizzo dei link:</block>
+  <block id="bf5b08a19bccddd5697b54218eb442dd" category="list-text">Il collegamento consente alla NetApp Console di inviare comandi ONTAP direttamente al tuo file system FSx for ONTAP, portando funzionalità avanzate di ONTAP oltre ciò che AWS offre nativamente.</block>
+  <block id="92d3d2d26bd62a6b2959d23585ef12a2" category="list-text">I link sfruttano AWS Lambda per eseguire codice in risposta agli eventi. Questo approccio serverless elimina la dipendenza da un'istanza in esecuzione nella tua VPC.</block>
+  <block id="87684df341e5a7d9f280a7bdf2048a6e" category="section-title">Come funzionano i link</block>
+  <block id="5abd3a6ae198e27e4c8402463411560f" category="paragraph">I link sfruttano AWS Lambda. Lambda esegue codice in risposta agli eventi e gestisce automaticamente le risorse di calcolo necessarie a tale codice. I link che crei fanno parte del tuo NetApp account e sono associati a un account AWS.</block>
+  <block id="e721a1904dd1a2a54d259deb8d176230" category="paragraph">Dopo aver creato un collegamento, puoi associarlo a uno o più file system FSx for ONTAP. Ogni file system può essere associato solo a un collegamento nello stesso account NetApp. Se hai più account NetApp, un singolo file system può essere associato a ulteriori collegamenti sotto account NetApp diversi.</block>
+  <block id="0d369015d5a60606bb8b6330f6c1030f" category="paragraph">Crei e associ collegamenti dal workload di Storage in Workload Factory.</block>
+  <block id="7869cf138befae7f7af03581af782724" category="paragraph">Puoi autenticare i collegamenti utilizzando le credenziali memorizzate nel servizio credenziali di Workload Factory oppure con le tue credenziali memorizzate in AWS Secrets Manager. Workload Factory non supporta la modifica dei metodi di autenticazione.</block>
+  <block id="81fccfd8b7cc4d87c0978527048afe60" category="paragraph">La connettività dei link per gli account GovCloud è supportata. NetApp Workload Factory utilizza le chiavi di autenticazione GovCloud, consentendo un accesso sicuro e senza agenti a FSx for ONTAP tramite meccanismi approvati GovCloud.</block>
+  <block id="66096c22a6220952b7aef731ef78c167" category="section-title">Costi</block>
+  <block id="2ec62661c871c6dda5bcd49be8cea521" category="paragraph">Ogni transazione eseguita da Lambda comporta un costo. Poiché Lambda funge da proxy tra i due sistemi, viene addebitato un costo quando Lambda invia una richiesta all'API REST di ONTAP su un file system e quando invia la risposta a Workload Factory.</block>
+  <block id="0ab8cd7f04804af6d53be93ef7bd5345" category="inline-link-macro">Scopri di più sui costi relativi all'utilizzo di AWS Lambda</block>
+  <block id="70f0040e444997fbb4beeeae8bd03d34" category="paragraph"><block ref="70f0040e444997fbb4beeeae8bd03d34" category="inline-link-macro-rx"></block></block>
+  <block id="8cd69d367e2dbdfca9ec0b55ba13baec" category="section-title">Quando è richiesto un collegamento</block>
+  <block id="875551355a7b095c8343c772ab9a39cd" category="paragraph">Workload Factory richiede un collegamento per visualizzare alcune informazioni ed eseguire alcune attività. Se provi a eseguire un'operazione che richiede un collegamento e non hai associato un collegamento al file system FSx for ONTAP, Workload Factory ti avvisa che l'operazione richiede un collegamento.</block>
+  <block id="c0653b3ad30a51a0fe3228ad2877ac9d" category="paragraph">Le funzionalità che richiedono un collegamento includono:</block>
+  <block id="d078fe237d087bff0fe3c19efd14fa54" category="list-text">Stato ben architettato delle configurazioni del file system Amazon FSx for ONTAP per la manutenzione proattiva, l'affidabilità e l'ottimizzazione di costi e prestazioni</block>
+  <block id="f1a54b856438e25c87919e1789ae841c" category="list-text">Monitoraggio e allerta degli eventi EMS di ONTAP</block>
+  <block id="c6501747b7c38b1e25460b13a727ec7c" category="list-text">NetApp Autonomous Ransomware Protection (ARP/AI)</block>
+  <block id="489e0dc0c162e1aff5f0f664bf2ea756" category="list-text">Osservabilità olistica migliorata della capacità su tutti i file system FSx for ONTAP</block>
+  <block id="b97b322b8cb0f9b187eb7b966c9ff886" category="list-text">Replica dei dati, gestione e monitoraggio di volumi e storage VM</block>
+  <block id="147d85abf5db68a53249c95e1a68cedb" category="list-text">Provisioning e gestione delle condivisioni SMB/CIFS e delle policy di esportazione NFS</block>
+  <block id="70b71b7616d1607e66f58defc9384bf3" category="list-text">Gestione dei volumi iSCSI su un file system Amazon FSx for ONTAP</block>
+  <block id="0ff428418a3d64cc69a6ee68906a8959" category="list-text">Creazione e gestione di policy di snapshot per SLA di protezione personalizzati</block>
+  <block id="c92f4938531f7fd55dc831a93892d29a" category="list-text">Miglioramenti alla gestione degli inode per la gestione automatica della capacità</block>
+  <block id="3b5c7e283e0b752d51311178d3fa06f1" category="list-text">Crescita automatica del volume per la scalabilità elastica</block>
+  <block id="6cdde78d80d6fbbd8f3706a9bcac599e" category="list-text">Creazione e gestione di cloni, per la clonazione istantanea dei dati sul posto</block>
+  <block id="7cacd07dfdd5c4feadcbf23d19f9972d" category="list-text">Visualizzazione di metriche aggiuntive direttamente da ONTAP, come la versione di ONTAP</block>
+  <block id="f22e542eda471e2702ed07136761fd6c" category="list-text">Visualizzazione dei dettagli LIF di storage VM e cluster, inclusi ruoli, endpoint, nodi, indirizzi IP e stato</block>
+  <block id="30f1ae8a88bc842cdf5e493350ae7eb1" category="inline-link-macro">collega un link a un file system Amazon FSx for ONTAP</block>
+  <block id="f86bb6aab3a49998f4db8fa07a49d81a" category="paragraph">Scopri come <block ref="e658cbfbd30fb261626bc7c82308a713" category="inline-link-macro-rx"></block>.</block>
+  <block id="526aa50fb911c91291e959f7543639b0" category="doc">Gestisci dashboard personalizzate in NetApp Workload Factory</block>
+  <block id="dbc831d32bec483a9698bd8ffbae773b" category="doc">Gestisci le funzionalità di intelligenza artificiale in NetApp Workload Factory</block>
+  <block id="a1212a4e5f083322acc45c56b9938112" category="summary">Puoi visualizzare i link associati al tuo account, aggiornare le password per l'autenticazione tramite link e rimuovere un link in NetApp Workload Factory.</block>
+  <block id="a4d45bf93deed5e773f1c470ea181049" category="doc">Gestisci i collegamenti di NetApp Workload Factory</block>
+  <block id="83dfd07dca3a04ca19cdc3262cb17df4" category="paragraph">Gestisci i collegamenti che hai associato al tuo account Workload Factory. Puoi visualizzare i collegamenti associati a un file system FSx for ONTAP, fornire le password utilizzate per l'autenticazione dei collegamenti e rimuovere i collegamenti dalla console Workload Factory.</block>
+  <block id="2c793b5b15ea565983390f5625f7b85b" category="inline-link-macro">crea e associa un collegamento</block>
+  <block id="d2daf1f2c560c48cb1e86e38214b4f9f" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block> o <block ref="cd9ae14bef62d063a73930ad8837c0cf" category="inline-link-macro-rx"></block>.</block>
+  <block id="e32918056c538c64f6e229f2ca257e25" category="section-title">Visualizza i link associati al tuo account</block>
+  <block id="a8fa4cf9dc4a62f0a1665e1500bbff0a" category="paragraph">Puoi visualizzare i link attualmente associati al tuo account.</block>
+  <block id="2042c96024e7e8a46d1497c843c76da6" category="list-text">Dal menu Archiviazione, seleziona *Amministrazione* e poi *Collegamenti*.</block>
+  <block id="50e87fbed332b782c23eefcd063c29f3" category="paragraph">I link esistenti appaiono nella pagina Link.</block>
+  <block id="c1197fb19ed4c969880f963d9b6df11f" category="list-text">Per visualizzare i file system FSx for ONTAP associati a un collegamento, seleziona il pulsante *Visualizza* nella sezione Risorse associate.</block>
+  <block id="d527a24e3cd3e2df59c9ec57fb8383de" category="inline-image-macro">Uno screenshot che mostra i file system FSx for ONTAP che utilizzano un collegamento specifico.</block>
+  <block id="8153258b50418b6ebcd06d64da06a5bc" category="paragraph"><block ref="8153258b50418b6ebcd06d64da06a5bc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="65ded7963c0209145c9b1f65dff784c8" category="list-text">Se ti serve l'Amazon Resource Name (ARN) per il link, puoi selezionare l'icona _copia_ accanto al campo ARN.</block>
+  <block id="93ebb8d72a0e7c1dd1418d053f7a19cd" category="section-title">Modifica un collegamento</block>
+  <block id="c4aa49062b446a9d4f1b821ea4acbe46" category="paragraph">Non puoi modificare un collegamento dall'interfaccia di Workload Factory. Se hai bisogno di modificare un collegamento, devi crearne uno nuovo e poi associarlo al tuo file system.</block>
+  <block id="191297866068665b2c5ad24b9642279b" category="admonition">Puoi modificare la configurazione di rete di Lambda (ad esempio VPC, subnet e gruppi di sicurezza) tramite la console AWS e le modifiche verranno visualizzate nell'interfaccia utente di gestione dei collegamenti; tuttavia, queste modifiche possono causare problemi di connettività tra Lambda e ONTAP e non sono consigliate.</block>
+  <block id="eee5751928fa32e80cacc3177eabff02" category="section-title">Autentica un collegamento</block>
+  <block id="6ac964feef269db1d25abb9f4ecad2aa" category="paragraph">Fornisci una password utente amministratore per le credenziali di Workload Factory o un ARN del segreto di AWS Secrets Manager per connettere il collegamento a un file system FSx for ONTAP.</block>
+  <block id="696ea928d9d3c6e9a7783d23ab82a78a" category="admonition">È supportato un solo metodo di autenticazione per ogni collegamento. Ad esempio, se selezioni l'autenticazione del collegamento con AWS Secrets Manager, non puoi cambiare il metodo di autenticazione in seguito.</block>
+  <block id="034e373fa9e2dc0b4cbe364fc260fa60" category="list-text">Da *FSx per ONTAP*, seleziona il menu delle azioni del file system a cui vuoi associare un collegamento e poi seleziona *Gestisci*.</block>
+  <block id="baab97c3c06c21b10c5fbf084fed88fe" category="list-text">Nella panoramica del file system, seleziona *Autentica il collegamento*.</block>
+  <block id="6a77bcb0db7f616ab9e6d4b9682fd2e8" category="list-text">Nella pagina del collegamento Autentica, seleziona una modalità di autenticazione:</block>
+  <block id="9bb198b717235f0a6c47edbb623da61b" category="paragraph">Il collegamento è autenticato e puoi eseguire operazioni ONTAP avanzate</block>
+  <block id="5939baecae7dc8288ebfc473986ecb42" category="section-title">Aggiorna la password per l'autenticazione del collegamento</block>
+  <block id="3dbdaf9d78c6e1835c0a6d5d7aaaf3f4" category="paragraph">Quando la password amministrativa non è valida, aggiorna la password per connettere il link al file system FSx for ONTAP.</block>
+  <block id="99210d4bfc7a4ca55c8efe57bb8b88d1" category="list-text">Nella panoramica del file system, seleziona *Aggiorna password*.</block>
+  <block id="f98b1cc9dd042df9aefdcb9f72b86aeb" category="list-text">Nella pagina del collegamento di autenticazione, inserisci la nuova password due volte.</block>
+  <block id="3b9daf2248cf3d9617b236df5c887b99" category="paragraph">La password è stata aggiornata e il collegamento è ora connesso al file system FSx for ONTAP.</block>
+  <block id="d1a880704664676bffdaf8c74ccfdbbc" category="section-title">Rimuovi un collegamento</block>
+  <block id="e39c068b963de97aa76b144b426e273e" category="paragraph">Puoi rimuovere un collegamento che non usi più nel tuo ambiente. Qualsiasi file system FSx for ONTAP o altra risorsa che utilizzava il collegamento non potrà utilizzare alcune funzionalità dopo la rimozione del collegamento.</block>
+  <block id="03fc743c74b7e7511aa1eeb9bf490f14" category="paragraph">Tieni presente che il collegamento viene eliminato solo da Workload Factory, non dal tuo ambiente AWS. Devi eliminare la funzione Lambda dal tuo account AWS dopo aver rimosso il collegamento da Workload Factory.</block>
+  <block id="758ba3729afd23bc4e9b98c419e8ea87" category="list-text">Dalla pagina Collegamenti, seleziona il menu delle azioni del collegamento da rimuovere e poi seleziona *Rimuovi*.</block>
+  <block id="f1ce091ae1a5a535ceceb1b8895c7620" category="inline-image-macro">Uno screenshot che mostra come rimuovere un collegamento da Workload Factory.</block>
+  <block id="8d0a9b10b0feb1fbeb54874e4db30c45" category="paragraph"><block ref="8d0a9b10b0feb1fbeb54874e4db30c45" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="39d7d9e85c32f2e7a66207533ef4a3a9" category="list-text">Se sei sicuro, seleziona di nuovo *Rimuovi*.</block>
+  <block id="0978bfc9ea0b38f88360973d41319547" category="inline-link-macro">elimina la funzione Lambda</block>
+  <block id="0cfc72f205d571b960431be39a5d413e" category="paragraph">Consulta la documentazione AWS per <block ref="00813965c876b66bf6a0f1cc3b46a3b0" category="inline-link-macro-rx"></block>.</block>
+  <block id="c60ba736e69705bedfc77153b72b405e" category="doc">Gestisci gli account di servizio in NetApp Workload Factory</block>
+  <block id="3c126dd82372972cc1e5a7175c65d925" category="doc">Registrati e accedi a NetApp Workload Factory</block>
+  <block id="b9be88fc11ad6670dab2c9b28bfeed84" category="doc">Registra il tuo account Workload Factory per il supporto NetApp</block>
+  <block id="960a198913ac6de1cc9fe9e4aa9a0e5c" category="doc">Risolvi i problemi dei dashboard personalizzati in NetApp Workload Factory</block>
+  <block id="3d60bbe8009e2129f1c2ae00abebc9d9" category="doc">Come NetApp Workload Factory supporta i carichi di lavoro ben strutturati</block>
+  <block id="1b49013170bacd3ac0ed92bfb5d6284d" category="doc">Funzionalità dei carichi di lavoro in NetApp Workload Factory</block>
+  <block id="b238ca7ca122a1ce24711d99c0c8e351" category="list-text">Connettività link Lambda</block>
+  <block id="7a94444038f48da1a655e7bae5941515" category="list-text">Usa la connettività Lambda link per creare una relazione di fiducia e una connessione tra un account NetApp Workload Factory e uno o più file system Amazon FSx for ONTAP. I link ti permettono di monitorare e gestire alcune funzionalità del file system direttamente dalle chiamate API REST di ONTAP che non sono disponibili tramite l'API Amazon FSx for ONTAP.</block>
+  <block id="0c494b9de42ea8fa58a84818a7841933" category="list-text">operazioni di storage EDA</block>
+  <block id="05559796bcff4a2c9baaa60824e2a922" category="list-text">Semplifica le operazioni di archiviazione per l'automazione della progettazione elettronica (EDA) in NetApp Workload Factory ottimizzando le prestazioni, integrandoti con la tua IaC per automatizzare i parametri di archiviazione e garantendo la salute operativa.</block>
+  <block id="d73e9a49c2210d74fef5ec0e42ad4292" category="sidebar">Registrati e accedi a Workload Factory</block>
+  <block id="bd908db5ccb07777ced8023dffc802f4" category="sidebar">Collegamenti</block>
+  <block id="78f8c00f462b0fbe742eab283e3fdf7a" category="sidebar">Scopri i link</block>
+  <block id="c108a5680d95b024bcb3f456683c719c" category="sidebar">Connettiti a un file system tramite un link</block>
+  <block id="fa1a08e2a749c9f330c9a8e60cac9cc3" category="sidebar">Gestisci i collegamenti</block>
 </blocks>

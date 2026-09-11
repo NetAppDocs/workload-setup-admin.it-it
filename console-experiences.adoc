@@ -4,7 +4,7 @@ permalink: console-experiences.html
 keywords: console, consoles, access, saas, Workload Factory, NetApp Workload Factory, NetApp Console 
 summary: NetApp Workload Factory è accessibile tramite due console basate sul Web. 
 ---
-= Esperienze di console
+= Esperienze della console per NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

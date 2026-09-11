@@ -4,7 +4,7 @@ permalink: create-custom-dashboard.html
 keywords: create dashboard, custom dashboard, AI dashboard, dashboard creation, personalized dashboard 
 summary: 'Crea una dashboard personalizzata utilizzando suggerimenti guidati dall"intelligenza artificiale per monitorare ciò che conta di più per i tuoi carichi di lavoro e le tue priorità operative.' 
 ---
-= Crea una dashboard personalizzata
+= Crea una dashboard personalizzata in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
