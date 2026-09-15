@@ -76,4 +76,11 @@ Le funzionalità che richiedono un collegamento includono:
 * Visualizzazione dei dettagli LIF di storage VM e cluster, inclusi ruoli, endpoint, nodi, indirizzi IP e stato
 
 
-Scopri come link:create-link.html["collega un link a un file system Amazon FSx for ONTAP"].
+
+
+[[related-information]]
+== Informazioni correlate
+
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Collega un link a un file system FSx for ONTAP"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/manage-links.html["Gestisci i collegamenti"]
+
