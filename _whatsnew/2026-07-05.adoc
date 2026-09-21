@@ -13,7 +13,7 @@ Descrivi in parole semplici cosa vuoi monitorare e l'AI creerà una dashboard ba
 
 Le dashboard personalizzate sono di sola lettura, quindi non possono modificare le impostazioni di archiviazione o di carico di lavoro. Chiunque nel tuo account Workload Factory può visualizzare e gestire queste dashboard, facilitando la condivisione di informazioni e mantenendo l'allineamento tra i team.
 
-link:learn-custom-dashboards.html["Scopri di più sulle dashboard personalizzate"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/learn-custom-dashboards.html["Scopri di più sulle dashboard personalizzate"]
 
 
 

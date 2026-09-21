@@ -1022,7 +1022,6 @@
   <block id="65c95ed5c9f895be6dfa81e8583c86af" category="list-text">*CloudShell CLI*: Workload Factory include una CloudShell CLI per gestire e utilizzare gli ambienti AWS e NetApp su più account da un'unica CLI basata su browser. Accedi a CloudShell dalla barra superiore della console di Workload Factory.</block>
   <block id="34904d30d825a389b588efb76a1ceb16" category="list-text">*API REST*: utilizza le API REST di Workload Factory per distribuire e gestire i tuoi file system FSx for ONTAP e altre risorse AWS.</block>
   <block id="3995165ba76339d9d4d08edf5a17c07c" category="list-text">*CloudFormation*: utilizza il codice AWS CloudFormation per eseguire le azioni definite nella console Workload Factory per modellare, fornire e gestire risorse AWS e di terze parti dallo stack CloudFormation nel tuo account AWS.</block>
-  <block id="a1b1209dad1b58c4e66fd68ee5bc0148" category="list-text">*Provider Terraform NetApp Workload Factory*: utilizza Terraform per creare e gestire i flussi di lavoro dell'infrastruttura generati nella console Workload Factory.</block>
   <block id="cfcd02bc3ad349605f667b1db0164fe0" category="paragraph">Workload Factory consente di ottimizzare, automatizzare e gestire i file system FSx for ONTAP per carichi di lavoro specifici.  Ogni carico di lavoro espone un'API REST associata.  Nel complesso, questi carichi di lavoro e API formano una piattaforma di sviluppo flessibile ed estensibile che puoi utilizzare per amministrare i tuoi file system FSx for ONTAP .</block>
   <block id="49dac47ef61c863ab22404394b6c84e7" category="paragraph">L'utilizzo delle API REST di Workload Factory offre numerosi vantaggi:</block>
   <block id="b5b61948785c8f81b44871382cf798d9" category="list-text">L'autenticazione di Workload Factory si basa sullo standard OAuth2.  NetApp si basa sull'implementazione del servizio Auth0.</block>
@@ -1364,7 +1363,6 @@
   <block id="4ebed31793305164cd5e1b71336c2244" category="paragraph">Descrivi in parole semplici cosa vuoi monitorare e l'AI creerà una dashboard basata sulla tua richiesta. Ad esempio, puoi monitorare lo stato del disaster recovery, la capacità e i costi nelle diverse regioni, la conformità alla protezione dello storage e altre metriche operative.</block>
   <block id="f2c8c03b6d33f0a06783ce6241b381a6" category="paragraph">Le dashboard personalizzate sono di sola lettura, quindi non possono modificare le impostazioni di archiviazione o di carico di lavoro. Chiunque nel tuo account Workload Factory può visualizzare e gestire queste dashboard, facilitando la condivisione di informazioni e mantenendo l'allineamento tra i team.</block>
   <block id="7f7fdf6329959f984b3ff303ae5ac37f" category="inline-link-macro">Scopri di più sulle dashboard personalizzate</block>
-  <block id="b95d6b8ad9f73321f9cc2385811deedb" category="paragraph"><block ref="b95d6b8ad9f73321f9cc2385811deedb" category="inline-link-macro-rx"></block></block>
   <block id="b8aad264abc6ada71a68a9b5a701a58b" category="summary">Crea una dashboard personalizzata utilizzando suggerimenti guidati dall'intelligenza artificiale per monitorare ciò che conta di più per i tuoi carichi di lavoro e le tue priorità operative.</block>
   <block id="dfc2a77d9b383cd28cba1a1e99f9a378" category="doc">Crea una dashboard personalizzata</block>
   <block id="43d2bb31c641fd8b871b835572bc7441" category="paragraph">Crea dashboard personalizzate descrivendo in modo semplice cosa vuoi monitorare. L'intelligenza artificiale ti guida nella configurazione così le tue dashboard corrispondono ai tuoi carichi di lavoro e alle tue priorità.</block>
@@ -1854,4 +1852,6 @@
   <block id="bf7102668593cd82fd27a66594640387" category="inline-link-macro">Collega un link a un file system FSx for ONTAP</block>
   <block id="f54caf9bcfff2cb7aa30ba073518e7db" category="list-text"><block ref="f54caf9bcfff2cb7aa30ba073518e7db" category="inline-link-macro-rx"></block></block>
   <block id="364f26fd39f55f2137b4749b01da3565" category="list-text"><block ref="364f26fd39f55f2137b4749b01da3565" category="inline-link-macro-rx"></block></block>
+  <block id="dd6c12ecaee3143ccc7a7d85e16032ff" category="paragraph"><block ref="dd6c12ecaee3143ccc7a7d85e16032ff" category="inline-link-macro-rx"></block></block>
+  <block id="06e2f75907573850abfa673fd6e8572a" category="list-text">*NetApp Terraform provider*: Usa Terraform per creare e gestire i workflow di infrastruttura generati nella console di Workload Factory.</block>
 </blocks>
