@@ -1,0 +1,79 @@
+= Agenti AI per Workload Factory
+:allow-uri-read: 
+
+
+
+
+[[ai-agents-for-workload-factory]]
+=== Agenti AI per Workload Factory
+
+Workload Factory AIOps utilizza l'intelligenza artificiale per analizzare il tuo ambiente e consigliare miglioramenti. Se approvi, può anche eseguire azioni utilizzando le credenziali e le autorizzazioni che hai configurato. Gli agenti AI analizzano il tuo ambiente, aiutandoti a individuare i rischi, migliorare i workload e risolvere i problemi in Workload Factory e Slack.
+
+Accedi agli agenti IA nella nuova sezione *Esplora agenti* in Ask Me. Per impostazione predefinita, gli agenti vengono eseguiti in modalità di sola lettura e forniscono raccomandazioni e analisi.
+
+Usa *Impostazioni agenti* per controllare come funzionano gli agenti. Puoi:
+
+* Scegli la modalità di sola lettura o di lettura/scrittura
+* Seleziona le credenziali che gli agenti possono utilizzare
+* Aggiungi istruzioni personalizzate
+* Regola il livello di dettaglio delle risposte
+
+
+Questi controlli aggiuntivi ti offrono maggiore visibilità e supervisione. In modalità di lettura/scrittura, gli agenti devono ottenere la tua approvazione prima di apportare modifiche ad AWS, ONTAP o alle API supportate. Puoi anche scegliere il livello di dettaglio da visualizzare nelle risposte, incluse le informazioni sul ragionamento dell'agente e, in Slack, la sua attività con gli strumenti.
+
+Gli agenti supportano anche ambienti multi-account e semplificano la configurazione. Un singolo agente può operare in modo sicuro su più account AWS utilizzando credenziali diverse.
+
+link:learn-agent.html["Scopri di più sugli agenti di intelligenza artificiale"]
+
+link:manage-agent-settings.html["Gestisci le impostazioni degli agenti"]
+
+
+
+[[scheduled-tasks-in-ask-me]]
+=== Attività programmate in Ask Me
+
+Ora puoi personalizzare un prompt nella chat di Ask Me per creare attività pianificate. Usa le attività pianificate per chiedere ad Ask Me di eseguire controlli ricorrenti e inviare aggiornamenti in chat in base alla pianificazione che definisci.
+
+Esempi di richieste:
+
+* Verifica ogni ora lo stato di salute e il ciclo di vita di tutti i file system FSx for NetApp ONTAP per individuare tempestivamente eventuali problemi.
+* Elenca ogni ora tutti i file system AWS FSx accessibili per mantenere un inventario aggiornato.
+
+
+link:workload-factory-overview.html#features["Scopri di più su Ask Me"]
+
+
+
+[[ontap-support-in-ask-me]]
+=== Supporto ONTAP in Ask Me
+
+Ask Me ora supporta FSx per ONTAP e i sistemi ONTAP on-premises. Usa la stessa esperienza di chat per ottenere risposte e informazioni su tutta la tua infrastruttura ONTAP.
+
+link:workload-factory-overview.html#features["Scopri di più su Ask Me"]
+
+
+
+[[notifications-update]]
+=== Aggiornamento delle notifiche
+
+Le notifiche di NetApp Console sono ora abilitate per impostazione predefinita. Gli utenti di NetApp Console riceveranno automaticamente le notifiche di Workload Factory senza ulteriori configurazioni.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Notifiche di Workload Factory"]
+
+
+
+[[link-creation-notification-email]]
+=== Email di notifica della creazione del collegamento
+
+Workload Factory ora ti ricorda di completare l'associazione del collegamento dopo aver aggiunto correttamente le credenziali. Sebbene le credenziali consentano il rilevamento delle risorse, le funzionalità avanzate di ONTAP richiedono l'associazione del collegamento con i file system rilevati. Riceverai la notifica via e-mail una volta a settimana, il lunedì. Dopo aver completato l'associazione del collegamento, le notifiche si interrompono.
+
+
+
+[[lambda-link-version-notifications-and-upgrade-guidance]]
+=== Notifiche sulla versione di Lambda link e guida all'aggiornamento
+
+Workload Factory ora ti avvisa quando un collegamento Lambda non utilizza l'immagine più recente disponibile. Se gli aggiornamenti automatici non sono supportati per un collegamento, la notifica indica quando è disponibile una versione più recente.
+
+Puoi visualizzare le istruzioni di aggiornamento dalla pagina Collegamenti. Le istruzioni spiegano come aggiornare manualmente l'immagine del collegamento Lambda e abilitare gli aggiornamenti automatici quando sono disponibili. Mantenere i collegamenti aggiornati ti consente di accedere alle funzionalità più recenti, risolvere i problemi noti e applicare gli aggiornamenti di sicurezza più recenti.
+
+Ricevi anche un avviso nella dashboard di FSx per ONTAP quando è disponibile una versione più recente del collegamento per un collegamento che non supporta gli aggiornamenti automatici.

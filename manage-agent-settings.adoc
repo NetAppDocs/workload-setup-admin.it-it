@@ -1,0 +1,141 @@
+---
+sidebar: sidebar 
+permalink: manage-agent-settings.html 
+keywords: agents settings, aiops, agent configuration, ai agent, agent mode, credentials, read-only, read-write, custom prompt, verbose, slack integration 
+summary: Configura le impostazioni degli agenti AI, come la modalità operativa, le autorizzazioni di accesso, le istruzioni personalizzate e i livelli di dettaglio delle risposte, per controllare il modo in cui gli agenti operano nel tuo ambiente Workload Factory. 
+---
+= Gestisci le impostazioni degli agenti AI in NetApp Workload Factory
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Configura il funzionamento degli agenti AI nel tuo ambiente Workload Factory. Puoi scegliere come operano gli agenti, decidere quali credenziali possono utilizzare, aggiungere prompt personalizzati e regolare i livelli di dettaglio delle risposte.
+
+
+
+[[before-you-begin]]
+== Prima di iniziare
+
+* Ti consigliamo di affidare la configurazione delle impostazioni degli agenti a un amministratore dell'account.
+* Prima di abilitare la modalità di lettura/scrittura, assicurati di comprendere i rischi per la sicurezza derivanti dal consentire agli agenti di eseguire azioni per tuo conto.
+
+
+
+NOTE: Se l'amministratore del tuo account ha disattivato le funzionalità di intelligenza artificiale, gli agenti IA non saranno disponibili. link:manage-genai-features.html["Scopri come gestire le funzionalità di intelligenza artificiale"].
+
+
+
+[[access-agents-settings]]
+== Impostazioni degli agenti di accesso
+
+.Fasi
+. Accedi utilizzando uno dei link:console-experiences.html["esperienze di console"^].
+. Accedi alle impostazioni degli agenti utilizzando uno di questi metodi:
++
+** Dal menu, seleziona *Amministrazione*, *Impostazioni* e quindi *Agenti*.
+** Dall'esperienza di chat degli agenti, seleziona il link *Impostazioni agenti*.
+
+
+
+
+
+
+[[set-up-agents-operation-mode]]
+== Configura la modalità operativa degli agenti
+
+Scegli se gli agenti operano in modalità di sola lettura o in modalità di lettura e scrittura.
+
+.A proposito di questa attività
+La modalità operativa degli agenti determina quali azioni gli agenti possono eseguire:
+
+Modalità di sola lettura (predefinita):: Gli agenti possono visualizzare e analizzare i tuoi dati, ma non possono modificare le tue risorse. Possono rispondere alle domande, identificare i rischi, fornire raccomandazioni e aiutarti a risolvere i problemi.
+Modalità di lettura/scrittura:: Gli agenti possono agire per tuo conto utilizzando le credenziali che hai scelto. Prima di intraprendere qualsiasi azione, ti mostreranno un riepilogo e attenderanno la tua approvazione. Non intraprenderanno alcuna azione senza la tua approvazione.
+
+
+.Fasi
+. Dal menu, seleziona *Amministrazione*, *Impostazioni* e quindi *Agenti*.
+. Nella pagina *Impostazioni agenti*, vai alla sezione *Modalità agenti*.
+. Seleziona la modalità operativa.
+. Selezionare *Applica*.
+
+
+
+
+[[select-credentials-for-agents-access]]
+== Seleziona le credenziali per l'accesso degli agenti
+
+Scegli quali credenziali AWS gli agenti possono utilizzare per accedere al tuo ambiente cloud. Per impostazione predefinita, sono selezionate tutte le credenziali, ma puoi ridurle a un sottoinsieme delle credenziali configurate.
+
+.A proposito di questa attività
+Puoi selezionare nessuna, una, alcune o tutte le credenziali configurate. Se non selezioni alcuna credenziale, gli agenti possono rispondere a domande generali ma non possono analizzare le risorse nel tuo ambiente.
+
+.Fasi
+. Nella pagina *Impostazioni degli agenti*, vai alla sezione *Credenziali*.
+. Dal menu a tendina *Nome credenziali*, seleziona le credenziali che gli agenti possono utilizzare.
++
+Se non hai configurato credenziali, vedrai un'opzione per aggiungere credenziali per il tuo account Workload Factory.
+
+. Selezionare *Applica*.
+
+
+
+
+[[slack-integration]]
+== Integrazione con Slack
+
+Puoi collegare gli agenti a Slack e interagire con loro direttamente nel tuo spazio di lavoro Slack.
+
+Per informazioni sulla configurazione dell'integrazione con Slack, consulta la documentazione sull'integrazione con Slack o contatta il tuo referente NetApp per quanto riguarda gli agenti.
+
+
+
+[[add-a-custom-prompt]]
+== Aggiungi un prompt personalizzato
+
+Aggiungi linee guida, preferenze o regole personalizzate che gli agenti devono seguire quando rispondono alle tue richieste.
+
+.A proposito di questa attività
+Un prompt personalizzato aiuta a guidare il modo in cui gli agenti rispondono, in modo che seguano le policy, il linguaggio e i flussi di lavoro della tua organizzazione. Si applica a ogni interazione di ciascun agente.
+
+Il campo del prompt personalizzato è vuoto per impostazione predefinita. Puoi aggiungere, modificare o rimuovere il prompt personalizzato in qualsiasi momento.
+
+.Fasi
+. Nella pagina *Impostazioni agenti*, vai alla sezione *Prompt personalizzato*.
+. Nel campo di testo, inserisci le tue linee guida personalizzate per gli agenti.
++
+Ad esempio, puoi definire regole di denominazione, formati di risposta preferiti o politiche aziendali che gli agenti devono seguire.
+
+. Selezionare *Applica*.
+
+
+.Risultato
+Gli agenti utilizzeranno il tuo prompt personalizzato insieme alle loro funzionalità integrate quando risponderanno alle tue richieste.
+
+Per modificare o rimuovere il messaggio personalizzato, torna a questa pagina, modifica la casella di testo e seleziona *Applica*.
+
+
+
+[[configure-verbosity-options]]
+== Configura le opzioni di verbosità
+
+Scegli quanto dettaglio gli agenti condividono sul loro ragionamento e sull'utilizzo degli strumenti.
+
+.A proposito di questa attività
+Le opzioni di verbosità ti consentono di visualizzare maggiori informazioni su come gli agenti arrivano alle loro risposte e quali strumenti utilizzano per raccogliere informazioni:
+
+Ragionamento prolisso:: Quando questa funzione è abilitata, gli agenti spiegano come giungono alle loro risposte e prendono le loro decisioni. Questo ti aiuta a capire perché raccomandano determinate azioni o arrivano a conclusioni specifiche.
+Dettagli prolissi degli strumenti:: Quando sono abilitati, gli agenti mostrano quali strumenti e API utilizzano per raccogliere dati ed eseguire analisi. Questo ti aiuta a capire come interagiscono con il tuo ambiente.
+
+
+Entrambe le opzioni sono disattivate per impostazione predefinita per mantenere concise le risposte. Attivale quando hai bisogno di maggiore trasparenza o stai risolvendo problemi relativi al comportamento degli agenti.
+
+.Fasi
+. Nella pagina *Impostazioni agenti*, vai alla sezione *Livello di verbosità*.
+. Seleziona le opzioni di verbosità che desideri abilitare.
+. Selezionare *Applica*.
+

@@ -31,11 +31,21 @@ Lifecycle management del database:: Scopri i carichi di lavoro dei database e an
 operazioni di storage EDA:: Semplifica le operazioni di archiviazione per l'automazione della progettazione elettronica (EDA) in NetApp Workload Factory ottimizzando le prestazioni, integrandoti con la tua IaC per automatizzare i parametri di archiviazione e garantendo la salute operativa.
 Calcolatori del risparmio per risparmiare i costi:: Analizza le tue implementazioni attuali che utilizzano lo storage Amazon Elastic Block Store (EBS) o Elastic file System (EFS) o Amazon FSX per Windows file Server, per scoprire quanto denaro puoi risparmiare passando ad Amazon FSX per NetApp ONTAP. È inoltre possibile utilizzare la calcolatrice per eseguire uno scenario "what if" per una distribuzione futura che si sta pianificando.
 Account di servizio per promuovere l'automazione:: Utilizza gli account di servizio per automatizzare le operazioni di NetApp Workload Factory in modo sicuro e affidabile.  Gli account di servizio garantiscono un'automazione affidabile e duratura, senza alcuna restrizione nella gestione degli utenti, e sono più sicuri perché forniscono solo l'accesso API.
-Chiedimi assistente AI:: Poni all'assistente AI domande sulla gestione e l'utilizzo dei file system FSx for ONTAP .  Utilizzando il Model Context Protocol (MCP), Ask Me interagisce in modo sicuro con ambienti esterni e interroga gli strumenti API per fornire risposte personalizzate in base al tuo specifico ambiente di archiviazione.
+Chiedimi assistente AI:: Poni all'assistente AI domande sulla gestione e l'esecuzione di FSx per ONTAP e dei file system ONTAP on-premises. Ask Me si connette in modo sicuro al tuo ambiente e utilizza le API per fornire risposte in base alla tua configurazione di storage.
++
+--
+Esempi di richieste:
+
+* Verifica ogni ora lo stato di salute e il ciclo di vita di tutti i file system FSx for NetApp ONTAP per individuare tempestivamente eventuali problemi.
+* Elenca ogni ora tutti i file system AWS FSx accessibili per mantenere un inventario aggiornato.
+
+
+--
+agenti AI:: Workload Factory AIOps utilizza l'intelligenza artificiale per analizzare il tuo ambiente e consigliare miglioramenti. Se approvi, può anche eseguire azioni utilizzando le credenziali e le autorizzazioni che hai configurato. Gli agenti AI aiutano Ask Me a fornirti informazioni utili utilizzando i tuoi account connessi. Apri la sezione "Explore Agents" in Ask Me per ottenere risposte rapide, identificare rischi e opportunità, risolvere problemi e ricevere consigli. Per impostazione predefinita, gli agenti possono solo visualizzare le informazioni. In modalità read-write, possono eseguire azioni in AWS, ONTAP e nelle API supportate solo dopo la tua approvazione. Puoi anche utilizzare le credenziali di più account AWS, aggiungere prompt personalizzati e scegliere quanto dettaglio includere nelle risposte, compresi il ragionamento e l'attività degli strumenti in Slack. link:learn-agent.html["Scopri gli agenti di intelligenza artificiale"].
 
 
 
-NOTE: Gli amministratori dell'account possono attivare o disattivare le funzionalità di intelligenza artificiale. Se un amministratore le disattiva, l'assistente AI Ask Me non sarà disponibile. link:manage-genai-features.html["Scopri come gestire le funzionalità di intelligenza artificiale"].
+NOTE: Gli amministratori dell'account possono attivare o disattivare le funzionalità AI. Se un amministratore le disattiva, l'assistente Ask Me AI e gli agenti AI non saranno disponibili. link:manage-genai-features.html["Scopri come gestire le funzionalità di intelligenza artificiale"].
 
 
 
