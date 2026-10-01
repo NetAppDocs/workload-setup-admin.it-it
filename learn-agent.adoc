@@ -43,7 +43,7 @@ Gli agenti di intelligenza artificiale ti aiutano a lavorare in modo più effici
 * Individua i rischi e le opportunità di ottimizzazione.
 * Risolvi i problemi e intraprendi le azioni approvate in un unico flusso di lavoro.
 * Esegui controlli programmati e ricevi aggiornamenti nella cronologia chat.
-* Lavora negli ambienti FSx for ONTAP e ONTAP on-premises.
+* Lavora negli ambienti FSx per ONTAP e Google Cloud NetApp Volumes.
 
 
 

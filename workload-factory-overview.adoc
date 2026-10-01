@@ -31,7 +31,7 @@ Lifecycle management del database:: Scopri i carichi di lavoro dei database e an
 operazioni di storage EDA:: Semplifica le operazioni di archiviazione per l'automazione della progettazione elettronica (EDA) in NetApp Workload Factory ottimizzando le prestazioni, integrandoti con la tua IaC per automatizzare i parametri di archiviazione e garantendo la salute operativa.
 Calcolatori del risparmio per risparmiare i costi:: Analizza le tue implementazioni attuali che utilizzano lo storage Amazon Elastic Block Store (EBS) o Elastic file System (EFS) o Amazon FSX per Windows file Server, per scoprire quanto denaro puoi risparmiare passando ad Amazon FSX per NetApp ONTAP. È inoltre possibile utilizzare la calcolatrice per eseguire uno scenario "what if" per una distribuzione futura che si sta pianificando.
 Account di servizio per promuovere l'automazione:: Utilizza gli account di servizio per automatizzare le operazioni di NetApp Workload Factory in modo sicuro e affidabile.  Gli account di servizio garantiscono un'automazione affidabile e duratura, senza alcuna restrizione nella gestione degli utenti, e sono più sicuri perché forniscono solo l'accesso API.
-Chiedimi assistente AI:: Poni all'assistente AI domande sulla gestione e l'esecuzione di FSx per ONTAP e dei file system ONTAP on-premises. Ask Me si connette in modo sicuro al tuo ambiente e utilizza le API per fornire risposte in base alla tua configurazione di storage.
+Chiedimi assistente AI:: Poni all'assistente AI domande sulla gestione e l'esecuzione di FSx per ONTAP e Google Cloud NetApp Volumes. Ask Me si connette in modo sicuro al tuo ambiente e utilizza le API per fornire risposte in base alla tua configurazione dello storage.
 +
 --
 Esempi di richieste:

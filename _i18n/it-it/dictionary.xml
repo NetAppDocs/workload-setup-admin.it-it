@@ -1864,8 +1864,6 @@
   <block id="ff51f1512e81cb44e19946405c4c3751" category="paragraph">Esempi di richieste:</block>
   <block id="9c51276de03bc7f0cc89565810a9583c" category="list-text">Verifica ogni ora lo stato di salute e il ciclo di vita di tutti i file system FSx for NetApp ONTAP per individuare tempestivamente eventuali problemi.</block>
   <block id="7c232a692347d9efae9eafb444b454ef" category="list-text">Elenca ogni ora tutti i file system AWS FSx accessibili per mantenere un inventario aggiornato.</block>
-  <block id="fcc3c37c09c2649e94509997e3e32ace" category="section-title">Supporto ONTAP in Ask Me</block>
-  <block id="5887518ab4bafe0e2cd30ee6d85ca830" category="paragraph">Ask Me ora supporta FSx per ONTAP e i sistemi ONTAP on-premises. Usa la stessa esperienza di chat per ottenere risposte e informazioni su tutta la tua infrastruttura ONTAP.</block>
   <block id="61ac51994f4e558eb3be753f892d08aa" category="section-title">Aggiornamento delle notifiche</block>
   <block id="02796e8ea898eccf4fc1ec43b8c9a990" category="paragraph">Le notifiche di NetApp Console sono ora abilitate per impostazione predefinita. Gli utenti di NetApp Console riceveranno automaticamente le notifiche di Workload Factory senza ulteriori configurazioni.</block>
   <block id="21342e11f90d32dc68b1110fcbb8adc2" category="inline-link-macro">Notifiche di Workload Factory</block>
@@ -1889,7 +1887,6 @@
   <block id="f41dc5b513f7a5678f949fafbb672e71" category="list-text">Individua i rischi e le opportunità di ottimizzazione.</block>
   <block id="45747fdf81b9f650b9ab26706866db24" category="list-text">Risolvi i problemi e intraprendi le azioni approvate in un unico flusso di lavoro.</block>
   <block id="6fd44b1c4edd80ad7b595f1fcb4c7483" category="list-text">Esegui controlli programmati e ricevi aggiornamenti nella cronologia chat.</block>
-  <block id="e974804a88a47e4bcdb4ff1c718951bc" category="list-text">Lavora negli ambienti FSx for ONTAP e ONTAP on-premises.</block>
   <block id="4eeb2bca1dddd7a796d908c266d60075" category="section-title">Accedi agli agenti AI</block>
   <block id="e6478bab5c49062e219e1290c4442eed" category="list-text">Dalla homepage di Ask Me</block>
   <block id="b3c72178808d9fa6e9c876b76d5d1928" category="list-text">Nella landing page di Ask Me, seleziona *Explore Agents*. Si apre il pannello laterale degli agenti AI con un messaggio di benvenuto che illustra le funzionalità degli agenti.</block>
@@ -1966,7 +1963,6 @@
   <block id="5af9190832e86a39b32955d77e972b2e" category="list-text">Seleziona le opzioni di verbosità che desideri abilitare.</block>
   <block id="17f306dd010c4f9182635b5f5e336fa1" category="paragraph">Workload Factory include diverse funzionalità basate sull'intelligenza artificiale che migliorano la tua esperienza, come Ask Me, agenti IA, dashboard personalizzate, costruttore di regole e analizzatori per EMS, log del database e latenza.</block>
   <block id="cbdbc1bacc2d0ff55d93219e225f857a" category="list-text">Disattiva tutte le funzionalità di IA. Gli utenti non possono più usare Ask Me, l'AI Agent, gli analizzatori, le dashboard personalizzate, il costruttore di regole o altri strumenti basati sull'IA.</block>
-  <block id="346e26a9cf03697a4cc5fa74d552d528" category="list-text">Poni all'assistente AI domande sulla gestione e l'esecuzione di FSx per ONTAP e dei file system ONTAP on-premises. Ask Me si connette in modo sicuro al tuo ambiente e utilizza le API per fornire risposte in base alla tua configurazione di storage.</block>
   <block id="c04236280596e42d063458cddb934506" category="list-text">agenti AI</block>
   <block id="3189c2a21a0d40fdf4391d22fec8b33c" category="inline-link-macro">Scopri gli agenti di intelligenza artificiale</block>
   <block id="b91ab34707ef60b3cb9e7b43383594ea" category="list-text">Workload Factory AIOps utilizza l'intelligenza artificiale per analizzare il tuo ambiente e consigliare miglioramenti. Se approvi, può anche eseguire azioni utilizzando le credenziali e le autorizzazioni che hai configurato. Gli agenti AI aiutano Ask Me a fornirti informazioni utili utilizzando i tuoi account connessi. Apri la sezione "Explore Agents" in Ask Me per ottenere risposte rapide, identificare rischi e opportunità, risolvere problemi e ricevere consigli. Per impostazione predefinita, gli agenti possono solo visualizzare le informazioni. In modalità read-write, possono eseguire azioni in AWS, ONTAP e nelle API supportate solo dopo la tua approvazione. Puoi anche utilizzare le credenziali di più account AWS, aggiungere prompt personalizzati e scegliere quanto dettaglio includere nelle risposte, compresi il ragionamento e l'attività degli strumenti in Slack. <block ref="4688d09efacd50ccc7831795bcbb59e1" category="inline-link-macro-rx"></block>.</block>
@@ -1977,4 +1973,8 @@
   <block id="92ef509d26c2f4b8f1eafc483dafc514" category="paragraph"><block ref="92ef509d26c2f4b8f1eafc483dafc514" category="inline-link-macro-rx"></block></block>
   <block id="ff60e6cb69fa35fc765fb6716dc86a1d" category="paragraph"><block ref="ff60e6cb69fa35fc765fb6716dc86a1d" category="inline-link-macro-rx"></block></block>
   <block id="5ff6cb415ca5edb6088a3bb92aadbf41" category="list-text">*Notifiche via e-mail*: Per ricevere notifiche via e-mail, configura i destinatari delle notifiche e le preferenze di gravità nelle <block ref="7532dfde8c533672ea63a5b546224a97" category="inline-link-macro-rx"></block> impostazioni di notifica.</block>
+  <block id="d757afa220ac7f97f408903182fddee2" category="section-title">Supporto per lo storage in Ask Me</block>
+  <block id="541644294bd888a59c4f26e19102bfb2" category="paragraph">Ask Me ora supporta FSx per ONTAP e Google Cloud NetApp Volumes. Usa la stessa esperienza di chat per ottenere risposte e approfondimenti in tutti gli ambienti di storage supportati.</block>
+  <block id="54ba8fb885319acf274731794ecf9b35" category="list-text">Lavora negli ambienti FSx per ONTAP e Google Cloud NetApp Volumes.</block>
+  <block id="3ddb8c8ba0ebed85a3c1d3ddf7cc424c" category="list-text">Poni all'assistente AI domande sulla gestione e l'esecuzione di FSx per ONTAP e Google Cloud NetApp Volumes. Ask Me si connette in modo sicuro al tuo ambiente e utilizza le API per fornire risposte in base alla tua configurazione dello storage.</block>
 </blocks>
