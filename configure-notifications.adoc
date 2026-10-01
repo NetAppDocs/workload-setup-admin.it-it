@@ -77,7 +77,7 @@ Dopo aver creato l'argomento, copia l'ARN dell'argomento e inseriscilo nel campo
 . Accedi allink:https://console.workloads.netapp.com["Console Workload Factory"^] .
 . Dal menu della console Workload Factory, seleziona *Carichi di lavoro*, *Amministrazione* e quindi *Impostazione notifiche*.
 +
-** *Notifiche via e-mail*: Per ricevere notifiche via e-mail, configura i destinatari delle notifiche e le preferenze di gravità nelle link:link:https://console.netapp.com["Console NetApp"^] impostazioni di notifica.
+** *Notifiche via e-mail*: Per ricevere notifiche via e-mail, configura i destinatari delle notifiche e le preferenze di gravità nelle link:https://console.netapp.com["Console NetApp"^] impostazioni di notifica.
 ** *Notifiche Amazon SNS*: Seleziona *Abilita notifiche SNS*, quindi segui le istruzioni per configurare Amazon SNS dalla console Amazon SNS.
 +
 Dopo aver verificato la configurazione inviando una notifica di prova, seleziona *Applica*.
