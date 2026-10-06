@@ -18,7 +18,7 @@ Le dashboard personalizzate utilizzano l'intelligenza artificiale per creare vis
 Tutti gli utenti del tuo account Workload Factory possono visualizzare tutte le dashboard personalizzate. Questa configurazione condivisa aiuta i team a collaborare e a vedere le stesse informazioni operative in tutta l'organizzazione.
 
 
-NOTE: Se l'amministratore del tuo account ha disattivato le funzionalità di intelligenza artificiale, visualizzerai un messaggio e non potrai creare dashboard. Contatta il tuo amministratore o link:manage-genai-features.html["Scopri come amministrare l'AI"].
+NOTE: Se l'amministratore del tuo account ha disattivato le funzionalità di intelligenza artificiale, visualizzerai un messaggio e non potrai creare o modificare dashboard. Contatta il tuo amministratore o link:manage-genai-features.html["Scopri come amministrare l'AI"].
 
 
 
@@ -46,6 +46,11 @@ Durante la configurazione, la finestra di dialogo guidata dall'IA ti aiuta a def
 * Visualizzazioni per regione, carico di lavoro o altre categorie
 * Regole o requisiti che devi monitorare e mostrare
 
+
+Puoi modificare le dashboard dal catalogo e aggiornare il nome, la descrizione, la categoria o la richiesta di monitoraggio della dashboard prima di decidere se salvare la versione modificata.
+
+
+NOTE: Solo chi ha creato la dashboard può modificarla. Durante la modifica, gli altri utenti non potranno visualizzare le modifiche finché non le salverai.
 
 
 

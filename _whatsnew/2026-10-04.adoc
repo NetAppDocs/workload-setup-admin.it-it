@@ -1,0 +1,28 @@
+= Aggiornamenti della dashboard personalizzata
+:allow-uri-read: 
+
+
+
+
+[[custom-dashboard-updates]]
+=== Aggiornamenti della dashboard personalizzata
+
+Le dashboard personalizzate ora semplificano la gestione del tuo lavoro.
+
+Puoi modificare le dashboard direttamente dal catalogo, incluse metriche, grafici e intervalli di tempo.
+
+Quando modifichi una dashboard, Workload Factory riapre la chat con le tue richieste e i tuoi messaggi precedenti. Puoi quindi aggiornare la dashboard, salvare le modifiche o ripristinare la versione precedente.
+
+Solo chi ha creato la dashboard può modificarla. Durante la modifica, gli altri utenti non potranno visualizzare le modifiche finché non le salverai.
+
+Il catalogo delle dashboard ora include più filtri per aiutarti a trovare rapidamente le dashboard in base alla categoria e allo stato.
+
+Se il tuo amministratore disabilita le funzionalità di AI o viene raggiunto il limite di credito mensile, non puoi più creare o modificare le dashboard.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/learn-custom-dashboards.html["Scopri le dashboard personalizzate"]
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-custom-dashboard.html["Crea una dashboard personalizzata"]
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-custom-dashboards.html["Gestisci dashboard personalizzate"]
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/troubleshoot-custom-dashboards.html["Risolvi i problemi delle dashboard personalizzate"]

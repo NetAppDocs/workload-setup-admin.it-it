@@ -59,6 +59,7 @@ Dopo la creazione, puoi:
 
 * Modifica la visibilità del dashboard per condividerlo con il tuo team
 * Aggiorna i dati del pannello di controllo per vedere le informazioni più recenti
+* Modifica le dashboard per cambiare ciò che mostrano, incluse metriche, grafici e intervalli di tempo
 * Elimina le dashboard che non ti servono più
 * Visualizza i dettagli della dashboard, inclusi chi l'ha creata e quando è stata aggiornata l'ultima volta
 

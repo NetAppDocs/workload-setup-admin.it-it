@@ -1433,15 +1433,6 @@
   <block id="dffad8b6380340c5079727deb13bb3f2" category="list-text">Esamina l'elenco del dashboard.</block>
   <block id="9e3f16aef1d22400bdae48c5cb77b00f" category="section-title">Aggiorna i dati della dashboard</block>
   <block id="4e424a1ad37782627141d4d50f79b586" category="paragraph">I dati del dashboard vengono caricati quando apri il dashboard. Puoi aggiornarlo per vedere le informazioni più recenti.</block>
-  <block id="6835e72df37e141c78401ea8d4bfcf90" category="paragraph">La dashboard ricarica i dati dai tuoi carichi di lavoro. L'ora dell'ultimo aggiornamento cambia per indicare quando i dati sono stati aggiornati.</block>
-  <block id="74ee9feffcb1603b7eeb47c099c0e5a5" category="section-title">Elimina una dashboard</block>
-  <block id="e54360b7371199d6607f76cd1ae6ad17" category="paragraph">Elimina le dashboard che non ti servono più. Questa operazione è permanente e non può essere annullata.</block>
-  <block id="3325f3a5c13a73bb87ed2dabebb0b6a3" category="list-text">Nella pagina *Custom dashboards*, individua la dashboard che desideri rimuovere.</block>
-  <block id="0ce6306187e44bdf505a14f5d0676bb6" category="list-text">Dal menu a tendina *Azioni* di quella dashboard, seleziona *Elimina*.</block>
-  <block id="b26a5fa549c938ffb56d20623c3f69c0" category="list-text">Conferma l'eliminazione.</block>
-  <block id="22e8351c82677bcc78bd23d6fb170bc8" category="paragraph">La dashboard viene rimossa definitivamente dal tuo account Workload Factory e tutti gli utenti perdono l'accesso ad essa.</block>
-  <block id="9537d9160ef701530bdd875698475957" category="inline-link-macro">Crea dashboard personalizzate aggiuntive</block>
-  <block id="1258b44f1520a3cf10d648fb08dbf72e" category="list-text"><block ref="1258b44f1520a3cf10d648fb08dbf72e" category="inline-link-macro-rx"></block></block>
   <block id="0c5896a9e6c8d2cff1b4d007852b1732" category="paragraph">Usa queste informazioni per risolvere i problemi comuni che potresti incontrare quando crei o usi dashboard personalizzate.</block>
   <block id="2e00365fe32c89b1fd1ad214f291ca85" category="section-title">Creazione dashboard non riuscita</block>
   <block id="09a8c59ab236b488dde6ce993a012c63" category="paragraph">**Problema:** Vedi il messaggio di errore "Impossibile comprendere la richiesta e generare il codice" quando crei una dashboard.</block>
@@ -1977,4 +1968,28 @@
   <block id="541644294bd888a59c4f26e19102bfb2" category="paragraph">Ask Me ora supporta FSx per ONTAP e Google Cloud NetApp Volumes. Usa la stessa esperienza di chat per ottenere risposte e approfondimenti in tutti gli ambienti di storage supportati.</block>
   <block id="54ba8fb885319acf274731794ecf9b35" category="list-text">Lavora negli ambienti FSx per ONTAP e Google Cloud NetApp Volumes.</block>
   <block id="3ddb8c8ba0ebed85a3c1d3ddf7cc424c" category="list-text">Poni all'assistente AI domande sulla gestione e l'esecuzione di FSx per ONTAP e Google Cloud NetApp Volumes. Ask Me si connette in modo sicuro al tuo ambiente e utilizza le API per fornire risposte in base alla tua configurazione dello storage.</block>
+  <block id="77c39d029270c567ae2816d2c688ea3b" category="doc">Aggiornamenti della dashboard personalizzata</block>
+  <block id="b4a3fedd52cfe46140994157b6fa12ec" category="paragraph">Le dashboard personalizzate ora semplificano la gestione del tuo lavoro.</block>
+  <block id="5d95426dd9834d03b33e051ae7f9fb5c" category="paragraph">Puoi modificare le dashboard direttamente dal catalogo, incluse metriche, grafici e intervalli di tempo.</block>
+  <block id="e57137dc0ab44a9b0797700e3e8c851c" category="paragraph">Quando modifichi una dashboard, Workload Factory riapre la chat con le tue richieste e i tuoi messaggi precedenti. Puoi quindi aggiornare la dashboard, salvare le modifiche o ripristinare la versione precedente.</block>
+  <block id="8f44990f66d79c05eb2b8e612e7e18b5" category="paragraph">Solo chi ha creato la dashboard può modificarla. Durante la modifica, gli altri utenti non potranno visualizzare le modifiche finché non le salverai.</block>
+  <block id="14dd0ad1c8f18e92cbbc77ecf3a2645b" category="paragraph">Il catalogo delle dashboard ora include più filtri per aiutarti a trovare rapidamente le dashboard in base alla categoria e allo stato.</block>
+  <block id="fb1ecdb5253f537a735a53d5e9e2eba6" category="paragraph">Se il tuo amministratore disabilita le funzionalità di AI o viene raggiunto il limite di credito mensile, non puoi più creare o modificare le dashboard.</block>
+  <block id="f736e966e4394f88a05cee94fdba57ff" category="paragraph"><block ref="f736e966e4394f88a05cee94fdba57ff" category="inline-link-macro-rx"></block></block>
+  <block id="e703f5c9737234e07b6d50b473d03d31" category="paragraph"><block ref="e703f5c9737234e07b6d50b473d03d31" category="inline-link-macro-rx"></block></block>
+  <block id="a6624b6c8238a8d2fecbcab00748683a" category="paragraph"><block ref="a6624b6c8238a8d2fecbcab00748683a" category="inline-link-macro-rx"></block></block>
+  <block id="6690aacdf8125a25e4539caa3239e86f" category="paragraph"><block ref="6690aacdf8125a25e4539caa3239e86f" category="inline-link-macro-rx"></block></block>
+  <block id="b2174789d5314bb12b464a8d03a18be6" category="list-text">Modifica le dashboard per cambiare ciò che mostrano, incluse metriche, grafici e intervalli di tempo</block>
+  <block id="0d4c6d4cadfc35e450177a6f124a12ce" category="admonition">Se l'amministratore del tuo account ha disattivato le funzionalità di intelligenza artificiale, visualizzerai un messaggio e non potrai creare o modificare dashboard. Contatta il tuo amministratore o <block ref="51cc9b1bceb3cdf8e5a226d8fb6d37eb" category="inline-link-macro-rx"></block>.</block>
+  <block id="3dacf374ca39e9d1e2ccd73b21e8d75a" category="paragraph">Puoi modificare le dashboard dal catalogo e aggiornare il nome, la descrizione, la categoria o la richiesta di monitoraggio della dashboard prima di decidere se salvare la versione modificata.</block>
+  <block id="09716803bbab78d4545cc7210ae61d90" category="paragraph">La dashboard ricarica i dati dai tuoi carichi di lavoro.</block>
+  <block id="d2258a9653c6a977efeeb955b27c66e9" category="section-title">Modifica dashboard</block>
+  <block id="4e2f12e496523d85bae4a969657d45aa" category="paragraph">Puoi modificare una dashboard per cambiare ciò che mostra, incluse le metriche, i grafici e gli intervalli di tempo.</block>
+  <block id="b13bad0dcb6df4e403e8e2af9058dfe5" category="list-text">Nella pagina *Dashboard personalizzate*, individua la dashboard che vuoi modificare.</block>
+  <block id="d431f68c965a7131bbc2f48128983c25" category="list-text">Dal menu *Azioni* per quella dashboard, seleziona *Modifica dashboard*.</block>
+  <block id="63f40ecf20824ff6d561a306d3a25fd1" category="list-text">Nella finestra di dialogo dell'IA, descrivi le modifiche che desideri apportare.</block>
+  <block id="3184c7e78934ef4b37ea845f1d56789a" category="paragraph">Questo processo è simile alla creazione di una nuova dashboard. Puoi modificare i carichi di lavoro, le metriche o gli intervalli di tempo che la dashboard tiene traccia.</block>
+  <block id="f66306510aaf399aef8bdf649739a15e" category="list-text">Rivedi le modifiche e seleziona **Salva**.</block>
+  <block id="89806ea6a9ed9b0bb6cb322f912aff65" category="paragraph">La dashboard si aggiorna con le tue modifiche. Anche la data dell'ultima modifica si aggiorna.</block>
+  <block id="6cd19393862a5a23e39bb63b43a86baa" category="section-title">04 ottobre 2026</block>
 </blocks>
