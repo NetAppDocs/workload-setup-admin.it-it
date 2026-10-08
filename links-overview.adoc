@@ -74,6 +74,7 @@ Le funzionalità che richiedono un collegamento includono:
 * Creazione e gestione di cloni, per la clonazione istantanea dei dati sul posto
 * Visualizzazione di metriche aggiuntive direttamente da ONTAP, come la versione di ONTAP
 * Visualizzazione dei dettagli LIF di storage VM e cluster, inclusi ruoli, endpoint, nodi, indirizzi IP e stato
+* Scomposizione dei componenti per gli eventi di latenza
 
 
 
