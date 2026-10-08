@@ -86,3 +86,28 @@ Questo processo è simile alla creazione di una nuova dashboard. Puoi modificare
 
 .Risultato
 La dashboard si aggiorna con le tue modifiche. Anche la data dell'ultima modifica si aggiorna.
+
+
+
+[[delete-a-dashboard]]
+== Elimina una dashboard
+
+Elimina le dashboard che non ti servono più. Questa operazione è permanente e non può essere annullata.
+
+.Fasi
+. Nella pagina *Custom dashboards*, individua la dashboard che desideri rimuovere.
+. Dal menu a tendina *Azioni* di quella dashboard, seleziona *Elimina*.
+. Conferma l'eliminazione.
+
+
+.Risultato
+La dashboard viene rimossa definitivamente dal tuo account Workload Factory e tutti gli utenti perdono l'accesso ad essa.
+
+
+
+[[related-information]]
+== Informazioni correlate
+
+* link:create-custom-dashboard.html["Crea dashboard personalizzate aggiuntive"]
+* link:troubleshoot-custom-dashboards.html["Risolvi i problemi delle dashboard personalizzate"]
+
