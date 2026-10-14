@@ -15,6 +15,24 @@ Scopri le novità relative alle funzionalità di amministrazione di Workload Fac
 
 
 
+[[14-october-2026]]
+== 14 ottobre 2026
+
+
+
+[[use-your-own-amazon-bedrock-instance-for-ai-tools]]
+=== Usa la tua istanza Amazon Bedrock per gli strumenti di AI
+
+Workload Factory ora include un'ulteriore opzione nella pagina delle impostazioni AI che consente ai clienti di utilizzare la propria istanza Amazon Bedrock.
+
+Questa opzione è disponibile in Bedrock gestito dal cliente per gli strumenti di AI ed è supportata da tutti i servizi di AI di Workload Factory.
+
+Dopo la connessione, Workload Factory ti comunica se la connessione è andata a buon fine.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Scopri come gestire le funzionalità di intelligenza artificiale"]
+
+
+
 [[04-october-2026]]
 == 04 ottobre 2026
 
