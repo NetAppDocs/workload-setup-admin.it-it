@@ -1,0 +1,256 @@
+---
+sidebar: sidebar 
+permalink: faq-workload-factory.html 
+keywords: faq, frequently asked questions, frequently asked questions about workload factory, setup, administration, credentials, permissions, links, codebox, cloudshell, notifications, service accounts, ai features, custom dashboards, fsx for ontap 
+summary: Trova le risposte alle domande più frequenti sugli account di Workload Factory, le credenziali, le autorizzazioni, Links, Codebox, CloudShell, le notifiche, gli account di servizio e le funzionalità AI. 
+---
+= Domande frequenti su configurazione e amministrazione di NetApp Workload Factory
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando configuri e amministri NetApp Workload Factory, è probabile che tu abbia domande comuni su concetti, terminologia, comportamento e vincoli relativi al tuo account, alle credenziali, ai Links e agli strumenti di automazione.
+
+
+
+[[overview-and-costs]]
+== Panoramica e costi
+
+.Cos'è Workload Factory e quanto costa?
+Workload Factory è una piattaforma di gestione del ciclo di vita per ottimizzare i carichi di lavoro, come database, migrazioni VMware e progetti EDA, che vengono eseguiti su file system FSx for ONTAP. L'uso di Workload Factory è gratuito. Paghi AWS per i servizi che implementi, come i file system FSx for ONTAP, l'infrastruttura VMware Cloud on AWS e altri servizi AWS.
+
+link:workload-factory-overview.html["Scopri di più su Workload Factory"].
+
+.In quali regioni AWS è disponibile Workload Factory?
+Workload Factory funziona in tutte le regioni commerciali in cui è supportato FSx for ONTAP, ma non nelle regioni della Cina, Secret Cloud o Top Secret Cloud.
+
+https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Visualizza le regioni AWS supportate."^]
+
+
+
+[[accounts-and-sign-in]]
+== Account e accesso
+
+.Qual è la differenza tra la Workload Factory console e la NetApp Console?
+Entrambe sono console basate sul web che ti consentono di accedere a Workload Factory. La NetApp Console offre un'esperienza ibrida in cui gestisci file system e workload di FSx for ONTAP in un unico posto insieme ad altri servizi dati. La console di Workload Factory è un'esperienza dedicata incentrata sui workload in esecuzione su FSx for ONTAP.
+
+link:console-experiences.html["Decidi quale console usare"].
+
+.Come faccio a registrarmi e cosa succede quando creo il mio primo account?
+Registrati con le tue credenziali del Support Site (NSS) di NetApp o crea un login cloud di NetApp. Per un login cloud, devi verificare il tuo indirizzo email prima di poter accedere. Al primo accesso, crei un account che organizza le tue risorse, i carichi di lavoro e le credenziali, e diventi l'amministratore dell'account con accesso a tutte le funzionalità di Workload Factory. Se usi già NetApp Console, fai già parte di un account perché Workload Factory usa gli account NetApp.
+
+link:sign-up-and-log-in.html["Registrati e accedi"].
+
+.Devo creare il mio account come account AWS GovCloud (US) e posso modificarlo in seguito?
+Seleziona l'opzione GovCloud (US) se hai bisogno di un account che utilizzi solo endpoint e regioni GovCloud (US), con credenziali e segreti che restano in GovCloud. Questa selezione è permanente. Gli account GovCloud devono aggiungere le credenziali e creare i Links manualmente.
+
+.Come faccio a invitare altri utenti al mio account Workload Factory?
+Puoi gestire il tuo account solo dalla NetApp Console. L'amministratore dell'account aggiunge i membri da lì e l'utente invitato riceve un'e-mail con le istruzioni per unirsi.
+
+link:sign-up-and-log-in.html["Invita altri utenti al tuo account"].
+
+
+
+[[credentials-and-permissions]]
+== Credenziali e permessi
+
+.Devo aggiungere le credenziali AWS per utilizzare Workload Factory?
+L'aggiunta delle credenziali è facoltativa per iniziare, quindi puoi usare Workload Factory senza accedere al tuo account AWS. Tuttavia, per creare e gestire i file system FSx for ONTAP e per distribuire e gestire carichi di lavoro come i database, Workload Factory richiede le credenziali.
+
+* link:quick-start.html["Inizia a usare Workload Factory"].
+* link:add-credentials.html["Aggiungi credenziali"].
+
+
+.Come funzionano le credenziali di Workload Factory?
+Le credenziali usano un flusso AWS AssumeRole. Ogni set di credenziali è composto da una o più policy IAM, in base alle funzionalità del carico di lavoro e ai livelli di autorizzazione che selezioni, e da un ruolo IAM che Workload Factory assume. Puoi aggiungere altre funzionalità in qualsiasi momento.
+
+link:add-credentials.html["Aggiungi credenziali"].
+
+.Devo aggiungere le credenziali manualmente o tramite CloudFormation?
+Con il metodo manuale, crei le policy IAM e il ruolo IAM nella AWS Management Console, copiando il JSON della policy da Codebox. Con il metodo automatico, selezioni le funzionalità e uno stack CloudFormation crea le policy IAM e il ruolo IAM per te. Le credenziali GovCloud (US) devono essere aggiunte manualmente, perché CloudFormation non è supportato lì.
+
+link:add-credentials.html["Aggiungi credenziali"].
+
+.Quali livelli di autorizzazione posso scegliere e come decido quale concedere?
+Le policy di autorizzazione sono raggruppate per carico di lavoro. Per Storage, le opzioni sono *Visualizzazione, pianificazione e analisi*, *Operazioni e correzione* e *Creazione ed eliminazione del file system*. I carichi di lavoro di database offrono *Visualizzazione, pianificazione e analisi*, *Operazioni e correzione* e *Creazione dell'host del database*. Le policy ti consentono di assegnare livelli di attendibilità incrementali in base alle tue policy IT. Seleziona solo le funzionalità che prevedi di usare ora.
+
+link:permissions-reference.html["Riferimento autorizzazioni"].
+
+.A cosa serve il controllo automatico delle autorizzazioni e devo lasciarlo attivo?
+Selezionando *Abilita il controllo automatico delle autorizzazioni*, Workload Factory aggiunge `iam:SimulatePrincipalPolicy` alle tue policy di autorizzazione la verifica che tu disponga delle autorizzazioni AWS necessarie prima di completare le operazioni. Puoi rimuoverla dopo aver aggiunto le credenziali, ma è consigliabile mantenerla. Impedisce la creazione di risorse in caso di operazioni riuscite solo parzialmente e ti evita la pulizia manuale delle risorse.
+
+link:add-credentials.html["Abilita il controllo automatico delle autorizzazioni quando aggiungi le credenziali"].
+
+.Posso eliminare le credenziali che non mi servono più?
+Puoi eliminare le credenziali solo se non sono associate a un file system FSx for ONTAP. Usa *Rimuovi* nella console di Workload Factory o *Elimina* nella NetApp Console.
+
+link:manage-credentials.html["Rimuovere le credenziali"].
+
+
+
+[[links]]
+== Collegamenti
+
+.Cos'è un Link e ne ho bisogno?
+Un Link crea una relazione di fiducia e connettività tra un account Workload Factory e uno o più file system FSx for ONTAP. I Link usano AWS Lambda per consentirti di monitorare e gestire le funzionalità tramite chiamate ONTAP REST API che l'API di Amazon FSx for ONTAP non fornisce. Non ti serve un Link per iniziare, ma te ne serve uno per sbloccare tutte le funzionalità di Workload Factory.
+
+link:links-overview.html["Scopri di più sui collegamenti"].
+
+.Quali funzionalità richiedono un Link?
+Le funzionalità che richiedono un Link includono:
+
+* Stato di architettura ottimale per FSx for ONTAP
+* Monitoraggio degli eventi EMS di ONTAP
+* Autonomous Ransomware Protection with AI (ARP/AI)
+* Replica di volumi e VM di storage
+* Condivisioni SMB/CIFS e criteri di esportazione NFS
+* Gestione dei volumi iSCSI
+* Policy di Snapshot
+* Espansione automatica del volume e gestione degli inode
+* Creazione del clone
+* Ulteriori metriche ONTAP e dettagli LIF
+
+
+Se provi un'operazione che richiede un Link e non ne è associato alcuno, Workload Factory te lo segnala. Consulta link:links-overview.html["Scopri di più sui collegamenti"].
+
+.Links comportano costi aggiuntivi?
+Sì. Ogni transazione Lambda comporta un addebito da parte di AWS. Poiché Lambda funge da proxy, paghi quando invia una richiesta all'API REST di ONTAP su un file system e di nuovo quando invia la risposta a Workload Factory.
+
+link:links-overview.html["Scopri di più sui collegamenti"].
+
+.Puoi associare un file system a più di un collegamento?
+Un Link può essere associato a molti file system FSx for ONTAP. Ogni file system può essere associato a un solo Link nello stesso account NetApp. Se hai più account NetApp, un file system può essere associato a Link aggiuntivi in account diversi. Vedi link:links-overview.html["Scopri di più sui collegamenti"].
+
+.Devi creare un Link automaticamente o manualmente?
+La creazione automatica registra il Link tramite Workload Factory, ma utilizza token per l'automazione di Workload Factory e il relativo codice CloudFormation può essere utilizzato solo per un massimo di sei ore. La creazione manuale utilizza CloudFormation o Terraform da Codebox e il codice persiste. Questo è utile quando team come quelli di Sicurezza e DevOps devono prima concedere le autorizzazioni. Gli account GovCloud devono creare i Link manualmente.
+
+link:create-link.html["Crea un collegamento"].
+
+.Di cosa ho bisogno prima di creare un Link?
+Hai bisogno che le porte richieste siano aperte nel gruppo di sicurezza del file system, che Link possa raggiungere  `\https://api.workloads.netapp.com` e di autorizzazioni AWS sufficienti per creare stack CloudFormation.
+
+link:create-link.html["Scopri l'elenco completo dei prerequisiti per creare un Link"].
+
+.Posso modificare le modalità di autenticazione di un Link o modificarlo dopo la sua creazione?
+No. Un Link supporta un solo metodo di autenticazione, ovvero le credenziali di Workload Factory o AWS Secrets Manager, e non puoi modificarlo in seguito.
+
+Non puoi modificare un Link nell'interfaccia. Per cambiarne uno, crea un nuovo Link e associalo al file system. Non ti consigliamo di modificare la configurazione di rete di Lambda in AWS, perché potrebbe causare problemi di connettività.
+
+link:manage-links.html["Gestisci i collegamenti"].
+
+.Cosa succede quando rimuovo un Link?
+I file system e le altre risorse che utilizzavano il Link non possono più utilizzare funzionalità che dipendono da esso. Il Link viene eliminato solo da Workload Factory, non da AWS, quindi devi eliminare anche la funzione Lambda nel tuo account AWS.
+
+link:manage-links.html["Rimuovi un collegamento"].
+
+
+
+[[codebox]]
+== Codebox
+
+.Cos'è Codebox e quali formati di codice genera?
+Codebox è un copilota per l'Infrastructure as Code che genera il codice per eseguire qualsiasi operazione supportata da Workload Factory. Supporta le API REST di Workload Factory, AWS CLI, AWS CloudFormation e Terraform. Codebox Viewer mostra il codice generato dalle voci inserite nella procedura guidata e Automation Catalog archivia i job salvati come modelli riutilizzabili.
+
+link:codebox-automation.html["Ulteriori informazioni su Codebox"].
+
+.Posso modificare il codice in Codebox e il codice generato scade?
+Codebox Viewer è di sola lettura. Puoi solo copiare il codice, salvarlo in Automation Catalog o scaricarlo per alcuni formati. Puoi modificare il codice scaricato per adattarlo ad altri account AWS. CloudFormation Il codice YAML scade dopo sette giorni per motivi di sicurezza.
+
+link:use-codebox.html["Usa Codebox"].
+
+
+
+[[cloudshell]]
+== CloudShell
+
+.Cosa posso fare in CloudShell e quali sono i suoi limiti?
+CloudShell esegue i comandi AWS CLI e ONTAP CLI in una shell basata su browser, tramite proxy attraverso il backend di Workload Factory, utilizzando le credenziali AWS e ONTAP che hai fornito. Richiede almeno una credenziale AWS. Gli operatori della shell come pipe `|`, background `&` e redirection `>` non sono supportati e i comandi che li includono non vanno a buon fine. I comandi AWS riescono solo se le credenziali selezionate dispongono delle autorizzazioni nella regione scelta.
+
+link:use-cloudshell.html["Utilizzare CloudShell"].
+
+
+
+[[notifications]]
+== Notifiche
+
+.Dove può inviare le notifiche Workload Factory, e chi le controlla?
+Workload Factory può inviare notifiche come avvisi di NetApp Console, come e-mail agli indirizzi associati all'account o a un argomento Amazon SNS. Gli avvisi di Console vengono visualizzati quando hai distribuito un agente o un Link di Console. Quando configuri le notifiche in NetApp Console, quest'ultima assume la responsabilità della consegna e le opzioni di notifica della console di Workload Factory diventano di sola lettura.
+
+link:configure-notifications.html["Configurare le notifiche"].
+
+.Cosa devo sapere prima di usare Amazon SNS per gli avvisi critici?
+Workload Factory supporta solo il tipo di argomento SNS Standard, che non garantisce che le notifiche raggiungano i sottoscrittori nell'ordine in cui vengono ricevute. Tienilo presente per le notifiche critiche o di emergenza. Per impostazione predefinita, un sottoscrittore riceve tutte le notifiche sull'argomento, quindi usa una policy di filtro SNS (per tipo di risorsa, workload, priorità o tipo di notifica) per ricevere solo quelle che ti servono.
+
+link:configure-notifications.html["Configurare le notifiche"].
+
+
+
+[[service-accounts]]
+== Account di servizio
+
+.Quando dovresti usare un account di servizio e cosa dovresti sapere sul suo segreto?
+Utilizza un account di servizio per l'automazione solo tramite API, in modo che gli script non dipendano dall'account utente di una persona. Il segreto client viene visualizzato una sola volta e Workload Factory non lo memorizza, quindi copialo o scaricalo quando crei l'account di servizio. I token di accesso generati dall'ID client e dal segreto hanno una durata limitata e durano solo poche ore. Nella console di Workload Factory puoi solo creare o eliminare account di servizio. Per ottenere un nuovo segreto, elimina l'account di servizio e creane uno nuovo.
+
+link:manage-service-accounts.html["Gestire gli account di servizio"].
+
+
+
+[[well-architected-analysis]]
+== Analisi ben progettata
+
+.Come funziona l'analisi well-architected e richiede un Link?
+Workload Factory esegue ogni giorno la scansione dei file system FSx for ONTAP. Valuta le configurazioni come ottimizzate o non ottimizzate, fornisce raccomandazioni e può risolvere automaticamente alcuni problemi, mentre altri richiedono passaggi manuali. Puoi ignorare i controlli che non si applicano al tuo ambiente o creare regole personalizzate in linguaggio naturale. Per un'analisi completa dei tuoi file system, devi creare e associare un Link.
+
+link:well-architected-workloads.html["Scopri di più sull'analisi Well-Architected"].
+
+
+
+[[tracker]]
+== Tracker
+
+.Cos'è Tracker, per quanto tempo conserva la cronologia dei job e cosa puoi fare con i job non riusciti?
+Tracker è lo strumento di monitoraggio di Workload Factory e conserva gli eventi nell'interfaccia utente per 30 giorni. Puoi filtrare per intervallo di tempo, carico di lavoro, stato e utente e scaricare la tabella dei processi come file CSV. In caso di operazione non riuscita, puoi riprovarla oppure modificarne i parametri e riprovare. Il numero di tentativi consentiti per un'operazione non riuscita è limitato.
+
+link:monitor-operations.html["Monitora le operazioni con Tracker"].
+
+
+
+[[ai-features]]
+== Funzionalità AI
+
+.Come posso controllare le funzionalità di intelligenza artificiale e cosa succede se le disattivo?
+Nella pagina delle impostazioni AI, un amministratore può scegliere Bedrock gestito da NetApp (consigliato) oppure disattivare tutte le funzionalità AI. Bedrock gestito da NetApp non usa i tuoi dati per addestrare i modelli e non richiede alcuna configurazione AWS aggiuntiva. Se disattivi le funzionalità AI, Ask Me, gli agenti AI, le dashboard personalizzate, il costruttore di regole, gli analizzatori e le risposte agli errori AI in CloudShell non sono disponibili. Le funzionalità AI usano AWS Bedrock nelle regioni AWS pubbliche, cosa che può essere importante per gli account GovCloud.
+
+link:manage-genai-features.html["Gestisci le funzionalità di intelligenza artificiale"].
+
+.C'è un limite all'utilizzo dell'AI?
+Sì. Con Bedrock gestito da NetApp, ogni account ha un limite di spesa mensile per ogni funzionalità di intelligenza artificiale. Quando viene raggiunto il limite, Workload Factory disattiva le funzionalità di intelligenza artificiale, rende inattive le parti correlate dell'interfaccia e mostra un tooltip. Per ottenere altri crediti, contatta il tuo rappresentante NetApp.
+
+.Gli agenti di intelligenza artificiale possono modificare le mie risorse AWS o ONTAP?
+Per impostazione predefinita, gli agenti vengono eseguiti in modalità di sola lettura e non possono modificare le risorse. Nella modalità opzionale di lettura/scrittura, gli agenti riepilogano ogni azione e la eseguono solo dopo la tua approvazione, utilizzando le credenziali che hai selezionato. Gli agenti possono accedere solo alle risorse all'interno del tuo ambito corrente e alle credenziali scelte nelle impostazioni di Agents, e selezionare una credenziale non concede autorizzazioni AWS aggiuntive.
+
+* link:learn-agent.html["Scopri di più sugli agenti di intelligenza artificiale"].
+* link:manage-agent-settings.html["Gestisci le impostazioni degli agenti"].
+
+
+
+
+[[custom-dashboards]]
+== dashboard personalizzate
+
+.Chi può visualizzare, modificare o eliminare una dashboard personalizzata?
+Le nuove dashboard sono private e visibili solo al creatore. La condivisione rende una dashboard pubblica per tutti gli utenti del tuo account Workload Factory e non è possibile condividerla al di fuori dell'account. Solo il creatore può modificare una dashboard, ma tutti gli utenti dell'account possono eliminarla. L'eliminazione è permanente e rimuove la dashboard per tutti, quindi coordinati con il tuo team.
+
+* link:learn-custom-dashboards.html["Scopri le dashboard personalizzate"].
+* link:manage-custom-dashboards.html["Gestisci dashboard personalizzate"].
+
+
+.Di cosa ho bisogno per creare e utilizzare dashboard personalizzate?
+L'amministratore del tuo account deve abilitare le funzionalità di intelligenza artificiale. Ti servono credenziali AWS con accesso in lettura ai servizi che vuoi monitorare. Ti serve un Link per connetterti ai file system FSx for ONTAP. Le dashboard sono di sola lettura e non possono modificare le impostazioni di storage o del workload.
+
+link:learn-custom-dashboards.html["Scopri le dashboard personalizzate"].
