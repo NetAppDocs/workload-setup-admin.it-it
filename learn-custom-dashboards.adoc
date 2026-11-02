@@ -69,6 +69,17 @@ link:manage-custom-dashboards.html#change-dashboard-visibility["Scopri come modi
 
 
 
+[[check-if-the-data-is-up-to-date]]
+== Verifica che i dati siano aggiornati
+
+Puoi verificare quando sono stati aggiornati i dati della tua dashboard e richiedere un aggiornamento in qualsiasi momento. Un tooltip mostra la data e l'ora dell'ultimo aggiornamento.
+
+Seleziona *Aggiorna dati* per avviare una nuova scansione. Il pulsante non è disponibile mentre è in corso una scansione. Quando i nuovi dati sono pronti, compare un banner con l'opzione per aggiornare la dashboard.
+
+link:manage-custom-dashboards.html#refresh-dashboard-data["Scopri come aggiornare i dati della dashboard"].
+
+
+
 [[considerations-and-limitations]]
 == Considerazioni e limitazioni
 

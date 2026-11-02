@@ -1,0 +1,54 @@
+= Verifica e aggiorna i dati del dashboard personalizzato
+:allow-uri-read: 
+
+
+
+
+[[check-and-refresh-custom-dashboard-data]]
+=== Verifica e aggiorna i dati del dashboard personalizzato
+
+Ora puoi vedere quando le metriche della tua dashboard personalizzata sono state aggiornate l'ultima volta e aggiornarle manualmente. Passa il mouse su *Aggiorna dati* per visualizzare la data e l'ora dell'ultimo aggiornamento.
+
+Seleziona *Aggiorna dati* per avviare una nuova scansione. Un banner conferma che la scansione è stata avviata e il pulsante è disabilitato fino al termine della scansione.
+
+Quando sono disponibili nuovi dati, seleziona *Caricali ora* nel banner di notifica per aggiornare la dashboard.
+
+Sia *Aggiorna dati* che *Carica ora* creano eventi di raccolta di dati in Tracker.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-custom-dashboards.html#refresh-dashboard-data["Scopri come aggiornare i dati della dashboard personalizzata"]
+
+
+
+[[specify-regions-for-custom-dashboards]]
+=== Specifica le regioni per dashboard personalizzate
+
+Le dashboard personalizzate ora ti chiedono di scegliere una o più regioni se la richiesta non le include. I dati della dashboard sono limitati alle regioni che selezioni.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-custom-dashboard.html["Scopri come creare una dashboard personalizzata"]
+
+
+
+[[iam-policy-for-link-creation]]
+=== Criteri IAM per la creazione di collegamenti
+
+Il template CloudFormation e il codice Terraform per la creazione dei link ora utilizzano una policy IAM anziché le autorizzazioni Lambda inline.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Impara come creare un link"]
+
+
+
+[[audit-and-tracking-for-ai-agent-actions]]
+=== Audit e monitoraggio delle azioni degli agenti di IA
+
+Ora puoi usare Tracker per esaminare le modifiche alle impostazioni dell'agente AI e, in modalità di lettura/scrittura, ogni richiesta di approvazione, incluse la domanda dell'agente e la risposta dell'utente.
+
+Il servizio Workload Factory che esegue l'operazione registra le modifiche alle risorse effettuate tramite le API di Workload Factory.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/learn-agent.html#audit-and-tracking-for-agent-actions["Scopri il controllo e il tracciamento delle azioni degli agenti"]
+
+
+
+[[link-creation-improvements]]
+=== Miglioramenti nella creazione di link
+
+Workload Factory ha aggiornato l'output di Codebox per la creazione di link sostituendo le autorizzazioni inline di Lambda con la policy IAM per il template CloudFormation e Terraform.

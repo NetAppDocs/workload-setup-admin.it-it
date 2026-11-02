@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-custom-dashboards.html 
-keywords: manage dashboards, delete dashboard, refresh dashboard, dashboard catalog 
+keywords: manage dashboards, delete dashboard, refresh dashboard, dashboard catalog, refresh data, load data, last updated 
 summary: Accedi al catalogo delle dashboard per visualizzare, aggiornare ed eliminare le dashboard personalizzate in Workload Factory. 
 ---
 = Gestisci dashboard personalizzate in NetApp Workload Factory
@@ -60,9 +60,28 @@ Il pannello di controllo si aggiorna immediatamente. L'etichetta di visibilità 
 [[refresh-dashboard-data]]
 == Aggiorna i dati della dashboard
 
-I dati del dashboard vengono caricati quando apri il dashboard. Puoi aggiornarlo per vedere le informazioni più recenti.
+Controlla quando il tuo dashboard è stato aggiornato l'ultima volta e richiedi una scansione on-demand quando hai bisogno di dati aggiornati.
 
-La dashboard ricarica i dati dai tuoi carichi di lavoro.
+.A proposito di questa attività
+Il tooltip *Aggiorna dati* mostra un timestamp *Ultimo aggiornamento* con la data e l'ora in cui la dashboard è stata aggiornata l'ultima volta. Questo timestamp si riferisce ai dati raccolti, non all'ultima volta che è stata modificata la configurazione della dashboard.
+
+Selezionando *Refresh data* avvii una nuova scansione. Mentre è in esecuzione una scansione, il pulsante è disattivato e il relativo tooltip indica che la scansione è in corso.
+
+Workload Factory registra un evento in Tracker quando selezioni *Aggiorna dati* o *Carica ora*. link:monitor-operations.html["Scopri come monitorare le operazioni con Tracker"].
+
+.Fasi
+. Dal catalogo delle dashboard, apri la dashboard che vuoi visualizzare.
+. Passa il mouse su *Aggiorna dati* per verificare la data e l'ora di *Ultimo aggiornamento*.
+. Per richiedere metriche aggiornate, seleziona *Aggiorna dati*.
++
+Un banner indica che la scansione è iniziata. Attendi il completamento della scansione.
+
+. Quando sono disponibili nuovi dati, viene visualizzato un banner con il seguente messaggio: "Sono disponibili nuovi dati. Caricali ora oppure fai clic su Aggiorna dati in qualsiasi momento per aggiornare la visualizzazione."
+. Seleziona *Carica ora* nel banner per caricare i dati disponibili nella dashboard. In alternativa, seleziona *Aggiorna dati* per aggiornare la visualizzazione.
+
+
+.Risultato
+La dashboard visualizza le metriche aggiornate.
 
 
 

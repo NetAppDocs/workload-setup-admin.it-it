@@ -228,6 +228,11 @@ Nella pagina delle impostazioni AI, un amministratore può scegliere Bedrock ges
 
 link:manage-genai-features.html["Gestisci le funzionalità di intelligenza artificiale"].
 
+.Dove compaiono le impostazioni e le azioni dell'agente ai fini dell'audit?
+Il tracker registra le modifiche alle impostazioni dell'agente e, in modalità di lettura/scrittura, ogni richiesta di approvazione, comprese la domanda dell'agente e la risposta dell'utente. Le modifiche alle risorse effettuate tramite le API di Workload Factory sono registrate dal servizio Workload Factory che esegue l'operazione.
+
+link:manage-agent-settings.html#audit-and-tracking-for-agent-actions["Scopri il controllo e il tracciamento delle azioni degli agenti"].
+
 .C'è un limite all'utilizzo dell'AI?
 Sì. Con Bedrock gestito da NetApp, ogni account ha un limite di spesa mensile per ogni funzionalità di intelligenza artificiale. Quando viene raggiunto il limite, Workload Factory disattiva le funzionalità di intelligenza artificiale, rende inattive le parti correlate dell'interfaccia e mostra un tooltip. Per ottenere altri crediti, contatta il tuo rappresentante NetApp.
 

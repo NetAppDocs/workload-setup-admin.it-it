@@ -16,7 +16,7 @@ Crea dashboard personalizzate descrivendo in modo semplice cosa vuoi monitorare.
 .A proposito di questa attività
 Le dashboard personalizzate utilizzano un dialogo guidato dall'intelligenza artificiale per capire cosa vuoi visualizzare. Descrivi le tue esigenze di monitoraggio in linguaggio naturale e il sistema fa domande di chiarimento per assicurarsi che la dashboard soddisfi le tue richieste.
 
-Una volta creata, puoi aggiornare la dashboard per vedere i dati aggiornati.
+Una volta creata, puoi verificare quando le metriche della dashboard sono state aggiornate l'ultima volta e richiedere un aggiornamento on-demand. link:manage-custom-dashboards.html#refresh-dashboard-data["Scopri come aggiornare i dati della dashboard"].
 
 Ricorda che le dashboard personalizzate sono, per impostazione predefinita, di sola lettura e non possono apportare modifiche alle configurazioni di storage o workload.
 
@@ -58,10 +58,10 @@ Riceverai una notifica quando la tua dashboard sarà pronta. Se non può essere 
 Dopo la creazione, puoi:
 
 * Modifica la visibilità del dashboard per condividerlo con il tuo team
+* Controlla il timestamp *Last Updated* e seleziona *Refresh data* per richiedere metriche aggiornate
 * Aggiorna i dati del pannello di controllo per vedere le informazioni più recenti
 * Modifica le dashboard per cambiare ciò che mostrano, incluse metriche, grafici e intervalli di tempo
 * Elimina le dashboard che non ti servono più
-* Visualizza i dettagli della dashboard, inclusi chi l'ha creata e quando è stata aggiornata l'ultima volta
 
 
 
