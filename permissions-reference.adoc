@@ -481,6 +481,217 @@ Nella tabella seguente vengono visualizzate le autorizzazioni per l'archiviazion
 ====
 
 
+==== Impatti della rimozione delle autorizzazioni dalle policy IAM di Storage
+
+Per motivi di sicurezza, potresti voler rimuovere alcune autorizzazioni dalle policy IAM di Storage. Le tabelle seguenti descrivono l'impatto della rimozione delle autorizzazioni da ciascuna policy.
+
+.Autorizzazioni per visualizzazione, pianificazione e analisi
+[%collapsible]
+====
+[cols="2,3,3"]
+|===
+| Permesso | Scopo | Impatto della rimozione 
+
+
+| fsx:DescribeFileSystems | Scopri e visualizza la configurazione del file system | Nessun file system visibile 
+
+
+| fsx:DescribeVolumes | Elenca i volumi e le relative proprietà | Volumi non visualizzati 
+
+
+| fsx:DescribeStorageVirtualMachines | Elenco delle VM di storage, dei protocolli e della configurazione DNS | SVM non visualizzate 
+
+
+| fsx:DescribeBackups | Elenco dei backup disponibili | Informazioni di backup non disponibili 
+
+
+| fsx:ListTagsForResource | Visualizza i tag delle risorse | Tag mancanti 
+
+
+| fsx:DescribeSharedVpcConfigurations | Rileva le implementazioni VPC condivise | Informazioni sulla VPC condivisa non disponibili 
+
+
+| fsx:DescribeS3AccessPointAttachments | Elenca i punti di accesso S3 sui volumi | Informazioni sul punto di accesso S3 mancanti 
+
+
+| s3:GetAccessPoint | Recupera i dettagli del punto di accesso S3 | Dettagli del punto di accesso non disponibili 
+
+
+| Cloudwatch:GetMetricData | Recupera le metriche di performance e capacità | Cruscotti e grafici vuoti 
+
+
+| Cloudwatch:GetMetricStatistics | Monitoraggio dell'utilizzo della capacità | Funzionalità di gestione della capacità disabilitate 
+
+
+| ec2:DescripbeInstances | Scopri i carichi di lavoro di calcolo che utilizzano lo storage FSx | Topologia del workload incompleta 
+
+
+| ec2:DescripteVolumes | Rilevamento dei volumi EBS per il confronto dello storage | Analisi dei risparmi incompleta 
+
+
+| ec2:DescripteVpcs | Enumerazione VPC per il contesto di rete | Selezione VPC non disponibile 
+
+
+| ec2:DescripteSubnet | Enumerazione delle sottoreti per le decisioni di posizionamento | Selezione della sottorete non disponibile 
+
+
+| ec2:DescripteSecurityGroups | Individuazione e convalida dei gruppi di sicurezza | Informazioni sul gruppo di sicurezza mancanti 
+
+
+| ec2:DescripteRouteTable | Mappatura del percorso di rete | Informazioni sul percorso non disponibili 
+
+
+| ec2:DescripteNetworkInterfaces | Rilevamento dell'interfaccia di rete | Controlli di connettività degradati 
+
+
+| elasticfilesystem:DescribeFileSystems | Rilevamento EFS per l'analisi della migrazione e del risparmio | EFS non incluso nel risparmio 
+
+
+| ce:GetCostAndUsage | Dati sui costi per il calcolo dei risparmi | Analisi dei costi non disponibile 
+
+
+| ce:OttieniTag | Query dei tag per l'allocazione dei costi | Le visualizzazioni dei costi basate sui tag non funzionano 
+|===
+Ambito delle risorse: tutte le risorse (`*`). Queste sono azioni Describe/Get/List di sola lettura.
+
+====
+.Autorizzazioni per operazioni e bonifica
+[%collapsible]
+====
+Le autorizzazioni per operazioni e interventi correttivi consentono il ciclo di vita del volume, la gestione dei backup, i punti di accesso S3, il catalogo dei metadati e l'analisi degli eventi basata sull'intelligenza artificiale.
+
+Ambito delle risorse: tutte le risorse (`*`), ad eccezione delle azioni CloudTrail condizionate dal tag `netapp-fsxs3-metadata=journal`.
+
+
+NOTE: L'inferenza AI viene eseguita nel tuo account AWS utilizzando i tuoi profili di inferenza Bedrock. Nessun dato viene inviato al di fuori del tuo account per la diagnostica AI.
+
+[cols="2,3,3"]
+|===
+| Permesso | Scopo | Impatto della rimozione 
+
+
+| fsx:CreateVolume | Crea nuovi volumi | Creazione del volume non disponibile 
+
+
+| fsx:EliminaVolume | Elimina i volumi | Eliminazione del volume non disponibile 
+
+
+| fsx:AggiornaFileSystem | Modifica il throughput e la capacità di archiviazione | Aggiornamenti del file system e gestione automatica della capacità disabilitati 
+
+
+| fsx:UpdateStorageVirtualMachine | Modifica le impostazioni SVM | Modifiche alla configurazione SVM non disponibili 
+
+
+| fsx:UpdateVolume | Modifica le dimensioni del volume, il tiering e la QoS | Modifiche del volume non disponibili 
+
+
+| fsx:CreaBackup | Crea backup su richiesta | Creazione manuale del backup non disponibile 
+
+
+| fsx:CreaVolumeDaBackup | Ripristina un volume da un backup | Ripristino da backup non disponibile 
+
+
+| fsx:EliminaBackup | Rimuovi i backup | Impossibile eliminare il backup 
+
+
+| fsx:TagResource / fsx:UntagResource | Gestisci i tag delle risorse FSx | Le operazioni di tagging non riescono 
+
+
+| fsx:CreateAndAttachS3AccessPoint | Creare un punto di accesso S3 su un volume | Creazione del punto di accesso S3 non disponibile 
+
+
+| fsx:DetachAndDeleteS3AccessPoint | Rimuovere un punto di accesso S3 da un volume | Impossibile rimuovere il punto di accesso S3 
+
+
+| s3:CreateAccessPoint / s3:DeleteAccessPoint | ciclo di vita di S3 access point | Le operazioni del punto di accesso S3 non riescono 
+
+
+| s3:TagResource / s3:UntagResource / s3:ListTagsForResource | Etichettatura delle risorse S3 | Le operazioni sui tag S3 non riescono 
+
+
+| s3:GetObjectTagging / s3:ListBucket | Interroga il contenuto del catalogo dei metadati | Query del catalogo dei metadati degradate 
+
+
+| bedrock:InvokeModel / bedrock:InvokeModelWithResponseStream | Analisi e diagnostica basate sull'IA | Funzionalità di analisi AI non disponibili 
+
+
+| bedrock:ListInferenceProfiles / bedrock:GetInferenceProfile | Elenca i modelli di IA disponibili | Impossibile configurare le funzionalità AI 
+
+
+| s3tables:CreateTableBucket / s3tables:CreateTable / s3tables:CreateNamespace | Crea strutture di catalogo dei metadati | La creazione del catalogo dei metadati non riesce 
+
+
+| s3tables:GetTable / s3tables:GetTableBucket / s3tables:GetNamespace / s3tables:GetTableMetadataLocation | Leggi la configurazione del catalogo dei metadati | Le letture del catalogo dei metadati non riescono 
+
+
+| s3tables:PutTableData / s3tables:GetTableData | Scrivere e leggere le voci del catalogo dei metadati | Le operazioni del catalogo dei metadati non riescono 
+
+
+| s3tables:ListTables / s3tables:ListNamespaces / s3tables:ListTableBuckets | Enumera gli oggetti del catalogo dei metadati | La navigazione del catalogo dei metadati non funziona 
+
+
+| s3tables:UpdateTableMetadataLocation | Aggiorna i puntatori ai metadati del catalogo | Aggiornamenti della posizione del catalogo non riusciti 
+
+
+| s3tables:ListTagsForResource / s3tables:TagResource | Etichettatura del catalogo dei metadati | Le operazioni sui tag del catalogo non riescono 
+
+
+| cloudtrail:PutEventSelectors / cloudtrail:GetEventSelectors | Registrazione delle modifiche del catalogo dei metadati | Journaling del catalogo non disponibile 
+|===
+====
+.Autorizzazioni di creazione del file system
+[%collapsible]
+====
+Le autorizzazioni per la creazione dei file system consentono il provisioning e il deprovisioning dei file system FSx for ONTAP e delle storage VMs.
+
+[cols="2,3,3"]
+|===
+| Permesso | Scopo | Impatto della rimozione 
+
+
+| fsx:CreateFileSystem | Esegui il provisioning di nuovi file system FSx for ONTAP | Creazione del file system non disponibile 
+
+
+| fsx:EliminaFileSystem | Elimina i file system | Impossibile eliminare il file system 
+
+
+| fsx:CreateStorageVirtualMachine | Crea VM di storage | Creazione SVM non disponibile 
+
+
+| fsx:DeleteStorageVirtualMachine | Elimina le VM di storage | Eliminazione SVM non disponibile 
+
+
+| fsx:TagResource / fsx:UntagResource | Etichetta le risorse durante la creazione | Risorse create senza tag 
+
+
+| Km: CreateGrant | Consenti a FSx di utilizzare la tua chiave KMS per la crittografia dei dati a riposo | La creazione del file system crittografato non riesce 
+
+
+| kms:DescribeKey / kms:ListKeys / kms:ListAliases | Elenca le chiavi KMS disponibili per la selezione | Selettore di chiavi KMS vuoto 
+
+
+| iam:CreateServiceEnumerRole | Crea il ruolo collegato al servizio FSx (una tantum) | La creazione del primo file system fallisce se il ruolo non esiste 
+
+
+| ec2:CreateSecurityGroup / ec2:CreateTags | Crea un gruppo di sicurezza per il nuovo file system | La creazione del file system non riesce 
+
+
+| EC2:DescribeVolumeStatus | Verifica lo stato di salute dello storage sottostante | Controlli di integrità degradati 
+
+
+| ec2:AuthorizeSecurityGroupEgress / ec2:AuthorizeSecurityGroupIngress | Configura le regole del gruppo di sicurezza per l'accesso a ONTAP | Regole di rete non applicate 
+
+
+| ec2:RevokeSecurityGroupEgress / ec2:RevokeSecurityGroupIngress | Pulizia delle regole del gruppo di sicurezza al momento dell'eliminazione | Le regole obsolete rimangono 
+
+
+| ec2:DeleteSecurityGroup | Rimuovi il gruppo di sicurezza quando elimini il file system | Gruppi di sicurezza orfani 
+|===
+Ambito delle risorse: le azioni di modifica del gruppo di sicurezza (Autorizza, Revoca, Elimina) sono limitate alle risorse contrassegnate `AppCreator=NetappFSxWF`.
+
+====
+
+
 [[permissions-for-database-workloads]]
 === Autorizzazioni per i carichi di lavoro del database
 
